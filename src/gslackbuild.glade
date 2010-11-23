@@ -32,7 +32,7 @@
           <object class="GtkMenuBar" id="menubar">
             <property name="visible">True</property>
             <child>
-              <object class="GtkMenuItem" id="menuitem1">
+              <object class="GtkMenuItem" id="menuitem_file">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">_File</property>
                 <property name="use_underline">True</property>
@@ -68,7 +68,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkMenuItem" id="menuitem3">
+              <object class="GtkMenuItem" id="menuitem_package">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">_Package</property>
                 <property name="use_underline">True</property>
@@ -81,6 +81,7 @@
                         <property name="visible">True</property>
                         <property name="image">image13</property>
                         <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_menuitem_unmark_activate"/>
                       </object>
                     </child>
                     <child>
@@ -90,6 +91,7 @@
                         <property name="sensitive">False</property>
                         <property name="image">image5</property>
                         <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_menuitem_install_activate"/>
                       </object>
                     </child>
                     <child>
@@ -99,6 +101,7 @@
                         <property name="sensitive">False</property>
                         <property name="image">image10</property>
                         <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_menuitem_reinstall_activate"/>
                       </object>
                     </child>
                     <child>
@@ -108,6 +111,7 @@
                         <property name="sensitive">False</property>
                         <property name="image">image11</property>
                         <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_menuitem_remove_activate"/>
                       </object>
                     </child>
                     <child>
@@ -122,6 +126,7 @@
                         <property name="sensitive">False</property>
                         <property name="image">image12</property>
                         <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_menuitem_getinfo_activate"/>
                       </object>
                     </child>
                   </object>
@@ -129,7 +134,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkMenuItem" id="menuitem4">
+              <object class="GtkMenuItem" id="menuitem_help">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">_Help</property>
                 <property name="use_underline">True</property>
@@ -517,6 +522,7 @@
         <property name="tooltip_text" translatable="yes">Unmark</property>
         <property name="image">image4</property>
         <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menuitem_unmark_activate"/>
       </object>
     </child>
     <child>
@@ -526,6 +532,7 @@
         <property name="tooltip_text" translatable="yes">Install</property>
         <property name="image">image7</property>
         <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menuitem_install_activate"/>
       </object>
     </child>
     <child>
@@ -535,6 +542,7 @@
         <property name="tooltip_text" translatable="yes">Reinstall</property>
         <property name="image">image6</property>
         <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menuitem_reinstall_activate"/>
       </object>
     </child>
     <child>
@@ -543,6 +551,7 @@
         <property name="visible">True</property>
         <property name="image">image8</property>
         <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menuitem_remove_activate"/>
       </object>
     </child>
     <child>
@@ -556,6 +565,7 @@
         <property name="visible">True</property>
         <property name="image">image9</property>
         <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menuitem_getinfo_activate"/>
       </object>
     </child>
   </object>

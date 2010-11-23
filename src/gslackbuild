@@ -26,6 +26,12 @@ icon_installed = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_installed.png')
 # size
 config_file = 'gslackbuild.conf'
 
+class PkgAction:
+	DoNothing = 0
+	Install = 1
+	Reinstall = 2
+	Remove = 3
+
 def slaptsrclist(searchstring):
 	if len(searchstring) == 0:
 		cmd = 'slapt-src --list'
@@ -61,7 +67,9 @@ class GSlackBuild:
 					icon = icon_avail
 					installed = False
 				action = 0
-				self.ls_pkg.append([icon, pkgname, pkgver, pkgdesc, installed, action])
+				self.ls_pkg.append([icon, pkgname,
+					pkgver, pkgdesc,
+					installed, action])
 			self.mi_install.set_sensitive(False)
 			self.mi_reinstall.set_sensitive(False)
 			self.mi_remove.set_sensitive(False)
@@ -114,21 +122,50 @@ class GSlackBuild:
 					gtk.main_iteration()
 		self.refresh_pkglist()
 
-	def on_pkg_click(self, btn, click_in_status, pkg, ver, installed,
-			action):
+	def update_menus(self):
+		selectedline = self.tv_pkg.get_selection()
+		self.ls_pkg, iter = selectedline.get_selected()
+		pkg = self.ls_pkg.get_value(iter, 1)
+		ver = self.ls_pkg.get_value(iter, 2)
+		installed = self.ls_pkg.get_value(iter, 4)
+		action = self.ls_pkg.get_value(iter, 5)
+		if installed:
+			self.mi_install.set_sensitive(False)
+			self.mi_pkg_install.hide()
+			self.mi_reinstall.set_sensitive(True)
+			self.mi_pkg_reinstall.show()
+			self.mi_remove.set_sensitive(True)
+			self.mi_pkg_remove.show()
+			self.mi_getinfo.set_sensitive(True)
+		else:
+			self.mi_install.set_sensitive(True)
+			self.mi_pkg_install.show()
+			self.mi_reinstall.set_sensitive(False)
+			self.mi_pkg_reinstall.hide()
+			self.mi_remove.set_sensitive(False)
+			self.mi_pkg_remove.hide()
+			self.mi_getinfo.set_sensitive(True)
+		if action == PkgAction.DoNothing:
+			self.mi_unmark.set_sensitive(False)
+			self.mi_pkg_unmark.hide()
+		elif action == PkgAction.Install:
+			self.mi_unmark.set_sensitive(True)
+			self.mi_pkg_unmark.show()
+			self.mi_install.set_sensitive(False)
+			self.mi_pkg_install.hide()
+		elif action == PkgAction.Reinstall:
+			self.mi_unmark.set_sensitive(True)
+			self.mi_pkg_unmark.show()
+			self.mi_reinstall.set_sensitive(False)
+			self.mi_pkg_reinstall.hide()
+		elif action == PkgAction.Remove:
+			self.mi_unmark.set_sensitive(True)
+			self.mi_pkg_unmark.show()
+			self.mi_remove.set_sensitive(False)
+			self.mi_pkg_remove.hide()
+
+	def on_pkg_click(self, btn, click_in_status):
 		if click_in_status or btn == 3:
-			if installed:
-				self.mi_pkg_install.hide()
-				self.mi_pkg_reinstall.show()
-				self.mi_pkg_remove.show()
-			else:
-				self.mi_pkg_install.show()
-				self.mi_pkg_reinstall.hide()
-				self.mi_pkg_remove.hide()
-			if action == 0:
-				self.mi_pkg_unmark.hide()
-			else:
-				self.mi_pkg_unmark.show()
 			self.menu_pkgaction.popup(parent_menu_shell=None,
 					parent_menu_item=None,
 					func=None,
@@ -142,33 +179,45 @@ class GSlackBuild:
 	
 	def on_treeview_pkg_cursor_changed(self, widget, data=None):
 		global button_clicked
-		selectedline = self.tv_pkg.get_selection()
-		self.ls_pkg, iter = selectedline.get_selected()
-		pkg = self.ls_pkg.get_value(iter, 1)
-		ver = self.ls_pkg.get_value(iter, 2)
-		installed = self.ls_pkg.get_value(iter, 4)
-		action = self.ls_pkg.get_value(iter, 5)
-		if installed:
-			self.mi_install.set_sensitive(False)
-			self.mi_reinstall.set_sensitive(True)
-			self.mi_remove.set_sensitive(True)
-			self.mi_getinfo.set_sensitive(True)
-		else:
-			self.mi_install.set_sensitive(True)
-			self.mi_reinstall.set_sensitive(False)
-			self.mi_remove.set_sensitive(False)
-			self.mi_getinfo.set_sensitive(True)
-		if action == 0:
-			self.mi_unmark.set_sensitive(False)
-		else:
-			self.mi_unmark.set_sensitive(True)
 		path, column = self.tv_pkg.get_cursor()
 		if column.get_title() == _('Status'):
 			click_in_status = True
 		else:
 			click_in_status = False
-		self.on_pkg_click(button_clicked, click_in_status, pkg,
-				ver, installed, action)
+		self.update_menus()
+		self.on_pkg_click(button_clicked, click_in_status)
+
+	def on_menuitem_unmark_activate(self, widget):
+		selectedline = self.tv_pkg.get_selection()
+		self.ls_pkg, iter = selectedline.get_selected()
+		self.ls_pkg.set_value(iter, 5, PkgAction.DoNothing)
+		self.update_menus()
+	
+	def on_menuitem_install_activate(self, widget):
+		selectedline = self.tv_pkg.get_selection()
+		self.ls_pkg, iter = selectedline.get_selected()
+		self.ls_pkg.set_value(iter, 5, PkgAction.Install)
+		self.update_menus()
+
+	def on_menuitem_reinstall_activate(self, widget):
+		selectedline = self.tv_pkg.get_selection()
+		self.ls_pkg, iter = selectedline.get_selected()
+		self.ls_pkg.set_value(iter, 5, PkgAction.Reinstall)
+		self.update_menus()
+
+	def on_menuitem_remove_activate(self, widget):
+		selectedline = self.tv_pkg.get_selection()
+		self.ls_pkg, iter = selectedline.get_selected()
+		self.ls_pkg.set_value(iter, 5, PkgAction.Remove)
+		self.update_menus()
+	
+	def on_menuitem_getinfo_activate(self, widget):
+		selectedline = self.tv_pkg.get_selection()
+		self.ls_pkg, iter = selectedline.get_selected()
+		pkg = self.ls_pkg.get_value(iter, 1)
+		ver = self.ls_pkg.get_value(iter, 2)
+		print pkg, ver
+	
 
 	def on_dialog_errorcache_delete_event(self, widget, event):
 		self.dlg_errorcache.hide()
