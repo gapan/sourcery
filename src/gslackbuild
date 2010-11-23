@@ -1,0 +1,245 @@
+#!/usr/bin/env python
+
+import gtk
+import os
+import sys
+import commands
+import subprocess
+import time
+
+# Internationalization
+import locale
+import gettext
+import gtk.glade
+gettext.bindtextdomain("gslackbuild", "/usr/share/locale")
+gettext.textdomain("gslackbuild")
+gettext.install("gslackbuild", "/usr/share/locale", unicode=1)
+gtk.glade.bindtextdomain("gslackbuild", "/usr/share/locale")
+gtk.glade.textdomain("gslackbuild")
+
+
+# Constants
+# (I should change these before a final release)
+icon_avail = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_available.png')
+icon_installed = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_installed.png')
+# the config_file will probably only be used for remembering the window
+# size
+config_file = 'gslackbuild.conf'
+
+def slaptsrclist(searchstring):
+	if len(searchstring) == 0:
+		cmd = 'slapt-src --list'
+	else:
+		cmd = 'slapt-src -s "'+searchstring+'"'
+	status, pkglist_output = commands.getstatusoutput(cmd)
+	pkglist_lines = pkglist_output.splitlines()
+	pkglist = []
+	if status == 0:
+		for i in pkglist_lines:
+			nameandver, sep, desc = i.partition(': ')
+			name = nameandver.rpartition('-')[0]
+			ver = nameandver.rpartition('-')[2]
+			pkglist.append([name, ver, desc])
+	return status, pkglist
+
+class GSlackBuild:
+	def refresh_pkglist(self):
+		self.ls_pkg.clear()
+		cmdstatus, pkglist = slaptsrclist(self.entry_search.get_text())
+		if cmdstatus == 0:
+			pkg_varlogpkg = commands.getoutput('ls /var/log/packages').splitlines()
+			pkg_installed = []
+			for i in pkg_varlogpkg:
+				pkg_installed.append(i.rpartition('-')[0].rpartition('-')[0].rpartition('-')[0])
+
+			for i in pkglist:
+				pkgname, pkgver, pkgdesc = i
+				if pkgname in pkg_installed:
+					icon = icon_installed
+					installed = True
+				else:
+					icon = icon_avail
+					installed = False
+				action = 0
+				self.ls_pkg.append([icon, pkgname, pkgver, pkgdesc, installed, action])
+			self.mi_install.set_sensitive(False)
+			self.mi_reinstall.set_sensitive(False)
+			self.mi_remove.set_sensitive(False)
+			self.mi_getinfo.set_sensitive(False)
+		if action == 0:
+			self.mi_unmark.set_sensitive(False)
+		else:
+			print 'error updating package list'
+
+	def on_toolbutton_update_clicked(self, widget):
+		self.window_cacheupdate.show()
+		self.pbar_cacheupdate.pulse()
+		process = subprocess.Popen(['slapt-src','-u'], shell=False)
+		while True:
+			while gtk.events_pending():
+				gtk.main_iteration()
+			self.pbar_cacheupdate.pulse()
+			status = process.poll()
+			time.sleep(0.1)
+			if status != None:
+				self.window_cacheupdate.hide()
+				break
+		# ***************************
+		# Remove this after debugging
+
+		status = 0
+		# ***************************
+		if status == 0:
+			self.refresh_pkglist()
+		else:
+			self.ls_pkg.clear()
+			self.dlg_errorcache.show()
+
+	def on_toolbutton_exec_clicked(self, widget):
+		print 'exec'
+	
+	def on_toolbutton_clearsearch_clicked(self, widget):
+		if len(self.entry_search.get_text()) != 0:
+			self.entry_search.set_text(None)
+			self.refresh_pkglist()
+
+	def on_entry_search_activate(self, widget):
+		self.refresh_pkglist()	
+
+	def on_entry_search_icon_release(self, widget, icon, event):
+		if icon.value_name == 'GTK_ENTRY_ICON_PRIMARY':
+			if len(self.entry_search.get_text()) != 0:
+				self.entry_search.set_text('')
+				while gtk.events_pending():
+					gtk.main_iteration()
+		self.refresh_pkglist()
+
+	def on_pkg_click(self, btn, click_in_status, pkg, ver, installed,
+			action):
+		if click_in_status or btn == 3:
+			if installed:
+				self.mi_pkg_install.hide()
+				self.mi_pkg_reinstall.show()
+				self.mi_pkg_remove.show()
+			else:
+				self.mi_pkg_install.show()
+				self.mi_pkg_reinstall.hide()
+				self.mi_pkg_remove.hide()
+			if action == 0:
+				self.mi_pkg_unmark.hide()
+			else:
+				self.mi_pkg_unmark.show()
+			self.menu_pkgaction.popup(parent_menu_shell=None,
+					parent_menu_item=None,
+					func=None,
+					button=btn,
+					activate_time=0,
+					data=None)
+
+	def on_treeview_pkg_button_press_event(self, widget, event):
+		global button_clicked
+		button_clicked = event.button
+	
+	def on_treeview_pkg_cursor_changed(self, widget, data=None):
+		global button_clicked
+		selectedline = self.tv_pkg.get_selection()
+		self.ls_pkg, iter = selectedline.get_selected()
+		pkg = self.ls_pkg.get_value(iter, 1)
+		ver = self.ls_pkg.get_value(iter, 2)
+		installed = self.ls_pkg.get_value(iter, 4)
+		action = self.ls_pkg.get_value(iter, 5)
+		if installed:
+			self.mi_install.set_sensitive(False)
+			self.mi_reinstall.set_sensitive(True)
+			self.mi_remove.set_sensitive(True)
+			self.mi_getinfo.set_sensitive(True)
+		else:
+			self.mi_install.set_sensitive(True)
+			self.mi_reinstall.set_sensitive(False)
+			self.mi_remove.set_sensitive(False)
+			self.mi_getinfo.set_sensitive(True)
+		if action == 0:
+			self.mi_unmark.set_sensitive(False)
+		else:
+			self.mi_unmark.set_sensitive(True)
+		path, column = self.tv_pkg.get_cursor()
+		if column.get_title() == _('Status'):
+			click_in_status = True
+		else:
+			click_in_status = False
+		self.on_pkg_click(button_clicked, click_in_status, pkg,
+				ver, installed, action)
+
+	def on_treeviewcolumn_status_clicked(self, widget, data=None):
+		print 'clicked'
+
+	def on_dialog_errorcache_delete_event(self, widget, event):
+		self.dlg_errorcache.hide()
+		return True
+
+	def on_button_errorcache_close_clicked(self, widget):
+		self.dlg_errorcache.hide()
+
+	def gtk_main_quit(self, widget, data=None):
+		gtk.main_quit()
+
+	def __init__(self):
+		builder = gtk.Builder()
+		if os.path.exists('gslackbuild.glade'):
+			builder.add_from_file('gslackbuild.glade')
+		elif os.path.exists('/usr/share/salixtools/gslackbuild/gslackbuild.glade'):
+			builder.add_from_file('/usr/share/salixtools/gslackbuild/gslackbuild.glade')
+
+		#
+		# Main window objects
+		#
+		self.window = builder.get_object('gslackbuild')
+		self.tv_pkg = builder.get_object('treeview_pkg')
+		self.tv_pkg.set_rules_hint(True)
+		self.tvc_status = builder.get_object('treeviewcolumn_status')
+		self.tvc_status.set_title(_('Status'))
+		self.cr_status = builder.get_object('cellrendererpixbuf_status')
+		self.tvc_pkgname = builder.get_object('treeviewcolumn_pkgname')
+		self.tvc_pkgname.set_title(_('Name'))
+		self.tvc_version = builder.get_object('treeviewcolumn_version')
+		self.tvc_version.set_title(_('Version'))
+		self.tvc_desc = builder.get_object('treeviewcolumn_desc')
+		self.tvc_desc.set_title(_('Description'))
+		self.ls_pkg = builder.get_object('liststore_pkg')
+		self.tb_update = builder.get_object('toolbutton_update')
+		self.tb_exec = builder.get_object('toolbutton_exec')
+		self.entry_search = builder.get_object('entry_search')
+		# Package menu
+		self.mi_unmark = builder.get_object('menuitem_unmark')
+		self.mi_install = builder.get_object('menuitem_install')
+		self.mi_reinstall = builder.get_object('menuitem_reinstall')
+		self.mi_remove = builder.get_object('menuitem_remove')
+		self.mi_getinfo = builder.get_object('menuitem_getinfo')
+		# right click menu
+		self.menu_pkgaction = builder.get_object('menu_pkgaction')
+		self.mi_pkg_unmark = builder.get_object('menuitem_pkg_unmark')
+		self.mi_pkg_install = builder.get_object('menuitem_pkg_install')
+		self.mi_pkg_reinstall = builder.get_object('menuitem_pkg_reinstall')
+		self.mi_pkg_remove = builder.get_object('menuitem_pkg_remove')
+		self.mi_pkg_getinfo = builder.get_object('menuitem_pkg_getinfo')
+
+		#
+		# Update cache progress window
+		#
+		self.window_cacheupdate = builder.get_object('window_cacheupdate')
+		self.pbar_cacheupdate = builder.get_object('progressbar_cacheupdate')
+
+		#
+		# Error updating cache dialog
+		#
+		self.dlg_errorcache = builder.get_object('dialog_errorcache')
+		self.btn_errorcacheok = builder.get_object('button_errorcacheok')
+
+		# Connect all signals
+		builder.connect_signals(self)
+		self.refresh_pkglist()
+
+if __name__ == "__main__":
+	app = GSlackBuild()
+	app.window.show()
+	gtk.main()
