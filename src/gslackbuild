@@ -170,9 +170,6 @@ class GSlackBuild:
 		self.on_pkg_click(button_clicked, click_in_status, pkg,
 				ver, installed, action)
 
-	def on_treeviewcolumn_status_clicked(self, widget, data=None):
-		print 'clicked'
-
 	def on_dialog_errorcache_delete_event(self, widget, event):
 		self.dlg_errorcache.hide()
 		return True
