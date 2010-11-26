@@ -127,7 +127,7 @@ class GSlackBuild:
 			self.dlg_errorcache.show()
 
 	def on_toolbutton_exec_clicked(self, widget):
-		print 'exec'
+		print pending
 	
 	def on_toolbutton_clearsearch_clicked(self, widget):
 		if len(self.entry_search.get_text()) != 0:
@@ -222,8 +222,10 @@ class GSlackBuild:
 			self.ls_pkg.set_value(iter, 0, Icon.remove)
 		if pending == []:
 			self.mi_unmarkall.set_sensitive(False)
+			self.tb_exec.set_sensitive(False)
 		else:
 			self.mi_unmarkall.set_sensitive(True)
+			self.tb_exec.set_sensitive(True)
 
 	def on_pkg_click(self, btn, click_in_status):
 		if click_in_status or btn == 3:
@@ -251,6 +253,8 @@ class GSlackBuild:
 	def on_menuitem_unmarkall_activate(self, widget):
 		global pending
 		pending = []
+		self.mi_unmarkall.set_sensitive(False)
+		self.tb_exec.set_sensitive(False)
 		self.refresh_pkglist()
 
 	def on_menuitem_unmark_activate(self, widget):
