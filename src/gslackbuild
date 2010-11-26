@@ -18,13 +18,17 @@ gtk.glade.bindtextdomain("gslackbuild", "/usr/share/locale")
 gtk.glade.textdomain("gslackbuild")
 
 
-# Constants
-# (I should change these before a final release)
-icon_avail = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_available.png')
-icon_installed = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_installed.png')
 # the config_file will probably only be used for remembering the window
 # size
 config_file = 'gslackbuild.conf'
+
+# Icons locations should be changed before final release
+class Icon:
+	avail = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_available.png')
+	installed = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_installed.png')
+	install = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_install.png')
+	reinstall = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_reinstall.png')
+	remove = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_remove.png')
 
 class PkgAction:
 	DoNothing = 0
@@ -32,26 +36,38 @@ class PkgAction:
 	Reinstall = 2
 	Remove = 3
 
-def slaptsrclist(searchstring):
-	if len(searchstring) == 0:
-		cmd = 'slapt-src --list'
-	else:
-		cmd = 'slapt-src -s "'+searchstring+'"'
-	status, pkglist_output = commands.getstatusoutput(cmd)
-	pkglist_lines = pkglist_output.splitlines()
-	pkglist = []
-	if status == 0:
-		for i in pkglist_lines:
-			nameandver, sep, desc = i.partition(': ')
-			name = nameandver.rpartition('-')[0]
-			ver = nameandver.rpartition('-')[2]
-			pkglist.append([name, ver, desc])
-	return status, pkglist
-
 class GSlackBuild:
+	def slaptsrclist(self, searchstring):
+		if len(searchstring) == 0:
+			cmd = 'slapt-src --list'
+		else:
+			cmd = 'slapt-src -s "'+searchstring+'"'
+		status, pkglist_output = commands.getstatusoutput(cmd)
+		pkglist_lines = pkglist_output.splitlines()
+		pkglist = []
+		if status == 0:
+			for i in pkglist_lines:
+				nameandver, sep, desc = i.partition(': ')
+				name = nameandver.rpartition('-')[0]
+				ver = nameandver.rpartition('-')[2]
+				pkglist.append([name, ver, desc])
+				#make a check if a package with the same version
+				#is present in more than one repos. only the
+				#first one should be shown
+		return status, pkglist
+
 	def refresh_pkglist(self):
+		global pending
+		global pkg_varlogpkg
 		self.ls_pkg.clear()
-		cmdstatus, pkglist = slaptsrclist(self.entry_search.get_text())
+		# The list is cleared, no item is selected, so all menu
+		# options for package actions should be disabled
+		self.mi_unmark.set_sensitive(False)
+		self.mi_install.set_sensitive(False)
+		self.mi_reinstall.set_sensitive(False)
+		self.mi_remove.set_sensitive(False)
+		self.mi_getinfo.set_sensitive(False)
+		cmdstatus, pkglist = self.slaptsrclist(self.entry_search.get_text())
 		if cmdstatus == 0:
 			pkg_varlogpkg = commands.getoutput('ls /var/log/packages').splitlines()
 			pkg_installed = []
@@ -59,14 +75,27 @@ class GSlackBuild:
 				pkg_installed.append(i.rpartition('-')[0].rpartition('-')[0].rpartition('-')[0])
 
 			for i in pkglist:
-				pkgname, pkgver, pkgdesc = i
-				if pkgname in pkg_installed:
-					icon = icon_installed
-					installed = True
-				else:
-					icon = icon_avail
-					installed = False
 				action = 0
+				pkgname, pkgver, pkgdesc = i
+				for i in pending:
+					if pkgname == i[0] and pkgver == i[1]:
+						action = i[2]
+						break
+				if pkgname in pkg_installed:
+					icon = Icon.installed
+					installed = True
+				else:	
+					icon = Icon.avail
+					installed = False
+				if [pkgname, pkgver, PkgAction.Install] in pending:
+					icon = Icon.install
+					installed = False
+				elif [pkgname, pkgver, PkgAction.Reinstall] in pending:
+					icon = Icon.reinstall
+					installed = True
+				elif [pkgname, pkgver, PkgAction.Remove] in pending:
+					icon = Icon.remove
+					installed = True
 				self.ls_pkg.append([icon, pkgname,
 					pkgver, pkgdesc,
 					installed, action])
@@ -117,12 +146,17 @@ class GSlackBuild:
 		self.refresh_pkglist()
 
 	def update_menus(self):
+		global pending
+		global pkg_varlogpkg
 		selectedline = self.tv_pkg.get_selection()
 		self.ls_pkg, iter = selectedline.get_selected()
 		pkg = self.ls_pkg.get_value(iter, 1)
 		ver = self.ls_pkg.get_value(iter, 2)
 		installed = self.ls_pkg.get_value(iter, 4)
 		action = self.ls_pkg.get_value(iter, 5)
+		pkg_installed = []
+		for i in pkg_varlogpkg:
+			pkg_installed.append(i.rpartition('-')[0].rpartition('-')[0].rpartition('-')[0])
 		if installed:
 			self.mi_install.set_sensitive(False)
 			self.mi_pkg_install.hide()
@@ -142,21 +176,54 @@ class GSlackBuild:
 		if action == PkgAction.DoNothing:
 			self.mi_unmark.set_sensitive(False)
 			self.mi_pkg_unmark.hide()
+			if [pkg, ver, PkgAction.Install] in pending:
+				pending.remove([pkg, ver, PkgAction.Install])
+			if [pkg, ver, PkgAction.Reinstall] in pending:
+				pending.remove([pkg, ver, PkgAction.Reinstall])
+			if [pkg, ver, PkgAction.Remove] in pending:
+				pending.remove([pkg, ver, PkgAction.Remove])
+			if pkg in pkg_installed:
+				self.ls_pkg.set_value(iter, 0, Icon.installed)
+			else:
+				self.ls_pkg.set_value(iter, 0, Icon.avail)
 		elif action == PkgAction.Install:
 			self.mi_unmark.set_sensitive(True)
 			self.mi_pkg_unmark.show()
 			self.mi_install.set_sensitive(False)
 			self.mi_pkg_install.hide()
+			if [pkg, ver, PkgAction.Install] in pending:
+				pass
+			else:
+				pending.append([pkg, ver, PkgAction.Install])
+			self.ls_pkg.set_value(iter, 0, Icon.install)
 		elif action == PkgAction.Reinstall:
 			self.mi_unmark.set_sensitive(True)
 			self.mi_pkg_unmark.show()
 			self.mi_reinstall.set_sensitive(False)
 			self.mi_pkg_reinstall.hide()
+			if [pkg, ver, PkgAction.Reinstall] in pending:
+				pass
+			else:
+				pending.append([pkg, ver, PkgAction.Reinstall])
+			if [pkg, ver, PkgAction.Remove] in pending:
+				pending.remove([pkg, ver, PkgAction.Remove])
+			self.ls_pkg.set_value(iter, 0, Icon.reinstall)
 		elif action == PkgAction.Remove:
 			self.mi_unmark.set_sensitive(True)
 			self.mi_pkg_unmark.show()
 			self.mi_remove.set_sensitive(False)
 			self.mi_pkg_remove.hide()
+			if [pkg, ver, PkgAction.Remove] in pending:
+				pass
+			else:
+				pending.append([pkg, ver, PkgAction.Remove])
+			if [pkg, ver, PkgAction.Reinstall] in pending:
+				pending.remove([pkg, ver, PkgAction.Reinstall])
+			self.ls_pkg.set_value(iter, 0, Icon.remove)
+		if pending == []:
+			self.mi_unmarkall.set_sensitive(False)
+		else:
+			self.mi_unmarkall.set_sensitive(True)
 
 	def on_pkg_click(self, btn, click_in_status):
 		if click_in_status or btn == 3:
@@ -180,6 +247,11 @@ class GSlackBuild:
 			click_in_status = False
 		self.update_menus()
 		self.on_pkg_click(button_clicked, click_in_status)
+
+	def on_menuitem_unmarkall_activate(self, widget):
+		global pending
+		pending = []
+		self.refresh_pkglist()
 
 	def on_menuitem_unmark_activate(self, widget):
 		selectedline = self.tv_pkg.get_selection()
@@ -248,6 +320,8 @@ class GSlackBuild:
 		self.tb_update = builder.get_object('toolbutton_update')
 		self.tb_exec = builder.get_object('toolbutton_exec')
 		self.entry_search = builder.get_object('entry_search')
+		# Edit menu
+		self.mi_unmarkall = builder.get_object('menuitem_unmarkall')
 		# Package menu
 		self.mi_unmark = builder.get_object('menuitem_unmark')
 		self.mi_install = builder.get_object('menuitem_install')
@@ -274,6 +348,11 @@ class GSlackBuild:
 		self.dlg_errorcache = builder.get_object('dialog_errorcache')
 		self.btn_errorcacheok = builder.get_object('button_errorcacheok')
 
+		global pending
+		pending = []
+		global pkg_varlogpkg	
+		pkg_varlogpkg = commands.getoutput('ls /var/log/packages').splitlines()
+		
 		# Connect all signals
 		builder.connect_signals(self)
 		self.refresh_pkglist()

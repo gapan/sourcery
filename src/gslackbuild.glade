@@ -68,6 +68,28 @@
               </object>
             </child>
             <child>
+              <object class="GtkMenuItem" id="menuitem_edit">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Edit</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu4">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="menuitem_unmarkall">
+                        <property name="label" translatable="yes">Unmark all</property>
+                        <property name="visible">True</property>
+                        <property name="sensitive">False</property>
+                        <property name="image">image14</property>
+                        <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_menuitem_unmarkall_activate"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
               <object class="GtkMenuItem" id="menuitem_package">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">_Package</property>
@@ -606,6 +628,10 @@
     <property name="stock">gtk-info</property>
   </object>
   <object class="GtkImage" id="image13">
+    <property name="visible">True</property>
+    <property name="stock">gtk-undo</property>
+  </object>
+  <object class="GtkImage" id="image14">
     <property name="visible">True</property>
     <property name="stock">gtk-undo</property>
   </object>
