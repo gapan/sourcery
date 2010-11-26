@@ -127,7 +127,17 @@ class GSlackBuild:
 			self.dlg_errorcache.show()
 
 	def on_toolbutton_exec_clicked(self, widget):
-		print pending
+		global pending
+		for i in pending:
+			if i[2] == PkgAction.Install:
+				desc = _('%s %s is going to be installed') % (i[0], i[1])
+			elif i[2] == PkgAction.Reinstall:
+				desc = _('%s %s is going to be reinstalled') % (i[0], i[1])
+			elif i[2] == PkgAction.Remove:
+				desc = _('%s %s is going to be removed') % (i[0], i[1])
+			self.ls_summary.append([desc, i[0], i[1], i[2]])
+		self.dlg_summary.show()
+		
 	
 	def on_toolbutton_clearsearch_clicked(self, widget):
 		if len(self.entry_search.get_text()) != 0:
@@ -298,6 +308,30 @@ class GSlackBuild:
 	def on_button_errorcache_close_clicked(self, widget):
 		self.dlg_errorcache.hide()
 
+	def on_dialog_summary_delete_event(self, widget, event):
+		self.dlg_summary.hide()
+		self.ls_summary.clear()
+		return True
+
+	def on_button_summary_apply_clicked(self, widget):
+		global pending
+		self.dlg_summary.hide()
+		#self.dlg_exec.show()
+		self.execute_pending()
+
+	def execute_pending(self):
+		while gtk.events_pending():
+			gtk.main_iteration()
+		for i in self.ls_summary:
+			print 'Installing', i[1], i[2], i[3]
+		pending = []
+		self.ls_summary.clear()
+		self.refresh_pkglist()
+
+	def on_button_summary_cancel_clicked(self, widget):
+		self.ls_summary.clear()
+		self.dlg_summary.hide()
+	
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
 
@@ -356,6 +390,15 @@ class GSlackBuild:
 		#
 		self.dlg_errorcache = builder.get_object('dialog_errorcache')
 		self.btn_errorcacheok = builder.get_object('button_errorcacheok')
+
+		#
+		# Summary dialog
+		#
+		self.dlg_summary = builder.get_object('dialog_summary')
+		self.btn_summary_apply = builder.get_object('button_summary_apply')
+		self.btn_summary_cancel = builder.get_object('button_summary_cancel')
+		self.tv_summary = builder.get_object('treeview_summary')
+		self.ls_summary = builder.get_object('liststore_summary')
 
 		global pending
 		pending = []
