@@ -314,12 +314,12 @@ class GSlackBuild:
 		return True
 
 	def on_button_summary_apply_clicked(self, widget):
-		global pending
 		self.dlg_summary.hide()
 		#self.dlg_exec.show()
 		self.execute_pending()
 
 	def execute_pending(self):
+		global pending
 		while gtk.events_pending():
 			gtk.main_iteration()
 		for i in self.ls_summary:
