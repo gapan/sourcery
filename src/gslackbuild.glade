@@ -50,6 +50,16 @@
                       </object>
                     </child>
                     <child>
+                      <object class="GtkImageMenuItem" id="menuitem_exec">
+                        <property name="label" translatable="yes">Execute</property>
+                        <property name="visible">True</property>
+                        <property name="sensitive">False</property>
+                        <property name="image">image15</property>
+                        <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_toolbutton_exec_clicked"/>
+                      </object>
+                    </child>
+                    <child>
                       <object class="GtkSeparatorMenuItem" id="separatormenuitem1">
                         <property name="visible">True</property>
                       </object>
@@ -635,5 +645,9 @@
   <object class="GtkImage" id="image14">
     <property name="visible">True</property>
     <property name="stock">gtk-undo</property>
+  </object>
+  <object class="GtkImage" id="image15">
+    <property name="visible">True</property>
+    <property name="stock">gtk-apply</property>
   </object>
 </interface>

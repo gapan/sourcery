@@ -223,9 +223,11 @@ class GSlackBuild:
 		if pending == []:
 			self.mi_unmarkall.set_sensitive(False)
 			self.tb_exec.set_sensitive(False)
+			self.mi_exec.set_sensitive(False)
 		else:
 			self.mi_unmarkall.set_sensitive(True)
 			self.tb_exec.set_sensitive(True)
+			self.mi_exec.set_sensitive(True)
 
 	def on_pkg_click(self, btn, click_in_status):
 		if click_in_status or btn == 3:
@@ -255,6 +257,7 @@ class GSlackBuild:
 		pending = []
 		self.mi_unmarkall.set_sensitive(False)
 		self.tb_exec.set_sensitive(False)
+		self.mi_exec.set_sensitive(False)
 		self.refresh_pkglist()
 
 	def on_menuitem_unmark_activate(self, widget):
@@ -324,6 +327,8 @@ class GSlackBuild:
 		self.tb_update = builder.get_object('toolbutton_update')
 		self.tb_exec = builder.get_object('toolbutton_exec')
 		self.entry_search = builder.get_object('entry_search')
+		# File menu
+		self.mi_exec = builder.get_object('menuitem_exec')
 		# Edit menu
 		self.mi_unmarkall = builder.get_object('menuitem_unmarkall')
 		# Package menu
