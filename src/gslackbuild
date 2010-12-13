@@ -318,12 +318,12 @@ class GSlackBuild:
 				break
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
-		if status != 0:
-			canceltask = False
-			return 1
 		if canceltask:
 			canceltask = False
 			return 127
+		elif status != 0:
+			canceltask = False
+			return 1
 		else:
 			canceltask = False
 			return 0
