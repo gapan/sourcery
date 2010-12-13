@@ -47,9 +47,9 @@ class GSlackBuild:
 		pkglist = []
 		if status == 0:
 			for i in pkglist_lines:
-				nameandver, sep, desc = i.partition(': ')
-				name = nameandver.rpartition('-')[0]
-				ver = nameandver.rpartition('-')[2]
+				nameandver, sep, desc = i.partition(' - ')
+				name = nameandver.rpartition(':')[0]
+				ver = nameandver.rpartition(':')[2]
 				pkglist.append([name, ver, desc])
 				#make a check if a package with the same version
 				#is present in more than one repos. only the
@@ -306,23 +306,77 @@ class GSlackBuild:
 
 	def on_button_summary_apply_clicked(self, widget):
 		self.dlg_summary.hide()
-		#self.dlg_exec.show()
+		self.dlg_exec.show()
 		self.execute_pending()
+
+	def installpkg(self, pkg, pkgver):
+		process = subprocess.Popen(['slapt-src','-y','-i', pkg+':'+pkgver], shell=False)
+		while not canceltask:
+			while gtk.events_pending():
+				gtk.main_iteration()
+			self.pb_exec.pulse()
+			status = process.poll()
+			time.sleep(0.1)
+			if status != None:
+				print "DONE"
+				break
+
+	def removepkg(self, pkg):
+		process = subprocess.Popen(['spkg','-d', pkg], shell=False)
+		while not canceltask:
+			while gtk.events_pending():
+				gtk.main_iteration()
+			self.pb_exec.pulse()
+			status = process.poll()
+			time.sleep(0.1)
+			if status != None:
+				print "DONE"
+				break
 
 	def execute_pending(self):
 		global pending
 		while gtk.events_pending():
 			gtk.main_iteration()
+		totaltasks = len(self.ls_summary)
+		currentpos = 0
+		step = 1/float(totaltasks)
+		print step
+		self.pb_execoverall.set_fraction(0)
+		self.pb_exec.set_fraction(0)
 		for i in self.ls_summary:
-			print 'Installing', i[1], i[2], i[3]
+			# we might have a problem with updating the
+			# label in time here...
+			if i[3] == PkgAction.Install:
+				self.lb_exec.set_text(_('Installing')+' '+i[1]+'-'+i[2]+'...')
+				self.installpkg(i[1], i[2])
+			if i[3] == PkgAction.Reinstall:
+				self.lb_exec.set_text(_('Reinstalling')+' '+i[1]+'-'+i[2]+'...')
+				self.installpkg(i[1], i[2])
+			if i[3] == PkgAction.Remove:
+				self.lb_exec.set_text(_('Removing')+' '+i[1]+'...')
+				self.removepkg(i[1])
+			currentpos = currentpos + step
+			self.pb_execoverall.set_fraction(currentpos)
 		pending = []
 		self.ls_summary.clear()
 		self.refresh_pkglist()
+		self.dlg_exec.hide()
+		self.dlg_success.show()
 
 	def on_button_summary_cancel_clicked(self, widget):
 		self.ls_summary.clear()
 		self.dlg_summary.hide()
-	
+
+	def on_button_exec_cancel_clicked(self, widget):
+		# nothing much here, I don't know how to stop the
+		# slapt-src child process of running foo.SlackBuild
+		# slapt-src itself can be stopped with process.kill(),
+		# but the child process will keep running
+		self.dlg_exec.hide()
+
+	def on_button_success_ok_clicked(self, widget):
+		self.dlg_success.hide()
+
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
 
@@ -390,6 +444,23 @@ class GSlackBuild:
 		self.btn_summary_cancel = builder.get_object('button_summary_cancel')
 		self.tv_summary = builder.get_object('treeview_summary')
 		self.ls_summary = builder.get_object('liststore_summary')
+
+		#
+		# Execute dialog
+		#
+		self.dlg_exec = builder.get_object('dialog_exec')
+		self.btn_exec_cancel = builder.get_object('button_exec_cancel')
+		self.lb_exec = builder.get_object('label_exec')
+		self.pb_exec = builder.get_object('progressbar_exec')
+		self.tv_exec = builder.get_object('treeview_exec')
+		self.pb_execoverall = builder.get_object('progressbar_execoverall')
+
+
+		#
+		# Success dialog
+		#
+		self.dlg_success = builder.get_object('messagedialog_success')
+		self.btn_success_ok = builder.get_object('button_success_ok')
 
 		global pending
 		pending = []
