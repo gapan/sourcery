@@ -384,10 +384,6 @@ class GSlackBuild:
 		self.dlg_summary.hide()
 
 	def on_button_exec_cancel_clicked(self, widget):
-		# nothing much here, I don't know how to stop the
-		# slapt-src child process of running foo.SlackBuild
-		# slapt-src itself can be stopped with process.kill(),
-		# but the child process will keep running
 		global canceltask
 		canceltask = True
 		self.dlg_exec.hide()
