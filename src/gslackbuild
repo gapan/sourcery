@@ -133,7 +133,6 @@ class GSlackBuild:
 				desc = _('%s %s is going to be removed') % (i[0], i[1])
 			self.ls_summary.append([desc, i[0], i[1], i[2]])
 		self.dlg_summary.show()
-		
 	
 	def on_toolbutton_clearsearch_clicked(self, widget):
 		if len(self.entry_search.get_text()) != 0:
@@ -319,9 +318,12 @@ class GSlackBuild:
 				break
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
-		if canceltask:
+		if status != 0:
 			canceltask = False
 			return 1
+		if canceltask:
+			canceltask = False
+			return 127
 		else:
 			canceltask = False
 			return 0
@@ -352,15 +354,18 @@ class GSlackBuild:
 		self.pb_execoverall.set_fraction(0)
 		self.pb_exec.set_fraction(0)
 		for i in self.ls_summary:
-			if i[3] == PkgAction.Install:
-				self.lb_exec.set_text(_('Installing')+' '+i[1]+'-'+i[2]+'...')
-				retval = self.installpkg(i[1], i[2])
-			if i[3] == PkgAction.Reinstall:
-				self.lb_exec.set_text(_('Reinstalling')+' '+i[1]+'-'+i[2]+'...')
-				retval = self.installpkg(i[1], i[2])
-			if i[3] == PkgAction.Remove:
-				self.lb_exec.set_text(_('Removing')+' '+i[1]+'...')
-				retval = self.removepkg(i[1])
+			pkg, pkgver, action = i[1], i[2], i[3]
+			if action == PkgAction.Install:
+				self.lb_exec.set_text(_('Installing')+' '+pkg+'-'+pkgver+'...')
+				retval = self.installpkg(pkg, pkgver)
+			elif action == PkgAction.Reinstall:
+				self.lb_exec.set_text(_('Reinstalling')+' '+pkg+'-'+pkgver+'...')
+				retval = self.installpkg(pkg, pkgver)
+			elif action == PkgAction.Remove:
+				self.lb_exec.set_text(_('Removing')+' '+pkg+'...')
+				retval = self.removepkg(pkg)
+			if retval != 0:
+				break
 			currentpos = currentpos + step
 			self.pb_execoverall.set_fraction(currentpos)
 		pending = []
@@ -369,6 +374,8 @@ class GSlackBuild:
 		self.dlg_exec.hide()
 		if retval == 0:
 			self.dlg_success.show()
+		elif retval == 1:
+			self.show_pkg_install_error_dlg(pkg, pkgver)
 		else:
 			self.dlg_canceled.show()
 
@@ -393,7 +400,16 @@ class GSlackBuild:
 	
 	def on_button_updateerror_ok_clicked(self, widget):
 		self.dlg_updateerror.hide()
-	
+
+	def show_pkg_install_error_dlg(self, pkg, pkgver):
+		self.lb_pkginstallerror.set_text(_('There was an error while installing %s %s. All pending actions will be purged from the processing queue.') %(pkg, pkgver))
+		self.dlg_pkginstallerror.show()
+
+	def on_button_pkginstallerror_close_clicked(self, widget):
+		self.dlg_pkginstallerror.hide()
+		# Unmark all pending actions if an error has occured
+		self.on_menuitem_unmarkall_activate(None)
+
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
 
@@ -490,6 +506,13 @@ class GSlackBuild:
 		#
 		self.dlg_updateerror = builder.get_object('messagedialog_updateerror')
 		self.btn_updateerror_ok = builder.get_object('button_updateerror_ok')
+
+		#
+		# Install package error dialog
+		#
+		self.dlg_pkginstallerror = builder.get_object('dialog_pkginstallerror')
+		self.btn_pkginstallerror_close = builder.get_object('button_pkginstallerror_close')
+		self.lb_pkginstallerror = builder.get_object('label_pkginstallerror')
 
 		global pending
 		pending = []
