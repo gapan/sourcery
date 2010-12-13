@@ -101,7 +101,7 @@ class GSlackBuild:
 					pkgver, pkgdesc,
 					installed, action])
 		else:
-			print 'error updating package list'
+			self.dlg_updateerror.show()
 
 	def on_toolbutton_update_clicked(self, widget):
 		self.window_cacheupdate.show()
@@ -116,11 +116,6 @@ class GSlackBuild:
 			if status != None:
 				self.window_cacheupdate.hide()
 				break
-		# ***************************
-		# Remove this after debugging
-
-		status = 0
-		# ***************************
 		if status == 0:
 			self.refresh_pkglist()
 		else:
@@ -396,6 +391,9 @@ class GSlackBuild:
 	def on_button_canceled_ok_clicked(self, widget):
 		self.dlg_canceled.hide()
 	
+	def on_button_updateerror_ok_clicked(self, widget):
+		self.dlg_updateerror.hide()
+	
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
 
@@ -486,6 +484,12 @@ class GSlackBuild:
 		#
 		self.dlg_canceled = builder.get_object('messagedialog_canceled')
 		self.btn_canceled_ok = builder.get_object('button_canceled_ok')
+
+		#
+		# Update error dialog
+		#
+		self.dlg_updateerror = builder.get_object('messagedialog_updateerror')
+		self.btn_updateerror_ok = builder.get_object('button_updateerror_ok')
 
 		global pending
 		pending = []
