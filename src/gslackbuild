@@ -46,15 +46,15 @@ class GSlackBuild:
 		status, pkglist_output = commands.getstatusoutput(cmd)
 		pkglist_lines = pkglist_output.splitlines()
 		pkglist = []
+		pkglist2 = []
 		if status == 0:
 			for i in pkglist_lines:
 				nameandver, sep, desc = i.partition(' - ')
 				name = nameandver.rpartition(':')[0]
 				ver = nameandver.rpartition(':')[2]
-				pkglist.append([name, ver, desc])
-				#make a check if a package with the same version
-				#is present in more than one repos. only the
-				#first one should be shown
+				if [name, ver] not in pkglist2:
+					pkglist.append([name, ver, desc])
+					pkglist2.append([name, ver])
 		return status, pkglist
 
 	def refresh_pkglist(self):
