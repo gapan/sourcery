@@ -426,7 +426,7 @@
             <child>
               <object class="GtkLabel" id="label2">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">Error updating SlackBuild cache. Make sure you have configured the sources properly and that you have a working internet connection.</property>
+                <property name="label" translatable="yes">There was an error while updating the SlackBuild cache. Make sure you have configured all sources properly and that you have a working internet connection.</property>
                 <property name="wrap">True</property>
               </object>
               <packing>

@@ -120,8 +120,7 @@ class GSlackBuild:
 				break
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
-		elif status != 0:
-			self.ls_pkg.clear()
+		if status != 0:
 			self.dlg_errorcache.show()
 		else:
 			self.refresh_pkglist()
