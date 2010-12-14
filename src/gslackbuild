@@ -104,23 +104,28 @@ class GSlackBuild:
 			self.dlg_updateerror.show()
 
 	def on_toolbutton_update_clicked(self, widget):
-		self.window_cacheupdate.show()
+		global canceltask
+		canceltask = False
+		self.dlg_cacheupdate.show()
 		self.pbar_cacheupdate.pulse()
-		process = subprocess.Popen(['slapt-src','-u'], shell=False)
-		while True:
+		process = subprocess.Popen(['slapt-src','-u'], shell=False, close_fds=True, preexec_fn=os.setsid)
+		while not canceltask:
 			while gtk.events_pending():
 				gtk.main_iteration()
 			self.pbar_cacheupdate.pulse()
 			status = process.poll()
 			time.sleep(0.1)
 			if status != None:
-				self.window_cacheupdate.hide()
+				self.dlg_cacheupdate.hide()
 				break
-		if status == 0:
-			self.refresh_pkglist()
-		else:
+		if status == None:
+			os.killpg(process.pid, signal.SIGKILL)
+		elif status != 0:
 			self.ls_pkg.clear()
 			self.dlg_errorcache.show()
+		else:
+			self.refresh_pkglist()
+		canceltask = False
 
 	def on_toolbutton_exec_clicked(self, widget):
 		global pending
@@ -406,6 +411,11 @@ class GSlackBuild:
 		# Unmark all pending actions if an error has occured
 		self.on_menuitem_unmarkall_activate(None)
 
+	def on_button_cacheupdate_cancel_clicked(self, widget):
+		global canceltask
+		canceltask = True
+		self.dlg_cacheupdate.hide()
+
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
 
@@ -456,8 +466,9 @@ class GSlackBuild:
 		#
 		# Update cache progress window
 		#
-		self.window_cacheupdate = builder.get_object('window_cacheupdate')
+		self.dlg_cacheupdate = builder.get_object('dialog_cacheupdate')
 		self.pbar_cacheupdate = builder.get_object('progressbar_cacheupdate')
+		self.btn_cacheupdate_cancel = builder.get_object('button_cacheupdate_cancel')
 
 		#
 		# Error updating cache dialog
@@ -483,7 +494,6 @@ class GSlackBuild:
 		self.pb_exec = builder.get_object('progressbar_exec')
 		self.tv_exec = builder.get_object('treeview_exec')
 		self.pb_execoverall = builder.get_object('progressbar_execoverall')
-
 
 		#
 		# Success dialog
