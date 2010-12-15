@@ -1456,6 +1456,7 @@
   </object>
   <object class="GtkDialog" id="dialog_iconlegend">
     <property name="border_width">5</property>
+    <property name="title" translatable="yes">Icon legend</property>
     <property name="resizable">False</property>
     <property name="window_position">center</property>
     <property name="destroy_with_parent">True</property>
