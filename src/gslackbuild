@@ -7,6 +7,7 @@ import commands
 import subprocess
 import time
 import signal
+import urllib2
 
 # Internationalization
 import locale
@@ -22,6 +23,7 @@ gtk.glade.textdomain("gslackbuild")
 # the config_file will probably only be used for remembering the window
 # size
 config_file = 'gslackbuild.conf'
+slackbuilds_data = '/usr/src/slapt-src/slackbuilds_data'
 
 # Icons locations should be changed before final release
 class Icon:
@@ -102,6 +104,68 @@ class GSlackBuild:
 					installed, action])
 		else:
 			self.dlg_updateerror.show()
+
+	def get_pkg_info(self, pkg, pkgver):
+		self.dlg_fetchpkginfo.show()
+		while gtk.events_pending():
+			gtk.main_iteration()
+		# just to be on the safe side
+		sourceurl = None
+		location = None
+		files = None
+		deps = None
+		cmd = 'grep -A10 "^SLACKBUILD NAME: '+pkg+'$" '+slackbuilds_data+'|grep -m1 -B4 -A6 "^SLACKBUILD VERSION: '+pkgver+'$"'
+		status, data = commands.getstatusoutput(cmd)
+		# I don't see a way status can be anything other than 0
+		# here. pkg and pkgver will always be correct since they
+		# are passed from the gui
+		pkginfo = data.splitlines()
+		for i in pkginfo:
+			if 'SLACKBUILD SOURCEURL: ' in i:
+				sourceurl = i.partition('SOURCEURL: ')[2]
+			elif 'SLACKBUILD LOCATION: ' in i:
+				location = i.partition('LOCATION: ')[2]
+			elif 'SLACKBUILD FILES: ' in i:
+				files = i.partition('FILES: ')[2].rsplit(' ')
+			elif 'SLACKBUILD REQUIRES: ' in i:
+				deps = i.partition('REQUIRES: ')[2].rsplit(',')
+		if 'slack-desc' in files:
+			try:
+				f = urllib2.urlopen(sourceurl+location+'slack-desc')
+				slackdescfull = f.read().splitlines()
+				slackdesc = []
+				for i in slackdescfull:
+					if i.startswith(pkg+':'):
+						slackdesc.append(i.partition(pkg+':')[2])
+			except urllib2.httperror:
+				print 'http error'
+		else:
+			slackdesc = None
+		if 'README' in files:
+			try:
+				f = urllib2.urlopen(sourceurl+location+'README')
+				readme = f.read().splitlines()
+			except urllib2.httperror:
+				print 'http error'
+		else:
+			readme = None
+		self.dlg_fetchpkginfo.hide()
+		self.dlg_pkginfo.set_title(_('SlackBuild information for ')+pkg+' '+pkgver)
+		self.lb_pkginfo_name.set_text(pkg)
+		self.lb_pkginfo_ver.set_text(pkgver)
+		self.lb_pkginfo_source.set_text(sourceurl)
+		self.lb_pkginfo_location.set_text(location)
+		self.lb_pkginfo_files.set_text("\n".join(files))
+		self.lb_pkginfo_deps.set_text("\n".join(deps))
+		if slackdesc == None:
+			self.lb_pkginfo_slackdesc.set_text(_('Not available.'))
+		else:
+			self.lb_pkginfo_slackdesc.set_text("\n".join(slackdesc))
+		if readme == None:
+			self.txt_pkginfo_readme.set_text(_('Not available.'))
+		else:
+			self.txt_pkginfo_readme.set_text("\n".join(readme))
+		self.dlg_pkginfo.show()
 
 	def on_toolbutton_update_clicked(self, widget):
 		global canceltask
@@ -289,7 +353,7 @@ class GSlackBuild:
 		self.ls_pkg, iter = selectedline.get_selected()
 		pkg = self.ls_pkg.get_value(iter, 1)
 		ver = self.ls_pkg.get_value(iter, 2)
-		print 'Get info for: ', pkg, ver
+		self.get_pkg_info(pkg, ver)
 
 	def on_dialog_errorcache_delete_event(self, widget, event):
 		self.dlg_errorcache.hide()
@@ -415,6 +479,13 @@ class GSlackBuild:
 		canceltask = True
 		self.dlg_cacheupdate.hide()
 
+	def on_dialog_pkginfo_delete_event(self, widget, event):
+		self.dlg_pkginfo.hide()
+		return True
+
+	def on_button_pkginfo_close_clicked(self, widget):
+		self.dlg_pkginfo.hide()
+	
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
 
@@ -519,6 +590,24 @@ class GSlackBuild:
 		self.btn_pkginstallerror_close = builder.get_object('button_pkginstallerror_close')
 		self.lb_pkginstallerror = builder.get_object('label_pkginstallerror')
 
+		#
+		# Fetch pkg info dialog
+		#
+		self.dlg_fetchpkginfo = builder.get_object('dialog_fetchpkginfo')
+	
+		#
+		# Display pkg info dialog
+		#
+		self.dlg_pkginfo = builder.get_object('dialog_pkginfo')
+		self.btn_pkginfo_close = builder.get_object('button_pkginfo_close')
+		self.lb_pkginfo_name = builder.get_object('label_pkginfo_name')
+		self.lb_pkginfo_ver = builder.get_object('label_pkginfo_ver')
+		self.lb_pkginfo_source = builder.get_object('label_pkginfo_source')
+		self.lb_pkginfo_location = builder.get_object('label_pkginfo_location')
+		self.lb_pkginfo_files = builder.get_object('label_pkginfo_files')
+		self.lb_pkginfo_deps = builder.get_object('label_pkginfo_deps')
+		self.lb_pkginfo_slackdesc = builder.get_object('label_pkginfo_slackdesc')
+		self.txt_pkginfo_readme = builder.get_object('textbuffer_pkginfo_readme')
 		global pending
 		pending = []
 		global pkg_varlogpkg	
