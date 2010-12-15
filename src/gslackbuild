@@ -355,6 +355,9 @@ class GSlackBuild:
 		ver = self.ls_pkg.get_value(iter, 2)
 		self.get_pkg_info(pkg, ver)
 
+	def on_menuitem_legend_activate(self, widget):
+		self.dlg_iconlegend.show()
+
 	def on_dialog_errorcache_delete_event(self, widget, event):
 		self.dlg_errorcache.hide()
 		return True
@@ -485,7 +488,15 @@ class GSlackBuild:
 
 	def on_button_pkginfo_close_clicked(self, widget):
 		self.dlg_pkginfo.hide()
-	
+
+	def on_dialog_iconlegend_delete_event(self, widget, event):
+		self.dlg_iconlegend.hide()
+		return True
+
+
+	def on_button_iconlegend_close_clicked(self, widget):
+		self.dlg_iconlegend.hide()
+
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
 
@@ -612,7 +623,23 @@ class GSlackBuild:
 		pending = []
 		global pkg_varlogpkg	
 		pkg_varlogpkg = commands.getoutput('ls /var/log/packages').splitlines()
-		
+	
+		#
+		# Icon legend dialog
+		#
+		self.dlg_iconlegend = builder.get_object('dialog_iconlegend')
+		self.btn_iconlegend_close = builder.get_object('button_iconlegend_close')
+		self.im_legend_notinstalled = builder.get_object('image_legend_notinstalled')
+		self.im_legend_notinstalled.set_from_pixbuf(Icon.avail)
+		self.im_legend_installed = builder.get_object('image_legend_installed')
+		self.im_legend_installed.set_from_pixbuf(Icon.installed)
+		self.im_legend_tobeinstalled = builder.get_object('image_legend_tobeinstalled')
+		self.im_legend_tobeinstalled.set_from_pixbuf(Icon.install)
+		self.im_legend_tobereinstalled = builder.get_object('image_legend_tobereinstalled')
+		self.im_legend_tobereinstalled.set_from_pixbuf(Icon.reinstall)
+		self.im_legend_toberemoved = builder.get_object('image_legend_toberemoved')
+		self.im_legend_toberemoved.set_from_pixbuf(Icon.remove)
+
 		# Connect all signals
 		builder.connect_signals(self)
 		self.refresh_pkglist()
