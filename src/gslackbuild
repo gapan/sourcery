@@ -166,11 +166,17 @@ class GSlackBuild:
 		if slackdesc == None:
 			self.lb_pkginfo_slackdesc.set_text(_('Not available.'))
 		else:
-			self.lb_pkginfo_slackdesc.set_text("\n".join(slackdesc))
+			try:
+				self.lb_pkginfo_slackdesc.set_text("\n".join(slackdesc).decode('utf8'))
+			except UnicodeDecodeError:
+				self.lb_pkginfo_slackdesc.set_text("\n".join(slackdesc).decode('latin1'))
 		if readme == None:
 			self.txt_pkginfo_readme.set_text(_('Not available.'))
 		else:
-			self.txt_pkginfo_readme.set_text("\n".join(readme))
+			try:
+				self.txt_pkginfo_readme.set_text("\n".join(readme).decode('utf8'))
+			except UnicodeDecodeError:
+				self.txt_pkginfo_readme.set_text("\n".join(readme).decode('latin1'))
 		self.dlg_pkginfo.show()
 
 	def on_toolbutton_update_clicked(self, widget):
