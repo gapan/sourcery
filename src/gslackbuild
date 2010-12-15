@@ -390,7 +390,15 @@ class GSlackBuild:
 	def installpkg(self, pkg, pkgver):
 		global canceltask
 		canceltask = False
-		process = subprocess.Popen(['slapt-src','-y','-i', pkg+':'+pkgver], shell=False, close_fds=True, preexec_fn=os.setsid)
+		# The "yes n" part is added because there are some
+		# SlackBuilds that actually ask questions during
+		# configuration, however stupid that may seem. A good
+		# example is Eterm: if libast is not installed, it will
+		# ask if it should download it... It's better to just
+		# fail by default in such cases and check the logs for
+		# what happened.
+		# shell=True is needed to the pipe to work
+		process = subprocess.Popen(['yes n|slapt-src -y -i '+pkg+':'+pkgver], shell=True, close_fds=True, preexec_fn=os.setsid)
 		while not canceltask:
 			while gtk.events_pending():
 				gtk.main_iteration()

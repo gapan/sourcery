@@ -812,6 +812,18 @@
             <property name="position">1</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkLabel" id="label21">
+            <property name="visible">True</property>
+            <property name="xpad">10</property>
+            <property name="ypad">10</property>
+            <property name="label" translatable="yes">Please wait. This might take a while. Processing time varies, depending on the size and complexity of the software, from a few seconds to a few hours...</property>
+            <property name="wrap">True</property>
+          </object>
+          <packing>
+            <property name="position">3</property>
+          </packing>
+        </child>
         <child internal-child="action_area">
           <object class="GtkHButtonBox" id="dialog-action_area3">
             <property name="visible">True</property>
