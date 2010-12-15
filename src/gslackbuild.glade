@@ -37,8 +37,6 @@
     </columns>
   </object>
   <object class="GtkWindow" id="gslackbuild">
-    <property name="width_request">750</property>
-    <property name="height_request">550</property>
     <property name="title" translatable="yes">gSlackBuild</property>
     <property name="window_position">center</property>
     <signal name="destroy" handler="gtk_main_quit"/>

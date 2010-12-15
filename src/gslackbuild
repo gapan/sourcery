@@ -40,6 +40,12 @@ class PkgAction:
 	Remove = 3
 
 class GSlackBuild:
+	def set_default_window_size(self):
+		w = gtk.gdk.get_default_root_window()
+		p = gtk.gdk.atom_intern('_NET_WORKAREA')
+		width, height = w.property_get(p)[2][2:4]
+		self.window.set_default_size(int(width*0.8), int(height*0.8))
+
 	def slaptsrclist(self, searchstring):
 		if len(searchstring) == 0:
 			cmd = 'slapt-src --list'
@@ -640,6 +646,9 @@ class GSlackBuild:
 		self.im_legend_toberemoved = builder.get_object('image_legend_toberemoved')
 		self.im_legend_toberemoved.set_from_pixbuf(Icon.remove)
 
+		# Set default window size
+		self.set_default_window_size()
+		
 		# Connect all signals
 		builder.connect_signals(self)
 		self.refresh_pkglist()
