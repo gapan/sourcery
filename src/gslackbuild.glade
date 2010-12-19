@@ -1682,6 +1682,7 @@
             <property name="can_focus">True</property>
             <property name="hscrollbar_policy">automatic</property>
             <property name="vscrollbar_policy">automatic</property>
+            <property name="shadow_type">in</property>
             <child>
               <object class="GtkTextView" id="textview_pkglog">
                 <property name="visible">True</property>
