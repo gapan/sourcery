@@ -400,7 +400,6 @@
     <property name="skip_pager_hint">True</property>
     <property name="focus_on_map">False</property>
     <property name="transient_for">gslackbuild</property>
-    <property name="has_separator">False</property>
     <signal name="delete_event" handler="on_dialog_errorcache_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox1">
@@ -597,7 +596,6 @@
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <property name="transient_for">gslackbuild</property>
-    <property name="has_separator">False</property>
     <signal name="delete_event" handler="on_dialog_summary_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox2">
@@ -1014,7 +1012,6 @@
     <property name="skip_pager_hint">True</property>
     <property name="focus_on_map">False</property>
     <property name="transient_for">gslackbuild</property>
-    <property name="has_separator">False</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox9">
         <property name="visible">True</property>
@@ -1057,6 +1054,20 @@
             <property name="visible">True</property>
             <property name="layout_style">end</property>
             <child>
+              <object class="GtkButton" id="button_pkginstallerror_log">
+                <property name="label" translatable="yes">View log</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="on_button_pkginstallerror_log_clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkButton" id="button_pkginstallerror_close">
                 <property name="label" translatable="yes">gtk-close</property>
                 <property name="visible">True</property>
@@ -1068,7 +1079,7 @@
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">False</property>
-                <property name="position">0</property>
+                <property name="position">1</property>
               </packing>
             </child>
           </object>
@@ -1081,6 +1092,7 @@
       </object>
     </child>
     <action-widgets>
+      <action-widget response="0">button_pkginstallerror_log</action-widget>
       <action-widget response="0">button_pkginstallerror_close</action-widget>
     </action-widgets>
   </object>
@@ -1096,7 +1108,6 @@
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <property name="transient_for">gslackbuild</property>
-    <property name="has_separator">False</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox8">
         <property name="visible">True</property>
@@ -1189,7 +1200,6 @@
     <property name="destroy_with_parent">True</property>
     <property name="icon_name">dialog-information</property>
     <property name="type_hint">normal</property>
-    <property name="has_separator">False</property>
     <signal name="delete_event" handler="on_dialog_pkginfo_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox10">
@@ -1652,4 +1662,69 @@
       <action-widget response="0">button_iconlegend_close</action-widget>
     </action-widgets>
   </object>
+  <object class="GtkDialog" id="dialog_pkglog">
+    <property name="width_request">600</property>
+    <property name="height_request">500</property>
+    <property name="border_width">5</property>
+    <property name="window_position">center</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="icon_name">text-x-generic</property>
+    <property name="type_hint">normal</property>
+    <signal name="delete_event" handler="on_dialog_pkglog_delete_event"/>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox12">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow4">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hscrollbar_policy">automatic</property>
+            <property name="vscrollbar_policy">automatic</property>
+            <child>
+              <object class="GtkTextView" id="textview_pkglog">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="buffer">textbuffer_pkglog</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area12">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="button_pkglog_close">
+                <property name="label" translatable="yes">gtk-close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <signal name="clicked" handler="on_button_pkglog_close_clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">button_pkglog_close</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkTextBuffer" id="textbuffer_pkglog"/>
 </interface>

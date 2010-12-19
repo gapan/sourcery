@@ -388,6 +388,31 @@ class GSlackBuild:
 		self.dlg_exec.show()
 		self.execute_pending()
 
+	def fetchpkg(self, pkg, pkgver):
+		global canceltask
+		canceltask = False
+		pkgstr = pkg+':'+pkgver
+		process = subprocess.Popen(['slapt-src', '-y', '-f', pkgstr], shell=False)
+		while not canceltask:
+			while gtk.events_pending():
+				gtk.main_iteration()
+			self.pb_exec.pulse()
+			status = process.poll()
+			time.sleep(0.1)
+			if status != None:
+				break
+		if status == None:
+			os.killpg(process.pid, signal.SIGKILL)
+		if canceltask:
+			canceltask = False
+			return 127
+		elif status != 0:
+			canceltask = False
+			return 2
+		else:
+			canceltask = False
+			return 0
+
 	def installpkg(self, pkg, pkgver):
 		global canceltask
 		canceltask = False
@@ -418,6 +443,7 @@ class GSlackBuild:
 			canceltask = False
 			return 127
 		elif status != 0:
+			self.dlg_pkglog.set_title(_('Build log for')+' '+pkg+'-'+pkgver)
 			canceltask = False
 			return 1
 		else:
@@ -446,31 +472,55 @@ class GSlackBuild:
 			gtk.main_iteration()
 		totaltasks = len(self.ls_summary)
 		currentpos = 0
-		step = 1/float(totaltasks)
+		step = 1/float(totaltasks*2)
 		self.pb_execoverall.set_fraction(0)
 		self.pb_exec.set_fraction(0)
 		for i in self.ls_summary:
 			pkg, pkgver, action = i[1], i[2], i[3]
 			if action == PkgAction.Install:
-				self.lb_exec.set_text(_('Installing')+' '+pkg+'-'+pkgver+'...')
-				retval = self.installpkg(pkg, pkgver)
+				self.lb_exec.set_text(_('Downloading source files for')+' '+pkg+'-'+pkgver+'...')
+				retval = self.fetchpkg(pkg, pkgver)
+				currentpos = currentpos + step
+				self.pb_execoverall.set_fraction(currentpos)
+				if retval == 0:
+					self.lb_exec.set_text(_('Compiling')+' '+pkg+'-'+pkgver+'...')
+					retval = self.installpkg(pkg, pkgver)
 			elif action == PkgAction.Reinstall:
-				self.lb_exec.set_text(_('Reinstalling')+' '+pkg+'-'+pkgver+'...')
-				retval = self.installpkg(pkg, pkgver)
+				self.lb_exec.set_text(_('Downloading source files for')+' '+pkg+'-'+pkgver+'...')
+				retval = self.fetchpkg(pkg, pkgver)
+				currentpos = currentpos + step
+				self.pb_execoverall.set_fraction(currentpos)
+				if retval == 0:
+					self.lb_exec.set_text(_('Compiling')+' '+pkg+'-'+pkgver+'...')
+					retval = self.installpkg(pkg, pkgver)
 			elif action == PkgAction.Remove:
 				self.lb_exec.set_text(_('Removing')+' '+pkg+'...')
 				retval = self.removepkg(pkg)
+				currentpos = currentpos + step
+				self.pb_execoverall.set_fraction(currentpos)
 			if retval != 0:
 				break
 			currentpos = currentpos + step
 			self.pb_execoverall.set_fraction(currentpos)
+		while gtk.events_pending():
+			gtk.main_iteration()
 		pending = []
 		self.ls_summary.clear()
 		self.refresh_pkglist()
 		self.dlg_exec.hide()
 		if retval == 0:
 			self.dlg_success.show()
+		# retval = 1 means there was an error during building
+		# the package
 		elif retval == 1:
+			self.btn_pkginstallerror_log.set_sensitive(True)
+			self.lb_pkginstallerror.set_text(_('There was an error while compiling %s %s. All pending actions will be purged from the processing queue. You can review the log file for any errors during compiling.') %(pkg, pkgver))
+			self.show_pkg_install_error_dlg(pkg, pkgver)
+		# retval = 2 means there was an error during downloading
+		# the sources
+		elif retval == 2:
+			self.btn_pkginstallerror_log.set_sensitive(False)
+			self.lb_pkginstallerror.set_text(_('There was an error while downloading source files for %s %s. All pending actions will be purged from the processing queue.') %(pkg, pkgver))
 			self.show_pkg_install_error_dlg(pkg, pkgver)
 		else:
 			self.dlg_canceled.show()
@@ -494,13 +544,26 @@ class GSlackBuild:
 		self.dlg_updateerror.hide()
 
 	def show_pkg_install_error_dlg(self, pkg, pkgver):
-		self.lb_pkginstallerror.set_text(_('There was an error while installing %s %s. All pending actions will be purged from the processing queue.') %(pkg, pkgver))
 		self.dlg_pkginstallerror.show()
 
 	def on_button_pkginstallerror_close_clicked(self, widget):
 		self.dlg_pkginstallerror.hide()
 		# Unmark all pending actions if an error has occured
 		self.on_menuitem_unmarkall_activate(None)
+
+	def on_button_pkginstallerror_log_clicked(self, widget):
+		# get the pkg name and ver from the window title
+		# weird, but it works
+		logfile = logdir+'/'+self.dlg_pkglog.get_title().partition(_('Build log for')+' ')[2]
+		f = open(logfile)
+		try:
+			log = f.read().decode('utf8')
+		except UnicodeDecodeError:
+			log = f.read().decode('latin1')
+		self.txt_pkglog.set_text(log)
+		self.dlg_pkginstallerror.hide()
+		self.dlg_pkglog.show()
+		f.close()
 
 	def on_button_cacheupdate_cancel_clicked(self, widget):
 		global canceltask
@@ -514,11 +577,17 @@ class GSlackBuild:
 	def on_button_pkginfo_close_clicked(self, widget):
 		self.dlg_pkginfo.hide()
 
+	def on_button_pkglog_close_clicked(self, widget):
+		self.dlg_pkglog.hide()
+
+	def on_dialog_pkglog_delete_event(self, widget, event):
+		self.dlg_pkglog.hide()
+		return True
+	
 	def on_dialog_iconlegend_delete_event(self, widget, event):
 		self.dlg_iconlegend.hide()
 		return True
-
-
+	
 	def on_button_iconlegend_close_clicked(self, widget):
 		self.dlg_iconlegend.hide()
 
@@ -624,6 +693,8 @@ class GSlackBuild:
 		#
 		self.dlg_pkginstallerror = builder.get_object('dialog_pkginstallerror')
 		self.btn_pkginstallerror_close = builder.get_object('button_pkginstallerror_close')
+		self.btn_pkginstallerror_log = builder.get_object('button_pkginstallerror_log')
+		
 		self.lb_pkginstallerror = builder.get_object('label_pkginstallerror')
 
 		#
@@ -664,6 +735,13 @@ class GSlackBuild:
 		self.im_legend_tobereinstalled.set_from_pixbuf(Icon.reinstall)
 		self.im_legend_toberemoved = builder.get_object('image_legend_toberemoved')
 		self.im_legend_toberemoved.set_from_pixbuf(Icon.remove)
+
+		#
+		# Pkg log dialog
+		#
+		self.dlg_pkglog = builder.get_object('dialog_pkglog')
+		self.btn_pkglog_close = builder.get_object('button_pkglog_close')
+		self.txt_pkglog = builder.get_object('textbuffer_pkglog')
 
 		# Set default window size
 		self.set_default_window_size()
