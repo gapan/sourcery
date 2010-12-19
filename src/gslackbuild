@@ -24,6 +24,7 @@ gtk.glade.textdomain("gslackbuild")
 # size
 config_file = 'gslackbuild.conf'
 slackbuilds_data = '/usr/src/slapt-src/slackbuilds_data'
+logdir = '/var/log/gslackbuild'
 
 # Icons locations should be changed before final release
 class Icon:
@@ -398,7 +399,9 @@ class GSlackBuild:
 		# fail by default in such cases and check the logs for
 		# what happened.
 		# shell=True is needed to the pipe to work
-		process = subprocess.Popen(['yes n|slapt-src -y -i '+pkg+':'+pkgver], shell=True, close_fds=True, preexec_fn=os.setsid)
+		logfile = logdir+'/'+pkg+'-'+pkgver
+		f = open(logfile, 'w')
+		process = subprocess.Popen(['yes n|slapt-src -y -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
 		while not canceltask:
 			while gtk.events_pending():
 				gtk.main_iteration()
@@ -407,6 +410,8 @@ class GSlackBuild:
 			time.sleep(0.1)
 			if status != None:
 				break
+		f.close()
+		subprocess.Popen(['sed', '-i', '/^yes:/d', logfile], shell=False)
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
 		if canceltask:
