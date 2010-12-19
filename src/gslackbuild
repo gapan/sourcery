@@ -555,15 +555,19 @@ class GSlackBuild:
 		# get the pkg name and ver from the window title
 		# weird, but it works
 		logfile = logdir+'/'+self.dlg_pkglog.get_title().partition(_('Build log for')+' ')[2]
-		f = open(logfile)
 		try:
-			log = f.read().decode('utf8')
-		except UnicodeDecodeError:
-			log = f.read().decode('latin1')
-		self.txt_pkglog.set_text(log)
+			f = open(logfile)
+			try:
+				log = f.read().decode('utf8')
+			except UnicodeDecodeError:
+				log = f.read().decode('latin1')
+			self.txt_pkglog.set_text(log)
+
+			f.close()
+		except IOError:
+			self.txt_pkglog.set_text(_('Not available'))
 		self.dlg_pkginstallerror.hide()
 		self.dlg_pkglog.show()
-		f.close()
 
 	def on_button_cacheupdate_cancel_clicked(self, widget):
 		global canceltask
