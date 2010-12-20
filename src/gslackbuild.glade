@@ -36,6 +36,14 @@
       <column type="gchararray"/>
     </columns>
   </object>
+  <object class="GtkListStore" id="liststore_loglist">
+    <columns>
+      <!-- column-name pkgname -->
+      <column type="gchararray"/>
+      <!-- column-name pkgver -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
   <object class="GtkWindow" id="gslackbuild">
     <property name="title" translatable="yes">gSlackBuild</property>
     <property name="window_position">center</property>
@@ -175,6 +183,26 @@
                         <property name="image">image12</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="on_menuitem_getinfo_activate"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem_view">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_View</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu5">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkMenuItem" id="menuitem_logs">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">SlackBuild logs</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_logs_activate"/>
                       </object>
                     </child>
                   </object>
@@ -1728,4 +1756,132 @@
     </action-widgets>
   </object>
   <object class="GtkTextBuffer" id="textbuffer_pkglog"/>
+  <object class="GtkDialog" id="dialog_loglist">
+    <property name="height_request">400</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">SlackBuild logs</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-on-parent</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="type_hint">normal</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="skip_pager_hint">True</property>
+    <property name="transient_for">gslackbuild</property>
+    <signal name="delete_event" handler="on_dialog_loglist_delete_event"/>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox13">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child>
+          <object class="GtkVBox" id="vbox7">
+            <property name="visible">True</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">10</property>
+            <child>
+              <object class="GtkLabel" id="label22">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Select the package you want to view the build log for:</property>
+                <property name="wrap">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="scrolledwindow5">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="hscrollbar_policy">automatic</property>
+                <property name="vscrollbar_policy">automatic</property>
+                <property name="shadow_type">in</property>
+                <child>
+                  <object class="GtkTreeView" id="treeview_loglist">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="model">liststore_loglist</property>
+                    <property name="headers_clickable">False</property>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="treeviewcolumn_loglist_name">
+                        <property name="title">pkgname</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertext_loglist_name"/>
+                          <attributes>
+                            <attribute name="text">0</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="treeviewcolumn_loglist_ver">
+                        <property name="title">pkgver</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertext_loglist_ver"/>
+                          <attributes>
+                            <attribute name="text">1</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area13">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="button_loglist_close">
+                <property name="label" translatable="yes">gtk-close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <signal name="clicked" handler="on_button_loglist_close_clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_loglist_view">
+                <property name="label" translatable="yes">View log</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="on_button_loglist_view_clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">button_loglist_close</action-widget>
+      <action-widget response="0">button_loglist_view</action-widget>
+    </action-widgets>
+  </object>
 </interface>

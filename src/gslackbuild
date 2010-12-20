@@ -371,6 +371,13 @@ class GSlackBuild:
 	def on_menuitem_legend_activate(self, widget):
 		self.dlg_iconlegend.show()
 
+	def on_menuitem_logs_activate(self, widget):
+		self.ls_loglist.clear()
+		if os.path.isdir(logdir):
+			for file in os.listdir(logdir):
+				self.ls_loglist.append(file.rsplit('-', 1))
+		self.dlg_loglist.show()
+
 	def on_dialog_errorcache_delete_event(self, widget, event):
 		self.dlg_errorcache.hide()
 		return True
@@ -436,6 +443,7 @@ class GSlackBuild:
 			if status != None:
 				break
 		f.close()
+		# removing any redundant output from the yes command
 		subprocess.Popen(['sed', '-i', '/^yes:/d', logfile], shell=False)
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
@@ -562,7 +570,6 @@ class GSlackBuild:
 			except UnicodeDecodeError:
 				log = f.read().decode('latin1')
 			self.txt_pkglog.set_text(log)
-
 			f.close()
 		except IOError:
 			self.txt_pkglog.set_text(_('Not available'))
@@ -594,6 +601,33 @@ class GSlackBuild:
 	
 	def on_button_iconlegend_close_clicked(self, widget):
 		self.dlg_iconlegend.hide()
+
+	def on_dialog_loglist_delete_event(self, widget, event):
+		self.dlg_loglist.hide()
+		return True
+
+	def on_button_loglist_view_clicked(self, widget):
+		self.dlg_loglist.hide()
+		selectedlog = self.tv_loglist.get_selection()
+		self.ls_loglist, iter = selectedlog.get_selected()
+		pkg = self.ls_loglist.get_value(iter, 0)
+		ver = self.ls_loglist.get_value(iter, 1)
+		self.dlg_pkglog.set_title(_('Build log for')+' '+pkg+'-'+ver)
+		logfile = logdir+'/'+pkg+'-'+ver
+		try:
+			f = open(logfile)
+			try:
+				log = f.read().decode('utf8')
+			except UnicodeDecodeError:
+				log = f.read().decode('latin1')
+			self.txt_pkglog.set_text(log)
+			f.close()
+		except IOError:
+			self.txt_pkglog.set_text(_('Error reading log file.'))
+		self.dlg_pkglog.show()
+
+	def on_button_loglist_close_clicked(self, widget):
+		self.dlg_loglist.hide()
 
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
@@ -634,6 +668,8 @@ class GSlackBuild:
 		self.mi_reinstall = builder.get_object('menuitem_reinstall')
 		self.mi_remove = builder.get_object('menuitem_remove')
 		self.mi_getinfo = builder.get_object('menuitem_getinfo')
+		# View menu
+		self.mi_logs = builder.get_object('menuitem_logs')
 		# right click menu
 		self.menu_pkgaction = builder.get_object('menu_pkgaction')
 		self.mi_pkg_unmark = builder.get_object('menuitem_pkg_unmark')
@@ -747,6 +783,19 @@ class GSlackBuild:
 		self.btn_pkglog_close = builder.get_object('button_pkglog_close')
 		self.txt_pkglog = builder.get_object('textbuffer_pkglog')
 
+		#
+		# Log list dialog
+		#
+		self.dlg_loglist = builder.get_object('dialog_loglist')
+		self.ls_loglist = builder.get_object('liststore_loglist')
+		self.tv_loglist = builder.get_object('treeview_loglist')
+		self.tvc_loglist_name = builder.get_object('treeviewcolumn_loglist_name')
+		self.tvc_loglist_ver = builder.get_object('treeviewcolumn_loglist_ver')
+		self.tvc_loglist_name.set_title(_('Name'))
+		self.tvc_loglist_ver.set_title(_('Version'))
+		self.cr_loglist_name = builder.get_object('cellrenderer_loglist_name')
+		self.cr_loglist_ver = builder.get_object('cellrenderer_loglist_ver')
+		
 		# Set default window size
 		self.set_default_window_size()
 		
