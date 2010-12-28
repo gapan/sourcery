@@ -1899,6 +1899,7 @@
     <property name="type_hint">normal</property>
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
+    <property name="transient_for">sourcery</property>
     <property name="program_name">Sourcery</property>
     <property name="copyright">Copyright &#xA9; 2010 George Vlahavas</property>
     <property name="comments" translatable="yes">A graphical frontend to slapt-src, a utility to build and install packages from source using SlackBuilds and/or SLKBUILDs.</property>
