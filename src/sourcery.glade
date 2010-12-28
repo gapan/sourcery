@@ -44,8 +44,8 @@
       <column type="gchararray"/>
     </columns>
   </object>
-  <object class="GtkWindow" id="gslackbuild">
-    <property name="title" translatable="yes">gSlackBuild</property>
+  <object class="GtkWindow" id="sourcery">
+    <property name="title" translatable="yes">Sourcery</property>
     <property name="window_position">center</property>
     <signal name="destroy" handler="gtk_main_quit"/>
     <child>
@@ -427,7 +427,7 @@
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
     <property name="focus_on_map">False</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <signal name="delete_event" handler="on_dialog_errorcache_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox1">
@@ -623,7 +623,7 @@
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <signal name="delete_event" handler="on_dialog_summary_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox2">
@@ -790,7 +790,7 @@
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox3">
         <property name="visible">True</property>
@@ -892,7 +892,7 @@
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <property name="text" translatable="yes">All tasks have been executed succesfully.</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox4">
@@ -940,7 +940,7 @@
     <property name="type_hint">normal</property>
     <property name="urgency_hint">True</property>
     <property name="deletable">False</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <property name="message_type">warning</property>
     <property name="text" translatable="yes">Canceled. Some tasks may have already been completed.</property>
     <child internal-child="vbox">
@@ -989,7 +989,7 @@
     <property name="skip_pager_hint">True</property>
     <property name="urgency_hint">True</property>
     <property name="deletable">False</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <property name="message_type">error</property>
     <property name="text" translatable="yes">Error updating package list.</property>
     <child internal-child="vbox">
@@ -1039,7 +1039,7 @@
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
     <property name="focus_on_map">False</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox9">
         <property name="visible">True</property>
@@ -1135,7 +1135,7 @@
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox8">
         <property name="visible">True</property>
@@ -1210,7 +1210,7 @@
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <child>
       <object class="GtkLabel" id="label5">
         <property name="visible">True</property>
@@ -1771,7 +1771,7 @@
     <property name="type_hint">normal</property>
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
-    <property name="transient_for">gslackbuild</property>
+    <property name="transient_for">sourcery</property>
     <signal name="delete_event" handler="on_dialog_loglist_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox13">
