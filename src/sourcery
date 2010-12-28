@@ -29,11 +29,11 @@ resolve_deps = True
 
 # Icons locations should be changed before final release
 class Icon:
-	avail = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_available.png')
-	installed = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_installed.png')
-	install = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_install.png')
-	reinstall = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_reinstall.png')
-	remove = gtk.gdk.pixbuf_new_from_file('icons/pkg_action_remove.png')
+	avail = gtk.gdk.pixbuf_new_from_file('pixmaps/pkg_action_available.png')
+	installed = gtk.gdk.pixbuf_new_from_file('pixmaps/pkg_action_installed.png')
+	install = gtk.gdk.pixbuf_new_from_file('pixmaps/pkg_action_install.png')
+	reinstall = gtk.gdk.pixbuf_new_from_file('pixmaps/pkg_action_reinstall.png')
+	remove = gtk.gdk.pixbuf_new_from_file('pixmaps/pkg_action_remove.png')
 
 class PkgAction:
 	DoNothing = 0
