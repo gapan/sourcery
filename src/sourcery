@@ -416,6 +416,9 @@ class Sourcery:
 				self.ls_loglist.append(file.rsplit('-', 1))
 		self.dlg_loglist.show()
 
+	def on_menuitem_about_activate(self, widget):
+		self.dlg_about.show()
+
 	def on_dialog_errorcache_delete_event(self, widget, event):
 		self.dlg_errorcache.hide()
 		return True
@@ -667,6 +670,13 @@ class Sourcery:
 	def on_button_loglist_close_clicked(self, widget):
 		self.dlg_loglist.hide()
 
+	def on_aboutdialog_response(self, widget, data=None):
+		self.dlg_about.hide()
+
+	def on_aboutdialog_delete_event(self, widget, event):
+		self.dlg_about.hide()
+		return True
+
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
 
@@ -831,7 +841,12 @@ class Sourcery:
 		self.tvc_loglist_ver.set_title(_('Version'))
 		self.cr_loglist_name = builder.get_object('cellrenderer_loglist_name')
 		self.cr_loglist_ver = builder.get_object('cellrenderer_loglist_ver')
-		
+	
+		#
+		# About dialog
+		#
+		self.dlg_about = builder.get_object('aboutdialog')
+
 		# Set default window size
 		self.set_default_window_size()
 		
