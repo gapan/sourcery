@@ -1544,6 +1544,7 @@
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">Not installed</property>
+                    <property name="wrap">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -1554,7 +1555,8 @@
                   <object class="GtkLabel" id="label17">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">A version of this package is already installed</property>
+                    <property name="label" translatable="yes">A package with this name is already installed</property>
+                    <property name="wrap">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -1567,7 +1569,8 @@
                   <object class="GtkLabel" id="label18">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">To be installed</property>
+                    <property name="label" translatable="yes">The package is going to be installed</property>
+                    <property name="wrap">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -1580,7 +1583,8 @@
                   <object class="GtkLabel" id="label19">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">To be reinstalled</property>
+                    <property name="label" translatable="yes">A package with this name is already installed and is going to be reinstalled</property>
+                    <property name="wrap">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -1593,7 +1597,8 @@
                   <object class="GtkLabel" id="label20">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">To be removed</property>
+                    <property name="label" translatable="yes">The package is going to be removed</property>
+                    <property name="wrap">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>

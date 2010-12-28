@@ -13,18 +13,18 @@ import urllib2
 import locale
 import gettext
 import gtk.glade
-gettext.bindtextdomain("gslackbuild", "/usr/share/locale")
-gettext.textdomain("gslackbuild")
-gettext.install("gslackbuild", "/usr/share/locale", unicode=1)
-gtk.glade.bindtextdomain("gslackbuild", "/usr/share/locale")
-gtk.glade.textdomain("gslackbuild")
+gettext.bindtextdomain("sourcery", "/usr/share/locale")
+gettext.textdomain("sourcery")
+gettext.install("sourcery", "/usr/share/locale", unicode=1)
+gtk.glade.bindtextdomain("sourcery", "/usr/share/locale")
+gtk.glade.textdomain("sourcery")
 
 
 # the config_file will probably only be used for remembering the window
 # size
-config_file = 'gslackbuild.conf'
+config_file = 'sourcery.conf'
 slackbuilds_data = '/usr/src/slapt-src/slackbuilds_data'
-logdir = '/var/log/gslackbuild'
+logdir = '/var/log/sourcery'
 resolve_deps = True
 
 # Icons locations should be changed before final release
@@ -41,7 +41,7 @@ class PkgAction:
 	Reinstall = 2
 	Remove = 3
 
-class GSlackBuild:
+class Sourcery:
 	def set_default_window_size(self):
 		w = gtk.gdk.get_default_root_window()
 		p = gtk.gdk.atom_intern('_NET_WORKAREA')
@@ -672,15 +672,15 @@ class GSlackBuild:
 
 	def __init__(self):
 		builder = gtk.Builder()
-		if os.path.exists('gslackbuild.glade'):
-			builder.add_from_file('gslackbuild.glade')
-		elif os.path.exists('/usr/share/salixtools/gslackbuild/gslackbuild.glade'):
-			builder.add_from_file('/usr/share/salixtools/gslackbuild/gslackbuild.glade')
+		if os.path.exists('sourcery.glade'):
+			builder.add_from_file('sourcery.glade')
+		elif os.path.exists('/usr/share/salixtools/sourcery/sourcery.glade'):
+			builder.add_from_file('/usr/share/salixtools/sourcery/sourcery.glade')
 
 		#
 		# Main window objects
 		#
-		self.window = builder.get_object('gslackbuild')
+		self.window = builder.get_object('sourcery')
 		self.tv_pkg = builder.get_object('treeview_pkg')
 		self.tv_pkg.set_rules_hint(True)
 		self.tvc_status = builder.get_object('treeviewcolumn_status')
@@ -840,6 +840,6 @@ class GSlackBuild:
 		self.refresh_pkglist()
 
 if __name__ == "__main__":
-	app = GSlackBuild()
+	app = Sourcery()
 	app.window.show()
 	gtk.main()
