@@ -685,8 +685,8 @@ class Sourcery:
 		builder = gtk.Builder()
 		if os.path.exists('sourcery.glade'):
 			builder.add_from_file('sourcery.glade')
-		elif os.path.exists('/usr/share/salixtools/sourcery/sourcery.glade'):
-			builder.add_from_file('/usr/share/salixtools/sourcery/sourcery.glade')
+		elif os.path.exists('/usr/share/sourcery/sourcery.glade'):
+			builder.add_from_file('/usr/share/sourcery/sourcery.glade')
 
 		#
 		# Main window objects
