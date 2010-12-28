@@ -21,11 +21,6 @@ for i in 48 32 24 22 16; do
 	2> /dev/null
 	install -m 644 icons/sourcery-$i.png \
 	$DESTDIR/usr/share/icons/hicolor/${i}x${i}/apps/sourcery.png
-	install -d -m 755 \
-	$DESTDIR/usr/share/icons/hicolor/${i}x${i}/actions/ \
-	2> /dev/null
-	install -m 644 icons/sourcery-vimdiff-$i.png \
-	$DESTDIR/usr/share/icons/hicolor/${i}x${i}/actions/sourcery-vimdiff.png
 done
 
 for i in `ls po/*.po|sed "s/po\/\(.*\)\.po/\1/"`; do

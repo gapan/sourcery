@@ -4,13 +4,13 @@ xgettext --from-code=utf-8 \
 	-x po/EXCLUDE \
 	-L Glade \
 	-o po/sourcery.pot \
-	sourcery.glade
+	src/sourcery.glade
 
 xgettext --from-code=utf-8 \
 	-j \
 	-L Python \
 	-o po/sourcery.pot \
-	sourcery
+	src/sourcery
 
 intltool-extract --type="gettext/ini" sourcery.desktop.in
 intltool-extract --type="gettext/ini" sourcery-kde.desktop.in
