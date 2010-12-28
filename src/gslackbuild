@@ -25,6 +25,7 @@ gtk.glade.textdomain("gslackbuild")
 config_file = 'gslackbuild.conf'
 slackbuilds_data = '/usr/src/slapt-src/slackbuilds_data'
 logdir = '/var/log/gslackbuild'
+resolve_deps = True
 
 # Icons locations should be changed before final release
 class Icon:
@@ -66,9 +67,15 @@ class GSlackBuild:
 					pkglist2.append([name, ver])
 		return status, pkglist
 
+	def pkg_installed(self):
+		pkg_varlogpkg = commands.getoutput('ls /var/log/packages').splitlines()
+		pkg_installed = []
+		for i in pkg_varlogpkg:
+			pkg_installed.append(i.rpartition('-')[0].rpartition('-')[0].rpartition('-')[0])
+		return pkg_installed
+
 	def refresh_pkglist(self):
 		global pending
-		global pkg_varlogpkg
 		self.ls_pkg.clear()
 		# The list is cleared, no item is selected, so all menu
 		# options for package actions should be disabled
@@ -79,11 +86,7 @@ class GSlackBuild:
 		self.mi_getinfo.set_sensitive(False)
 		cmdstatus, pkglist = self.slaptsrclist(self.entry_search.get_text())
 		if cmdstatus == 0:
-			pkg_varlogpkg = commands.getoutput('ls /var/log/packages').splitlines()
-			pkg_installed = []
-			for i in pkg_varlogpkg:
-				pkg_installed.append(i.rpartition('-')[0].rpartition('-')[0].rpartition('-')[0])
-
+			pkg_installed = self.pkg_installed()
 			for i in pkglist:
 				action = 0
 				pkgname, pkgver, pkgdesc = i
@@ -112,6 +115,23 @@ class GSlackBuild:
 		else:
 			self.dlg_updateerror.show()
 
+	def get_pkgver(self, pkg):
+		cmd = 'grep -A10 "^SLACKBUILD NAME: '+pkg+'$" '+slackbuilds_data+'|grep "^SLACKBUILD VERSION: "|sed "s/^SLACKBUILD VERSION: \(.*\)/\\1/"'
+		status, pkgver = commands.getstatusoutput(cmd)
+		return pkgver
+
+	def get_deps(self, pkglist):
+		deps = []
+		for pkg, pkgver in pkglist:
+			cmd = 'LANG=C yes n|slapt-src -i '+pkg+':'+pkgver+'|grep -A10 "The following dependent slackbuilds"|grep -v "The following dependent slackbuilds"|grep -B10 "Do you want to continue"|grep -v "Do you want to continue"'
+			status, data = commands.getstatusoutput(cmd)
+			newdeps = data.partition('\n ')[2].rsplit(' ')
+			for i in newdeps:
+				if i is not '':
+					if i not in deps:
+						deps.append(i)
+		return deps
+
 	def get_pkg_info(self, pkg, pkgver):
 		self.dlg_fetchpkginfo.show()
 		while gtk.events_pending():
@@ -135,7 +155,7 @@ class GSlackBuild:
 			elif 'SLACKBUILD FILES: ' in i:
 				files = i.partition('FILES: ')[2].rsplit(' ')
 			elif 'SLACKBUILD REQUIRES: ' in i:
-				deps = i.partition('REQUIRES: ')[2].rsplit(',')
+				deps = i.partition('REQUIRES: ')[2].replace(',',' ').rsplit(' ')
 		if 'slack-desc' in files:
 			try:
 				f = urllib2.urlopen(sourceurl+location+'slack-desc')
@@ -205,6 +225,25 @@ class GSlackBuild:
 
 	def on_toolbutton_exec_clicked(self, widget):
 		global pending
+		if resolve_deps == True:
+			requested_pkg = []
+			# get a list of all dependencies for all
+			# requested packages
+			for i in pending:
+				if i[2] == PkgAction.Install:
+					requested_pkg.append([i[0], i[1]])
+			# add all dependencies to the processing
+			# liststore
+			for pkg in self.get_deps(requested_pkg):
+				pkgver = self.get_pkgver(pkg)
+				desc = _('%s %s is going to be installed as a dependency') % (pkg, pkgver)
+				self.ls_summary.append([desc, pkg, pkgver, PkgAction.Install])
+				# if a package is already going to be
+				# installed as a dependency, remove it
+				# from the pending list, it's going to
+				# be installed anyway
+				if [pkg, pkgver, PkgAction.Install] in pending:
+					pending.remove([pkg, pkgver, PkgAction.Install])
 		for i in pending:
 			if i[2] == PkgAction.Install:
 				desc = _('%s %s is going to be installed') % (i[0], i[1])
@@ -233,16 +272,13 @@ class GSlackBuild:
 
 	def update_menus(self):
 		global pending
-		global pkg_varlogpkg
 		selectedline = self.tv_pkg.get_selection()
 		self.ls_pkg, iter = selectedline.get_selected()
 		pkg = self.ls_pkg.get_value(iter, 1)
 		ver = self.ls_pkg.get_value(iter, 2)
 		installed = self.ls_pkg.get_value(iter, 4)
 		action = self.ls_pkg.get_value(iter, 5)
-		pkg_installed = []
-		for i in pkg_varlogpkg:
-			pkg_installed.append(i.rpartition('-')[0].rpartition('-')[0].rpartition('-')[0])
+		pkg_installed = self.pkg_installed()
 		if installed:
 			self.mi_install.set_sensitive(False)
 			self.mi_pkg_install.hide()
@@ -346,6 +382,8 @@ class GSlackBuild:
 	def on_menuitem_install_activate(self, widget):
 		selectedline = self.tv_pkg.get_selection()
 		self.ls_pkg, iter = selectedline.get_selected()
+		pkg = self.ls_pkg.get_value(iter, 1)
+		ver = self.ls_pkg.get_value(iter, 2)
 		self.ls_pkg.set_value(iter, 5, PkgAction.Install)
 		self.update_menus()
 
@@ -757,8 +795,6 @@ class GSlackBuild:
 		self.txt_pkginfo_readme = builder.get_object('textbuffer_pkginfo_readme')
 		global pending
 		pending = []
-		global pkg_varlogpkg	
-		pkg_varlogpkg = commands.getoutput('ls /var/log/packages').splitlines()
 	
 		#
 		# Icon legend dialog
