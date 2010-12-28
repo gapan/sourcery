@@ -15,6 +15,9 @@ install -d -m 755 $DESTDIR/var/log/sourcery
 install -d -m 755 $DESTDIR/usr/share/icons/hicolor/scalable/apps/
 install -m 644 icons/sourcery.svg $DESTDIR/usr/share/icons/hicolor/scalable/apps/
 
+install -d -m 755 $DESTDIR/usr/share/sourcery/pixmaps
+install -m 644 pixmaps/* $DESTDIR/usr/share/sourcery/pixmaps/
+
 for i in 48 32 24 22 16; do
 	install -d -m 755 \
 	$DESTDIR/usr/share/icons/hicolor/${i}x${i}/apps/ \
