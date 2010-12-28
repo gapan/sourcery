@@ -47,6 +47,7 @@
   <object class="GtkWindow" id="sourcery">
     <property name="title" translatable="yes">Sourcery</property>
     <property name="window_position">center</property>
+    <property name="icon_name">sourcery</property>
     <signal name="destroy" handler="gtk_main_quit"/>
     <child>
       <object class="GtkVBox" id="vbox1">
@@ -889,6 +890,7 @@
     <property name="modal">True</property>
     <property name="window_position">center-on-parent</property>
     <property name="destroy_with_parent">True</property>
+    <property name="icon_name">sourcery</property>
     <property name="type_hint">normal</property>
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
@@ -1208,6 +1210,7 @@
     <property name="modal">True</property>
     <property name="window_position">center-on-parent</property>
     <property name="destroy_with_parent">True</property>
+    <property name="icon_name">sourcery</property>
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
