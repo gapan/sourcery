@@ -1,0 +1,11 @@
+[Desktop Entry]
+_Name=Sourcery SlackBuild Manager
+_Comment=A graphical frontend to slapt-src
+Exec=gksu sourcery
+Icon=sourcery
+Terminal=false
+Type=Application
+Categories=Application;System;;
+StartupNotify=true
+Encoding=UTF-8
+OnlyShowIn=KDE

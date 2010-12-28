@@ -236,7 +236,7 @@ class Sourcery:
 			# liststore
 			for pkg in self.get_deps(requested_pkg):
 				pkgver = self.get_pkgver(pkg)
-				desc = _('%s %s is going to be installed as a dependency') % (pkg, pkgver)
+				desc = _('%(pkg)s %(pkgver)s is going to be installed as a dependency') % {'pkg' : pkg, 'pkgver' : pkgver}
 				self.ls_summary.append([desc, pkg, pkgver, PkgAction.Install])
 				# if a package is already going to be
 				# installed as a dependency, remove it
@@ -246,11 +246,11 @@ class Sourcery:
 					pending.remove([pkg, pkgver, PkgAction.Install])
 		for i in pending:
 			if i[2] == PkgAction.Install:
-				desc = _('%s %s is going to be installed') % (i[0], i[1])
+				desc = _('%(pkg)s %(pkgver)s is going to be installed') %{'pkg' : i[0], 'pkgver' : i[1]}
 			elif i[2] == PkgAction.Reinstall:
-				desc = _('%s %s is going to be reinstalled') % (i[0], i[1])
+				desc = _('%(pkg)s %(pkgver)s is going to be reinstalled') %{'pkg' : i[0], 'pkgver' : i[1]}
 			elif i[2] == PkgAction.Remove:
-				desc = _('%s %s is going to be removed') % (i[0], i[1])
+				desc = _('%(pkg)s %(pkgver)s is going to be removed') %{'pkg' : i[0], 'pkgver' : i[1]}
 			self.ls_summary.append([desc, i[0], i[1], i[2]])
 		self.dlg_summary.show()
 	
@@ -563,13 +563,13 @@ class Sourcery:
 		# the package
 		elif retval == 1:
 			self.btn_pkginstallerror_log.set_sensitive(True)
-			self.lb_pkginstallerror.set_text(_('There was an error while compiling %s %s. All pending actions will be purged from the processing queue. You can review the log file for any errors during compiling.') %(pkg, pkgver))
+			self.lb_pkginstallerror.set_text(_('There was an error while compiling %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue. You can review the log file for any errors during compiling.') % {'pkg' : pkg, 'pkgver' : pkgver})
 			self.show_pkg_install_error_dlg(pkg, pkgver)
 		# retval = 2 means there was an error during downloading
 		# the sources
 		elif retval == 2:
 			self.btn_pkginstallerror_log.set_sensitive(False)
-			self.lb_pkginstallerror.set_text(_('There was an error while downloading source files for %s %s. All pending actions will be purged from the processing queue.') %(pkg, pkgver))
+			self.lb_pkginstallerror.set_text(_('There was an error while downloading source files for %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue.') % {'pkg' : pkg, 'pkgver' : pkgver})
 			self.show_pkg_install_error_dlg(pkg, pkgver)
 		else:
 			self.dlg_canceled.show()
