@@ -44,10 +44,13 @@ class PkgAction:
 
 class Sourcery:
 	def set_default_window_size(self):
-		w = gtk.gdk.get_default_root_window()
-		p = gtk.gdk.atom_intern('_NET_WORKAREA')
-		width, height = w.property_get(p)[2][2:4]
-		self.window.set_default_size(int(width*0.8), int(height*0.8))
+		try:
+			w = gtk.gdk.get_default_root_window()
+			p = gtk.gdk.atom_intern('_NET_WORKAREA')
+			width, height = w.property_get(p)[2][2:4]
+			self.window.set_default_size(int(width*0.8), int(height*0.8))
+		except TypeError:
+			self.window.set_default_size(700, 500)
 
 	def slaptsrclist(self, searchstring):
 		if len(searchstring) == 0:
