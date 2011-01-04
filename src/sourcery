@@ -8,6 +8,7 @@ import subprocess
 import time
 import signal
 import urllib2
+import ConfigParser
 
 # Internationalization
 import locale
@@ -22,11 +23,30 @@ gtk.glade.textdomain("sourcery")
 
 # the config_file will probably only be used for remembering the window
 # size
-config_file = 'sourcery.conf'
+config_file = '/etc/sourcery.conf'
 slackbuilds_data = '/usr/src/slapt-src/slackbuilds_data'
 logdir = '/var/log/sourcery'
 shareddir = '/usr/share/sourcery'
-resolve_deps = True
+
+class SourceryConfig:
+	config = ConfigParser.RawConfigParser()
+
+	def deps(self):
+		try:
+			self.config.read(config_file)
+			dependencies = self.config.getboolean('app', 'dependencies')
+		except (ConfigParser.NoOptionError, ConfigParser.NoSectionError):
+			dependencies = True
+		return dependencies
+
+	def write_config(self, dependencies):
+		try:
+			self.config.add_section('app')
+		except ConfigParser.DuplicateSectionError:
+			pass
+		self.config.set('app', 'dependencies', dependencies)
+		with open(config_file, 'wb') as configfile:
+			self.config.write(configfile)
 
 # Icons locations should be changed before final release
 class Icon:
@@ -127,7 +147,7 @@ class Sourcery:
 	def get_deps(self, pkglist):
 		deps = []
 		for pkg, pkgver in pkglist:
-			cmd = 'LANG=C yes n|slapt-src -i '+pkg+':'+pkgver+'|grep -A10 "The following dependent slackbuilds"|grep -v "The following dependent slackbuilds"|grep -B10 "Do you want to continue"|grep -v "Do you want to continue"'
+			cmd = 'export LANG=C;yes n|slapt-src -i '+pkg+':'+pkgver+'|grep -A10 "The following dependent slackbuilds"|grep -v "The following dependent slackbuilds"|grep -B10 "Do you want to continue"|grep -v "Do you want to continue"'
 			status, data = commands.getstatusoutput(cmd)
 			newdeps = data.partition('\n ')[2].rsplit(' ')
 			for i in newdeps:
@@ -229,7 +249,10 @@ class Sourcery:
 
 	def on_toolbutton_exec_clicked(self, widget):
 		global pending
-		if resolve_deps == True:
+
+		config = SourceryConfig()
+
+		if config.deps() == True:
 			requested_pkg = []
 			# get a list of all dependencies for all
 			# requested packages
@@ -377,6 +400,11 @@ class Sourcery:
 		self.mi_exec.set_sensitive(False)
 		self.refresh_pkglist()
 
+	def on_menuitem_prefs_activate(self, widget):
+		config = SourceryConfig()
+		self.cb_prefs_deps.set_active(config.deps())
+		self.dlg_prefs.show()
+
 	def on_menuitem_unmark_activate(self, widget):
 		selectedline = self.tv_pkg.get_selection()
 		self.ls_pkg, iter = selectedline.get_selected()
@@ -440,6 +468,18 @@ class Sourcery:
 		self.dlg_exec.show()
 		self.execute_pending()
 
+	def on_dialog_prefs_delete_event(self, widget, event):
+		self.dlg_prefs.hide()
+		return True
+
+	def on_button_prefs_apply_clicked(self, widget):
+		config = SourceryConfig()
+		config.write_config(self.cb_prefs_deps.get_active())
+		self.dlg_prefs.hide()
+
+	def on_button_prefs_cancel_clicked(self, widget):
+		self.dlg_prefs.hide()
+
 	def fetchpkg(self, pkg, pkgver):
 		global canceltask
 		canceltask = False
@@ -478,7 +518,13 @@ class Sourcery:
 		# shell=True is needed to the pipe to work
 		logfile = logdir+'/'+pkg+'-'+pkgver
 		f = open(logfile, 'w')
-		process = subprocess.Popen(['yes n|slapt-src -y -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+		
+		config = SourceryConfig()
+
+		if config.deps() == True:
+			process = subprocess.Popen(['yes n|slapt-src -y -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+		else:
+			process = subprocess.Popen(['yes n|slapt-src -y -n -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
 		while not canceltask:
 			while gtk.events_pending():
 				gtk.main_iteration()
@@ -714,6 +760,7 @@ class Sourcery:
 		self.mi_exec = builder.get_object('menuitem_exec')
 		# Edit menu
 		self.mi_unmarkall = builder.get_object('menuitem_unmarkall')
+		self.mi_prefs = builder.get_object('menuitem_prefs')
 		# Package menu
 		self.mi_unmark = builder.get_object('menuitem_unmark')
 		self.mi_install = builder.get_object('menuitem_install')
@@ -845,7 +892,15 @@ class Sourcery:
 		self.tvc_loglist_ver.set_title(_('Version'))
 		self.cr_loglist_name = builder.get_object('cellrenderer_loglist_name')
 		self.cr_loglist_ver = builder.get_object('cellrenderer_loglist_ver')
-	
+
+		#
+		# Preferences dialog
+		#
+		self.dlg_prefs = builder.get_object('dialog_prefs')
+		self.cb_prefs_deps = builder.get_object('checkbutton_prefs_deps')
+		self.btn_prefs_apply = builder.get_object('button_prefs_apply')
+		self.btn_prefs_cancel = builder.get_object('button_prefs_cancel')
+
 		#
 		# About dialog
 		#
