@@ -20,9 +20,7 @@ gettext.install("sourcery", "/usr/share/locale", unicode=1)
 gtk.glade.bindtextdomain("sourcery", "/usr/share/locale")
 gtk.glade.textdomain("sourcery")
 
-
-# the config_file will probably only be used for remembering the window
-# size
+# configuration options
 config_file = '/etc/sourcery.conf'
 slackbuilds_data = '/usr/src/slapt-src/slackbuilds_data'
 logdir = '/var/log/sourcery'
