@@ -187,7 +187,7 @@ class Sourcery:
 					if i.startswith(pkg+':'):
 						slackdesc.append(i.partition(pkg+':')[2])
 			except urllib2.httperror:
-				print 'http error'
+				slackdesc = None
 		else:
 			slackdesc = None
 		if 'README' in files:
@@ -195,7 +195,7 @@ class Sourcery:
 				f = urllib2.urlopen(sourceurl+location+'README')
 				readme = f.read().splitlines()
 			except urllib2.httperror:
-				print 'http error'
+				readme = None
 		else:
 			readme = None
 		self.dlg_fetchpkginfo.hide()
