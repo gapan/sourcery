@@ -3,10 +3,12 @@
 install -d -m 755 $DESTDIR/usr/sbin
 install -d -m 755 $DESTDIR/usr/share/applications
 install -d -m 755 $DESTDIR/usr/share/sourcery
+install -d -m 755 $DESTDIR/etc
 install -m 755 src/sourcery $DESTDIR/usr/sbin/
 install -m 644 src/sourcery.glade $DESTDIR/usr/share/sourcery/
 install -m 644 sourcery.desktop $DESTDIR/usr/share/applications/
 install -m 644 sourcery-kde.desktop $DESTDIR/usr/share/applications/
+install -m 644 sourcery.conf $DESTDIR/etc/
 
 # install the log dir
 install -d -m 755 $DESTDIR/var/log/sourcery
