@@ -32,17 +32,17 @@ class SourceryConfig:
 	def deps(self):
 		try:
 			self.config.read(config_file)
-			dependencies = self.config.getboolean('app', 'dependencies')
+			dependencies = self.config.getboolean('Sourcery', 'dependencies')
 		except (ConfigParser.NoOptionError, ConfigParser.NoSectionError):
 			dependencies = True
 		return dependencies
 
 	def write_config(self, dependencies):
 		try:
-			self.config.add_section('app')
+			self.config.add_section('Sourcery')
 		except ConfigParser.DuplicateSectionError:
 			pass
-		self.config.set('app', 'dependencies', dependencies)
+		self.config.set('Sourcery', 'dependencies', dependencies)
 		with open(config_file, 'wb') as configfile:
 			self.config.write(configfile)
 

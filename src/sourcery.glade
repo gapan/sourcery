@@ -488,7 +488,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_errorcache_close">
-                <property name="label" translatable="yes">gtk-close</property>
+                <property name="label">gtk-close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -754,7 +754,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_summary_cancel">
-                <property name="label" translatable="yes">gtk-cancel</property>
+                <property name="label">gtk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -769,7 +769,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button_summary_apply">
-                <property name="label" translatable="yes">gtk-ok</property>
+                <property name="label">gtk-ok</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -872,7 +872,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_exec_cancel">
-                <property name="label" translatable="yes">gtk-cancel</property>
+                <property name="label">gtk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -922,7 +922,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_success_ok">
-                <property name="label" translatable="yes">gtk-ok</property>
+                <property name="label">gtk-ok</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -971,7 +971,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_canceled_ok">
-                <property name="label" translatable="yes">gtk-ok</property>
+                <property name="label">gtk-ok</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1020,7 +1020,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_updateerror_ok">
-                <property name="label" translatable="yes">gtk-ok</property>
+                <property name="label">gtk-ok</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1114,7 +1114,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button_pkginstallerror_close">
-                <property name="label" translatable="yes">gtk-close</property>
+                <property name="label">gtk-close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1192,7 +1192,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_cacheupdate_cancel">
-                <property name="label" translatable="yes">gtk-cancel</property>
+                <property name="label">gtk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1491,7 +1491,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_pkginfo_close">
-                <property name="label" translatable="yes">gtk-close</property>
+                <property name="label">gtk-close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1687,7 +1687,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_iconlegend_close">
-                <property name="label" translatable="yes">gtk-close</property>
+                <property name="label">gtk-close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1752,7 +1752,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_pkglog_close">
-                <property name="label" translatable="yes">gtk-close</property>
+                <property name="label">gtk-close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1866,7 +1866,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_loglist_close">
-                <property name="label" translatable="yes">gtk-close</property>
+                <property name="label">gtk-close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2652,7 +2652,7 @@ Public License instead of this License.  But first, please read
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_prefs_cancel">
-                <property name="label" translatable="yes">gtk-cancel</property>
+                <property name="label">gtk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2667,7 +2667,7 @@ Public License instead of this License.  But first, please read
             </child>
             <child>
               <object class="GtkButton" id="button_prefs_apply">
-                <property name="label" translatable="yes">gtk-apply</property>
+                <property name="label">gtk-apply</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
