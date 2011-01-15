@@ -45,7 +45,7 @@
     </columns>
   </object>
   <object class="GtkWindow" id="sourcery">
-    <property name="title" translatable="yes">Sourcery</property>
+    <property name="title">Sourcery</property>
     <property name="window_position">center</property>
     <property name="icon_name">sourcery</property>
     <signal name="destroy" handler="gtk_main_quit"/>
