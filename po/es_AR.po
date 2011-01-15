@@ -1,0 +1,370 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Salix\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-16 00:47+0200\n"
+"PO-Revision-Date: 2011-01-15 22:23+0000\n"
+"Last-Translator: seacat <seacat.linux@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es_AR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: src/sourcery.glade:62
+msgid "_File"
+msgstr "_Archivo"
+
+#: src/sourcery.glade:69 src/sourcery.glade:270
+msgid "Update"
+msgstr "Actualizar"
+
+#: src/sourcery.glade:71 src/sourcery.glade:269
+msgid "Update local SlackBuild cache"
+msgstr "Actualizar el caché local de SlackBuild"
+
+#: src/sourcery.glade:79 src/sourcery.glade:285
+msgid "Execute"
+msgstr "Ejecutar"
+
+#: src/sourcery.glade:108
+msgid "_Edit"
+msgstr "_Editar"
+
+#: src/sourcery.glade:115
+msgid "Unmark all"
+msgstr "Desmarcar todo"
+
+#: src/sourcery.glade:144
+msgid "_Package"
+msgstr "_Paquete"
+
+#: src/sourcery.glade:151 src/sourcery.glade:530 src/sourcery.glade:532
+msgid "Unmark"
+msgstr "Desmarcar"
+
+#: src/sourcery.glade:160 src/sourcery.glade:540 src/sourcery.glade:542
+msgid "Install"
+msgstr "Instalar"
+
+#: src/sourcery.glade:170 src/sourcery.glade:550 src/sourcery.glade:552
+msgid "Reinstall"
+msgstr "Reinstalar"
+
+#: src/sourcery.glade:180 src/sourcery.glade:560
+msgid "Remove"
+msgstr "Eliminar"
+
+#: src/sourcery.glade:195 src/sourcery.glade:574
+msgid "Get information"
+msgstr "Obtener información"
+
+#: src/sourcery.glade:210
+msgid "_View"
+msgstr "_Ver"
+
+#: src/sourcery.glade:218 src/sourcery.glade:1785
+msgid "SlackBuild logs"
+msgstr "Registros de SlackBuild"
+
+#: src/sourcery.glade:230
+msgid "_Help"
+msgstr "A_yuda"
+
+#: src/sourcery.glade:237 src/sourcery.glade:1525
+msgid "Icon legend"
+msgstr "Leyenda del icono"
+
+#: src/sourcery.glade:284
+msgid "Execute pending actions"
+msgstr "Ejecutar acciones pendientes"
+
+#: src/sourcery.glade:323
+msgid "Search: "
+msgstr "Buscar:"
+
+#: src/sourcery.glade:438 src/sourcery.glade:1051
+msgid "Error"
+msgstr "Error"
+
+#: src/sourcery.glade:471
+msgid ""
+"There was an error while updating the SlackBuild cache. Make sure you have "
+"configured all sources properly and that you have a working internet "
+"connection."
+msgstr ""
+"Hubo un error mientras se actualizaba el caché de SlackBuild. Asegúrese que "
+"configuró correctamente todos los fuentes y que tiene una conexión de "
+"Internet funcionando."
+
+#: src/sourcery.glade:632
+msgid "Pending tasks"
+msgstr "Tareas pendientes"
+
+#: src/sourcery.glade:679
+msgid "<b>Execute the following tasks?</b>"
+msgstr "<b>¿Ejecutar las siguientes tareas?</b>"
+
+#: src/sourcery.glade:690
+msgid ""
+"The following tasks are about to be performed. You can rearrange the "
+"processing order by dragging the items in the list."
+msgstr ""
+"Las siguientes  tareas están a punto de ejecutarse. Puede reorganizar el "
+"orden de procesamiento arrastrando los ítems a la lista."
+
+#: src/sourcery.glade:801
+msgid "Progress"
+msgstr "Progreso"
+
+#: src/sourcery.glade:823
+msgid "Overall progress"
+msgstr "Progreso global"
+
+#: src/sourcery.glade:862
+msgid ""
+"Please wait. This might take a while. Processing time varies, depending on "
+"the size and complexity of the software, from a few seconds to a few hours..."
+msgstr ""
+"Por favor espere. Esto puede tomar un tiempo. El tiempo de procesamiento "
+"varía, dependiendo del tamaño y complejidad del software, desde algunos "
+"segundos a unas horas..."
+
+#: src/sourcery.glade:903
+msgid "Completed tasks"
+msgstr "Tareas completadas"
+
+#: src/sourcery.glade:913
+msgid "All tasks have been executed succesfully."
+msgstr "Se ejecutaron correctamente todas las tareas."
+
+#: src/sourcery.glade:953
+msgid "Canceled"
+msgstr "Cancelado"
+
+#: src/sourcery.glade:962
+msgid "Canceled. Some tasks may have already been completed."
+msgstr "Cancelado. Algunas tareas ya se pueden haber completado."
+
+#: src/sourcery.glade:1011
+msgid "Error updating package list."
+msgstr "Error al actualizar la lista de paquetes."
+
+#: src/sourcery.glade:1083
+msgid "Error message..."
+msgstr "Mensage de error..."
+
+#: src/sourcery.glade:1103 src/sourcery.glade:1884
+msgid "View log"
+msgstr "Ver registro"
+
+#: src/sourcery.glade:1146
+msgid "Updating..."
+msgstr "Actualizando..."
+
+#: src/sourcery.glade:1169
+msgid "Updating SlackBuild cache..."
+msgstr "Actualizando el caché de SlackBuild ..."
+
+#: src/sourcery.glade:1222
+msgid "Getting SlackBuild information"
+msgstr "Obteniendo información de SlackBuild"
+
+#: src/sourcery.glade:1237
+msgid "Downloading SlackBuild information. Please wait..."
+msgstr "Descargando informacion de SlackBuild. Por favor espere ..."
+
+#: src/sourcery.glade:1271
+msgid "<b>Name:</b>"
+msgstr "<b>Nombre:</b>"
+
+#: src/sourcery.glade:1279
+msgid "<b>Version:</b>"
+msgstr "<b>Versión:</b>"
+
+#: src/sourcery.glade:1291
+msgid "<b>Source:</b>"
+msgstr "<b>Fuente:</b>"
+
+#: src/sourcery.glade:1304
+msgid "<b>Files:</b>"
+msgstr "<b>Archivos:</b>"
+
+#: src/sourcery.glade:1316
+msgid "<b>Location:</b>"
+msgstr "<b>Ubicación:</b>"
+
+#: src/sourcery.glade:1379
+msgid "<b>Dependencies:</b>"
+msgstr "<b>Dependencias:</b>"
+
+#: src/sourcery.glade:1421
+msgid "General information"
+msgstr "Información general"
+
+#: src/sourcery.glade:1445 src/sourcery:752
+msgid "Description"
+msgstr "Descripción"
+
+#: src/sourcery.glade:1476
+msgid "README file"
+msgstr "Archivo README"
+
+#: src/sourcery.glade:1545
+msgid ""
+"<b>The following icons are used to indicate the current status of a "
+"SlackBuild:</b>"
+msgstr ""
+"<b>Los siguientes iconos se usan para indicar el estado actual de un "
+"SlackBuild:</b>"
+
+#: src/sourcery.glade:1564
+msgid "Not installed"
+msgstr "No instalado"
+
+#: src/sourcery.glade:1576
+msgid "A package with this name is already installed"
+msgstr "Ya se instaló un paquete con el mismo nombre"
+
+#: src/sourcery.glade:1590
+msgid "The package is going to be installed"
+msgstr "El paquete está a punto de ser instalado"
+
+#: src/sourcery.glade:1604
+msgid ""
+"A package with this name is already installed and is going to be reinstalled"
+msgstr "Un paquete con este nombre ya está instalado y será reinstalado"
+
+#: src/sourcery.glade:1618
+msgid "The package is going to be removed"
+msgstr "El paquete está a punto de ser eliminado"
+
+#: src/sourcery.glade:1807
+msgid "Select the package you want to view the build log for:"
+msgstr "Seleccionar el paquete para el que quiere ver su registro de creación:"
+
+#: src/sourcery.glade:1922
+msgid ""
+"A graphical frontend to slapt-src, a utility to build and install packages "
+"from source using SlackBuilds and/or SLKBUILDs."
+msgstr ""
+"Un frontend gráfico para slapt-src, una utilidad para compilar e instalar "
+"paquetes desde los fuentes usando SlackBuilds y/o SLKBUILDs."
+
+#: src/sourcery.glade:2600
+msgid "translator-credits"
+msgstr "Traductor-créditos"
+
+#: src/sourcery.glade:2625
+msgid "Preferences"
+msgstr ""
+
+#: src/sourcery.glade:2638
+msgid "Resolve dependencies"
+msgstr ""
+
+#: src/sourcery.glade:2642
+msgid ""
+"Dependency resolution is only available for the repositories that support "
+"it. SlackBuilds from SlackBuilds.org do not include any dependency "
+"information."
+msgstr ""
+
+#: src/sourcery:202
+msgid "SlackBuild information for "
+msgstr ""
+
+#: src/sourcery:210 src/sourcery:217
+msgid "Not available."
+msgstr "No disponible."
+
+#: src/sourcery:264
+#, python-format
+msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
+msgstr "%(pkg)s %(pkgver)s está a punto de ser instalado como una dependencia"
+
+#: src/sourcery:274
+#, python-format
+msgid "%(pkg)s %(pkgver)s is going to be installed"
+msgstr "%(pkg)s %(pkgver)s está a punto de ser instalado"
+
+#: src/sourcery:276
+#, python-format
+msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
+msgstr "%(pkg)s %(pkgver)s está a punto de ser reinstalado"
+
+#: src/sourcery:278
+#, python-format
+msgid "%(pkg)s %(pkgver)s is going to be removed"
+msgstr "%(pkg)s %(pkgver)s est"
+
+#: src/sourcery:389 src/sourcery:745
+msgid "Status"
+msgstr "Estado"
+
+#: src/sourcery:543 src/sourcery:654 src/sourcery:704
+msgid "Build log for"
+msgstr "Compilando registro para"
+
+#: src/sourcery:578 src/sourcery:586
+msgid "Downloading source files for"
+msgstr "Descargando archivos fuente para"
+
+#: src/sourcery:583 src/sourcery:591
+msgid "Compiling"
+msgstr "Compilando"
+
+#: src/sourcery:594
+msgid "Removing"
+msgstr "Eliminando"
+
+#: src/sourcery:614
+#, python-format
+msgid ""
+"There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
+"will be purged from the processing queue. You can review the log file for "
+"any errors during compiling."
+msgstr ""
+"Hubo un error mientras se compilaba %(pkg)s %(pkgver)s. Todas las acciones "
+"pendientes se eliminarán de la cola de procesamiento. Puede revisar el "
+"archivo de registro de los posibles errores durante la compilación."
+
+#: src/sourcery:620
+#, python-format
+msgid ""
+"There was an error while downloading source files for %(pkg)s %(pkgver)s. "
+"All pending actions will be purged from the processing queue."
+msgstr ""
+"Hubo un error mientras se descargaba el archivo fuente para %(pkg)s "
+"%(pkgver)s. Todas las acciones pendientes se eliminarán de la cola de "
+"procesamiento. "
+
+#: src/sourcery:664
+msgid "Not available"
+msgstr "No disponible"
+
+#: src/sourcery:715
+msgid "Error reading log file."
+msgstr "Error al leer el archivo de registro."
+
+#: src/sourcery:748 src/sourcery:889
+msgid "Name"
+msgstr "Nombre"
+
+#: src/sourcery:750 src/sourcery:890
+msgid "Version"
+msgstr "Versión"
+
+#: sourcery.desktop.in.h:1 sourcery-kde.desktop.in.h:1
+msgid "A graphical frontend to slapt-src"
+msgstr "Un frontend gráfico para slapt-src"
+
+#: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
+msgid "Sourcery SlackBuild Manager"
+msgstr ""
