@@ -1080,7 +1080,7 @@
             <child>
               <object class="GtkLabel" id="label_pkginstallerror">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">Error message...</property>
+                <property name="label">Error message...</property>
                 <property name="wrap">True</property>
               </object>
               <packing>
