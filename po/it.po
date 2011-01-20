@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 00:47+0200\n"
+"POT-Creation-Date: 2011-01-20 10:41+0200\n"
 "PO-Revision-Date: 2011-01-15 22:23+0000\n"
 "Last-Translator: Kerd <kerd89@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,10 +152,6 @@ msgstr ""
 #: src/sourcery.glade:1011
 msgid "Error updating package list."
 msgstr "Errore durante l'aggiornamento dell'elenco dei pacchetti."
-
-#: src/sourcery.glade:1083
-msgid "Error message..."
-msgstr "Messaggio di errore ..."
 
 #: src/sourcery.glade:1103 src/sourcery.glade:1884
 msgid "View log"
@@ -360,6 +356,9 @@ msgstr "Un frontend grafico per slapt-src"
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery SlackBuild Manager"
+
+#~ msgid "Error message..."
+#~ msgstr "Messaggio di errore ..."
 
 #~ msgid "Sourcery"
 #~ msgstr "Sourcery"
