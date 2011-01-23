@@ -71,22 +71,26 @@ class Sourcery:
 			self.window.set_default_size(700, 500)
 
 	def slaptsrclist(self, searchstring):
-		if len(searchstring) == 0:
-			cmd = 'slapt-src --list'
+		if os.path.isfile(slackbuilds_data):
+			if len(searchstring) == 0:
+				cmd = 'slapt-src --list'
+			else:
+				cmd = 'slapt-src -s "'+searchstring+'"'
+			status, pkglist_output = commands.getstatusoutput(cmd)
+			pkglist_lines = pkglist_output.splitlines()
+			pkglist = []
+			pkglist2 = []
+			if status == 0:
+				for i in pkglist_lines:
+					nameandver, sep, desc = i.partition(' - ')
+					name = nameandver.rpartition(':')[0]
+					ver = nameandver.rpartition(':')[2]
+					if [name, ver] not in pkglist2:
+						pkglist.append([name, ver, desc])
+						pkglist2.append([name, ver])
 		else:
-			cmd = 'slapt-src -s "'+searchstring+'"'
-		status, pkglist_output = commands.getstatusoutput(cmd)
-		pkglist_lines = pkglist_output.splitlines()
-		pkglist = []
-		pkglist2 = []
-		if status == 0:
-			for i in pkglist_lines:
-				nameandver, sep, desc = i.partition(' - ')
-				name = nameandver.rpartition(':')[0]
-				ver = nameandver.rpartition(':')[2]
-				if [name, ver] not in pkglist2:
-					pkglist.append([name, ver, desc])
-					pkglist2.append([name, ver])
+			status = 0
+			pkglist = []
 		return status, pkglist
 
 	def pkg_installed(self):
@@ -718,6 +722,13 @@ class Sourcery:
 	def on_button_loglist_close_clicked(self, widget):
 		self.dlg_loglist.hide()
 
+	def on_button_firstrun_cancel_clicked(self, widget):
+		self.dlg_firstrun.hide()
+
+	def on_button_firstrun_create_clicked(self, widget):
+		self.dlg_firstrun.hide()
+		self.on_toolbutton_update_clicked(self)
+
 	def on_aboutdialog_response(self, widget, data=None):
 		self.dlg_about.hide()
 
@@ -900,6 +911,13 @@ class Sourcery:
 		self.btn_prefs_cancel = builder.get_object('button_prefs_cancel')
 
 		#
+		# First run dialog
+		#
+		self.dlg_firstrun = builder.get_object('dialog_firstrun')
+		self.btn_firstrun_cancel = builder.get_object('button_firstrun_cancel')
+		self.btn_firstrun_create = builder.get_object('button_firstrun_create')
+
+		#
 		# About dialog
 		#
 		self.dlg_about = builder.get_object('aboutdialog')
@@ -909,7 +927,10 @@ class Sourcery:
 		
 		# Connect all signals
 		builder.connect_signals(self)
-		self.refresh_pkglist()
+		if os.path.isfile(slackbuilds_data):
+			self.refresh_pkglist()
+		else:
+			self.dlg_firstrun.show()
 
 if __name__ == "__main__":
 	app = Sourcery()

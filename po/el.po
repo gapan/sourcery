@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-20 10:41+0200\n"
+"POT-Creation-Date: 2011-01-23 12:58+0200\n"
 "PO-Revision-Date: 2011-01-15 23:19+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -205,7 +205,7 @@ msgstr "<b>Εξαρτήσεις:</b>"
 msgid "General information"
 msgstr "Γενικές πληροφορίες"
 
-#: src/sourcery.glade:1445 src/sourcery:752
+#: src/sourcery.glade:1445 src/sourcery:763
 msgid "Description"
 msgstr "Περιγραφή"
 
@@ -279,55 +279,71 @@ msgstr ""
 "εξαρτήσεις. SlackBuilds που προέρχονται από το SlackBuilds.org δεν "
 "περιλαμβάνουν πληροφορίες εξαρτήσεων."
 
-#: src/sourcery:202
+#: src/sourcery.glade:2700
+msgid "First run"
+msgstr ""
+
+#: src/sourcery.glade:2734
+msgid ""
+"It looks like this is the first time Sourcery is launched. The SlackBuild "
+"cache needs to be created first before Sourcery becomes useful. You will "
+"need a working internet connection to create the SlackBuild cache."
+msgstr ""
+
+#: src/sourcery.glade:2767
+#, fuzzy
+msgid "Create SlackBuild cache"
+msgstr "Ενημέρωση της τοπικής αποθήκης αρχείων SlackBuild"
+
+#: src/sourcery:206
 msgid "SlackBuild information for "
 msgstr "Πληροφορίες SlackBuild για το"
 
-#: src/sourcery:210 src/sourcery:217
+#: src/sourcery:214 src/sourcery:221
 msgid "Not available."
 msgstr "Μη διαθέσιμο."
 
-#: src/sourcery:264
+#: src/sourcery:268
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
 msgstr "Το %(pkg)s %(pkgver)s πρόκειται να εγκατασταθεί ως εξάρτηση"
 
-#: src/sourcery:274
+#: src/sourcery:278
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
 msgstr "Το %(pkg)s %(pkgver)s πρόκεται να εγκατασταθεί"
 
-#: src/sourcery:276
+#: src/sourcery:280
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
 msgstr "Το %(pkg)s %(pkgver)s πρόκεται να εγκατασταθεί εκ νέου"
 
-#: src/sourcery:278
+#: src/sourcery:282
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
 msgstr "Το %(pkg)s %(pkgver)s πρόκειται να απεγκατασταθεί"
 
-#: src/sourcery:389 src/sourcery:745
+#: src/sourcery:393 src/sourcery:756
 msgid "Status"
 msgstr "Κατάσταση"
 
-#: src/sourcery:543 src/sourcery:654 src/sourcery:704
+#: src/sourcery:547 src/sourcery:658 src/sourcery:708
 msgid "Build log for"
 msgstr "Αρχείο καταγραφών για το"
 
-#: src/sourcery:578 src/sourcery:586
+#: src/sourcery:582 src/sourcery:590
 msgid "Downloading source files for"
 msgstr "Λήψη πηγαίων αρχείων για το"
 
-#: src/sourcery:583 src/sourcery:591
+#: src/sourcery:587 src/sourcery:595
 msgid "Compiling"
 msgstr "Μεταγλώττιση"
 
-#: src/sourcery:594
+#: src/sourcery:598
 msgid "Removing"
 msgstr "Απεγκατάσταση"
 
-#: src/sourcery:614
+#: src/sourcery:618
 #, python-format
 msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
@@ -339,7 +355,7 @@ msgstr ""
 "εμφανίσετε το αρχείο καταγραφών για να εντοπίσετε τυχόν σφάλματα κατά τη "
 "μεταγλώττιση."
 
-#: src/sourcery:620
+#: src/sourcery:624
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
@@ -348,19 +364,19 @@ msgstr ""
 "Υπήρξε ένα σφάλμα κατά την λήψη πηγαίων αρχείων για το %(pkg)s %(pkgver)s. "
 "Όλες οι εκκρεμείς ενέργειες θα εκκαθαριστούν από την λίστα επεξεργασίας."
 
-#: src/sourcery:664
+#: src/sourcery:668
 msgid "Not available"
 msgstr "Μη διαθέσιμο."
 
-#: src/sourcery:715
+#: src/sourcery:719
 msgid "Error reading log file."
 msgstr "Σφάλμα κατά την ανάγνωση του αρχείου καταγραφής."
 
-#: src/sourcery:748 src/sourcery:889
+#: src/sourcery:759 src/sourcery:900
 msgid "Name"
 msgstr "Όνομα"
 
-#: src/sourcery:750 src/sourcery:890
+#: src/sourcery:761 src/sourcery:901
 msgid "Version"
 msgstr "Έκδοση"
 
