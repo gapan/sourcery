@@ -88,9 +88,18 @@ class Sourcery:
 					if [name, ver] not in pkglist2:
 						pkglist.append([name, ver, desc])
 						pkglist2.append([name, ver])
+			pkglistlen = len(pkglist)
+			if pkglistlen == 0:
+				msg = _('No SlackBuilds found')
+			elif pkglistlen == 1:
+				msg = _('One SlackBuild found')
+			else:
+				msg = _('%(num)i SlackBuilds found') % {'num' : len(pkglist)}
 		else:
 			status = 0
 			pkglist = []
+			msg = _('Could not retrieve SlackBuild data')
+		self.lb_statusbar.set_text(msg)
 		return status, pkglist
 
 	def pkg_installed(self):
@@ -765,6 +774,7 @@ class Sourcery:
 		self.tb_update = builder.get_object('toolbutton_update')
 		self.tb_exec = builder.get_object('toolbutton_exec')
 		self.entry_search = builder.get_object('entry_search')
+		self.lb_statusbar = builder.get_object('label_statusbar')
 		# File menu
 		self.mi_exec = builder.get_object('menuitem_exec')
 		# Edit menu
