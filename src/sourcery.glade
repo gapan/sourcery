@@ -1939,7 +1939,7 @@
     <property name="program_name">Sourcery</property>
     <property name="copyright">Copyright &#xA9; 2010 George Vlahavas</property>
     <property name="comments" translatable="yes">A graphical frontend to slapt-src, a utility to build and install packages from source using SlackBuilds and/or SLKBUILDs.</property>
-    <property name="website">http://www.salixos.org</property>
+    <property name="website">http://www.salixos.org/wiki/index.php/Sourcery</property>
     <property name="license">                    GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
