@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-02-02 21:26+0200\n"
-"PO-Revision-Date: 2011-02-02 19:25+0000\n"
+"PO-Revision-Date: 2011-02-21 18:45+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/sourcery.glade:62
@@ -94,14 +94,8 @@ msgid "Error"
 msgstr "Σφάλμα"
 
 #: src/sourcery.glade:490
-msgid ""
-"There was an error while updating the SlackBuild cache. Make sure you have "
-"configured all sources properly and that you have a working internet "
-"connection."
-msgstr ""
-"Υπήρξε σφάλμα κατά την ανανέωση της τοπικής αποθήκης SlackBuild. Βεβαιωθείτε "
-"ότι έχετε ρυθμίσει όλες τις πηγές σωστά και ότι η σύνδεσή σας με το internet "
-"λειτουργεί σωστά."
+msgid "There was an error while updating the SlackBuild cache. Make sure you have configured all sources properly and that you have a working internet connection."
+msgstr "Υπήρξε σφάλμα κατά την ανανέωση της τοπικής αποθήκης SlackBuild. Βεβαιωθείτε ότι έχετε ρυθμίσει όλες τις πηγές σωστά και ότι η σύνδεσή σας με το internet λειτουργεί σωστά."
 
 #: src/sourcery.glade:651
 msgid "Pending tasks"
@@ -112,12 +106,8 @@ msgid "<b>Execute the following tasks?</b>"
 msgstr "<b>Να εκτελεστούν οι ακόλουθες εργασίες;</b>t"
 
 #: src/sourcery.glade:709
-msgid ""
-"The following tasks are about to be performed. You can rearrange the "
-"processing order by dragging the items in the list."
-msgstr ""
-"Οι ακόλουθες εργασίες πρόκειται να εκτελεστούν. Μπορείτε να αλλάξετε τη "
-"σειρά επεξεργασίας μετακινώντας τα στοιχεία της λίστας."
+msgid "The following tasks are about to be performed. You can rearrange the processing order by dragging the items in the list."
+msgstr "Οι ακόλουθες εργασίες πρόκειται να εκτελεστούν. Μπορείτε να αλλάξετε τη σειρά επεξεργασίας μετακινώντας τα στοιχεία της λίστας."
 
 #: src/sourcery.glade:820
 msgid "Progress"
@@ -128,14 +118,8 @@ msgid "Overall progress"
 msgstr "Συνολική πρόοδος"
 
 #: src/sourcery.glade:881
-msgid ""
-"Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few hours..."
-msgstr ""
-"Παρακαλώ περιμένετε. Η εργασία μπορεί να διαρκέσει αρκετή ώρα. Ο χρόνος "
-"επεξεργασίας ποικίλει, εξαρτάται από το μέγεθος και την πολυπλοκότητα του "
-"λογισμικού και μπορεί να διαρκέσει από μερικά δευτερόλεπτα μέχρι μερικές "
-"ώρες..."
+msgid "Please wait. This might take a while. Processing time varies, depending on the size and complexity of the software, from a few seconds to a few hours..."
+msgstr "Παρακαλώ περιμένετε. Η εργασία μπορεί να διαρκέσει αρκετή ώρα. Ο χρόνος επεξεργασίας ποικίλει, εξαρτάται από το μέγεθος και την πολυπλοκότητα του λογισμικού και μπορεί να διαρκέσει από μερικά δευτερόλεπτα μέχρι μερικές ώρες..."
 
 #: src/sourcery.glade:922
 msgid "Completed tasks"
@@ -214,12 +198,8 @@ msgid "README file"
 msgstr "Αρχείο README"
 
 #: src/sourcery.glade:1564
-msgid ""
-"<b>The following icons are used to indicate the current status of a "
-"SlackBuild:</b>"
-msgstr ""
-"<b>Τα ακόλουθα εικονίδια χρησιμοποιούνται για να δείξουν την τρέχουσα "
-"κατάσταση ενός SlackBuild:</b>"
+msgid "<b>The following icons are used to indicate the current status of a SlackBuild:</b>"
+msgstr "<b>Τα ακόλουθα εικονίδια χρησιμοποιούνται για να δείξουν την τρέχουσα κατάσταση ενός SlackBuild:</b>"
 
 #: src/sourcery.glade:1583
 msgid "Not installed"
@@ -234,11 +214,8 @@ msgid "The package is going to be installed"
 msgstr "Το πακέτο πρόκειται να εγκατασταθεί"
 
 #: src/sourcery.glade:1623
-msgid ""
-"A package with this name is already installed and is going to be reinstalled"
-msgstr ""
-"Ένα πακέτο με αυτό το όνομα έχει ήδη εγκατασταθεί και πρόκειται να "
-"εγκατασταθεί εκ νέου"
+msgid "A package with this name is already installed and is going to be reinstalled"
+msgstr "Ένα πακέτο με αυτό το όνομα έχει ήδη εγκατασταθεί και πρόκειται να εγκατασταθεί εκ νέου"
 
 #: src/sourcery.glade:1637
 msgid "The package is going to be removed"
@@ -246,16 +223,11 @@ msgstr "Το πακέτο πρόκειται να αφαιρεθεί"
 
 #: src/sourcery.glade:1826
 msgid "Select the package you want to view the build log for:"
-msgstr ""
-"Επιλέξτε το πακέτο του οποίου θέλετε να προβάλετε το αρχείο καταγραφής:"
+msgstr "Επιλέξτε το πακέτο του οποίου θέλετε να προβάλετε το αρχείο καταγραφής:"
 
 #: src/sourcery.glade:1941
-msgid ""
-"A graphical frontend to slapt-src, a utility to build and install packages "
-"from source using SlackBuilds and/or SLKBUILDs."
-msgstr ""
-"Ένα γραφικό περιβάλλον για το slapt-src, ενός εργαλείου για την κατασκευή "
-"και εγκατάσταση πακέτων χρησιμοποιώντας SlackBuilds ή/και SLKBUILDs."
+msgid "A graphical frontend to slapt-src, a utility to build and install packages from source using SlackBuilds and/or SLKBUILDs."
+msgstr "Ένα γραφικό περιβάλλον για το slapt-src, ενός εργαλείου για την κατασκευή και εγκατάσταση πακέτων χρησιμοποιώντας SlackBuilds ή/και SLKBUILDs."
 
 #: src/sourcery.glade:2619
 msgid "translator-credits"
@@ -270,52 +242,37 @@ msgid "Resolve dependencies"
 msgstr "Επίλυση εξαρτήσεων"
 
 #: src/sourcery.glade:2661
-msgid ""
-"Dependency resolution is only available for the repositories that support "
-"it. SlackBuilds from SlackBuilds.org do not include any dependency "
-"information."
-msgstr ""
-"Η επίλυση εξαρτήσεων είναι διαθέσιμη μόνο αν τα αποθετήρια υποστηρίζουν "
-"εξαρτήσεις. SlackBuilds που προέρχονται από το SlackBuilds.org δεν "
-"περιλαμβάνουν πληροφορίες εξαρτήσεων."
+msgid "Dependency resolution is only available for the repositories that support it. SlackBuilds from SlackBuilds.org do not include any dependency information."
+msgstr "Η επίλυση εξαρτήσεων είναι διαθέσιμη μόνο αν τα αποθετήρια υποστηρίζουν εξαρτήσεις. SlackBuilds που προέρχονται από το SlackBuilds.org δεν περιλαμβάνουν πληροφορίες εξαρτήσεων."
 
 #: src/sourcery.glade:2719
 msgid "First run"
 msgstr "Πρώτη εκτέλεση"
 
 #: src/sourcery.glade:2753
-msgid ""
-"It looks like this is the first time Sourcery is launched. The SlackBuild "
-"cache needs to be created first before Sourcery becomes useful. You will "
-"need a working internet connection to create the SlackBuild cache."
-msgstr ""
-"Φαίνεται ότι είναι η πρώτη φορά που εκτελείται το Sourcery. Η τοπική αποθήκη "
-"SlackBuild θα πρέπει να δημιουργηθεί για τη σωστή λειτουργία του Sourcery. Η "
-"δημιουργία της τοπικής αποθήκης απαιτεί μια ενεργή σύνδεση internet."
+msgid "It looks like this is the first time Sourcery is launched. The SlackBuild cache needs to be created first before Sourcery becomes useful. You will need a working internet connection to create the SlackBuild cache."
+msgstr "Φαίνεται ότι είναι η πρώτη φορά που εκτελείται το Sourcery. Η τοπική αποθήκη SlackBuild θα πρέπει να δημιουργηθεί για τη σωστή λειτουργία του Sourcery. Η δημιουργία της τοπικής αποθήκης απαιτεί μια ενεργή σύνδεση internet."
 
 #: src/sourcery.glade:2786
 msgid "Create SlackBuild cache"
 msgstr "Δημιουργία τοπικής αποθήκης"
 
 #: src/sourcery:93
-#, fuzzy
 msgid "No SlackBuilds found"
-msgstr "Αρχεία καταγραφών SlackBuild"
+msgstr "Δεν βρέθηκαν SlackBuilds"
 
 #: src/sourcery:95
-#, fuzzy
 msgid "One SlackBuild found"
-msgstr "Αρχεία καταγραφών SlackBuild"
+msgstr "Βρέθηκε ένα SlackBuild"
 
 #: src/sourcery:97
-#, fuzzy, python-format
+#, python-format
 msgid "%(num)i SlackBuilds found"
-msgstr "Αρχεία καταγραφών SlackBuild"
+msgstr "Βρέθηκαν %(num)i SlackBuilds"
 
 #: src/sourcery:101
-#, fuzzy
 msgid "Could not retrieve SlackBuild data"
-msgstr "Δημιουργία τοπικής αποθήκης"
+msgstr "Δεν ήταν δυνατό να ανακτηθούν δεδομένα για SlackBuild"
 
 #: src/sourcery:215
 msgid "SlackBuild information for "
@@ -367,24 +324,13 @@ msgstr "Απεγκατάσταση"
 
 #: src/sourcery:627
 #, python-format
-msgid ""
-"There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
-"will be purged from the processing queue. You can review the log file for "
-"any errors during compiling."
-msgstr ""
-"Υπήρξε ένα σφάλμα κατά τη μεταγλώττιση του %(pkg)s %(pkgver)s. Όλες οι "
-"εκκρεμείς ενέργειες θα εκκαθαριστούν από την λίστα επεξεργασίας. Μπορείτε να "
-"εμφανίσετε το αρχείο καταγραφών για να εντοπίσετε τυχόν σφάλματα κατά τη "
-"μεταγλώττιση."
+msgid "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue. You can review the log file for any errors during compiling."
+msgstr "Υπήρξε ένα σφάλμα κατά τη μεταγλώττιση του %(pkg)s %(pkgver)s. Όλες οι εκκρεμείς ενέργειες θα εκκαθαριστούν από την λίστα επεξεργασίας. Μπορείτε να εμφανίσετε το αρχείο καταγραφών για να εντοπίσετε τυχόν σφάλματα κατά τη μεταγλώττιση."
 
 #: src/sourcery:633
 #, python-format
-msgid ""
-"There was an error while downloading source files for %(pkg)s %(pkgver)s. "
-"All pending actions will be purged from the processing queue."
-msgstr ""
-"Υπήρξε ένα σφάλμα κατά την λήψη πηγαίων αρχείων για το %(pkg)s %(pkgver)s. "
-"Όλες οι εκκρεμείς ενέργειες θα εκκαθαριστούν από την λίστα επεξεργασίας."
+msgid "There was an error while downloading source files for %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue."
+msgstr "Υπήρξε ένα σφάλμα κατά την λήψη πηγαίων αρχείων για το %(pkg)s %(pkgver)s. Όλες οι εκκρεμείς ενέργειες θα εκκαθαριστούν από την λίστα επεξεργασίας."
 
 #: src/sourcery:677
 msgid "Not available"
