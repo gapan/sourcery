@@ -2,34 +2,37 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-02 21:26+0200\n"
-"PO-Revision-Date: 2011-02-21 18:45+0000\n"
-"Last-Translator: JRD <jrd@enialis.net>\n"
+"POT-Creation-Date: 2011-03-30 00:43+0300\n"
+"PO-Revision-Date: 2011-03-30 00:45+0200\n"
+"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
 "Language-Team: French <>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: src/sourcery.glade:62
 msgid "_File"
 msgstr "_Fichier"
 
-#: src/sourcery.glade:69 src/sourcery.glade:270
+#: src/sourcery.glade:69
+#: src/sourcery.glade:270
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: src/sourcery.glade:71 src/sourcery.glade:269
+#: src/sourcery.glade:71
+#: src/sourcery.glade:269
 msgid "Update local SlackBuild cache"
 msgstr "Mettre à jour le cache local des SlackBuild"
 
-#: src/sourcery.glade:79 src/sourcery.glade:285
+#: src/sourcery.glade:79
+#: src/sourcery.glade:285
 msgid "Execute"
 msgstr "Exécuter"
 
@@ -45,23 +48,31 @@ msgstr "Décocher tout"
 msgid "_Package"
 msgstr "_Paquet"
 
-#: src/sourcery.glade:151 src/sourcery.glade:549 src/sourcery.glade:551
+#: src/sourcery.glade:151
+#: src/sourcery.glade:549
+#: src/sourcery.glade:551
 msgid "Unmark"
 msgstr "Décocher"
 
-#: src/sourcery.glade:160 src/sourcery.glade:559 src/sourcery.glade:561
+#: src/sourcery.glade:160
+#: src/sourcery.glade:559
+#: src/sourcery.glade:561
 msgid "Install"
 msgstr "Installer"
 
-#: src/sourcery.glade:170 src/sourcery.glade:569 src/sourcery.glade:571
+#: src/sourcery.glade:170
+#: src/sourcery.glade:569
+#: src/sourcery.glade:571
 msgid "Reinstall"
 msgstr "Réinstaller"
 
-#: src/sourcery.glade:180 src/sourcery.glade:579
+#: src/sourcery.glade:180
+#: src/sourcery.glade:579
 msgid "Remove"
 msgstr "Supprimer"
 
-#: src/sourcery.glade:195 src/sourcery.glade:593
+#: src/sourcery.glade:195
+#: src/sourcery.glade:593
 msgid "Get information"
 msgstr "Obtenir des informations"
 
@@ -69,7 +80,8 @@ msgstr "Obtenir des informations"
 msgid "_View"
 msgstr "A_ffichage"
 
-#: src/sourcery.glade:218 src/sourcery.glade:1804
+#: src/sourcery.glade:218
+#: src/sourcery.glade:1804
 msgid "SlackBuild logs"
 msgstr "Journaux des SlackBuild"
 
@@ -77,7 +89,8 @@ msgstr "Journaux des SlackBuild"
 msgid "_Help"
 msgstr "_Aide"
 
-#: src/sourcery.glade:237 src/sourcery.glade:1544
+#: src/sourcery.glade:237
+#: src/sourcery.glade:1544
 msgid "Icon legend"
 msgstr "Légende des icônes"
 
@@ -89,7 +102,8 @@ msgstr "Exécuter les actions en attente"
 msgid "Search: "
 msgstr "Recherche :"
 
-#: src/sourcery.glade:457 src/sourcery.glade:1070
+#: src/sourcery.glade:457
+#: src/sourcery.glade:1070
 msgid "Error"
 msgstr "Erreur"
 
@@ -141,7 +155,8 @@ msgstr "Annulé. Certaines tâches peuvent avoir déjà été réalisées."
 msgid "Error updating package list."
 msgstr "Erreur lors de la mise à jour de la liste des paquets."
 
-#: src/sourcery.glade:1122 src/sourcery.glade:1903
+#: src/sourcery.glade:1122
+#: src/sourcery.glade:1903
 msgid "View log"
 msgstr "Voir le journal"
 
@@ -189,7 +204,8 @@ msgstr "<b>Dépendances :</b>"
 msgid "General information"
 msgstr "Informations générales"
 
-#: src/sourcery.glade:1464 src/sourcery:772
+#: src/sourcery.glade:1464
+#: src/sourcery:772
 msgid "Description"
 msgstr "Description"
 
@@ -237,23 +253,23 @@ msgstr "Crédits-traducteurs"
 msgid "Preferences"
 msgstr "Préférences"
 
-#: src/sourcery.glade:2657
+#: src/sourcery.glade:2661
 msgid "Resolve dependencies"
 msgstr "Résoudre les dépendances"
 
-#: src/sourcery.glade:2661
-msgid "Dependency resolution is only available for the repositories that support it. SlackBuilds from SlackBuilds.org do not include any dependency information."
-msgstr "La résolution des dépendances est disponible uniquement pour les dépôts qui la prennent en compte. Les Slackbuilds de SlackBuilds.org n'incluent pas les informations de dépendance."
+#: src/sourcery.glade:2676
+msgid "(Dependency resolution is only available for the repositories that support it. SlackBuilds from SlackBuilds.org do not include any dependency information.)"
+msgstr "(La résolution des dépendances est disponible uniquement pour les dépôts qui la prennent en compte. Les Slackbuilds de SlackBuilds.org n'incluent pas les informations de dépendance.)"
 
-#: src/sourcery.glade:2719
+#: src/sourcery.glade:2741
 msgid "First run"
 msgstr "Première utilisation"
 
-#: src/sourcery.glade:2753
+#: src/sourcery.glade:2775
 msgid "It looks like this is the first time Sourcery is launched. The SlackBuild cache needs to be created first before Sourcery becomes useful. You will need a working internet connection to create the SlackBuild cache."
 msgstr "Il semble que ce soit la première fois que Sourcery est démarré. Le cache des SlackBuild doit être créé afin que Sourcery fonctionne. Vous aurez besoin d'une connexion Internet active pour créer le cache des SlackBuild."
 
-#: src/sourcery.glade:2786
+#: src/sourcery.glade:2808
 msgid "Create SlackBuild cache"
 msgstr "Créer le cache des SlackBuild"
 
@@ -278,7 +294,8 @@ msgstr "Impossible de récupérer les données du SlackBuild"
 msgid "SlackBuild information for "
 msgstr "informations de SlackBuild pour "
 
-#: src/sourcery:223 src/sourcery:230
+#: src/sourcery:223
+#: src/sourcery:230
 msgid "Not available."
 msgstr "Non disponible."
 
@@ -302,19 +319,24 @@ msgstr "%(pkg)s %(pkgver)s va être réinstallé"
 msgid "%(pkg)s %(pkgver)s is going to be removed"
 msgstr "%(pkg)s %(pkgver)s va être supprimé"
 
-#: src/sourcery:402 src/sourcery:765
+#: src/sourcery:402
+#: src/sourcery:765
 msgid "Status"
 msgstr "Statut"
 
-#: src/sourcery:556 src/sourcery:667 src/sourcery:717
+#: src/sourcery:556
+#: src/sourcery:667
+#: src/sourcery:717
 msgid "Build log for"
 msgstr "Le journal de génération pour "
 
-#: src/sourcery:591 src/sourcery:599
+#: src/sourcery:591
+#: src/sourcery:599
 msgid "Downloading source files for"
 msgstr "Téléchargement des fichiers sources pour "
 
-#: src/sourcery:596 src/sourcery:604
+#: src/sourcery:596
+#: src/sourcery:604
 msgid "Compiling"
 msgstr "Compilation"
 
@@ -340,18 +362,23 @@ msgstr "Non disponible"
 msgid "Error reading log file."
 msgstr "Erreur de lecture du fichier journal."
 
-#: src/sourcery:768 src/sourcery:910
+#: src/sourcery:768
+#: src/sourcery:910
 msgid "Name"
 msgstr "Nom"
 
-#: src/sourcery:770 src/sourcery:911
+#: src/sourcery:770
+#: src/sourcery:911
 msgid "Version"
 msgstr "Version"
 
-#: sourcery.desktop.in.h:1 sourcery-kde.desktop.in.h:1
+#: sourcery.desktop.in.h:1
+#: sourcery-kde.desktop.in.h:1
 msgid "A graphical frontend to slapt-src"
 msgstr "Une interface graphique pour slapt-src"
 
-#: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
+#: sourcery.desktop.in.h:2
+#: sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery, gestionnaire de SlackBuild"
+
