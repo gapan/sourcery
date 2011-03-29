@@ -340,8 +340,8 @@
                     <property name="invisible_char">&#x25CF;</property>
                     <property name="primary_icon_stock">gtk-clear</property>
                     <property name="secondary_icon_stock">gtk-find</property>
-                    <signal name="icon_release" handler="on_entry_search_icon_release"/>
                     <signal name="activate" handler="on_entry_search_activate"/>
+                    <signal name="icon_release" handler="on_entry_search_icon_release"/>
                   </object>
                 </child>
               </object>
@@ -2618,8 +2618,8 @@ Public License instead of this License.  But first, please read
     <property name="authors">George Vlahavas &lt;gapan~at~salixos~dot~org&gt;</property>
     <property name="translator_credits" translatable="yes">translator-credits</property>
     <property name="logo_icon_name">sourcery</property>
-    <signal name="response" handler="on_aboutdialog_response"/>
     <signal name="delete_event" handler="on_aboutdialog_delete_event"/>
+    <signal name="response" handler="on_aboutdialog_response"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox14">
         <property name="visible">True</property>
@@ -2653,13 +2653,35 @@ Public License instead of this License.  But first, please read
         <property name="orientation">vertical</property>
         <property name="spacing">10</property>
         <child>
-          <object class="GtkCheckButton" id="checkbutton_prefs_deps">
-            <property name="label" translatable="yes">Resolve dependencies</property>
+          <object class="GtkVBox" id="vbox8">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">False</property>
-            <property name="tooltip_text" translatable="yes">Dependency resolution is only available for the repositories that support it. SlackBuilds from SlackBuilds.org do not include any dependency information.</property>
-            <property name="draw_indicator">True</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkCheckButton" id="checkbutton_prefs_deps">
+                <property name="label" translatable="yes">Resolve dependencies</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label24">
+                <property name="visible">True</property>
+                <property name="xalign">0</property>
+                <property name="xpad">20</property>
+                <property name="label" translatable="yes">(Dependency resolution is only available for the repositories that support it. SlackBuilds from SlackBuilds.org do not include any dependency information.)</property>
+                <property name="wrap">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="position">1</property>
