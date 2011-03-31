@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-30 00:50+0300\n"
+"POT-Creation-Date: 2011-03-31 21:54+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -249,29 +249,29 @@ msgstr ""
 msgid "Preferences"
 msgstr ""
 
-#: src/sourcery.glade:2661
+#: src/sourcery.glade:2657
 msgid "Resolve dependencies"
 msgstr ""
 
-#: src/sourcery.glade:2676
+#: src/sourcery.glade:2661
 msgid ""
-"(Dependency resolution is only available for the repositories that support "
+"Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
-"information.)"
+"information."
 msgstr ""
 
-#: src/sourcery.glade:2741
+#: src/sourcery.glade:2719
 msgid "First run"
 msgstr ""
 
-#: src/sourcery.glade:2775
+#: src/sourcery.glade:2753
 msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
 msgstr ""
 
-#: src/sourcery.glade:2808
+#: src/sourcery.glade:2786
 msgid "Create SlackBuild cache"
 msgstr ""
 

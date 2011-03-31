@@ -2,34 +2,37 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-30 00:50+0300\n"
-"PO-Revision-Date: 2011-03-29 21:58+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"POT-Creation-Date: 2011-03-31 21:53+0300\n"
+"PO-Revision-Date: 2011-03-31 22:55+0200\n"
+"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: src/sourcery.glade:62
 msgid "_File"
 msgstr "_Файл"
 
-#: src/sourcery.glade:69 src/sourcery.glade:270
+#: src/sourcery.glade:69
+#: src/sourcery.glade:270
 msgid "Update"
 msgstr "Оновлення"
 
-#: src/sourcery.glade:71 src/sourcery.glade:269
+#: src/sourcery.glade:71
+#: src/sourcery.glade:269
 msgid "Update local SlackBuild cache"
 msgstr "Оновити локальний кеш SlackBuild"
 
-#: src/sourcery.glade:79 src/sourcery.glade:285
+#: src/sourcery.glade:79
+#: src/sourcery.glade:285
 msgid "Execute"
 msgstr "Запустити"
 
@@ -45,23 +48,31 @@ msgstr "Зняти всі позначення"
 msgid "_Package"
 msgstr "_Пакет"
 
-#: src/sourcery.glade:151 src/sourcery.glade:549 src/sourcery.glade:551
+#: src/sourcery.glade:151
+#: src/sourcery.glade:549
+#: src/sourcery.glade:551
 msgid "Unmark"
 msgstr "Зняти позначення"
 
-#: src/sourcery.glade:160 src/sourcery.glade:559 src/sourcery.glade:561
+#: src/sourcery.glade:160
+#: src/sourcery.glade:559
+#: src/sourcery.glade:561
 msgid "Install"
 msgstr "Встановити"
 
-#: src/sourcery.glade:170 src/sourcery.glade:569 src/sourcery.glade:571
+#: src/sourcery.glade:170
+#: src/sourcery.glade:569
+#: src/sourcery.glade:571
 msgid "Reinstall"
 msgstr "Перевстановити"
 
-#: src/sourcery.glade:180 src/sourcery.glade:579
+#: src/sourcery.glade:180
+#: src/sourcery.glade:579
 msgid "Remove"
 msgstr "Вилучити"
 
-#: src/sourcery.glade:195 src/sourcery.glade:593
+#: src/sourcery.glade:195
+#: src/sourcery.glade:593
 msgid "Get information"
 msgstr "Отримати інформацію"
 
@@ -69,7 +80,8 @@ msgstr "Отримати інформацію"
 msgid "_View"
 msgstr "_Вигляд"
 
-#: src/sourcery.glade:218 src/sourcery.glade:1804
+#: src/sourcery.glade:218
+#: src/sourcery.glade:1804
 msgid "SlackBuild logs"
 msgstr "Логи SlackBuild"
 
@@ -77,7 +89,8 @@ msgstr "Логи SlackBuild"
 msgid "_Help"
 msgstr "_Допомога"
 
-#: src/sourcery.glade:237 src/sourcery.glade:1544
+#: src/sourcery.glade:237
+#: src/sourcery.glade:1544
 msgid "Icon legend"
 msgstr "Іконки"
 
@@ -89,18 +102,14 @@ msgstr "Запустити визначені дії"
 msgid "Search: "
 msgstr "Пошук: "
 
-#: src/sourcery.glade:457 src/sourcery.glade:1070
+#: src/sourcery.glade:457
+#: src/sourcery.glade:1070
 msgid "Error"
 msgstr "Помилка"
 
 #: src/sourcery.glade:490
-msgid ""
-"There was an error while updating the SlackBuild cache. Make sure you have "
-"configured all sources properly and that you have a working internet "
-"connection."
-msgstr ""
-"Сталася помилка при оновленні кешу SlackBuild. Переконайтеся, що Ви "
-"налаштували всі джерела правильно, і що у Вас є з'єднання з Інтернетом."
+msgid "There was an error while updating the SlackBuild cache. Make sure you have configured all sources properly and that you have a working internet connection."
+msgstr "Сталася помилка при оновленні кешу SlackBuild. Переконайтеся, що Ви налаштували всі джерела правильно, і що у Вас є з'єднання з Інтернетом."
 
 #: src/sourcery.glade:651
 msgid "Pending tasks"
@@ -111,12 +120,8 @@ msgid "<b>Execute the following tasks?</b>"
 msgstr "<b>Виконати наступні завдання?</b>"
 
 #: src/sourcery.glade:709
-msgid ""
-"The following tasks are about to be performed. You can rearrange the "
-"processing order by dragging the items in the list."
-msgstr ""
-"Наступні завдання будуть виконані. Ви можете змінити порядок виконання, "
-"перетягуючи елементи в списку."
+msgid "The following tasks are about to be performed. You can rearrange the processing order by dragging the items in the list."
+msgstr "Наступні завдання будуть виконані. Ви можете змінити порядок виконання, перетягуючи елементи в списку."
 
 #: src/sourcery.glade:820
 msgid "Progress"
@@ -127,14 +132,8 @@ msgid "Overall progress"
 msgstr "Загальний поступ"
 
 #: src/sourcery.glade:881
-msgid ""
-"Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few "
-"hours..."
-msgstr ""
-"Будь ласка, почекайте. Це може зайняти деякий час. Час поступу може "
-"змінитися залежно від розміру та складності програмного забезпечення, від "
-"декількох секунд до декількох годин..."
+msgid "Please wait. This might take a while. Processing time varies, depending on the size and complexity of the software, from a few seconds to a few hours..."
+msgstr "Будь ласка, почекайте. Це може зайняти деякий час. Час поступу може змінитися залежно від розміру та складності програмного забезпечення, від декількох секунд до декількох годин..."
 
 #: src/sourcery.glade:922
 msgid "Completed tasks"
@@ -156,7 +155,8 @@ msgstr "Скасовано. Деякі завдання можливо вже з
 msgid "Error updating package list."
 msgstr "Помилка оновлення списку пакунків."
 
-#: src/sourcery.glade:1122 src/sourcery.glade:1903
+#: src/sourcery.glade:1122
+#: src/sourcery.glade:1903
 msgid "View log"
 msgstr "Показати журнал"
 
@@ -204,7 +204,8 @@ msgstr "<b>Залежності:</b>"
 msgid "General information"
 msgstr "Загальна інформація"
 
-#: src/sourcery.glade:1464 src/sourcery:772
+#: src/sourcery.glade:1464
+#: src/sourcery:772
 msgid "Description"
 msgstr "Опис"
 
@@ -213,12 +214,8 @@ msgid "README file"
 msgstr "Файл README"
 
 #: src/sourcery.glade:1564
-msgid ""
-"<b>The following icons are used to indicate the current status of a "
-"SlackBuild:</b>"
-msgstr ""
-"<b>Наступні значки використовуються для вказівки поточного стану "
-"SlackBuild:</b>"
+msgid "<b>The following icons are used to indicate the current status of a SlackBuild:</b>"
+msgstr "<b>Наступні значки використовуються для вказівки поточного стану SlackBuild:</b>"
 
 #: src/sourcery.glade:1583
 msgid "Not installed"
@@ -233,8 +230,7 @@ msgid "The package is going to be installed"
 msgstr "Пакунок буде встановлено"
 
 #: src/sourcery.glade:1623
-msgid ""
-"A package with this name is already installed and is going to be reinstalled"
+msgid "A package with this name is already installed and is going to be reinstalled"
 msgstr "Пакунок з такою назвою вже встановлений і буде перевстановлений"
 
 #: src/sourcery.glade:1637
@@ -246,12 +242,8 @@ msgid "Select the package you want to view the build log for:"
 msgstr "Виберіть пакунок, журнал побудови якого Ви бажаєте переглянути:"
 
 #: src/sourcery.glade:1941
-msgid ""
-"A graphical frontend to slapt-src, a utility to build and install packages "
-"from source using SlackBuilds and/or SLKBUILDs."
-msgstr ""
-"Графічний інтерфейс до slapt-src, утиліта для створення і встановлення "
-"пакетів з джерельних кодів за допомогою SlackBuild та/або SLKBUILD."
+msgid "A graphical frontend to slapt-src, a utility to build and install packages from source using SlackBuilds and/or SLKBUILDs."
+msgstr "Графічний інтерфейс до slapt-src, утиліта для створення і встановлення пакетів з джерельних кодів за допомогою SlackBuild та/або SLKBUILD."
 
 #: src/sourcery.glade:2619
 msgid "translator-credits"
@@ -261,32 +253,23 @@ msgstr "Yarema aka Knedlyk <yupadmin at gmail dot com>"
 msgid "Preferences"
 msgstr "Установки"
 
-#: src/sourcery.glade:2661
+#: src/sourcery.glade:2657
 msgid "Resolve dependencies"
 msgstr "Врахувати залежності"
 
-#: src/sourcery.glade:2676
-msgid ""
-"(Dependency resolution is only available for the repositories that support "
-"it. SlackBuilds from SlackBuilds.org do not include any dependency "
-"information.)"
-msgstr ""
+#: src/sourcery.glade:2661
+msgid "Dependency resolution is only available for the repositories that support it. SlackBuilds from SlackBuilds.org do not include any dependency information."
+msgstr "Залежності доступні тільки для сховищ, які їх підтримують. SlackBuild-и від SlackBuilds.org не містять інформацію про залежності."
 
-#: src/sourcery.glade:2741
+#: src/sourcery.glade:2719
 msgid "First run"
 msgstr "Перший запуск"
 
-#: src/sourcery.glade:2775
-msgid ""
-"It looks like this is the first time Sourcery is launched. The SlackBuild "
-"cache needs to be created first before Sourcery becomes useful. You will "
-"need a working internet connection to create the SlackBuild cache."
-msgstr ""
-"Схоже, що це перший запуск Sourcery. Спочатку потрібно створити кеш "
-"SlackBuild для роботи Sourcery. Вам необхідно робоче з’єднання з інтернетом "
-"для створення кешу SlackBuild."
+#: src/sourcery.glade:2753
+msgid "It looks like this is the first time Sourcery is launched. The SlackBuild cache needs to be created first before Sourcery becomes useful. You will need a working internet connection to create the SlackBuild cache."
+msgstr "Схоже, що це перший запуск Sourcery. Спочатку потрібно створити кеш SlackBuild для роботи Sourcery. Вам необхідно робоче з’єднання з інтернетом для створення кешу SlackBuild."
 
-#: src/sourcery.glade:2808
+#: src/sourcery.glade:2786
 msgid "Create SlackBuild cache"
 msgstr "Створити кеш SlackBuild "
 
@@ -311,7 +294,8 @@ msgstr "Не можу отримати дані SlackBuild"
 msgid "SlackBuild information for "
 msgstr "SlackBuild інформація для "
 
-#: src/sourcery:223 src/sourcery:230
+#: src/sourcery:223
+#: src/sourcery:230
 msgid "Not available."
 msgstr "Немає в наявності."
 
@@ -335,19 +319,24 @@ msgstr "%(pkg)s %(pkgver)s буде перевстановлений"
 msgid "%(pkg)s %(pkgver)s is going to be removed"
 msgstr "%(pkg)s %(pkgver)s буде вилучений"
 
-#: src/sourcery:402 src/sourcery:765
+#: src/sourcery:402
+#: src/sourcery:765
 msgid "Status"
 msgstr "Статус"
 
-#: src/sourcery:556 src/sourcery:667 src/sourcery:717
+#: src/sourcery:556
+#: src/sourcery:667
+#: src/sourcery:717
 msgid "Build log for"
 msgstr "Журнал компіляції для"
 
-#: src/sourcery:591 src/sourcery:599
+#: src/sourcery:591
+#: src/sourcery:599
 msgid "Downloading source files for"
 msgstr "Завантаження вихідних файлів для"
 
-#: src/sourcery:596 src/sourcery:604
+#: src/sourcery:596
+#: src/sourcery:604
 msgid "Compiling"
 msgstr "Компілювання"
 
@@ -357,23 +346,13 @@ msgstr "Вилучення"
 
 #: src/sourcery:627
 #, python-format
-msgid ""
-"There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
-"will be purged from the processing queue. You can review the log file for "
-"any errors during compiling."
-msgstr ""
-"Сталася помилка при компілюванні %(pkg)s %(pkgver)s. Всі заплановані дії "
-"будуть видалені з черги. Ви можете переглянути файл журналу з помилками під "
-"час компіляції."
+msgid "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue. You can review the log file for any errors during compiling."
+msgstr "Сталася помилка при компілюванні %(pkg)s %(pkgver)s. Всі заплановані дії будуть видалені з черги. Ви можете переглянути файл журналу з помилками під час компіляції."
 
 #: src/sourcery:633
 #, python-format
-msgid ""
-"There was an error while downloading source files for %(pkg)s %(pkgver)s. "
-"All pending actions will be purged from the processing queue."
-msgstr ""
-"Помилка під час завантаження вихідних файлів для %(pkg)s %(pkgver)s. Всі "
-"заплановані дії будуть видалені з черги."
+msgid "There was an error while downloading source files for %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue."
+msgstr "Помилка під час завантаження вихідних файлів для %(pkg)s %(pkgver)s. Всі заплановані дії будуть видалені з черги."
 
 #: src/sourcery:677
 msgid "Not available"
@@ -383,18 +362,23 @@ msgstr "Не доступно"
 msgid "Error reading log file."
 msgstr "Помилка при читанні файлу журналу."
 
-#: src/sourcery:768 src/sourcery:910
+#: src/sourcery:768
+#: src/sourcery:910
 msgid "Name"
 msgstr "Назва"
 
-#: src/sourcery:770 src/sourcery:911
+#: src/sourcery:770
+#: src/sourcery:911
 msgid "Version"
 msgstr "Версія"
 
-#: sourcery.desktop.in.h:1 sourcery-kde.desktop.in.h:1
+#: sourcery.desktop.in.h:1
+#: sourcery-kde.desktop.in.h:1
 msgid "A graphical frontend to slapt-src"
 msgstr "Графічний інтерфейс до slapt-src"
 
-#: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
+#: sourcery.desktop.in.h:2
+#: sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery SlackBuild Manager"
+
