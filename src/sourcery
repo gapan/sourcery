@@ -9,6 +9,7 @@ import time
 import signal
 import urllib2
 import ConfigParser
+from simpleconfig import SimpleConfig
 
 # Internationalization
 import locale
@@ -22,6 +23,7 @@ gtk.glade.textdomain("sourcery")
 
 # configuration options
 config_file = '/etc/sourcery.conf'
+slaptsrcrc = '/etc/slapt-get/slapt-srcrc'
 slackbuilds_data = '/usr/src/slapt-src/slackbuilds_data'
 logdir = '/var/log/sourcery'
 shareddir = '/usr/share/sourcery'
@@ -411,6 +413,13 @@ class Sourcery:
 		self.refresh_pkglist()
 
 	def on_menuitem_prefs_activate(self, widget):
+		# read sources and working dir
+		c = SimpleConfig(slaptsrcrc)
+		self.ls_sources.clear()
+		for i in c.get_multiple('SOURCE'):
+			self.ls_sources.append([i])
+		self.entry_workingdir.set_text(c.get('BUILDDIR'))
+		# check if dependency checkbox should be on/off
 		config = SourceryConfig()
 		self.cb_prefs_deps.set_active(config.deps())
 		self.dlg_prefs.show()
@@ -483,9 +492,35 @@ class Sourcery:
 		return True
 
 	def on_button_prefs_apply_clicked(self, widget):
+		# write sources and working dir configs to file if
+		# changed
+		c = SimpleConfig(slaptsrcrc)
+		changed = False
+		old_sources = c.get_multiple('SOURCE')
+		new_sources = list()
+		item = self.ls_sources.get_iter_first()
+		while (item is not None):
+			new_sources.append(self.ls_sources.get_value(item, 0))
+			item = self.ls_sources.iter_next(item)
+		if old_sources != new_sources:
+			c.remove('SOURCE')
+			for i in new_sources:
+				c.add('SOURCE', i)
+			changed = True
+		old_builddir = c.get('BUILDDIR')
+		new_builddir = self.entry_workingdir.get_text()
+		if old_builddir != new_builddir:
+			c.set('BUILDDIR', new_builddir)
+			changed = True
+		c.write()
+		# write dependency config to file
 		config = SourceryConfig()
 		config.write_config(self.cb_prefs_deps.get_active())
 		self.dlg_prefs.hide()
+		# if repository/working dir info has changed, prompt to
+		# rebuild icon cache
+		if changed:
+			self.dlg_ask_for_update.show()
 
 	def on_button_prefs_cancel_clicked(self, widget):
 		self.dlg_prefs.hide()
@@ -744,6 +779,14 @@ class Sourcery:
 		self.dlg_about.hide()
 		return True
 
+	def on_button_ask_for_update_rebuild_clicked(self, widget):
+		self.dlg_ask_for_update.hide()
+		self.on_toolbutton_update_clicked(self)
+
+	def on_button_ask_for_update_cancel_clicked(self, widget):
+		self.dlg_ask_for_update.hide()
+
+
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
 
@@ -914,10 +957,27 @@ class Sourcery:
 		#
 		# Preferences dialog
 		#
+		# sources tab
+		self.ls_sources = builder.get_object('liststore_sources')
+		self.btn_source_add = builder.get_object('button_source_add')
+		self.btn_source_edit = builder.get_object('button_source_edit')
+		self.btn_source_del = builder.get_object('button_source_del')
+		# working dir tab
+		self.entry_workingdir = builder.get_object('entry_workingdir')
+		self.btn_clear_cache = builder.get_object('button_clear_cache')
+		# dependencies tab
 		self.dlg_prefs = builder.get_object('dialog_prefs')
 		self.cb_prefs_deps = builder.get_object('checkbutton_prefs_deps')
+		# buttons
 		self.btn_prefs_apply = builder.get_object('button_prefs_apply')
 		self.btn_prefs_cancel = builder.get_object('button_prefs_cancel')
+
+		#
+		# Ask for update (after changing preferences) dialog
+		#
+		self.dlg_ask_for_update = builder.get_object('dialog_ask_for_update')
+		self.btn_ask_for_update_rebuild = builder.get_object('button_ask_for_update_rebuild')
+		self.btn_ask_for_update_cancel = builder.get_object('button_ask_for_update_cancel')
 
 		#
 		# First run dialog
