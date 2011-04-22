@@ -46,7 +46,6 @@ class SourceryConfig:
 		with open(config_file, 'wb') as configfile:
 			self.config.write(configfile)
 
-# Icons locations should be changed before final release
 class Icon:
 	avail = gtk.gdk.pixbuf_new_from_file(shareddir+'/pixmaps/pkg_action_available.png')
 	installed = gtk.gdk.pixbuf_new_from_file(shareddir+'/pixmaps/pkg_action_installed.png')
