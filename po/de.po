@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-23 20:38+0300\n"
+"POT-Creation-Date: 2011-04-23 20:53+0300\n"
 "PO-Revision-Date: 2011-03-29 21:58+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: German <None>\n"
@@ -335,7 +335,7 @@ msgstr "Erstelle SlackBuild Cache"
 
 #: src/sourcery.glade:3396
 #, fuzzy
-msgid "Clearing SlackBuild cache. Please wait..."
+msgid "Clearing working directory. Please wait..."
 msgstr "Erstelle SlackBuild Cache"
 
 #: src/sourcery:94
