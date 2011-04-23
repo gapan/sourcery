@@ -832,6 +832,7 @@
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <property name="transient_for">sourcery</property>
+    <signal name="delete_event" handler="on_dialog_exec_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox3">
         <property name="visible">True</property>
@@ -936,6 +937,7 @@
     <property name="deletable">False</property>
     <property name="transient_for">sourcery</property>
     <property name="text" translatable="yes">All tasks have been executed succesfully.</property>
+    <signal name="delete_event" handler="on_dialog_success_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox4">
         <property name="visible">True</property>
@@ -985,6 +987,7 @@
     <property name="transient_for">sourcery</property>
     <property name="message_type">warning</property>
     <property name="text" translatable="yes">Canceled. Some tasks may have already been completed.</property>
+    <signal name="delete_event" handler="on_dialog_canceled_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox5">
         <property name="visible">True</property>
@@ -1034,6 +1037,7 @@
     <property name="transient_for">sourcery</property>
     <property name="message_type">error</property>
     <property name="text" translatable="yes">Error updating package list.</property>
+    <signal name="delete_event" handler="on_dialog_updateerror_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox6">
         <property name="visible">True</property>
@@ -1082,6 +1086,7 @@
     <property name="skip_pager_hint">True</property>
     <property name="focus_on_map">False</property>
     <property name="transient_for">sourcery</property>
+    <signal name="delete_event" handler="on_dialog_pkginstallerror_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox9">
         <property name="visible">True</property>
@@ -1178,6 +1183,7 @@
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <property name="transient_for">sourcery</property>
+    <signal name="delete_event" handler="on_dialog_cacheupdate_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox8">
         <property name="visible">True</property>
@@ -1254,6 +1260,7 @@
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <property name="transient_for">sourcery</property>
+    <signal name="delete_event" handler="on_dialog_fetchpkginfo_delete_event"/>
     <child>
       <object class="GtkLabel" id="label5">
         <property name="visible">True</property>
@@ -2991,6 +2998,7 @@ Public License instead of this License.  But first, please read
     <property name="type_hint">normal</property>
     <property name="deletable">False</property>
     <property name="transient_for">sourcery</property>
+    <signal name="delete_event" handler="on_dialog_firstrun_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox20">
         <property name="visible">True</property>
@@ -3091,6 +3099,7 @@ Public License instead of this License.  But first, please read
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <property name="transient_for">sourcery</property>
+    <signal name="delete_event" handler="on_dialog_ask_for_update_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox19">
         <property name="visible">True</property>
@@ -3167,6 +3176,7 @@ Public License instead of this License.  But first, please read
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <property name="transient_for">dialog_prefs</property>
+    <signal name="delete_event" handler="on_dialog_add_source_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox21">
         <property name="visible">True</property>
@@ -3265,6 +3275,7 @@ Public License instead of this License.  But first, please read
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <property name="transient_for">dialog_prefs</property>
+    <signal name="delete_event" handler="on_dialog_edit_source_delete_event"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox23">
         <property name="visible">True</property>
@@ -3360,6 +3371,7 @@ Public License instead of this License.  But first, please read
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <property name="transient_for">dialog_prefs</property>
+    <signal name="delete_event" handler="on_dialog_clear_cache_delete_event"/>
     <child>
       <object class="GtkLabel" id="label33">
         <property name="visible">True</property>

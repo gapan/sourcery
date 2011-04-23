@@ -779,6 +779,54 @@ class Sourcery:
 		self.dlg_about.hide()
 		return True
 
+	def on_dialog_exec_delete_event(self, widget, event):
+		self.dlg_exec.hide()
+		return True
+
+	def on_dialog_success_delete_event(self, widget, event):
+		self.dlg_success.hide()
+		return True
+
+	def on_dialog_canceled_delete_event(self, widget, event):
+		self.dlg_canceled.hide()
+		return True
+
+	def on_dialog_updateerror_delete_event(self, widget, event):
+		self.dlg_updateerror.hide()
+		return True
+	
+	def on_dialog_pkginstallerror_delete_event(self, widget, event):
+		self.dlg_pkginstallerror.hide()
+		return True
+
+	def on_dialog_cacheupdate_delete_event(self, widget, event):
+		self.dlg_cacheupdate.hide()
+		return True
+
+	def on_dialog_fetchpkginfo_delete_event(self, widget, event):
+		self.dlg_fetchpkginfo.hide()
+		return True
+	
+	def on_dialog_firstrun_delete_event(self, widget, event):
+		self.dlg_firstrun.hide()
+		return True
+	
+	def on_dialog_ask_for_update_delete_event(self, widget, event):
+		self.dlg_ask_for_update.hide()
+		return True
+	
+	def on_dialog_add_source_delete_event(self, widget, event):
+		self.dlg_add_source.hide()
+		return True
+	
+	def on_dialog_edit_source_delete_event(self, widget, event):
+		self.dlg_edit_source.hide()
+		return True
+	
+	def on_dialog_clear_cache_delete_event(self, widget, event):
+		self.dlg_clear_cache.hide()
+		return True
+	
 	def on_button_ask_for_update_rebuild_clicked(self, widget):
 		self.dlg_ask_for_update.hide()
 		self.on_toolbutton_update_clicked(self)
@@ -817,7 +865,6 @@ class Sourcery:
 			gtk.main_iteration()
 		time.sleep(0.5)	
 		status, output = commands.getstatusoutput('slapt-src --clean')
-
 		self.dlg_clear_cache.hide()
 
 	def on_button_add_source_add_clicked(self, widget):
