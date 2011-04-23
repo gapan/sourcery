@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-31 21:53+0300\n"
+"POT-Creation-Date: 2011-04-23 20:38+0300\n"
 "PO-Revision-Date: 2011-03-31 22:54+0200\n"
 "Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,368 +17,451 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
-#: src/sourcery.glade:62
+#: src/sourcery.glade:68
 msgid "_File"
 msgstr "_File"
 
-#: src/sourcery.glade:69
-#: src/sourcery.glade:270
+#: src/sourcery.glade:75 src/sourcery.glade:276
 msgid "Update"
 msgstr "更新"
 
-#: src/sourcery.glade:71
-#: src/sourcery.glade:269
+#: src/sourcery.glade:77 src/sourcery.glade:275
 msgid "Update local SlackBuild cache"
 msgstr "ローカルのSlackBuildキャッシュを更新する"
 
-#: src/sourcery.glade:79
-#: src/sourcery.glade:285
+#: src/sourcery.glade:85 src/sourcery.glade:291
 msgid "Execute"
 msgstr "実行"
 
-#: src/sourcery.glade:108
+#: src/sourcery.glade:114
 msgid "_Edit"
 msgstr "_Edit"
 
-#: src/sourcery.glade:115
+#: src/sourcery.glade:121
 msgid "Unmark all"
 msgstr "すべてのマークを外す"
 
-#: src/sourcery.glade:144
+#: src/sourcery.glade:150
 msgid "_Package"
 msgstr "_Package"
 
-#: src/sourcery.glade:151
-#: src/sourcery.glade:549
-#: src/sourcery.glade:551
+#: src/sourcery.glade:157 src/sourcery.glade:555 src/sourcery.glade:557
 msgid "Unmark"
 msgstr "マークを外す"
 
-#: src/sourcery.glade:160
-#: src/sourcery.glade:559
-#: src/sourcery.glade:561
+#: src/sourcery.glade:166 src/sourcery.glade:565 src/sourcery.glade:567
 msgid "Install"
 msgstr "インストール"
 
-#: src/sourcery.glade:170
-#: src/sourcery.glade:569
-#: src/sourcery.glade:571
+#: src/sourcery.glade:176 src/sourcery.glade:575 src/sourcery.glade:577
 msgid "Reinstall"
 msgstr "再インストール"
 
-#: src/sourcery.glade:180
-#: src/sourcery.glade:579
+#: src/sourcery.glade:186 src/sourcery.glade:585
 msgid "Remove"
 msgstr "削除"
 
-#: src/sourcery.glade:195
-#: src/sourcery.glade:593
+#: src/sourcery.glade:201 src/sourcery.glade:599
 msgid "Get information"
 msgstr "情報を入手する"
 
-#: src/sourcery.glade:210
+#: src/sourcery.glade:216
 msgid "_View"
 msgstr "_View"
 
-#: src/sourcery.glade:218
-#: src/sourcery.glade:1804
+#: src/sourcery.glade:224 src/sourcery.glade:1817
 msgid "SlackBuild logs"
 msgstr "SlackBuildのログ"
 
-#: src/sourcery.glade:230
+#: src/sourcery.glade:236
 msgid "_Help"
 msgstr "_Help"
 
-#: src/sourcery.glade:237
-#: src/sourcery.glade:1544
+#: src/sourcery.glade:243 src/sourcery.glade:1557
 msgid "Icon legend"
 msgstr "アイコンの凡例"
 
-#: src/sourcery.glade:284
+#: src/sourcery.glade:290
 msgid "Execute pending actions"
 msgstr "保留されたアクションを実行する"
 
-#: src/sourcery.glade:323
+#: src/sourcery.glade:329
 msgid "Search: "
 msgstr "検索："
 
-#: src/sourcery.glade:457
-#: src/sourcery.glade:1070
+#: src/sourcery.glade:463 src/sourcery.glade:1080
 msgid "Error"
 msgstr "エラー"
 
-#: src/sourcery.glade:490
-msgid "There was an error while updating the SlackBuild cache. Make sure you have configured all sources properly and that you have a working internet connection."
-msgstr "SlackBuildのキャッシュを更新している間にエラーが発生しました。インターネットの接続、ソースの設定を確認してください。"
+#: src/sourcery.glade:496
+msgid ""
+"There was an error while updating the SlackBuild cache. Make sure you have "
+"configured all sources properly and that you have a working internet "
+"connection."
+msgstr ""
+"SlackBuildのキャッシュを更新している間にエラーが発生しました。インターネット"
+"の接続、ソースの設定を確認してください。"
 
-#: src/sourcery.glade:651
+#: src/sourcery.glade:657
 msgid "Pending tasks"
 msgstr "保留中のタスク"
 
-#: src/sourcery.glade:698
+#: src/sourcery.glade:704
 msgid "<b>Execute the following tasks?</b>"
 msgstr "<b>次のタスクを実行しますか？</b>"
 
-#: src/sourcery.glade:709
-msgid "The following tasks are about to be performed. You can rearrange the processing order by dragging the items in the list."
-msgstr "リストされているタスクが実行されます。リスト内の項目をドラッグして、処理順序を並べ替えることができます。"
+#: src/sourcery.glade:715
+msgid ""
+"The following tasks are about to be performed. You can rearrange the "
+"processing order by dragging the items in the list."
+msgstr ""
+"リストされているタスクが実行されます。リスト内の項目をドラッグして、処理順序"
+"を並べ替えることができます。"
 
-#: src/sourcery.glade:820
+#: src/sourcery.glade:826
 msgid "Progress"
 msgstr "進行状況"
 
-#: src/sourcery.glade:842
+#: src/sourcery.glade:849
 msgid "Overall progress"
 msgstr "全体の進行状況"
 
-#: src/sourcery.glade:881
-msgid "Please wait. This might take a while. Processing time varies, depending on the size and complexity of the software, from a few seconds to a few hours..."
-msgstr "しばらくお待ちください。しばらく時間がかかる場合があります。処理時間は数時間、数秒からと、サイズおよびソフトの複雑さによって異なります..."
+#: src/sourcery.glade:888
+msgid ""
+"Please wait. This might take a while. Processing time varies, depending on "
+"the size and complexity of the software, from a few seconds to a few hours..."
+msgstr ""
+"しばらくお待ちください。しばらく時間がかかる場合があります。処理時間は数時"
+"間、数秒からと、サイズおよびソフトの複雑さによって異なります..."
 
-#: src/sourcery.glade:922
+#: src/sourcery.glade:929
 msgid "Completed tasks"
 msgstr "完了したタスク"
 
-#: src/sourcery.glade:932
+#: src/sourcery.glade:939
 msgid "All tasks have been executed succesfully."
 msgstr "すべてのタスクが正常に実行されました。"
 
-#: src/sourcery.glade:972
+#: src/sourcery.glade:980
 msgid "Canceled"
 msgstr "キャンセルしました"
 
-#: src/sourcery.glade:981
+#: src/sourcery.glade:989
 msgid "Canceled. Some tasks may have already been completed."
-msgstr "キャンセルされました。タスクのいくらかは、既に完了している可能性があります。"
+msgstr ""
+"キャンセルされました。タスクのいくらかは、既に完了している可能性があります。"
 
-#: src/sourcery.glade:1030
+#: src/sourcery.glade:1039
 msgid "Error updating package list."
 msgstr "パッケージリストの更新中にエラーが発生しました。"
 
-#: src/sourcery.glade:1122
-#: src/sourcery.glade:1903
+#: src/sourcery.glade:1133 src/sourcery.glade:1916
 msgid "View log"
 msgstr "ログを見る"
 
-#: src/sourcery.glade:1165
+#: src/sourcery.glade:1176
 msgid "Updating..."
 msgstr "更新中..."
 
-#: src/sourcery.glade:1188
+#: src/sourcery.glade:1200
 msgid "Updating SlackBuild cache..."
 msgstr "SlackBuildキャッシュを更新中..."
 
-#: src/sourcery.glade:1241
+#: src/sourcery.glade:1253
 msgid "Getting SlackBuild information"
 msgstr "SlackBuildの情報を取得"
 
-#: src/sourcery.glade:1256
+#: src/sourcery.glade:1269
 msgid "Downloading SlackBuild information. Please wait..."
 msgstr "SlackBuildの情報をダウンロードしています。しばらくお待ちください..."
 
-#: src/sourcery.glade:1290
+#: src/sourcery.glade:1303
 msgid "<b>Name:</b>"
 msgstr "<b>名：</b>"
 
-#: src/sourcery.glade:1298
+#: src/sourcery.glade:1311
 msgid "<b>Version:</b>"
 msgstr "<b>バージョン：</b>"
 
-#: src/sourcery.glade:1310
+#: src/sourcery.glade:1323
 msgid "<b>Source:</b>"
 msgstr "<b>ソース：</b>"
 
-#: src/sourcery.glade:1323
+#: src/sourcery.glade:1336
 msgid "<b>Files:</b>"
 msgstr "<b>ファイル：</b>"
 
-#: src/sourcery.glade:1335
+#: src/sourcery.glade:1348
 msgid "<b>Location:</b>"
 msgstr "<b>ロケーション：</b>"
 
-#: src/sourcery.glade:1398
+#: src/sourcery.glade:1411
 msgid "<b>Dependencies:</b>"
 msgstr "<b>依存ファイル：</b>"
 
-#: src/sourcery.glade:1440
+#: src/sourcery.glade:1453
 msgid "General information"
 msgstr "一般情報"
 
-#: src/sourcery.glade:1464
-#: src/sourcery:772
+#: src/sourcery.glade:1477 src/sourcery:913
 msgid "Description"
 msgstr "概要"
 
-#: src/sourcery.glade:1495
+#: src/sourcery.glade:1508
 msgid "README file"
 msgstr "READMEファイル"
 
-#: src/sourcery.glade:1564
-msgid "<b>The following icons are used to indicate the current status of a SlackBuild:</b>"
+#: src/sourcery.glade:1577
+msgid ""
+"<b>The following icons are used to indicate the current status of a "
+"SlackBuild:</b>"
 msgstr "<b>次のアイコンは、SlackBuildの現在のステータスを表示しています：</b>"
 
-#: src/sourcery.glade:1583
+#: src/sourcery.glade:1596
 msgid "Not installed"
 msgstr "未インストール"
 
-#: src/sourcery.glade:1595
+#: src/sourcery.glade:1608
 msgid "A package with this name is already installed"
 msgstr "この名前を持つパッケージは、既にインストールされています"
 
-#: src/sourcery.glade:1609
+#: src/sourcery.glade:1622
 msgid "The package is going to be installed"
 msgstr "パッケージがインストールされます"
 
-#: src/sourcery.glade:1623
-msgid "A package with this name is already installed and is going to be reinstalled"
-msgstr "この名前を持つパッケージは既にインストールされていますから再インストールします"
+#: src/sourcery.glade:1636
+msgid ""
+"A package with this name is already installed and is going to be reinstalled"
+msgstr ""
+"この名前を持つパッケージは既にインストールされていますから再インストールしま"
+"す"
 
-#: src/sourcery.glade:1637
+#: src/sourcery.glade:1650
 msgid "The package is going to be removed"
 msgstr "パッケージが削除されます"
 
-#: src/sourcery.glade:1826
+#: src/sourcery.glade:1839
 msgid "Select the package you want to view the build log for:"
 msgstr "ビルドログを表示したいパッケージを選択してください："
 
-#: src/sourcery.glade:1941
-msgid "A graphical frontend to slapt-src, a utility to build and install packages from source using SlackBuilds and/or SLKBUILDs."
-msgstr "SlackBuildsを使用して、ソースからパッケージのビルドとインストールをするslapt- srcのグラフィカル·フロントエンドです。"
+#: src/sourcery.glade:1954
+msgid ""
+"A graphical frontend to slapt-src, a utility to build and install packages "
+"from source using SlackBuilds and/or SLKBUILDs."
+msgstr ""
+"SlackBuildsを使用して、ソースからパッケージのビルドとインストールをする"
+"slapt- srcのグラフィカル·フロントエンドです。"
 
-#: src/sourcery.glade:2619
+#: src/sourcery.glade:2632
 msgid "translator-credits"
 msgstr "翻訳者"
 
-#: src/sourcery.glade:2644
+#: src/sourcery.glade:2657
 msgid "Preferences"
 msgstr "設定"
 
-#: src/sourcery.glade:2657
+#: src/sourcery.glade:2680
+#, fuzzy
+msgid "<b>SlackBuild Sources</b>"
+msgstr "<b>ソース：</b>"
+
+#: src/sourcery.glade:2694
+msgid ""
+"<i>Sources closer to the top have higher priority. You can rearrange the "
+"order by dragging.</i>"
+msgstr ""
+
+#: src/sourcery.glade:2810
+msgid "Sources"
+msgstr ""
+
+#: src/sourcery.glade:2828
+msgid "<b>Source and package storage</b>"
+msgstr ""
+
+#: src/sourcery.glade:2853
+msgid "Clear working directory"
+msgstr ""
+
+#: src/sourcery.glade:2887
+msgid "Working Directory"
+msgstr ""
+
+#: src/sourcery.glade:2900
 msgid "Resolve dependencies"
 msgstr "依存ファイルの処理"
 
-#: src/sourcery.glade:2661
-msgid "Dependency resolution is only available for the repositories that support it. SlackBuilds from SlackBuilds.org do not include any dependency information."
-msgstr "依存ファイルの処理は、サポートされているリポジトリでのみ使用可能です。 SlackBuilds.orgのSlackBuildsはすべて依存ファイルの情報が含まれていません。"
+#: src/sourcery.glade:2917
+msgid ""
+"Dependency resolution is only available for the repositories that support "
+"it. SlackBuilds from SlackBuilds.org do not include any dependency "
+"information."
+msgstr ""
+"依存ファイルの処理は、サポートされているリポジトリでのみ使用可能です。 "
+"SlackBuilds.orgのSlackBuildsはすべて依存ファイルの情報が含まれていません。"
 
-#: src/sourcery.glade:2719
+#: src/sourcery.glade:2945
+#, fuzzy
+msgid "Dependencies"
+msgstr "<b>依存ファイル：</b>"
+
+#: src/sourcery.glade:3008
 msgid "First run"
 msgstr "初実行"
 
-#: src/sourcery.glade:2753
-msgid "It looks like this is the first time Sourcery is launched. The SlackBuild cache needs to be created first before Sourcery becomes useful. You will need a working internet connection to create the SlackBuild cache."
-msgstr "Sourceryの初起動のようです。 Sourceryを使用するには、SlackBuildのキャッシュをまず最初に作成する必要があります。そのためには、インターネット接続が必要です。"
+#: src/sourcery.glade:3043
+msgid ""
+"It looks like this is the first time Sourcery is launched. The SlackBuild "
+"cache needs to be created first before Sourcery becomes useful. You will "
+"need a working internet connection to create the SlackBuild cache."
+msgstr ""
+"Sourceryの初起動のようです。 Sourceryを使用するには、SlackBuildのキャッシュを"
+"まず最初に作成する必要があります。そのためには、インターネット接続が必要で"
+"す。"
 
-#: src/sourcery.glade:2786
+#: src/sourcery.glade:3076
 msgid "Create SlackBuild cache"
 msgstr "SlackBuildのキャッシュを作成する"
 
-#: src/sourcery:93
+#: src/sourcery.glade:3108
+#, fuzzy
+msgid "Update SlackBuild Cache?"
+msgstr "ローカルのSlackBuildキャッシュを更新する"
+
+#: src/sourcery.glade:3127
+msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+msgstr ""
+
+#: src/sourcery.glade:3156
+#, fuzzy
+msgid "Rebuild SlackBuild cache"
+msgstr "SlackBuildのキャッシュを作成する"
+
+#: src/sourcery.glade:3185
+#, fuzzy
+msgid "Add SlackBuild source"
+msgstr "SlackBuildがひとつ見つかりました"
+
+#: src/sourcery.glade:3209 src/sourcery.glade:3308
+#, fuzzy
+msgid "SlackBuild source location:"
+msgstr "SlackBuildの情報"
+
+#: src/sourcery.glade:3284
+#, fuzzy
+msgid "Edit SlackBuild source"
+msgstr "SlackBuildのキャッシュを作成する"
+
+#: src/sourcery.glade:3396
+#, fuzzy
+msgid "Clearing SlackBuild cache. Please wait..."
+msgstr "SlackBuildの情報をダウンロードしています。しばらくお待ちください..."
+
+#: src/sourcery:94
 msgid "No SlackBuilds found"
 msgstr "SlackBuildsが見つかりました"
 
-#: src/sourcery:95
+#: src/sourcery:96
 msgid "One SlackBuild found"
 msgstr "SlackBuildがひとつ見つかりました"
 
-#: src/sourcery:97
+#: src/sourcery:98
 #, python-format
 msgid "%(num)i SlackBuilds found"
 msgstr "%(num)i SlackBuildsが見つかりました"
 
-#: src/sourcery:101
+#: src/sourcery:102
 msgid "Could not retrieve SlackBuild data"
 msgstr "SlackBuildのデータを取得できませんでした。"
 
-#: src/sourcery:215
+#: src/sourcery:216
 msgid "SlackBuild information for "
 msgstr "SlackBuildの情報"
 
-#: src/sourcery:223
-#: src/sourcery:230
+#: src/sourcery:224 src/sourcery:231
 msgid "Not available."
 msgstr "入手できません"
 
-#: src/sourcery:277
+#: src/sourcery:278
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
 msgstr "%(pkg)s %(pkgver)sが、依存ファイルとしてインストールされます"
 
-#: src/sourcery:287
+#: src/sourcery:288
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
 msgstr "%(pkg)s %(pkgver)sが、インストールされます"
 
-#: src/sourcery:289
+#: src/sourcery:290
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
 msgstr "%(pkg)s %(pkgver)sが、再インストールされます"
 
-#: src/sourcery:291
+#: src/sourcery:292
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
 msgstr "%(pkg)s %(pkgver)sが、削除されます"
 
-#: src/sourcery:402
-#: src/sourcery:765
+#: src/sourcery:403 src/sourcery:906
 msgid "Status"
 msgstr "ステータス"
 
-#: src/sourcery:556
-#: src/sourcery:667
-#: src/sourcery:717
+#: src/sourcery:590 src/sourcery:701 src/sourcery:751
 msgid "Build log for"
 msgstr "ビルドログ"
 
-#: src/sourcery:591
-#: src/sourcery:599
+#: src/sourcery:625 src/sourcery:633
 msgid "Downloading source files for"
 msgstr "ソースファイルのダウンロード"
 
-#: src/sourcery:596
-#: src/sourcery:604
+#: src/sourcery:630 src/sourcery:638
 msgid "Compiling"
 msgstr "コンパイル"
 
-#: src/sourcery:607
+#: src/sourcery:641
 msgid "Removing"
 msgstr "削除"
 
-#: src/sourcery:627
+#: src/sourcery:661
 #, python-format
-msgid "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue. You can review the log file for any errors during compiling."
-msgstr "%(pkg)s %(pkgver)sをコンパイル中にエラーが発生しました。保留中のすべてのアクションは、処理リストから削除されます。コンパイル時のエラーは、ログファイルで確認することができます。"
+msgid ""
+"There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
+"will be purged from the processing queue. You can review the log file for "
+"any errors during compiling."
+msgstr ""
+"%(pkg)s %(pkgver)sをコンパイル中にエラーが発生しました。保留中のすべてのアク"
+"ションは、処理リストから削除されます。コンパイル時のエラーは、ログファイルで"
+"確認することができます。"
 
-#: src/sourcery:633
+#: src/sourcery:667
 #, python-format
-msgid "There was an error while downloading source files for %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue."
-msgstr "%(pkg)s %(pkgver)sのソースファイルをダウンロード中にエラーが発生しました。保留中のすべてのアクションは、処理リストから削除されます。"
+msgid ""
+"There was an error while downloading source files for %(pkg)s %(pkgver)s. "
+"All pending actions will be purged from the processing queue."
+msgstr ""
+"%(pkg)s %(pkgver)sのソースファイルをダウンロード中にエラーが発生しました。保"
+"留中のすべてのアクションは、処理リストから削除されます。"
 
-#: src/sourcery:677
+#: src/sourcery:711
 msgid "Not available"
 msgstr "入手できません"
 
-#: src/sourcery:728
+#: src/sourcery:762
 msgid "Error reading log file."
 msgstr "ログファイルの読み取り中にエラーが発生しました"
 
-#: src/sourcery:768
-#: src/sourcery:910
+#: src/sourcery:909 src/sourcery:1051
 msgid "Name"
 msgstr "名"
 
-#: src/sourcery:770
-#: src/sourcery:911
+#: src/sourcery:911 src/sourcery:1052
 msgid "Version"
 msgstr "バージョン"
 
-#: sourcery.desktop.in.h:1
-#: sourcery-kde.desktop.in.h:1
+#: sourcery.desktop.in.h:1 sourcery-kde.desktop.in.h:1
 msgid "A graphical frontend to slapt-src"
 msgstr "slapt-srcのグラフィカル·フロントエンド"
 
-#: sourcery.desktop.in.h:2
-#: sourcery-kde.desktop.in.h:2
+#: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery·SlackBuild·マネージャー"
-
