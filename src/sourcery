@@ -786,6 +786,58 @@ class Sourcery:
 	def on_button_ask_for_update_cancel_clicked(self, widget):
 		self.dlg_ask_for_update.hide()
 
+	def on_button_source_add_clicked(self, widget):
+		self.entry_add_source.set_text("")
+		self.entry_add_source.grab_focus()
+		self.dlg_add_source.show()
+
+	def on_button_source_edit_clicked(self, widget):
+		try:
+			selectedline = self.tv_sources.get_selection()
+			self.ls_sources, iter = selectedline.get_selected()
+			source = self.ls_sources.get_value(iter, 0)
+			self.entry_edit_source.set_text(source)
+			self.entry_edit_source.grab_focus()
+			self.dlg_edit_source.show()
+		except TypeError:
+			pass
+
+	def on_button_source_del_clicked(self, widget):
+		try:
+			selectedline = self.tv_sources.get_selection()
+			self.ls_sources, iter = selectedline.get_selected()
+			pkg = self.ls_sources.get_value(iter, 0)
+			self.ls_sources.remove(iter)
+		except TypeError:
+			pass
+
+	def on_button_clear_cache_clicked(self, widget):
+		self.dlg_clear_cache.show()
+		while gtk.events_pending():
+			gtk.main_iteration()
+		time.sleep(0.5)	
+		status, output = commands.getstatusoutput('slapt-src --clean')
+
+		self.dlg_clear_cache.hide()
+
+	def on_button_add_source_add_clicked(self, widget):
+		source = self.entry_add_source.get_text().lstrip(' ').rstrip(' ')
+		if source != "":
+			self.ls_sources.append([source])
+		self.dlg_add_source.hide()
+
+	def on_button_add_source_cancel_clicked(self, widget):
+		self.dlg_add_source.hide()
+
+	def on_button_edit_source_apply_clicked(self, widget):
+		selectedline = self.tv_sources.get_selection()
+		self.ls_sources, iter = selectedline.get_selected()
+		source = self.entry_edit_source.get_text().lstrip(' ').rstrip(' ')
+		self.ls_sources.set_value(iter, 0, source)
+		self.dlg_edit_source.hide()
+
+	def on_button_edit_source_cancel_clicked(self, widget):
+		self.dlg_edit_source.hide()
 
 	def gtk_main_quit(self, widget, data=None):
 		gtk.main_quit()
@@ -958,6 +1010,7 @@ class Sourcery:
 		# Preferences dialog
 		#
 		# sources tab
+		self.tv_sources = builder.get_object('treeview_sources')
 		self.ls_sources = builder.get_object('liststore_sources')
 		self.btn_source_add = builder.get_object('button_source_add')
 		self.btn_source_edit = builder.get_object('button_source_edit')
@@ -973,11 +1026,32 @@ class Sourcery:
 		self.btn_prefs_cancel = builder.get_object('button_prefs_cancel')
 
 		#
+		# Add new source dialog
+		#
+		self.dlg_add_source = builder.get_object('dialog_add_source')
+		self.entry_add_source = builder.get_object('entry_add_source')
+		self.btn_add_source_add = builder.get_object('button_add_source_add')
+		self.btn_add_source_cancel = builder.get_object('button_add_source_cancel')
+
+		#
+		# Edit source dialog
+		#
+		self.dlg_edit_source = builder.get_object('dialog_edit_source')
+		self.entry_edit_source = builder.get_object('entry_edit_source')
+		self.btn_edit_source_apply = builder.get_object('button_edit_source_apply')
+		self.btn_edit_source_cancel = builder.get_object('button_edit_source_cancel')
+
+		#
 		# Ask for update (after changing preferences) dialog
 		#
 		self.dlg_ask_for_update = builder.get_object('dialog_ask_for_update')
 		self.btn_ask_for_update_rebuild = builder.get_object('button_ask_for_update_rebuild')
 		self.btn_ask_for_update_cancel = builder.get_object('button_ask_for_update_cancel')
+
+		#
+		# Clear cache dialog
+		#
+		self.dlg_clear_cache = builder.get_object('dialog_clear_cache')
 
 		#
 		# First run dialog
