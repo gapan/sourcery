@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-23 20:53+0300\n"
-"PO-Revision-Date: 2011-03-31 22:13+0200\n"
-"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
+"PO-Revision-Date: 2011-04-23 17:55+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/sourcery.glade:68
@@ -99,9 +99,9 @@ msgid ""
 "configured all sources properly and that you have a working internet "
 "connection."
 msgstr ""
-"Υπήρξε σφάλμα κατά την ανανέωση της τοπικής αποθήκης SlackBuild. Βεβαιωθείτε "
-"ότι έχετε ρυθμίσει όλες τις πηγές σωστά και ότι η σύνδεσή σας με το internet "
-"λειτουργεί σωστά."
+"Υπήρξε σφάλμα κατά την ανανέωση της τοπικής αποθήκης SlackBuild. Βεβαιωθείτε"
+" ότι έχετε ρυθμίσει όλες τις πηγές σωστά και ότι η σύνδεσή σας με το "
+"internet λειτουργεί σωστά."
 
 #: src/sourcery.glade:657
 msgid "Pending tasks"
@@ -130,7 +130,8 @@ msgstr "Συνολική πρόοδος"
 #: src/sourcery.glade:888
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few hours..."
+"the size and complexity of the software, from a few seconds to a few "
+"hours..."
 msgstr ""
 "Παρακαλώ περιμένετε. Η εργασία μπορεί να διαρκέσει αρκετή ώρα. Ο χρόνος "
 "επεξεργασίας ποικίλει, εξαρτάται από το μέγεθος και την πολυπλοκότητα του "
@@ -266,31 +267,32 @@ msgid "Preferences"
 msgstr "Προτιμήσεις"
 
 #: src/sourcery.glade:2680
-#, fuzzy
 msgid "<b>SlackBuild Sources</b>"
-msgstr "<b>Πηγή:</b>"
+msgstr "<b>Πηγές SlackBuild</b>"
 
 #: src/sourcery.glade:2694
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
 msgstr ""
+"<i>Πηγές που τοποθετούνται ψηλότερα έχουν μεγαλύτερη προτεραιότητα. Μπορείτε"
+" να αλλάξετε τη θέση τους με το ποντίκι.</i>"
 
 #: src/sourcery.glade:2810
 msgid "Sources"
-msgstr ""
+msgstr "Πηγές"
 
 #: src/sourcery.glade:2828
 msgid "<b>Source and package storage</b>"
-msgstr ""
+msgstr "<b>Αποθήκευση πηγαίων αρχείων και πακέτων</b>"
 
 #: src/sourcery.glade:2853
 msgid "Clear working directory"
-msgstr ""
+msgstr "Καθαρισμός καταλόγου εργασίας"
 
 #: src/sourcery.glade:2887
 msgid "Working Directory"
-msgstr ""
+msgstr "Κατάλογος εργασίας"
 
 #: src/sourcery.glade:2900
 msgid "Resolve dependencies"
@@ -307,9 +309,8 @@ msgstr ""
 "περιλαμβάνουν πληροφορίες εξαρτήσεων."
 
 #: src/sourcery.glade:2945
-#, fuzzy
 msgid "Dependencies"
-msgstr "<b>Εξαρτήσεις:</b>"
+msgstr "Εξαρτήσεις"
 
 #: src/sourcery.glade:3008
 msgid "First run"
@@ -321,47 +322,44 @@ msgid ""
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
 msgstr ""
-"Φαίνεται ότι είναι η πρώτη φορά που εκτελείται το Sourcery. Η τοπική αποθήκη "
-"SlackBuild θα πρέπει να δημιουργηθεί για τη σωστή λειτουργία του Sourcery. Η "
-"δημιουργία της τοπικής αποθήκης απαιτεί μια ενεργή σύνδεση internet."
+"Φαίνεται ότι είναι η πρώτη φορά που εκτελείται το Sourcery. Η τοπική αποθήκη"
+" SlackBuild θα πρέπει να δημιουργηθεί για τη σωστή λειτουργία του Sourcery. "
+"Η δημιουργία της τοπικής αποθήκης απαιτεί μια ενεργή σύνδεση internet."
 
 #: src/sourcery.glade:3076
 msgid "Create SlackBuild cache"
 msgstr "Δημιουργία τοπικής αποθήκης"
 
 #: src/sourcery.glade:3108
-#, fuzzy
 msgid "Update SlackBuild Cache?"
-msgstr "Ενημέρωση της τοπικής αποθήκης αρχείων SlackBuild"
+msgstr "Να γίνει ανανέωση της τοπικής αποθήκης SlackBuild;"
 
 #: src/sourcery.glade:3127
-msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+msgid ""
+"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr ""
+"Οι ρυθμίσεις έχουν αλλάξει. Θέλετε να γίνει ανανέωση της τοπικής αποθήκης "
+"SlackBuild;"
 
 #: src/sourcery.glade:3156
-#, fuzzy
 msgid "Rebuild SlackBuild cache"
-msgstr "Δημιουργία τοπικής αποθήκης"
+msgstr "Ανανέωση της τοπικής αποθήκης SlackBuild"
 
 #: src/sourcery.glade:3185
-#, fuzzy
 msgid "Add SlackBuild source"
-msgstr "Βρέθηκε ένα SlackBuild"
+msgstr "Προσθήκη πηγής SlackBuild"
 
 #: src/sourcery.glade:3209 src/sourcery.glade:3308
-#, fuzzy
 msgid "SlackBuild source location:"
-msgstr "Πληροφορίες SlackBuild για το"
+msgstr "Τοποθεσία πηγής SlackBuild:"
 
 #: src/sourcery.glade:3284
-#, fuzzy
 msgid "Edit SlackBuild source"
-msgstr "Δημιουργία τοπικής αποθήκης"
+msgstr "Επεξεργασία πηγής SlackBuild"
 
 #: src/sourcery.glade:3396
-#, fuzzy
 msgid "Clearing working directory. Please wait..."
-msgstr "Γίνεται λήψη πληροφοριών του SlackBuild. Παρακαλούμε περιμένετε..."
+msgstr "Καθαρισμός του καταλόγου εργασίας. Παρακαλώ περιμένετε..."
 
 #: src/sourcery:94
 msgid "No SlackBuilds found"
@@ -436,8 +434,8 @@ msgid ""
 "any errors during compiling."
 msgstr ""
 "Υπήρξε ένα σφάλμα κατά τη μεταγλώττιση του %(pkg)s %(pkgver)s. Όλες οι "
-"εκκρεμείς ενέργειες θα εκκαθαριστούν από την λίστα επεξεργασίας. Μπορείτε να "
-"εμφανίσετε το αρχείο καταγραφών για να εντοπίσετε τυχόν σφάλματα κατά τη "
+"εκκρεμείς ενέργειες θα εκκαθαριστούν από την λίστα επεξεργασίας. Μπορείτε να"
+" εμφανίσετε το αρχείο καταγραφών για να εντοπίσετε τυχόν σφάλματα κατά τη "
 "μεταγλώττιση."
 
 #: src/sourcery:667

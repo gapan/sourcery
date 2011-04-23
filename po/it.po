@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-23 20:53+0300\n"
-"PO-Revision-Date: 2011-03-31 22:53+0200\n"
-"Last-Translator: George Vlahavas <vlahavas~at~gmail~dot~com>\n"
+"PO-Revision-Date: 2011-04-23 17:54+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/sourcery.glade:68
@@ -130,7 +130,8 @@ msgstr "Progresso globale"
 #: src/sourcery.glade:888
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few hours..."
+"the size and complexity of the software, from a few seconds to a few "
+"hours..."
 msgstr ""
 "Prego attendere. Questo tipo di operazione potrebbe richiedere un po di "
 "tempo, la durata è variabile a seconda della complessità del software, il "
@@ -264,9 +265,8 @@ msgid "Preferences"
 msgstr "Preferenze"
 
 #: src/sourcery.glade:2680
-#, fuzzy
 msgid "<b>SlackBuild Sources</b>"
-msgstr "<b>Sorgente:</b>"
+msgstr ""
 
 #: src/sourcery.glade:2694
 msgid ""
@@ -305,9 +305,8 @@ msgstr ""
 "informazione sulle dipendenze."
 
 #: src/sourcery.glade:2945
-#, fuzzy
 msgid "Dependencies"
-msgstr "<b>Dipendenze:</b>"
+msgstr ""
 
 #: src/sourcery.glade:3008
 msgid "First run"
@@ -320,46 +319,41 @@ msgid ""
 "need a working internet connection to create the SlackBuild cache."
 msgstr ""
 "Sembra che questa sia la prima volta che viene eseguito Sourcery. La cache "
-"SlackBuild deve essere creata prima di poter utilizzare Sourcery. Per creare "
-"la cache SlackBuild è necessaria una connessione ad internet attiva."
+"SlackBuild deve essere creata prima di poter utilizzare Sourcery. Per creare"
+" la cache SlackBuild è necessaria una connessione ad internet attiva."
 
 #: src/sourcery.glade:3076
 msgid "Create SlackBuild cache"
 msgstr "Creazione della cache SlackBuild "
 
 #: src/sourcery.glade:3108
-#, fuzzy
 msgid "Update SlackBuild Cache?"
-msgstr "Aggiorna la cache locale di SlackBuild"
+msgstr ""
 
 #: src/sourcery.glade:3127
-msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+msgid ""
+"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr ""
 
 #: src/sourcery.glade:3156
-#, fuzzy
 msgid "Rebuild SlackBuild cache"
-msgstr "Creazione della cache SlackBuild "
+msgstr ""
 
 #: src/sourcery.glade:3185
-#, fuzzy
 msgid "Add SlackBuild source"
-msgstr "Un SlackBuild trovato"
+msgstr ""
 
 #: src/sourcery.glade:3209 src/sourcery.glade:3308
-#, fuzzy
 msgid "SlackBuild source location:"
-msgstr "Informazioni riguardante SlackBuild"
+msgstr ""
 
 #: src/sourcery.glade:3284
-#, fuzzy
 msgid "Edit SlackBuild source"
-msgstr "Creazione della cache SlackBuild "
+msgstr ""
 
 #: src/sourcery.glade:3396
-#, fuzzy
 msgid "Clearing working directory. Please wait..."
-msgstr "Scaricamento delle informazioni SlackBuild. Si prega di attendere..."
+msgstr ""
 
 #: src/sourcery:94
 msgid "No SlackBuilds found"
@@ -444,7 +438,8 @@ msgid ""
 "All pending actions will be purged from the processing queue."
 msgstr ""
 "Si è verificato un'errore scaricando la sorgente del file  %(pkg)s "
-"%(pkgver)s. Tutte le azioni in coda saranno terminate dalla coda di processo."
+"%(pkgver)s. Tutte le azioni in coda saranno terminate dalla coda di "
+"processo."
 
 #: src/sourcery:711
 msgid "Not available"
