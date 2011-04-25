@@ -834,7 +834,7 @@
     <property name="transient_for">sourcery</property>
     <signal name="delete_event" handler="on_dialog_exec_delete_event"/>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox3">
+      <object class="GtkVBox" id="dialog_exec_vbox">
         <property name="visible">True</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
