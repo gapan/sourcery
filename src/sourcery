@@ -560,16 +560,16 @@ class Sourcery:
 		# ask if it should download it... It's better to just
 		# fail by default in such cases and check the logs for
 		# what happened.
-		# shell=True is needed to the pipe to work
+		# shell=True is needed for the pipe to work
 		logfile = logdir+'/'+pkg+'-'+pkgver
 		f = open(logfile, 'w')
 		
 		config = SourceryConfig()
 
 		if config.deps() == True:
-			process = subprocess.Popen(['yes n|slapt-src -y -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+			process = subprocess.Popen(['yes n|slapt-src -y -i '+pkg+':'+pkgver+'|sed "/^yes:/d"'], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
 		else:
-			process = subprocess.Popen(['yes n|slapt-src -y -n -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+			process = subprocess.Popen(['yes n|slapt-src -y -n -i '+pkg+':'+pkgver+'|sed "/^yes:/d"'], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
 		while not canceltask:
 			while gtk.events_pending():
 				gtk.main_iteration()
@@ -579,8 +579,6 @@ class Sourcery:
 			if status != None:
 				break
 		f.close()
-		# removing any redundant output from the yes command
-		subprocess.Popen(['sed', '-i', '/^yes:/d', logfile], shell=False)
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
 		if canceltask:
