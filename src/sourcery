@@ -9,6 +9,7 @@ import time
 import signal
 import urllib2
 import ConfigParser
+import vte
 from simpleconfig import SimpleConfig
 
 # Internationalization
@@ -528,8 +529,11 @@ class Sourcery:
 	def fetchpkg(self, pkg, pkgver):
 		global canceltask
 		canceltask = False
-		pkgstr = pkg+':'+pkgver
-		process = subprocess.Popen(['slapt-src', '-y', '-f', pkgstr], shell=False)
+
+		logfile = logdir+'/'+pkg+'-'+pkgver
+		f = open(logfile, 'w')
+		process = subprocess.Popen(['slapt-src -y -f '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+		self.vte_term.feed_child('tail --pid '+str(process.pid)+' -f '+logfile+'\n')
 		while not canceltask:
 			while gtk.events_pending():
 				gtk.main_iteration()
@@ -538,6 +542,8 @@ class Sourcery:
 			time.sleep(0.1)
 			if status != None:
 				break
+		f.close()
+		self.vte_term.feed_child('clear\n')
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
 		if canceltask:
@@ -562,14 +568,15 @@ class Sourcery:
 		# what happened.
 		# shell=True is needed for the pipe to work
 		logfile = logdir+'/'+pkg+'-'+pkgver
-		f = open(logfile, 'w')
-		
+		f = open(logfile, 'a')
+	
 		config = SourceryConfig()
 
 		if config.deps() == True:
 			process = subprocess.Popen(['yes n 2>/dev/null |slapt-src -y -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
 		else:
 			process = subprocess.Popen(['yes n 2>/dev/null |slapt-src -y -n -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+		self.vte_term.feed_child('tail --pid '+str(process.pid)+' -f '+logfile+'\n')
 		while not canceltask:
 			while gtk.events_pending():
 				gtk.main_iteration()
@@ -579,6 +586,7 @@ class Sourcery:
 			if status != None:
 				break
 		f.close()
+		self.vte_term.feed_child('clear\n')
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
 		if canceltask:
@@ -594,7 +602,14 @@ class Sourcery:
 
 	def removepkg(self, pkg):
 		error = False
-		process = subprocess.Popen(['slapt-get', '-y', '--remove', '--no-dep', pkg], shell=False)
+		logfile = '/tmp/sourcery-removepkg'
+		try:
+			os.remove(logfile)
+		except OSError:
+			pass
+		f = open(logfile, 'w')
+		process = subprocess.Popen(['slapt-get -y --remove --no-dep '+pkg], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+		self.vte_term.feed_child('clear\ntail --pid '+str(process.pid)+' -f '+logfile+'\n')
 		while True:
 			while gtk.events_pending():
 				gtk.main_iteration()
@@ -603,6 +618,12 @@ class Sourcery:
 			time.sleep(0.1)
 			if status != None:
 				break
+		f.close()
+		self.vte_term.feed_child('clear\n')
+		try:
+			os.remove(logfile)
+		except OSError:
+			pass
 		if error:
 			return 1
 		else:
@@ -967,6 +988,14 @@ class Sourcery:
 		self.tv_exec = builder.get_object('treeview_exec')
 		self.pb_execoverall = builder.get_object('progressbar_execoverall')
 		self.dlg_exec_vbox = builder.get_object('dialog_exec_vbox')
+		self.vte_term = vte.Terminal()
+		self.dlg_exec_vbox.add(self.vte_term)
+		self.vte_term.fork_command('bash')
+		self.vte_term.feed_child('unset PS1\nclear\n')
+		self.vte_term.set_sensitive(False)
+		self.vte_term.set_size(80, 20)
+		self.vte_term.set_font_from_string('Terminus')
+		self.vte_term.show()
 
 		#
 		# Success dialog
@@ -992,7 +1021,6 @@ class Sourcery:
 		self.dlg_pkginstallerror = builder.get_object('dialog_pkginstallerror')
 		self.btn_pkginstallerror_close = builder.get_object('button_pkginstallerror_close')
 		self.btn_pkginstallerror_log = builder.get_object('button_pkginstallerror_log')
-		
 		self.lb_pkginstallerror = builder.get_object('label_pkginstallerror')
 
 		#
