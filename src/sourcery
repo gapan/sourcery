@@ -679,14 +679,17 @@ class Sourcery:
 			self.btn_pkginstallerror_log.set_sensitive(True)
 			self.lb_pkginstallerror.set_text(_('There was an error while compiling %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue. You can review the log file for any errors during compiling.') % {'pkg' : pkg, 'pkgver' : pkgver})
 			self.show_pkg_install_error_dlg(pkg, pkgver)
+			self.on_menuitem_unmarkall_activate(None)
 		# retval = 2 means there was an error during downloading
 		# the sources
 		elif retval == 2:
 			self.btn_pkginstallerror_log.set_sensitive(False)
 			self.lb_pkginstallerror.set_text(_('There was an error while downloading source files for %(pkg)s %(pkgver)s. All pending actions will be purged from the processing queue.') % {'pkg' : pkg, 'pkgver' : pkgver})
 			self.show_pkg_install_error_dlg(pkg, pkgver)
+			self.on_menuitem_unmarkall_activate(None)
 		else:
 			self.dlg_canceled.show()
+			self.on_menuitem_unmarkall_activate(None)
 
 	def on_button_summary_cancel_clicked(self, widget):
 		self.ls_summary.clear()
