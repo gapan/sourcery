@@ -417,7 +417,7 @@ class Sourcery:
 		# read sources and working dir
 		c = SimpleConfig(slaptsrcrc)
 		self.ls_sources.clear()
-		for i in c.get_multiple('SOURCE'):
+		for i in c.get_all('SOURCE'):
 			self.ls_sources.append([i])
 		self.entry_workingdir.set_text(c.get('BUILDDIR'))
 		# check if dependency checkbox should be on/off
@@ -497,14 +497,14 @@ class Sourcery:
 		# changed
 		c = SimpleConfig(slaptsrcrc)
 		changed = False
-		old_sources = c.get_multiple('SOURCE')
+		old_sources = c.get_all('SOURCE')
 		new_sources = list()
 		item = self.ls_sources.get_iter_first()
 		while (item is not None):
 			new_sources.append(self.ls_sources.get_value(item, 0))
 			item = self.ls_sources.iter_next(item)
 		if old_sources != new_sources:
-			c.remove('SOURCE')
+			c.remove_all('SOURCE')
 			for i in new_sources:
 				c.add('SOURCE', i)
 			changed = True
