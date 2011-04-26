@@ -2,20 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-23 20:53+0300\n"
+"POT-Creation-Date: 2011-04-26 16:31+0300\n"
 "PO-Revision-Date: 2011-04-23 17:54+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ar\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5\n"
 
 #: src/sourcery.glade:68
 msgid "_File"
@@ -129,8 +130,7 @@ msgstr "التقدم الكلي"
 #: src/sourcery.glade:888
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few "
-"hours..."
+"the size and complexity of the software, from a few seconds to a few hours..."
 msgstr ""
 "يرجى الانتظار. هذا قد يستغرق بعض الوقت. زمن التنفيذ يختلف ، اعتمادا على حجم "
 "وتعقيد البرنامج ، من بضع ثوان إلى بضع ساعات..."
@@ -155,7 +155,7 @@ msgstr "تم الإلغاء . قد يكون هناك بعض المهام الت�
 msgid "Error updating package list."
 msgstr "خطأ في تحديث قائمة الحزمة."
 
-#: src/sourcery.glade:1133 src/sourcery.glade:1916
+#: src/sourcery.glade:1133 src/sourcery.glade:1891
 msgid "View log"
 msgstr "عرض السجل"
 
@@ -203,7 +203,7 @@ msgstr "<b>التبعيات :</b>"
 msgid "General information"
 msgstr "معلومات عامة"
 
-#: src/sourcery.glade:1477 src/sourcery:913
+#: src/sourcery.glade:1477 src/sourcery:953
 msgid "Description"
 msgstr "الوصف"
 
@@ -238,11 +238,7 @@ msgstr "تم بالفعل تثبيت حزمة بهذا الاسم سيقوم ب�
 msgid "The package is going to be removed"
 msgstr "سيتم حذف الحزمة "
 
-#: src/sourcery.glade:1839
-msgid "Select the package you want to view the build log for:"
-msgstr "حدد الحزمة التي تريد عرض السجل الخاص بها"
-
-#: src/sourcery.glade:1954
+#: src/sourcery.glade:1987
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
@@ -250,170 +246,169 @@ msgstr ""
 "الواجهة الرسومية لslapt-src ، و هي أداة لبناء و تثبيت الحزمات من المصدر "
 "بإستخدام SlackBuilds و /أو SLKBUILDs"
 
-#: src/sourcery.glade:2632
+#: src/sourcery.glade:2665
 msgid "translator-credits"
 msgstr "حقوق المترجم"
 
-#: src/sourcery.glade:2657
+#: src/sourcery.glade:2690
 msgid "Preferences"
 msgstr "الإعدادات "
 
-#: src/sourcery.glade:2680
+#: src/sourcery.glade:2713
 msgid "<b>SlackBuild Sources</b>"
 msgstr ""
 
-#: src/sourcery.glade:2694
+#: src/sourcery.glade:2727
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
 msgstr ""
 
-#: src/sourcery.glade:2810
+#: src/sourcery.glade:2843
 msgid "Sources"
 msgstr ""
 
-#: src/sourcery.glade:2828
+#: src/sourcery.glade:2861
 msgid "<b>Source and package storage</b>"
 msgstr ""
 
-#: src/sourcery.glade:2853
+#: src/sourcery.glade:2886
 msgid "Clear working directory"
 msgstr ""
 
-#: src/sourcery.glade:2887
+#: src/sourcery.glade:2920
 msgid "Working Directory"
 msgstr ""
 
-#: src/sourcery.glade:2900
+#: src/sourcery.glade:2933
 msgid "Resolve dependencies"
 msgstr "حل التبعيات"
 
-#: src/sourcery.glade:2917
+#: src/sourcery.glade:2950
 msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
 msgstr ""
-"تحليل التبعية متاح فقط للمستودعات التي تدعمها . SlackBuilds من  "
-"SlackBuilds.org لا تتضمن أي معلومات عن التبعية "
+"تحليل التبعية متاح فقط للمستودعات التي تدعمها . SlackBuilds من  SlackBuilds."
+"org لا تتضمن أي معلومات عن التبعية "
 
-#: src/sourcery.glade:2945
+#: src/sourcery.glade:2978
 msgid "Dependencies"
 msgstr ""
 
-#: src/sourcery.glade:3008
+#: src/sourcery.glade:3041
 msgid "First run"
 msgstr "التشغيل الأول "
 
-#: src/sourcery.glade:3043
+#: src/sourcery.glade:3076
 msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
 msgstr ""
-"يبدو أن هذه هي أول مرة لتشغيل الSourcery . يجب إنتاج الSlackBuild cache أولا"
-" قبل أن تكون الSourcery جاهزة للعمل . يجب أن تكون متصلا بالإنترنت لإنتاج "
+"يبدو أن هذه هي أول مرة لتشغيل الSourcery . يجب إنتاج الSlackBuild cache أولا "
+"قبل أن تكون الSourcery جاهزة للعمل . يجب أن تكون متصلا بالإنترنت لإنتاج "
 "الSlackBuild cache "
 
-#: src/sourcery.glade:3076
+#: src/sourcery.glade:3109
 msgid "Create SlackBuild cache"
 msgstr "إنتاج SlackBuild cache "
 
-#: src/sourcery.glade:3108
+#: src/sourcery.glade:3141
 msgid "Update SlackBuild Cache?"
 msgstr ""
 
-#: src/sourcery.glade:3127
-msgid ""
-"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+#: src/sourcery.glade:3160
+msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr ""
 
-#: src/sourcery.glade:3156
+#: src/sourcery.glade:3189
 msgid "Rebuild SlackBuild cache"
 msgstr ""
 
-#: src/sourcery.glade:3185
+#: src/sourcery.glade:3218
 msgid "Add SlackBuild source"
 msgstr ""
 
-#: src/sourcery.glade:3209 src/sourcery.glade:3308
+#: src/sourcery.glade:3242 src/sourcery.glade:3341
 msgid "SlackBuild source location:"
 msgstr ""
 
-#: src/sourcery.glade:3284
+#: src/sourcery.glade:3317
 msgid "Edit SlackBuild source"
 msgstr ""
 
-#: src/sourcery.glade:3396
+#: src/sourcery.glade:3429
 msgid "Clearing working directory. Please wait..."
 msgstr ""
 
-#: src/sourcery:94
+#: src/sourcery:95
 msgid "No SlackBuilds found"
 msgstr "ليس هناك أي SlackBuild "
 
-#: src/sourcery:96
+#: src/sourcery:97
 msgid "One SlackBuild found"
 msgstr "تم العثور علي SlackBuild واحد"
 
-#: src/sourcery:98
+#: src/sourcery:99
 #, python-format
 msgid "%(num)i SlackBuilds found"
 msgstr "تم العثور علي %(num)i SlackBuilds"
 
-#: src/sourcery:102
+#: src/sourcery:103
 msgid "Could not retrieve SlackBuild data"
 msgstr "لا يمكن استرداد بيانات ال  SlackBuild"
 
-#: src/sourcery:216
+#: src/sourcery:217
 msgid "SlackBuild information for "
 msgstr "معلومات عن SlackBuild"
 
-#: src/sourcery:224 src/sourcery:231
+#: src/sourcery:225 src/sourcery:232
 msgid "Not available."
 msgstr "غير متاح."
 
-#: src/sourcery:278
+#: src/sourcery:279
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
 msgstr "  سيتم تثبيته %(pkg)s %(pkgver)s  كتبعية "
 
-#: src/sourcery:288
+#: src/sourcery:289
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
 msgstr "سيتم ثبيت %(pkg)s %(pkgver)s  "
 
-#: src/sourcery:290
+#: src/sourcery:291
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
 msgstr "سيتم إعادة تثبيت %(pkg)s %(pkgver)s"
 
-#: src/sourcery:292
+#: src/sourcery:293
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
 msgstr "سيتم إزالة %(pkg)s %(pkgver)s"
 
-#: src/sourcery:403 src/sourcery:906
+#: src/sourcery:404 src/sourcery:946
 msgid "Status"
 msgstr "حالة"
 
-#: src/sourcery:590 src/sourcery:701 src/sourcery:751
+#: src/sourcery:596 src/sourcery:720 src/sourcery:771
 msgid "Build log for"
 msgstr "سجل البناء ل "
 
-#: src/sourcery:625 src/sourcery:633
+#: src/sourcery:644 src/sourcery:652
 msgid "Downloading source files for"
 msgstr "تحميل ملفات المصدر ل"
 
-#: src/sourcery:630 src/sourcery:638
+#: src/sourcery:649 src/sourcery:657
 msgid "Compiling"
 msgstr "تجميع"
 
-#: src/sourcery:641
+#: src/sourcery:660
 msgid "Removing"
 msgstr "إزالة"
 
-#: src/sourcery:661
+#: src/sourcery:680
 #, python-format
 msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
@@ -424,7 +419,7 @@ msgstr ""
 "إزالتها من قائمة المعالجة . يمكنك إستعراض ملف السجل للعثور علي أية أخطاء "
 "أثناء التجميع"
 
-#: src/sourcery:667
+#: src/sourcery:686
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
@@ -433,19 +428,19 @@ msgstr ""
 "كان هناك خطأ أثناء تحميل ملفات المصدر ل%(pkg)s %(pkgver)s . كل الأنشطة "
 "المعلقة سوف يتم إزالتها من قائمة المعالجة"
 
-#: src/sourcery:711
+#: src/sourcery:730
 msgid "Not available"
 msgstr "غير متاح"
 
-#: src/sourcery:762
+#: src/sourcery:782
 msgid "Error reading log file."
 msgstr "خطأ في قراءة ملف السجل."
 
-#: src/sourcery:909 src/sourcery:1051
+#: src/sourcery:949 src/sourcery:1099
 msgid "Name"
 msgstr "اسم"
 
-#: src/sourcery:911 src/sourcery:1052
+#: src/sourcery:951 src/sourcery:1100
 msgid "Version"
 msgstr "الإصدار"
 
@@ -456,3 +451,6 @@ msgstr "واجهة رسومية ل ، slapt-src "
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "مدير Sourcery SlackBuild"
+
+#~ msgid "Select the package you want to view the build log for:"
+#~ msgstr "حدد الحزمة التي تريد عرض السجل الخاص بها"
