@@ -533,7 +533,7 @@ class Sourcery:
 		logfile = logdir+'/'+pkg+'-'+pkgver
 		f = open(logfile, 'w')
 		process = subprocess.Popen(['slapt-src -y -f '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
-		self.vte_term.feed_child('tail --pid '+str(process.pid)+' -f '+logfile+'\n')
+		self.vte_term.feed_child('clear\ntail --pid '+str(process.pid)+' -f '+logfile+' 2>/dev/null & clear\n')
 		while not canceltask:
 			while gtk.events_pending():
 				gtk.main_iteration()
@@ -576,7 +576,7 @@ class Sourcery:
 			process = subprocess.Popen(['yes n 2>/dev/null |slapt-src -y -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
 		else:
 			process = subprocess.Popen(['yes n 2>/dev/null |slapt-src -y -n -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
-		self.vte_term.feed_child('tail --pid '+str(process.pid)+' -f '+logfile+'\n')
+		self.vte_term.feed_child('clear\ntail --pid '+str(process.pid)+' -f '+logfile+' 2>/dev/null & clear\n')
 		while not canceltask:
 			while gtk.events_pending():
 				gtk.main_iteration()
@@ -609,7 +609,7 @@ class Sourcery:
 			pass
 		f = open(logfile, 'w')
 		process = subprocess.Popen(['slapt-get -y --remove --no-dep '+pkg], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
-		self.vte_term.feed_child('tail --pid '+str(process.pid)+' -f '+logfile+'\n')
+		self.vte_term.feed_child('clear\ntail --pid '+str(process.pid)+' -f '+logfile+' 2>/dev/null & clear\n')
 		while True:
 			while gtk.events_pending():
 				gtk.main_iteration()
