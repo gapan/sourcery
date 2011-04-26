@@ -762,24 +762,45 @@ class Sourcery:
 		return True
 
 	def on_button_loglist_view_clicked(self, widget):
-		self.dlg_loglist.hide()
-		selectedlog = self.tv_loglist.get_selection()
-		self.ls_loglist, iter = selectedlog.get_selected()
-		pkg = self.ls_loglist.get_value(iter, 0)
-		ver = self.ls_loglist.get_value(iter, 1)
-		self.dlg_pkglog.set_title(_('Build log for')+' '+pkg+'-'+ver)
-		logfile = logdir+'/'+pkg+'-'+ver
 		try:
-			f = open(logfile)
+			selectedlog = self.tv_loglist.get_selection()
+			self.ls_loglist, iter = selectedlog.get_selected()
+			pkg = self.ls_loglist.get_value(iter, 0)
+			ver = self.ls_loglist.get_value(iter, 1)
+			self.dlg_loglist.hide()
+			self.dlg_pkglog.set_title(_('Build log for')+' '+pkg+'-'+ver)
+			logfile = logdir+'/'+pkg+'-'+ver
 			try:
-				log = f.read().decode('utf8')
-			except UnicodeDecodeError:
-				log = f.read().decode('latin1')
-			self.txt_pkglog.set_text(log)
-			f.close()
-		except IOError:
-			self.txt_pkglog.set_text(_('Error reading log file.'))
-		self.dlg_pkglog.show()
+				f = open(logfile)
+				try:
+					log = f.read().decode('utf8')
+				except UnicodeDecodeError:
+					log = f.read().decode('latin1')
+				self.txt_pkglog.set_text(log)
+				f.close()
+			except IOError:
+				self.txt_pkglog.set_text(_('Error reading log file.'))
+			self.dlg_pkglog.show()
+		except TypeError:
+			pass
+
+	def on_button_loglist_del_clicked(self, widget):
+		try:
+			selectedlog = self.tv_loglist.get_selection()
+			self.ls_loglist, iter = selectedlog.get_selected()
+			pkg = self.ls_loglist.get_value(iter, 0)
+			ver = self.ls_loglist.get_value(iter, 1)
+			logfile = logdir+'/'+pkg+'-'+ver
+			try:
+				os.remove(logfile)
+			except OSError:
+				pass
+			self.ls_loglist.clear()
+			if os.path.isdir(logdir):
+				for file in os.listdir(logdir):
+					self.ls_loglist.append(file.rsplit('-', 1))
+		except TypeError:
+			pass
 
 	def on_button_loglist_close_clicked(self, widget):
 		self.dlg_loglist.hide()

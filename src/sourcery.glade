@@ -1829,22 +1829,9 @@
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkVBox" id="vbox7">
+          <object class="GtkHBox" id="hbox7">
             <property name="visible">True</property>
-            <property name="orientation">vertical</property>
             <property name="spacing">10</property>
-            <child>
-              <object class="GtkLabel" id="label22">
-                <property name="visible">True</property>
-                <property name="label" translatable="yes">Select the package you want to view the build log for:</property>
-                <property name="wrap">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">False</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
             <child>
               <object class="GtkScrolledWindow" id="scrolledwindow5">
                 <property name="visible">True</property>
@@ -1854,10 +1841,12 @@
                 <property name="shadow_type">in</property>
                 <child>
                   <object class="GtkTreeView" id="treeview_loglist">
+                    <property name="width_request">350</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="model">liststore_loglist</property>
                     <property name="headers_clickable">False</property>
+                    <property name="search_column">0</property>
                     <child>
                       <object class="GtkTreeViewColumn" id="treeviewcolumn_loglist_name">
                         <property name="title">pkgname</property>
@@ -1881,6 +1870,65 @@
                       </object>
                     </child>
                   </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkVBox" id="vbox14">
+                <property name="visible">True</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkVBox" id="vbox15">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">5</property>
+                    <property name="homogeneous">True</property>
+                    <child>
+                      <object class="GtkButton" id="button_loglist_view">
+                        <property name="label" translatable="yes">View log</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <signal name="clicked" handler="on_button_loglist_view_clicked"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="button_loglist_del">
+                        <property name="label">gtk-delete</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="clicked" handler="on_button_loglist_del_clicked"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLayout" id="layout3">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
                 </child>
               </object>
               <packing>
@@ -1911,20 +1959,6 @@
                 <property name="position">0</property>
               </packing>
             </child>
-            <child>
-              <object class="GtkButton" id="button_loglist_view">
-                <property name="label" translatable="yes">View log</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <signal name="clicked" handler="on_button_loglist_view_clicked"/>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">False</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -1936,7 +1970,6 @@
     </child>
     <action-widgets>
       <action-widget response="0">button_loglist_close</action-widget>
-      <action-widget response="0">button_loglist_view</action-widget>
     </action-widgets>
   </object>
   <object class="GtkAboutDialog" id="aboutdialog">
