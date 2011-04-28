@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-23 17:54+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2011-04-26 19:57+0000\n"
+"Last-Translator: gambit73 <gambit73@gmail.com>\n"
 "Language-Team: Dutch <>\n"
-"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/sourcery.glade:68
@@ -130,7 +130,8 @@ msgstr "Algehele voortgang"
 #: src/sourcery.glade:888
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few hours..."
+"the size and complexity of the software, from a few seconds to a few "
+"hours..."
 msgstr ""
 "Even geduld aub. Dit kan even duren. De doorlooptijd varieert, afhankelijk "
 "van de grootte en complexiteit van de software, van een paar seconden tot "
@@ -261,29 +262,31 @@ msgstr "Voorkeuren"
 
 #: src/sourcery.glade:2713
 msgid "<b>SlackBuild Sources</b>"
-msgstr ""
+msgstr "<b>SlackBuild Sources</b>"
 
 #: src/sourcery.glade:2727
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
 msgstr ""
+"<i>Sources bovenaan hebben een hogere prioriteit. U kunt de volgorde "
+"wijzigen door te slepen.</i>"
 
 #: src/sourcery.glade:2843
 msgid "Sources"
-msgstr ""
+msgstr "Sources"
 
 #: src/sourcery.glade:2861
 msgid "<b>Source and package storage</b>"
-msgstr ""
+msgstr "<b>Source en pakket opslag</b>"
 
 #: src/sourcery.glade:2886
 msgid "Clear working directory"
-msgstr ""
+msgstr "Wis werkdirectory"
 
 #: src/sourcery.glade:2920
 msgid "Working Directory"
-msgstr ""
+msgstr "Werkdirectory"
 
 #: src/sourcery.glade:2933
 msgid "Resolve dependencies"
@@ -301,7 +304,7 @@ msgstr ""
 
 #: src/sourcery.glade:2978
 msgid "Dependencies"
-msgstr ""
+msgstr "Afhankelijkheden"
 
 #: src/sourcery.glade:3041
 msgid "First run"
@@ -323,31 +326,33 @@ msgstr "Maak SlackBuild cache"
 
 #: src/sourcery.glade:3141
 msgid "Update SlackBuild Cache?"
-msgstr ""
+msgstr "Update SlackBuild Cache?"
 
 #: src/sourcery.glade:3160
-msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+msgid ""
+"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr ""
+"De configuratie is veranderd. Wilt u op de Slackbuild cache opnieuw bouwen?"
 
 #: src/sourcery.glade:3189
 msgid "Rebuild SlackBuild cache"
-msgstr ""
+msgstr "Bouw de SlackBuild cache opnieuw"
 
 #: src/sourcery.glade:3218
 msgid "Add SlackBuild source"
-msgstr ""
+msgstr "Voeg SlackBuild source toe"
 
 #: src/sourcery.glade:3242 src/sourcery.glade:3341
 msgid "SlackBuild source location:"
-msgstr ""
+msgstr "SlackBuild source locatie:"
 
 #: src/sourcery.glade:3317
 msgid "Edit SlackBuild source"
-msgstr ""
+msgstr "Bewerk SlackBuild source"
 
 #: src/sourcery.glade:3429
 msgid "Clearing working directory. Please wait..."
-msgstr ""
+msgstr "Werkdirectory wissen. Even geduld aub ..."
 
 #: src/sourcery:95
 msgid "No SlackBuilds found"
@@ -457,6 +462,3 @@ msgstr "Een grafische schil voor slapt-src"
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery SlackBuild Manager"
-
-#~ msgid "Select the package you want to view the build log for:"
-#~ msgstr "Selecteer het pakket waarvan u de build log van wilt zien:"

@@ -2,21 +2,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-23 17:54+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2011-04-28 06:07+0000\n"
+"Last-Translator: knedlyk <yupadmin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: src/sourcery.glade:68
 msgid "_File"
@@ -130,7 +129,8 @@ msgstr "Загальний поступ"
 #: src/sourcery.glade:888
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few hours..."
+"the size and complexity of the software, from a few seconds to a few "
+"hours..."
 msgstr ""
 "Будь ласка, почекайте. Це може зайняти деякий час. Час поступу може "
 "змінитися залежно від розміру та складності програмного забезпечення, від "
@@ -217,8 +217,8 @@ msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
 msgstr ""
-"<b>Наступні значки використовуються для вказівки поточного стану SlackBuild:"
-"</b>"
+"<b>Наступні значки використовуються для вказівки поточного стану "
+"SlackBuild:</b>"
 
 #: src/sourcery.glade:1596
 msgid "Not installed"
@@ -259,29 +259,31 @@ msgstr "Установки"
 
 #: src/sourcery.glade:2713
 msgid "<b>SlackBuild Sources</b>"
-msgstr ""
+msgstr "<b>Джерела SlackBuild</b>"
 
 #: src/sourcery.glade:2727
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
 msgstr ""
+"<i>Джерела ближче до верхнього мають більш високий пріоритет. Ви можете "
+"змінити порядок шляхом перетягування.</i>"
 
 #: src/sourcery.glade:2843
 msgid "Sources"
-msgstr ""
+msgstr "Джерела"
 
 #: src/sourcery.glade:2861
 msgid "<b>Source and package storage</b>"
-msgstr ""
+msgstr "<b>Сховище джерел і пакунків</b>"
 
 #: src/sourcery.glade:2886
 msgid "Clear working directory"
-msgstr ""
+msgstr "Очистити робочу теку"
 
 #: src/sourcery.glade:2920
 msgid "Working Directory"
-msgstr ""
+msgstr "Робоча тека"
 
 #: src/sourcery.glade:2933
 msgid "Resolve dependencies"
@@ -298,7 +300,7 @@ msgstr ""
 
 #: src/sourcery.glade:2978
 msgid "Dependencies"
-msgstr ""
+msgstr "Залежності"
 
 #: src/sourcery.glade:3041
 msgid "First run"
@@ -320,31 +322,32 @@ msgstr "Створити кеш SlackBuild "
 
 #: src/sourcery.glade:3141
 msgid "Update SlackBuild Cache?"
-msgstr ""
+msgstr "Оновити кеш SlackBuild"
 
 #: src/sourcery.glade:3160
-msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
-msgstr ""
+msgid ""
+"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+msgstr "Конфігурація змінилася. Ви хочете, щоб перебудувати кеш SlackBuild?"
 
 #: src/sourcery.glade:3189
 msgid "Rebuild SlackBuild cache"
-msgstr ""
+msgstr "Перебудова кешу SlackBuild"
 
 #: src/sourcery.glade:3218
 msgid "Add SlackBuild source"
-msgstr ""
+msgstr "Додати джерело SlackBuild"
 
 #: src/sourcery.glade:3242 src/sourcery.glade:3341
 msgid "SlackBuild source location:"
-msgstr ""
+msgstr "Місцезнаходження джерела SlackBuild:"
 
 #: src/sourcery.glade:3317
 msgid "Edit SlackBuild source"
-msgstr ""
+msgstr "Змінити джерело SlackBuild"
 
 #: src/sourcery.glade:3429
 msgid "Clearing working directory. Please wait..."
-msgstr ""
+msgstr "Очищення робочої теки. Будь ласка, зачекайте ..."
 
 #: src/sourcery:95
 msgid "No SlackBuilds found"
@@ -454,6 +457,3 @@ msgstr "Графічний інтерфейс до slapt-src"
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery SlackBuild Manager"
-
-#~ msgid "Select the package you want to view the build log for:"
-#~ msgstr "Виберіть пакунок, журнал побудови якого Ви бажаєте переглянути:"

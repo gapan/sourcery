@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-25 08:08+0000\n"
-"Last-Translator: ingemar <ingemar@ingk.se>\n"
+"PO-Revision-Date: 2011-04-26 13:33+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/sourcery.glade:68
@@ -130,7 +130,8 @@ msgstr "Övergripande framsteg"
 #: src/sourcery.glade:888
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few hours..."
+"the size and complexity of the software, from a few seconds to a few "
+"hours..."
 msgstr ""
 "Var god vänta. Det kan ta en stund. Behandlingstiden varierar beroende på "
 "storlek och komplexitet av programvaran, från några sekunder till ett par "
@@ -217,7 +218,8 @@ msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
 msgstr ""
-"<b>Följande ikoner används för att ange aktuell status för en SlackBuild:</b>"
+"<b>Följande ikoner används för att ange aktuell status för en "
+"SlackBuild:</b>"
 
 #: src/sourcery.glade:1596
 msgid "Not installed"
@@ -295,8 +297,8 @@ msgid ""
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
 msgstr ""
-"Att lösa beroendeproblem är endast tillgängligt för förråden som stöder det. "
-"SlackBuilds från SlackBuilds.org inkluderar inte någon beroendeinformation."
+"Att lösa beroendeproblem är endast tillgängligt för förråden som stöder det."
+" SlackBuilds från SlackBuilds.org inkluderar inte någon beroendeinformation."
 
 #: src/sourcery.glade:2978
 msgid "Dependencies"
@@ -325,7 +327,8 @@ msgid "Update SlackBuild Cache?"
 msgstr "Uppdatera SlackBuild Cache?"
 
 #: src/sourcery.glade:3160
-msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+msgid ""
+"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr "Konfiguration har ändrats. Vill du bygga om Slackbuild cache?"
 
 #: src/sourcery.glade:3189
@@ -420,8 +423,8 @@ msgid ""
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
 msgstr ""
-"Det uppstod ett fel vid kompileringen av %(pkg)s  %(pkgver)s . Alla pågående "
-"åtgärder kommer att rensas från bearbetnings kön. Du kan granska loggfilen "
+"Det uppstod ett fel vid kompileringen av %(pkg)s  %(pkgver)s . Alla pågående"
+" åtgärder kommer att rensas från bearbetnings kön. Du kan granska loggfilen "
 "för eventuella felaktigheter under kompileringen."
 
 #: src/sourcery:686
@@ -430,8 +433,8 @@ msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
 msgstr ""
-"Det uppstod ett fel vid hämtning av källfiler för %(pkg)s  %(pkgver)s . Alla "
-"pågående åtgärder kommer att rensas från bearbetning kön."
+"Det uppstod ett fel vid hämtning av källfiler för %(pkg)s  %(pkgver)s . Alla"
+" pågående åtgärder kommer att rensas från bearbetning kön."
 
 #: src/sourcery:730
 msgid "Not available"
@@ -456,6 +459,3 @@ msgstr "Ett grafiskt gränssnitt till slapt-src"
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery SlackBuild Hanterare"
-
-#~ msgid "Select the package you want to view the build log for:"
-#~ msgstr "Välj det paket du vill visa bygg loggen för:"

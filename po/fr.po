@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-23 17:54+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2011-04-28 18:20+0000\n"
+"Last-Translator: Akuna <akuna@free.fr>\n"
 "Language-Team: French <>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: src/sourcery.glade:68
@@ -27,7 +27,7 @@ msgstr "Mettre à jour"
 
 #: src/sourcery.glade:77 src/sourcery.glade:275
 msgid "Update local SlackBuild cache"
-msgstr "Mettre à jour le cache local des SlackBuild"
+msgstr "Mettre à jour le cache local des SlackBuilds"
 
 #: src/sourcery.glade:85 src/sourcery.glade:291
 msgid "Execute"
@@ -71,7 +71,7 @@ msgstr "A_ffichage"
 
 #: src/sourcery.glade:224 src/sourcery.glade:1817
 msgid "SlackBuild logs"
-msgstr "Journaux des SlackBuild"
+msgstr "Fichiers journaux des SlackBuilds"
 
 #: src/sourcery.glade:236
 msgid "_Help"
@@ -99,9 +99,9 @@ msgid ""
 "configured all sources properly and that you have a working internet "
 "connection."
 msgstr ""
-"Il y a eu une erreur lors de la mise à jour du cache des SlackBuild. Assurez-"
-"vous que vous avez configuré toutes les sources correctement et que vous "
-"avez une connexion Internet active."
+"Une erreur s'est produite lors de la mise à jour du cache des SlackBuilds. "
+"Assurez-vous que vous avez configuré toutes les sources correctement et que "
+"vous avez une connexion Internet active."
 
 #: src/sourcery.glade:657
 msgid "Pending tasks"
@@ -131,11 +131,12 @@ msgstr "Progression générale"
 #: src/sourcery.glade:888
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few hours..."
+"the size and complexity of the software, from a few seconds to a few "
+"hours..."
 msgstr ""
 "Veuillez patienter. Cela peut prendre un certain temps. Le délai de "
-"traitement varie en fonction de la taille et de la complexité des logiciels, "
-"de quelques secondes à quelques heures…"
+"traitement varie en fonction de la taille et de la complexité des logiciels,"
+" de quelques secondes à quelques heures…"
 
 #: src/sourcery.glade:929
 msgid "Completed tasks"
@@ -151,7 +152,7 @@ msgstr "Annulé"
 
 #: src/sourcery.glade:989
 msgid "Canceled. Some tasks may have already been completed."
-msgstr "Annulé. Certaines tâches peuvent avoir déjà été réalisées."
+msgstr "Annulé. Certaines tâches peuvent déjà avoir été réalisées."
 
 #: src/sourcery.glade:1039
 msgid "Error updating package list."
@@ -159,7 +160,7 @@ msgstr "Erreur lors de la mise à jour de la liste des paquets."
 
 #: src/sourcery.glade:1133 src/sourcery.glade:1891
 msgid "View log"
-msgstr "Voir le journal"
+msgstr "Consulter le fichier journal"
 
 #: src/sourcery.glade:1176
 msgid "Updating..."
@@ -167,15 +168,15 @@ msgstr "Mise à jour…"
 
 #: src/sourcery.glade:1200
 msgid "Updating SlackBuild cache..."
-msgstr "Mise à jour du cache des SlackBuild…"
+msgstr "Mise à jour du cache des SlackBuilds…"
 
 #: src/sourcery.glade:1253
 msgid "Getting SlackBuild information"
-msgstr "Obtenir les informations du SlackBuild"
+msgstr "Obtenir les informations du SlackBuilds"
 
 #: src/sourcery.glade:1269
 msgid "Downloading SlackBuild information. Please wait..."
-msgstr "Téléchargement des informations du SlackBuild. Veuillez patienter…"
+msgstr "Téléchargement des informations du SlackBuilds. Veuillez patienter…"
 
 #: src/sourcery.glade:1303
 msgid "<b>Name:</b>"
@@ -247,9 +248,9 @@ msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
 msgstr ""
-"Une interface graphique pour slapt-src, un utilitaire pour construire et "
-"installer des paquets depuis les sources à l'aide de Slackbuild et/ou de "
-"SLKBUILD."
+"Interface graphique pour slapt-src, utilitaire permettant de construire et "
+"installer des paquets à partir de leurs sources à l'aide de Slackbuild et/ou"
+" de SLKBUILD."
 
 #: src/sourcery.glade:2665
 msgid "translator-credits"
@@ -261,29 +262,31 @@ msgstr "Préférences"
 
 #: src/sourcery.glade:2713
 msgid "<b>SlackBuild Sources</b>"
-msgstr ""
+msgstr "<b>Sources SlackBuild</b>"
 
 #: src/sourcery.glade:2727
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
 msgstr ""
+"<i>Plus une source est placée vers le haut, plus elle est prioritaire. Vous "
+"pouvez réorganiser l'ordre de priorité en faisant glisser les sources.</i>"
 
 #: src/sourcery.glade:2843
 msgid "Sources"
-msgstr ""
+msgstr "Sources"
 
 #: src/sourcery.glade:2861
 msgid "<b>Source and package storage</b>"
-msgstr ""
+msgstr "<b>Lieu de stockage des sources et paquets</b>"
 
 #: src/sourcery.glade:2886
 msgid "Clear working directory"
-msgstr ""
+msgstr "Vider le répertoire de travail"
 
 #: src/sourcery.glade:2920
 msgid "Working Directory"
-msgstr ""
+msgstr "Répertoire de travail"
 
 #: src/sourcery.glade:2933
 msgid "Resolve dependencies"
@@ -295,13 +298,13 @@ msgid ""
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
 msgstr ""
-"La résolution des dépendances est disponible uniquement pour les dépôts qui "
-"la prennent en compte. Les Slackbuilds de SlackBuilds.org n'incluent pas les "
-"informations de dépendance."
+"La résolution des dépendances est disponible uniquement pour les dépôts "
+"logiciels qui la prennent en compte. Les SlackBuilds de SlackBuilds.org "
+"n'incluent aucune information de dépendance."
 
 #: src/sourcery.glade:2978
 msgid "Dependencies"
-msgstr ""
+msgstr "Dépendances"
 
 #: src/sourcery.glade:3041
 msgid "First run"
@@ -313,45 +316,49 @@ msgid ""
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
 msgstr ""
-"Il semble que ce soit la première fois que Sourcery est démarré. Le cache "
-"des SlackBuild doit être créé afin que Sourcery fonctionne. Vous aurez "
-"besoin d'une connexion Internet active pour créer le cache des SlackBuild."
+"Il semble que ce soit la première exécution de Sourcery. Le cache des "
+"SlackBuilds doit d'abord être créé avant que Sourcery ne puisse fonctionner "
+"correctement. Vous devez disposer d'une connexion Internet fonctionnelle "
+"afin de créer le cache des SlackBuilds."
 
 #: src/sourcery.glade:3109
 msgid "Create SlackBuild cache"
-msgstr "Créer le cache des SlackBuild"
+msgstr "Créer le cache des SlackBuilds"
 
 #: src/sourcery.glade:3141
 msgid "Update SlackBuild Cache?"
-msgstr ""
+msgstr "Mettre à jour le cache des SlackBuilds ?"
 
 #: src/sourcery.glade:3160
-msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+msgid ""
+"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr ""
+"La configuration a été modifiée. Voulez-vous reconstruire le cache des "
+"SlackBuilds ?"
 
 #: src/sourcery.glade:3189
 msgid "Rebuild SlackBuild cache"
-msgstr ""
+msgstr "Reconstruire le cache des SlackBuilds"
 
 #: src/sourcery.glade:3218
 msgid "Add SlackBuild source"
-msgstr ""
+msgstr "Ajouter une source SlackBuild"
 
 #: src/sourcery.glade:3242 src/sourcery.glade:3341
 msgid "SlackBuild source location:"
-msgstr ""
+msgstr "Emplacement de la source SlackBuild :"
 
 #: src/sourcery.glade:3317
 msgid "Edit SlackBuild source"
-msgstr ""
+msgstr "Modifier la source SlackBuild"
 
 #: src/sourcery.glade:3429
 msgid "Clearing working directory. Please wait..."
-msgstr ""
+msgstr "Purge du répertoire de travail. Veuillez patienter..."
 
 #: src/sourcery:95
 msgid "No SlackBuilds found"
-msgstr "Slackbuilds non trouvés"
+msgstr "SlackBuilds non trouvés"
 
 #: src/sourcery:97
 msgid "One SlackBuild found"
@@ -360,7 +367,7 @@ msgstr "Un SlackBuild trouvé"
 #: src/sourcery:99
 #, python-format
 msgid "%(num)i SlackBuilds found"
-msgstr "%(num)i Slackbuilds trouvés"
+msgstr "%(num)i SlackBuilds trouvés"
 
 #: src/sourcery:103
 msgid "Could not retrieve SlackBuild data"
@@ -368,7 +375,7 @@ msgstr "Impossible de récupérer les données du SlackBuild"
 
 #: src/sourcery:217
 msgid "SlackBuild information for "
-msgstr "informations de SlackBuild pour "
+msgstr "informations SlackBuild pour "
 
 #: src/sourcery:225 src/sourcery:232
 msgid "Not available."
@@ -377,22 +384,22 @@ msgstr "Non disponible."
 #: src/sourcery:279
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
-msgstr "%(pkg)s %(pkgver)s va être installé en tant que dépendance"
+msgstr "%(pkg)s %(pkgver)s sera installé en tant que dépendance"
 
 #: src/sourcery:289
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
-msgstr "%(pkg)s %(pkgver)s va être installé"
+msgstr "%(pkg)s %(pkgver)s sera installé"
 
 #: src/sourcery:291
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
-msgstr "%(pkg)s %(pkgver)s va être réinstallé"
+msgstr "%(pkg)s %(pkgver)s sera réinstallé"
 
 #: src/sourcery:293
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
-msgstr "%(pkg)s %(pkgver)s va être supprimé"
+msgstr "%(pkg)s %(pkgver)s sera supprimé"
 
 #: src/sourcery:404 src/sourcery:946
 msgid "Status"
@@ -400,7 +407,7 @@ msgstr "Statut"
 
 #: src/sourcery:596 src/sourcery:720 src/sourcery:771
 msgid "Build log for"
-msgstr "Le journal de génération pour "
+msgstr "Le fichier journal de génération pour "
 
 #: src/sourcery:644 src/sourcery:652
 msgid "Downloading source files for"
@@ -421,9 +428,10 @@ msgid ""
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
 msgstr ""
-"Il y avait une erreur en compilant %(pkg)s %(pkgver)s. Toutes les actions en "
-"cours seront éliminées de la file d'attente de traitement. Vous pouvez "
-"consulter le fichier journal des erreurs de compilation."
+"Une erreur s'est produite lors de la compilation de %(pkg)s %(pkgver)s. "
+"Toutes les actions en cours seront éliminées de la file d'attente de "
+"traitement. Vous pouvez consulter le fichier journal des erreurs de "
+"compilation."
 
 #: src/sourcery:686
 #, python-format
@@ -431,7 +439,7 @@ msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
 msgstr ""
-"Il y avait une erreur lors du téléchargement des fichiers sources pour "
+"Une erreur s'est produite lors du téléchargement des fichiers sources pour "
 "%(pkg)s %(pkgver)s. Toutes les actions en cours seront éliminés de la file "
 "d'attente de traitement."
 
@@ -453,13 +461,8 @@ msgstr "Version"
 
 #: sourcery.desktop.in.h:1 sourcery-kde.desktop.in.h:1
 msgid "A graphical frontend to slapt-src"
-msgstr "Une interface graphique pour slapt-src"
+msgstr "Interface graphique pour slapt-src"
 
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery, gestionnaire de SlackBuild"
-
-#~ msgid "Select the package you want to view the build log for:"
-#~ msgstr ""
-#~ "Sélectionnez le paquet dont vous souhaitez afficher le journal de "
-#~ "génération :"

@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-23 17:54+0000\n"
+"PO-Revision-Date: 2011-04-26 13:33+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 #: src/sourcery.glade:68
@@ -98,9 +98,7 @@ msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr ""
-"SlackBuildのキャッシュを更新している間にエラーが発生しました。インターネット"
-"の接続、ソースの設定を確認してください。"
+msgstr "SlackBuildのキャッシュを更新している間にエラーが発生しました。インターネットの接続、ソースの設定を確認してください。"
 
 #: src/sourcery.glade:657
 msgid "Pending tasks"
@@ -114,9 +112,7 @@ msgstr "<b>次のタスクを実行しますか？</b>"
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
-msgstr ""
-"リストされているタスクが実行されます。リスト内の項目をドラッグして、処理順序"
-"を並べ替えることができます。"
+msgstr "リストされているタスクが実行されます。リスト内の項目をドラッグして、処理順序を並べ替えることができます。"
 
 #: src/sourcery.glade:826
 msgid "Progress"
@@ -129,10 +125,10 @@ msgstr "全体の進行状況"
 #: src/sourcery.glade:888
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few hours..."
+"the size and complexity of the software, from a few seconds to a few "
+"hours..."
 msgstr ""
-"しばらくお待ちください。しばらく時間がかかる場合があります。処理時間は数時"
-"間、数秒からと、サイズおよびソフトの複雑さによって異なります..."
+"しばらくお待ちください。しばらく時間がかかる場合があります。処理時間は数時間、数秒からと、サイズおよびソフトの複雑さによって異なります..."
 
 #: src/sourcery.glade:929
 msgid "Completed tasks"
@@ -148,8 +144,7 @@ msgstr "キャンセルしました"
 
 #: src/sourcery.glade:989
 msgid "Canceled. Some tasks may have already been completed."
-msgstr ""
-"キャンセルされました。タスクのいくらかは、既に完了している可能性があります。"
+msgstr "キャンセルされました。タスクのいくらかは、既に完了している可能性があります。"
 
 #: src/sourcery.glade:1039
 msgid "Error updating package list."
@@ -232,9 +227,7 @@ msgstr "パッケージがインストールされます"
 #: src/sourcery.glade:1636
 msgid ""
 "A package with this name is already installed and is going to be reinstalled"
-msgstr ""
-"この名前を持つパッケージは既にインストールされていますから再インストールしま"
-"す"
+msgstr "この名前を持つパッケージは既にインストールされていますから再インストールします"
 
 #: src/sourcery.glade:1650
 msgid "The package is going to be removed"
@@ -244,9 +237,7 @@ msgstr "パッケージが削除されます"
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr ""
-"SlackBuildsを使用して、ソースからパッケージのビルドとインストールをする"
-"slapt- srcのグラフィカル·フロントエンドです。"
+msgstr "SlackBuildsを使用して、ソースからパッケージのビルドとインストールをするslapt- srcのグラフィカル·フロントエンドです。"
 
 #: src/sourcery.glade:2665
 msgid "translator-credits"
@@ -309,9 +300,8 @@ msgid ""
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
 msgstr ""
-"Sourceryの初起動のようです。 Sourceryを使用するには、SlackBuildのキャッシュを"
-"まず最初に作成する必要があります。そのためには、インターネット接続が必要で"
-"す。"
+"Sourceryの初起動のようです。 "
+"Sourceryを使用するには、SlackBuildのキャッシュをまず最初に作成する必要があります。そのためには、インターネット接続が必要です。"
 
 #: src/sourcery.glade:3109
 msgid "Create SlackBuild cache"
@@ -322,7 +312,8 @@ msgid "Update SlackBuild Cache?"
 msgstr ""
 
 #: src/sourcery.glade:3160
-msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+msgid ""
+"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr ""
 
 #: src/sourcery.glade:3189
@@ -417,9 +408,8 @@ msgid ""
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
 msgstr ""
-"%(pkg)s %(pkgver)sをコンパイル中にエラーが発生しました。保留中のすべてのアク"
-"ションは、処理リストから削除されます。コンパイル時のエラーは、ログファイルで"
-"確認することができます。"
+"%(pkg)s "
+"%(pkgver)sをコンパイル中にエラーが発生しました。保留中のすべてのアクションは、処理リストから削除されます。コンパイル時のエラーは、ログファイルで確認することができます。"
 
 #: src/sourcery:686
 #, python-format
@@ -427,8 +417,7 @@ msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
 msgstr ""
-"%(pkg)s %(pkgver)sのソースファイルをダウンロード中にエラーが発生しました。保"
-"留中のすべてのアクションは、処理リストから削除されます。"
+"%(pkg)s %(pkgver)sのソースファイルをダウンロード中にエラーが発生しました。保留中のすべてのアクションは、処理リストから削除されます。"
 
 #: src/sourcery:730
 msgid "Not available"
@@ -453,6 +442,3 @@ msgstr "slapt-srcのグラフィカル·フロントエンド"
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery·SlackBuild·マネージャー"
-
-#~ msgid "Select the package you want to view the build log for:"
-#~ msgstr "ビルドログを表示したいパッケージを選択してください："
