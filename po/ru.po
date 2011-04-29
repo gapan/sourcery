@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-28 09:21+0000\n"
+"PO-Revision-Date: 2011-04-29 16:48+0000\n"
 "Last-Translator: andyun <pokazsch@yandex.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -163,11 +163,11 @@ msgstr "Просмотреть"
 
 #: src/sourcery.glade:1176
 msgid "Updating..."
-msgstr "Обновление ..."
+msgstr "Обновление..."
 
 #: src/sourcery.glade:1200
 msgid "Updating SlackBuild cache..."
-msgstr "Обновление списка скриптов SlackBuild ..."
+msgstr "Обновление списка скриптов SlackBuild..."
 
 #: src/sourcery.glade:1253
 msgid "Getting SlackBuild information"
@@ -175,7 +175,7 @@ msgstr "Получение информации"
 
 #: src/sourcery.glade:1269
 msgid "Downloading SlackBuild information. Please wait..."
-msgstr "Загрузка информации о скрипте SlackBuild. Пожалуйста, ждите ..."
+msgstr "Загрузка информации о скрипте SlackBuild. Пожалуйста, ждите..."
 
 #: src/sourcery.glade:1303
 msgid "<b>Name:</b>"
@@ -346,7 +346,7 @@ msgstr "Править источник скриптов SlackBuild"
 
 #: src/sourcery.glade:3429
 msgid "Clearing working directory. Please wait..."
-msgstr "Очищение рабочего каталога. Пожалуйста, ждите ..."
+msgstr "Очищение рабочего каталога. Пожалуйста, ждите..."
 
 #: src/sourcery:95
 msgid "No SlackBuilds found"
