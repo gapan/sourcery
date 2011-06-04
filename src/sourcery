@@ -408,7 +408,8 @@ class Sourcery:
 		self.update_menus()
 
 	def on_treeview_pkg_key_release_event(self, widget, event):
-		if gtk.gdk.keyval_name(event.keyval) == 'Menu':
+		button = gtk.gdk.keyval_name(event.keyval) 
+		if button == 'Menu':
 			self.menu_pkgaction.popup(None, None, None, 1, event.time)
 
 	def on_menuitem_unmarkall_activate(self, widget):
