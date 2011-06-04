@@ -407,6 +407,10 @@ class Sourcery:
 	def on_treeview_pkg_cursor_changed(self, widget):
 		self.update_menus()
 
+	def on_treeview_pkg_key_release_event(self, widget, event):
+		if gtk.gdk.keyval_name(event.keyval) == 'Menu':
+			self.menu_pkgaction.popup(None, None, None, 1, event.time)
+
 	def on_menuitem_unmarkall_activate(self, widget):
 		global pending
 		pending = []
