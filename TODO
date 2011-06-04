@@ -1,4 +1,3 @@
 * Add support for build queues, in a similar manner as sbopkg
 * Save window size on exit
 * Add support for browsing a specific category
-* Fix package menu when navigating SlackBuild list with keyboard

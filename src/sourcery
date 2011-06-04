@@ -400,11 +400,13 @@ class Sourcery:
 			path, col, cellx , celly = pthinfo
 			self.tv_pkg.grab_focus()
 			self.tv_pkg.set_cursor(path, col, 0)
-			self.update_menus()
 			if col.get_title() == _('Status') or event.button == 3:
 				self.menu_pkgaction.popup(None, None, None, event.button, time)
 		return True
 	
+	def on_treeview_pkg_cursor_changed(self, widget):
+		self.update_menus()
+
 	def on_menuitem_unmarkall_activate(self, widget):
 		global pending
 		pending = []
