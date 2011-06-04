@@ -1,15 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Péter Polonkai <polesz@nedudu.hu>, 2011
+# gapan <vlahavas@gmail.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-26 13:33+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2011-05-10 04:28+0000\n"
+"Last-Translator: Polesz <polesz@nedudu.hu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -259,29 +260,31 @@ msgstr "Tulajdonságok"
 
 #: src/sourcery.glade:2713
 msgid "<b>SlackBuild Sources</b>"
-msgstr ""
+msgstr "<b>SlackBuild Források</b>"
 
 #: src/sourcery.glade:2727
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
 msgstr ""
+"<i>A források prioritása a fentebbi mindig magasabb. Ezt a sorrendet húzd és"
+" ejtsd módszerrel lehet változtatni.</i>"
 
 #: src/sourcery.glade:2843
 msgid "Sources"
-msgstr ""
+msgstr "Források"
 
 #: src/sourcery.glade:2861
 msgid "<b>Source and package storage</b>"
-msgstr ""
+msgstr "<b>Forrás és csomagtároló eszköz</b>"
 
 #: src/sourcery.glade:2886
 msgid "Clear working directory"
-msgstr ""
+msgstr "Munka könyvtár törlése"
 
 #: src/sourcery.glade:2920
 msgid "Working Directory"
-msgstr ""
+msgstr "Munka könyvtár"
 
 #: src/sourcery.glade:2933
 msgid "Resolve dependencies"
@@ -299,7 +302,7 @@ msgstr ""
 
 #: src/sourcery.glade:2978
 msgid "Dependencies"
-msgstr ""
+msgstr "Függőségek"
 
 #: src/sourcery.glade:3041
 msgid "First run"
@@ -321,32 +324,32 @@ msgstr "SlackBuild átmeneti tár létrehozása"
 
 #: src/sourcery.glade:3141
 msgid "Update SlackBuild Cache?"
-msgstr ""
+msgstr "SlackBuild átmeneti tároló frissítése?"
 
 #: src/sourcery.glade:3160
 msgid ""
 "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
-msgstr ""
+msgstr "Konfiguráció megváltozott. Újraépíti a SlackBuild átmeneti tárolót?"
 
 #: src/sourcery.glade:3189
 msgid "Rebuild SlackBuild cache"
-msgstr ""
+msgstr "SlackBuild átmeneti tároló frissítése"
 
 #: src/sourcery.glade:3218
 msgid "Add SlackBuild source"
-msgstr ""
+msgstr "SlackBuild forrás hozzáadása"
 
 #: src/sourcery.glade:3242 src/sourcery.glade:3341
 msgid "SlackBuild source location:"
-msgstr ""
+msgstr "SlackBuild forrás helye:"
 
 #: src/sourcery.glade:3317
 msgid "Edit SlackBuild source"
-msgstr ""
+msgstr "SlackBuild forrás szerkesztése"
 
 #: src/sourcery.glade:3429
 msgid "Clearing working directory. Please wait..."
-msgstr ""
+msgstr "Munka könyvtár törlése. Kérem várjon..."
 
 #: src/sourcery:95
 msgid "No SlackBuilds found"
@@ -454,3 +457,5 @@ msgstr "Grafikus felület a slapt-src programhoz"
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "SlackBuild Forrásállomány Kezelő"
+
+
