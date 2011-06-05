@@ -1110,6 +1110,7 @@ class Sourcery:
 		#
 		self.dlg_loglist = builder.get_object('dialog_loglist')
 		self.ls_loglist = builder.get_object('liststore_loglist')
+		self.ls_loglist.set_sort_column_id(0, gtk.SORT_ASCENDING)
 		self.tv_loglist = builder.get_object('treeview_loglist')
 		self.tvc_loglist_name = builder.get_object('treeviewcolumn_loglist_name')
 		self.tvc_loglist_ver = builder.get_object('treeviewcolumn_loglist_ver')
