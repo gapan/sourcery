@@ -39,15 +39,41 @@ class SourceryConfig:
 		except (ConfigParser.NoOptionError, ConfigParser.NoSectionError):
 			dependencies = True
 		return dependencies
-
-	def write_config(self, dependencies):
+	
+	def window_size(self):
 		try:
-			self.config.add_section('Sourcery')
-		except ConfigParser.DuplicateSectionError:
+			self.config.read(config_file)
+			width = self.config.getint('Window', 'width')
+			height = self.config.getint('Window', 'height')
+		except (ConfigParser.NoOptionError, ConfigParser.NoSectionError):
+			try:
+				w = gtk.gdk.get_default_root_window()
+				p = gtk.gdk.atom_intern('_NET_WORKAREA')
+				workarea_width, workarea_height = w.property_get(p)[2][2:4]
+				width = int(workarea_width*0.8)
+				height = int(workarea_height*0.8)
+			except TypeError:
+				width = 700
+				height= 500
+		return width, height
+
+	def write_config(self, dependencies, width, height):
+		try:
+			try:
+				self.config.add_section('Sourcery')
+			except ConfigParser.DuplicateSectionError:
+				pass
+			try:
+				self.config.add_section('Window')
+			except ConfigParser.DuplicateSectionError:
+				pass
+			self.config.set('Sourcery', 'dependencies', dependencies)
+			self.config.set('Window', 'width', width)
+			self.config.set('Window', 'height', height)
+			with open(config_file, 'wb') as configfile:
+				self.config.write(configfile)
+		except IOError:
 			pass
-		self.config.set('Sourcery', 'dependencies', dependencies)
-		with open(config_file, 'wb') as configfile:
-			self.config.write(configfile)
 
 class Icon:
 	avail = gtk.gdk.pixbuf_new_from_file(shareddir+'/pixmaps/pkg_action_available.png')
@@ -63,14 +89,13 @@ class PkgAction:
 	Remove = 3
 
 class Sourcery:
+	win_width = 0
+	win_height = 0
+
 	def set_default_window_size(self):
-		try:
-			w = gtk.gdk.get_default_root_window()
-			p = gtk.gdk.atom_intern('_NET_WORKAREA')
-			width, height = w.property_get(p)[2][2:4]
-			self.window.set_default_size(int(width*0.8), int(height*0.8))
-		except TypeError:
-			self.window.set_default_size(700, 500)
+		config = SourceryConfig()
+		width, height = config.window_size()
+		self.window.set_default_size(width, height)
 
 	def slaptsrclist(self, searchstring):
 		if os.path.isfile(slackbuilds_data):
@@ -523,7 +548,8 @@ class Sourcery:
 		c.write()
 		# write dependency config to file
 		config = SourceryConfig()
-		config.write_config(self.cb_prefs_deps.get_active())
+		config.write_config(self.cb_prefs_deps.get_active(),
+				self.win_width, self.win_height)
 		self.dlg_prefs.hide()
 		# if repository/working dir info has changed, prompt to
 		# rebuild icon cache
@@ -943,7 +969,13 @@ class Sourcery:
 	def on_button_edit_source_cancel_clicked(self, widget):
 		self.dlg_edit_source.hide()
 
+	def on_sourcery_configure_event(self, widget, data=None):
+		self.win_width, self.win_height = self.window.get_size()
+
 	def gtk_main_quit(self, widget, data=None):
+		config = SourceryConfig()
+		deps = config.deps()
+		config.write_config(deps, self.win_width, self.win_height)
 		gtk.main_quit()
 
 	def __init__(self):

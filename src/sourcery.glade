@@ -55,6 +55,7 @@
     <property name="window_position">center</property>
     <property name="icon_name">sourcery</property>
     <signal name="destroy" handler="gtk_main_quit"/>
+    <signal name="configure_event" handler="on_sourcery_configure_event"/>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
