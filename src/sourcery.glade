@@ -1860,6 +1860,7 @@
                     <property name="model">liststore_loglist</property>
                     <property name="headers_clickable">False</property>
                     <property name="search_column">0</property>
+                    <signal name="key_release_event" handler="on_treeview_loglist_key_release_event"/>
                     <child>
                       <object class="GtkTreeViewColumn" id="treeviewcolumn_loglist_name">
                         <property name="title">pkgname</property>

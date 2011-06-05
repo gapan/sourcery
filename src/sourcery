@@ -815,6 +815,13 @@ class Sourcery:
 	def on_button_loglist_close_clicked(self, widget):
 		self.dlg_loglist.hide()
 
+	def on_treeview_loglist_key_release_event(self, widget, event):
+		button = gtk.gdk.keyval_name(event.keyval)
+		if button == 'Return':
+			self.on_button_loglist_view_clicked(self)
+		elif button == 'Delete':
+			self.on_button_loglist_del_clicked(self)
+
 	def on_button_firstrun_cancel_clicked(self, widget):
 		self.dlg_firstrun.hide()
 
