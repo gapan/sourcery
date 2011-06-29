@@ -1,15 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+#   <laplume@libero.it>, 2011.
+# Alessio Cuccovillo <alessio.cuccovillo@gmail.com>, 2011.
+# Kerd <kerd89@gmail.com>, 2011.
+# gapan <vlahavas@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-26 13:33+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2011-06-05 22:12+0000\n"
+"Last-Translator: laplume <laplume@libero.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,7 +82,7 @@ msgstr "_Aiuto"
 
 #: src/sourcery.glade:243 src/sourcery.glade:1557
 msgid "Icon legend"
-msgstr "Leggenda icone"
+msgstr "Legenda icone"
 
 #: src/sourcery.glade:290
 msgid "Execute pending actions"
@@ -261,7 +264,7 @@ msgstr "Preferenze"
 
 #: src/sourcery.glade:2713
 msgid "<b>SlackBuild Sources</b>"
-msgstr ""
+msgstr "<b>Sorgenti di Slackbuild</b>"
 
 #: src/sourcery.glade:2727
 msgid ""
@@ -305,7 +308,7 @@ msgstr ""
 
 #: src/sourcery.glade:3041
 msgid "First run"
-msgstr "Prima avvio "
+msgstr "Primo avvio "
 
 #: src/sourcery.glade:3076
 msgid ""
@@ -459,3 +462,5 @@ msgstr "Un frontend grafico per slapt-src"
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery SlackBuild Manager"
+
+
