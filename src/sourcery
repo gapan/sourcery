@@ -850,9 +850,11 @@ class Sourcery:
 
 	def on_button_firstrun_cancel_clicked(self, widget):
 		self.dlg_firstrun.hide()
+		self.window.show()
 
 	def on_button_firstrun_create_clicked(self, widget):
 		self.dlg_firstrun.hide()
+		self.window.show()
 		self.on_toolbutton_update_clicked(self)
 
 	def on_aboutdialog_response(self, widget, data=None):
@@ -1216,11 +1218,13 @@ class Sourcery:
 		# Connect all signals
 		builder.connect_signals(self)
 		if os.path.isfile(slackbuilds_data):
+			self.window.show()
 			self.refresh_pkglist()
 		else:
+			self.window.hide()
 			self.dlg_firstrun.show()
 
 if __name__ == "__main__":
 	app = Sourcery()
-	app.window.show()
+	#app.window.show()
 	gtk.main()
