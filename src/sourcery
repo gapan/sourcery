@@ -1226,5 +1226,4 @@ class Sourcery:
 
 if __name__ == "__main__":
 	app = Sourcery()
-	#app.window.show()
 	gtk.main()
