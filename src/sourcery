@@ -92,6 +92,7 @@ class Sourcery:
 	win_width = 0
 	win_height = 0
 	canceltask = False
+	pending = []
 
 	def set_default_window_size(self):
 		config = SourceryConfig()
@@ -138,7 +139,6 @@ class Sourcery:
 		return pkg_installed
 
 	def refresh_pkglist(self):
-		global pending
 		self.ls_pkg.clear()
 		# The list is cleared, no item is selected, so all menu
 		# options for package actions should be disabled
@@ -153,7 +153,7 @@ class Sourcery:
 			for i in pkglist:
 				action = 0
 				pkgname, pkgver, pkgdesc = i
-				for i in pending:
+				for i in self.pending:
 					if pkgname == i[0] and pkgver == i[1]:
 						action = i[2]
 						break
@@ -163,13 +163,13 @@ class Sourcery:
 				else:	
 					icon = Icon.avail
 					installed = False
-				if [pkgname, pkgver, PkgAction.Install] in pending:
+				if [pkgname, pkgver, PkgAction.Install] in self.pending:
 					icon = Icon.install
 					installed = False
-				elif [pkgname, pkgver, PkgAction.Reinstall] in pending:
+				elif [pkgname, pkgver, PkgAction.Reinstall] in self.pending:
 					icon = Icon.reinstall
 					installed = True
-				elif [pkgname, pkgver, PkgAction.Remove] in pending:
+				elif [pkgname, pkgver, PkgAction.Remove] in self.pending:
 					icon = Icon.remove
 					installed = True
 				self.ls_pkg.append([icon, pkgname,
@@ -286,15 +286,13 @@ class Sourcery:
 		self.canceltask = False
 
 	def on_toolbutton_exec_clicked(self, widget):
-		global pending
-
 		config = SourceryConfig()
 
 		if config.deps() == True:
 			requested_pkg = []
 			# get a list of all dependencies for all
 			# requested packages
-			for i in pending:
+			for i in self.pending:
 				if i[2] == PkgAction.Install:
 					requested_pkg.append([i[0], i[1]])
 			# add all dependencies to the processing
@@ -307,9 +305,9 @@ class Sourcery:
 				# installed as a dependency, remove it
 				# from the pending list, it's going to
 				# be installed anyway
-				if [pkg, pkgver, PkgAction.Install] in pending:
-					pending.remove([pkg, pkgver, PkgAction.Install])
-		for i in pending:
+				if [pkg, pkgver, PkgAction.Install] in self.pending:
+					self.pending.remove([pkg, pkgver, PkgAction.Install])
+		for i in self.pending:
 			if i[2] == PkgAction.Install:
 				desc = _('%(pkg)s %(pkgver)s is going to be installed') %{'pkg' : i[0], 'pkgver' : i[1]}
 			elif i[2] == PkgAction.Reinstall:
@@ -336,7 +334,6 @@ class Sourcery:
 		self.refresh_pkglist()
 
 	def update_menus(self):
-		global pending
 		selectedline = self.tv_pkg.get_selection()
 		self.ls_pkg, iter = selectedline.get_selected()
 		pkg = self.ls_pkg.get_value(iter, 1)
@@ -363,12 +360,12 @@ class Sourcery:
 		if action == PkgAction.DoNothing:
 			self.mi_unmark.set_sensitive(False)
 			self.mi_pkg_unmark.hide()
-			if [pkg, ver, PkgAction.Install] in pending:
-				pending.remove([pkg, ver, PkgAction.Install])
-			if [pkg, ver, PkgAction.Reinstall] in pending:
-				pending.remove([pkg, ver, PkgAction.Reinstall])
-			if [pkg, ver, PkgAction.Remove] in pending:
-				pending.remove([pkg, ver, PkgAction.Remove])
+			if [pkg, ver, PkgAction.Install] in self.pending:
+				self.pending.remove([pkg, ver, PkgAction.Install])
+			if [pkg, ver, PkgAction.Reinstall] in self.pending:
+				self.pending.remove([pkg, ver, PkgAction.Reinstall])
+			if [pkg, ver, PkgAction.Remove] in self.pending:
+				self.pending.remove([pkg, ver, PkgAction.Remove])
 			if pkg in pkg_installed:
 				self.ls_pkg.set_value(iter, 0, Icon.installed)
 			else:
@@ -378,36 +375,36 @@ class Sourcery:
 			self.mi_pkg_unmark.show()
 			self.mi_install.set_sensitive(False)
 			self.mi_pkg_install.hide()
-			if [pkg, ver, PkgAction.Install] in pending:
+			if [pkg, ver, PkgAction.Install] in self.pending:
 				pass
 			else:
-				pending.append([pkg, ver, PkgAction.Install])
+				self.pending.append([pkg, ver, PkgAction.Install])
 			self.ls_pkg.set_value(iter, 0, Icon.install)
 		elif action == PkgAction.Reinstall:
 			self.mi_unmark.set_sensitive(True)
 			self.mi_pkg_unmark.show()
 			self.mi_reinstall.set_sensitive(False)
 			self.mi_pkg_reinstall.hide()
-			if [pkg, ver, PkgAction.Reinstall] in pending:
+			if [pkg, ver, PkgAction.Reinstall] in self.pending:
 				pass
 			else:
-				pending.append([pkg, ver, PkgAction.Reinstall])
-			if [pkg, ver, PkgAction.Remove] in pending:
-				pending.remove([pkg, ver, PkgAction.Remove])
+				self.pending.append([pkg, ver, PkgAction.Reinstall])
+			if [pkg, ver, PkgAction.Remove] in self.pending:
+				self.pending.remove([pkg, ver, PkgAction.Remove])
 			self.ls_pkg.set_value(iter, 0, Icon.reinstall)
 		elif action == PkgAction.Remove:
 			self.mi_unmark.set_sensitive(True)
 			self.mi_pkg_unmark.show()
 			self.mi_remove.set_sensitive(False)
 			self.mi_pkg_remove.hide()
-			if [pkg, ver, PkgAction.Remove] in pending:
+			if [pkg, ver, PkgAction.Remove] in self.pending:
 				pass
 			else:
-				pending.append([pkg, ver, PkgAction.Remove])
-			if [pkg, ver, PkgAction.Reinstall] in pending:
-				pending.remove([pkg, ver, PkgAction.Reinstall])
+				self.pending.append([pkg, ver, PkgAction.Remove])
+			if [pkg, ver, PkgAction.Reinstall] in self.pending:
+				self.pending.remove([pkg, ver, PkgAction.Reinstall])
 			self.ls_pkg.set_value(iter, 0, Icon.remove)
-		if pending == []:
+		if self.pending == []:
 			self.mi_unmarkall.set_sensitive(False)
 			self.tb_exec.set_sensitive(False)
 			self.mi_exec.set_sensitive(False)
@@ -438,8 +435,7 @@ class Sourcery:
 			self.menu_pkgaction.popup(None, None, None, 1, event.time)
 
 	def on_menuitem_unmarkall_activate(self, widget):
-		global pending
-		pending = []
+		self.pending = []
 		self.mi_unmarkall.set_sensitive(False)
 		self.tb_exec.set_sensitive(False)
 		self.mi_exec.set_sensitive(False)
@@ -661,7 +657,6 @@ class Sourcery:
 			return 0
 
 	def execute_pending(self):
-		global pending
 		while gtk.events_pending():
 			gtk.main_iteration()
 		totaltasks = len(self.ls_summary)
@@ -698,7 +693,7 @@ class Sourcery:
 			self.pb_execoverall.set_fraction(currentpos)
 		while gtk.events_pending():
 			gtk.main_iteration()
-		pending = []
+		self.pending = []
 		self.ls_summary.clear()
 		self.refresh_pkglist()
 		self.dlg_exec.hide()
@@ -1109,8 +1104,6 @@ class Sourcery:
 		self.lb_pkginfo_deps = builder.get_object('label_pkginfo_deps')
 		self.lb_pkginfo_slackdesc = builder.get_object('label_pkginfo_slackdesc')
 		self.txt_pkginfo_readme = builder.get_object('textbuffer_pkginfo_readme')
-		global pending
-		pending = []
 	
 		#
 		# Icon legend dialog
