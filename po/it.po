@@ -2,16 +2,18 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # 
-#   <laplume@libero.it>, 2011.
+# Translators:
 # Alessio Cuccovillo <alessio.cuccovillo@gmail.com>, 2011.
-# Kerd <kerd89@gmail.com>, 2011.
 # gapan <vlahavas@gmail.com>, 2011.
+#   <kerd89@gmail.com>, 2011.
+# Kerd <kerd89@gmail.com>, 2011.
+#   <laplume@libero.it>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-06-05 22:12+0000\n"
+"PO-Revision-Date: 2011-10-20 20:56+0000\n"
 "Last-Translator: laplume <laplume@libero.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -271,22 +273,24 @@ msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
 msgstr ""
+"<i>Le fonti all'inizio hanno priorità più alta. Potete risistemare l'ordine "
+"trascinandole.</i>"
 
 #: src/sourcery.glade:2843
 msgid "Sources"
-msgstr ""
+msgstr "Sorgenti"
 
 #: src/sourcery.glade:2861
 msgid "<b>Source and package storage</b>"
-msgstr ""
+msgstr "<b>Sorgenti e stoccaggio pacchetti</b>"
 
 #: src/sourcery.glade:2886
 msgid "Clear working directory"
-msgstr ""
+msgstr "Pulisci la directory di lavoro"
 
 #: src/sourcery.glade:2920
 msgid "Working Directory"
-msgstr ""
+msgstr "Directory di lavoro"
 
 #: src/sourcery.glade:2933
 msgid "Resolve dependencies"
@@ -304,7 +308,7 @@ msgstr ""
 
 #: src/sourcery.glade:2978
 msgid "Dependencies"
-msgstr ""
+msgstr "Dipendenze"
 
 #: src/sourcery.glade:3041
 msgid "First run"
@@ -326,32 +330,34 @@ msgstr "Creazione della cache SlackBuild "
 
 #: src/sourcery.glade:3141
 msgid "Update SlackBuild Cache?"
-msgstr ""
+msgstr "Vuoi aggiornare la cache di SlackBuild?"
 
 #: src/sourcery.glade:3160
 msgid ""
 "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr ""
+"La configurazione è stata modificata. Vuoi ricostruire la cache di "
+"SlackBuild? "
 
 #: src/sourcery.glade:3189
 msgid "Rebuild SlackBuild cache"
-msgstr ""
+msgstr "Ricostriusci la cache di SlackBuild"
 
 #: src/sourcery.glade:3218
 msgid "Add SlackBuild source"
-msgstr ""
+msgstr "Aggiungi sorgente SlackBuild"
 
 #: src/sourcery.glade:3242 src/sourcery.glade:3341
 msgid "SlackBuild source location:"
-msgstr ""
+msgstr "Posizione della sorgente SlackBuild:"
 
 #: src/sourcery.glade:3317
 msgid "Edit SlackBuild source"
-msgstr ""
+msgstr "Modifica sorgente SlackBuild:"
 
 #: src/sourcery.glade:3429
 msgid "Clearing working directory. Please wait..."
-msgstr ""
+msgstr "Sto pulendo la directory di lavoro. Attendere per favore..."
 
 #: src/sourcery:95
 msgid "No SlackBuilds found"
