@@ -11,6 +11,10 @@ import urllib2
 import ConfigParser
 import vte
 from simpleconfig import SimpleConfig
+import threading
+
+#Initializing the gtk's thread engine
+gtk.gdk.threads_init()
 
 # Internationalization
 import locale
@@ -28,6 +32,12 @@ slaptsrcrc = '/etc/slapt-get/slapt-srcrc'
 slackbuilds_data = '/usr/src/slapt-src/slackbuilds_data'
 logdir = '/var/log/sourcery'
 shareddir = '/usr/share/sourcery'
+
+def threaded(f):
+	def wrapper(*args):
+		t = threading.Thread(target=f, args=args)
+		t.start()
+	return wrapper
 
 class SourceryConfig:
 	config = ConfigParser.RawConfigParser()
@@ -195,10 +205,11 @@ class Sourcery:
 						deps.append(i)
 		return deps
 
+	@threaded
 	def get_pkg_info(self, pkg, pkgver):
+		gtk.gdk.threads_init()
 		self.dlg_fetchpkginfo.show()
-		while gtk.events_pending():
-			gtk.main_iteration()
+		gtk.gdk.threads_leave()
 		# just to be on the safe side
 		sourceurl = None
 		location = None
@@ -239,6 +250,7 @@ class Sourcery:
 				readme = None
 		else:
 			readme = None
+		gtk.gdk.threads_init()
 		self.dlg_fetchpkginfo.hide()
 		self.dlg_pkginfo.set_title(_('SlackBuild information for ')+pkg+' '+pkgver)
 		self.lb_pkginfo_name.set_text(pkg)
@@ -247,42 +259,66 @@ class Sourcery:
 		self.lb_pkginfo_location.set_text(location)
 		self.lb_pkginfo_files.set_text("\n".join(files))
 		self.lb_pkginfo_deps.set_text("\n".join(deps))
+		gtk.gdk.threads_leave()
 		if slackdesc == None:
+			gtk.gdk.threads_enter()
 			self.lb_pkginfo_slackdesc.set_text(_('Not available.'))
+			gtk.gdk.threads_leave()
 		else:
 			try:
+				gtk.gdk.threads_enter()
 				self.lb_pkginfo_slackdesc.set_text("\n".join(slackdesc).decode('utf8'))
+				gtk.gdk.threads_leave()
 			except UnicodeDecodeError:
+				gtk.gdk.threads_enter()
 				self.lb_pkginfo_slackdesc.set_text("\n".join(slackdesc).decode('latin1'))
+				gtk.gdk.threads_leave()
 		if readme == None:
+			gtk.gdk.threads_enter()
 			self.txt_pkginfo_readme.set_text(_('Not available.'))
+			gtk.gdk.threads_leave()
 		else:
 			try:
+				gtk.gdk.threads_enter()
 				self.txt_pkginfo_readme.set_text("\n".join(readme).decode('utf8'))
+				gtk.gdk.threads_leave()
 			except UnicodeDecodeError:
+				gtk.gdk.threads_enter()
 				self.txt_pkginfo_readme.set_text("\n".join(readme).decode('latin1'))
+				gtk.gdk.threads_leave()
+		gtk.gdk.threads_enter()
 		self.dlg_pkginfo.show()
+		gtk.gdk.threads_leave()
 
+	@threaded
 	def on_toolbutton_update_clicked(self, widget):
 		self.canceltask = False
+		gtk.gdk.threads_init()
 		self.dlg_cacheupdate.show()
 		self.pbar_cacheupdate.pulse()
+		gtk.gdk.threads_leave()
 		process = subprocess.Popen(['slapt-src','-u'], shell=False, close_fds=True, preexec_fn=os.setsid)
 		while not self.canceltask:
-			while gtk.events_pending():
-				gtk.main_iteration()
+			gtk.gdk.threads_init()
 			self.pbar_cacheupdate.pulse()
+			gtk.gdk.threads_leave()
 			status = process.poll()
 			time.sleep(0.1)
 			if status != None:
+				gtk.gdk.threads_init()
 				self.dlg_cacheupdate.hide()
+				gtk.gdk.threads_leave()
 				break
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
 		if status != 0:
+			gtk.gdk.threads_enter()
 			self.dlg_errorcache.show()
+			gtk.gdk.threads_leave()
 		else:
+			gtk.gdk.threads_enter()
 			self.refresh_pkglist()
+			gtk.gdk.threads_leave()
 		self.canceltask = False
 
 	def on_toolbutton_exec_clicked(self, widget):
@@ -325,12 +361,13 @@ class Sourcery:
 	def on_entry_search_activate(self, widget):
 		self.refresh_pkglist()	
 
+	@threaded
 	def on_entry_search_icon_release(self, widget, icon, event):
 		if icon.value_name == 'GTK_ENTRY_ICON_PRIMARY':
 			if len(self.entry_search.get_text()) != 0:
+				gtk.gdk.threads_init()
 				self.entry_search.set_text('')
-				while gtk.events_pending():
-					gtk.main_iteration()
+				gtk.gdk.threads_leave()
 		self.refresh_pkglist()
 
 	def update_menus(self):
@@ -935,13 +972,16 @@ class Sourcery:
 		except TypeError:
 			pass
 
+	@threaded
 	def on_button_clear_cache_clicked(self, widget):
+		gtk.gdk.threads_init()
 		self.dlg_clear_cache.show()
-		while gtk.events_pending():
-			gtk.main_iteration()
+		gtk.gdk.threads_leave()
 		time.sleep(0.5)	
 		status, output = commands.getstatusoutput('slapt-src --clean')
+		gtk.gdk.threads_init()
 		self.dlg_clear_cache.hide()
+		gtk.gdk.threads_leave()
 
 	def on_button_add_source_add_clicked(self, widget):
 		source = self.entry_add_source.get_text().lstrip(' ').rstrip(' ')
