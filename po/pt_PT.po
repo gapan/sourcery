@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-12-18 20:22+0000\n"
+"PO-Revision-Date: 2012-01-12 23:05+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: src/sourcery.glade:68
 msgid "_File"
-msgstr "Ficheiro"
+msgstr "_Ficheiro"
 
 #: src/sourcery.glade:75 src/sourcery.glade:276
 msgid "Update"
@@ -88,7 +88,7 @@ msgstr "Executar ações pendentes"
 
 #: src/sourcery.glade:329
 msgid "Search: "
-msgstr "Pesquisa:"
+msgstr "Pesquisa: "
 
 #: src/sourcery.glade:463 src/sourcery.glade:1080
 msgid "Error"
@@ -134,7 +134,7 @@ msgid ""
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
 msgstr ""
-"Por favor, aguarde. Isso pode demorar um pouco. O tempo de processamento "
+"Por favor, aguarde. Isto pode demorar um pouco. O tempo de processamento "
 "varia, dependendo do tamanho e da complexidade do software, de alguns "
 "segundos a algumas horas ..."
 
@@ -372,7 +372,7 @@ msgstr "Não foi possível recuperar dados SlackBuild"
 
 #: src/sourcery:217
 msgid "SlackBuild information for "
-msgstr "SlackBuild informação para"
+msgstr "SlackBuild informação para "
 
 #: src/sourcery:225 src/sourcery:232
 msgid "Not available."
