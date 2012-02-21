@@ -1,14 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# cobraJoker <cobra.the.joker@gmail.com>, 2011.
+# gapan <vlahavas@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-26 13:33+0000\n"
+"PO-Revision-Date: 2012-02-14 13:36+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -98,9 +100,7 @@ msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr ""
-"كان هناك خطأ أثناء تحديث الSlackBuild cache . تأكد أنك قمت بإعدادات المصادر "
-"بشكل صحيح و أنك متصل بالإنترنت "
+msgstr "كان هناك خطأ أثناء تحديث الSlackBuild cache . تأكد أنك قمت بإعدادات المصادر بشكل صحيح و أنك متصل بالإنترنت "
 
 #: src/sourcery.glade:657
 msgid "Pending tasks"
@@ -114,9 +114,7 @@ msgstr "<b> تنفيذ المهام الآتية ؟ </b>"
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
-msgstr ""
-"المهام التالية على وشك التنفيذ . يمكنك إعادة ترتيب المعالجة عن طريق سحب "
-"العناصر في القائمة."
+msgstr "المهام التالية على وشك التنفيذ . يمكنك إعادة ترتيب المعالجة عن طريق سحب العناصر في القائمة."
 
 #: src/sourcery.glade:826
 msgid "Progress"
@@ -131,9 +129,7 @@ msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr ""
-"يرجى الانتظار. هذا قد يستغرق بعض الوقت. زمن التنفيذ يختلف ، اعتمادا على حجم "
-"وتعقيد البرنامج ، من بضع ثوان إلى بضع ساعات..."
+msgstr "يرجى الانتظار. هذا قد يستغرق بعض الوقت. زمن التنفيذ يختلف ، اعتمادا على حجم وتعقيد البرنامج ، من بضع ثوان إلى بضع ساعات..."
 
 #: src/sourcery.glade:929
 msgid "Completed tasks"
@@ -242,9 +238,7 @@ msgstr "سيتم حذف الحزمة "
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr ""
-"الواجهة الرسومية لslapt-src ، و هي أداة لبناء و تثبيت الحزمات من المصدر "
-"بإستخدام SlackBuilds و /أو SLKBUILDs"
+msgstr "الواجهة الرسومية لslapt-src ، و هي أداة لبناء و تثبيت الحزمات من المصدر بإستخدام SlackBuilds و /أو SLKBUILDs"
 
 #: src/sourcery.glade:2665
 msgid "translator-credits"
@@ -289,9 +283,7 @@ msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr ""
-"تحليل التبعية متاح فقط للمستودعات التي تدعمها . SlackBuilds من  "
-"SlackBuilds.org لا تتضمن أي معلومات عن التبعية "
+msgstr "تحليل التبعية متاح فقط للمستودعات التي تدعمها . SlackBuilds من  SlackBuilds.org لا تتضمن أي معلومات عن التبعية "
 
 #: src/sourcery.glade:2978
 msgid "Dependencies"
@@ -306,10 +298,7 @@ msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr ""
-"يبدو أن هذه هي أول مرة لتشغيل الSourcery . يجب إنتاج الSlackBuild cache أولا"
-" قبل أن تكون الSourcery جاهزة للعمل . يجب أن تكون متصلا بالإنترنت لإنتاج "
-"الSlackBuild cache "
+msgstr "يبدو أن هذه هي أول مرة لتشغيل الSourcery . يجب إنتاج الSlackBuild cache أولا قبل أن تكون الSourcery جاهزة للعمل . يجب أن تكون متصلا بالإنترنت لإنتاج الSlackBuild cache "
 
 #: src/sourcery.glade:3109
 msgid "Create SlackBuild cache"
@@ -415,19 +404,14 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr ""
-"كان هناك خطأ أثناء تجميع %(pkg)s %(pkgver)s . كل الأنشطة المعلقة سوف يتم "
-"إزالتها من قائمة المعالجة . يمكنك إستعراض ملف السجل للعثور علي أية أخطاء "
-"أثناء التجميع"
+msgstr "كان هناك خطأ أثناء تجميع %(pkg)s %(pkgver)s . كل الأنشطة المعلقة سوف يتم إزالتها من قائمة المعالجة . يمكنك إستعراض ملف السجل للعثور علي أية أخطاء أثناء التجميع"
 
 #: src/sourcery:686
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr ""
-"كان هناك خطأ أثناء تحميل ملفات المصدر ل%(pkg)s %(pkgver)s . كل الأنشطة "
-"المعلقة سوف يتم إزالتها من قائمة المعالجة"
+msgstr "كان هناك خطأ أثناء تحميل ملفات المصدر ل%(pkg)s %(pkgver)s . كل الأنشطة المعلقة سوف يتم إزالتها من قائمة المعالجة"
 
 #: src/sourcery:730
 msgid "Not available"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-08-27 22:38+0000\n"
+"PO-Revision-Date: 2012-02-14 13:36+0000\n"
 "Last-Translator: eren <erenlinux@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -435,5 +435,3 @@ msgstr ""
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr ""
-
-

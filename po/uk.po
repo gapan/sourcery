@@ -1,15 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# gapan <vlahavas@gmail.com>, 2011.
+# Yarema aka Knedlyk <yupadmin@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-04-28 06:07+0000\n"
-"Last-Translator: knedlyk <yupadmin@gmail.com>\n"
+"PO-Revision-Date: 2012-02-14 13:36+0000\n"
+"Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,9 +100,7 @@ msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr ""
-"Сталася помилка при оновленні кешу SlackBuild. Переконайтеся, що Ви "
-"налаштували всі джерела правильно, і що у Вас є з'єднання з Інтернетом."
+msgstr "Сталася помилка при оновленні кешу SlackBuild. Переконайтеся, що Ви налаштували всі джерела правильно, і що у Вас є з'єднання з Інтернетом."
 
 #: src/sourcery.glade:657
 msgid "Pending tasks"
@@ -114,9 +114,7 @@ msgstr "<b>Виконати наступні завдання?</b>"
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
-msgstr ""
-"Наступні завдання будуть виконані. Ви можете змінити порядок виконання, "
-"перетягуючи елементи в списку."
+msgstr "Наступні завдання будуть виконані. Ви можете змінити порядок виконання, перетягуючи елементи в списку."
 
 #: src/sourcery.glade:826
 msgid "Progress"
@@ -131,10 +129,7 @@ msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr ""
-"Будь ласка, почекайте. Це може зайняти деякий час. Час поступу може "
-"змінитися залежно від розміру та складності програмного забезпечення, від "
-"декількох секунд до декількох годин..."
+msgstr "Будь ласка, почекайте. Це може зайняти деякий час. Час поступу може змінитися залежно від розміру та складності програмного забезпечення, від декількох секунд до декількох годин..."
 
 #: src/sourcery.glade:929
 msgid "Completed tasks"
@@ -216,9 +211,7 @@ msgstr "Файл README"
 msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
-msgstr ""
-"<b>Наступні значки використовуються для вказівки поточного стану "
-"SlackBuild:</b>"
+msgstr "<b>Наступні значки використовуються для вказівки поточного стану SlackBuild:</b>"
 
 #: src/sourcery.glade:1596
 msgid "Not installed"
@@ -245,9 +238,7 @@ msgstr "Пакунок буде вилучений"
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr ""
-"Графічний інтерфейс до slapt-src, утиліта для створення і встановлення "
-"пакетів з джерельних кодів за допомогою SlackBuild та/або SLKBUILD."
+msgstr "Графічний інтерфейс до slapt-src, утиліта для створення і встановлення пакетів з джерельних кодів за допомогою SlackBuild та/або SLKBUILD."
 
 #: src/sourcery.glade:2665
 msgid "translator-credits"
@@ -265,9 +256,7 @@ msgstr "<b>Джерела SlackBuild</b>"
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
-msgstr ""
-"<i>Джерела ближче до верхнього мають більш високий пріоритет. Ви можете "
-"змінити порядок шляхом перетягування.</i>"
+msgstr "<i>Джерела ближче до верхнього мають більш високий пріоритет. Ви можете змінити порядок шляхом перетягування.</i>"
 
 #: src/sourcery.glade:2843
 msgid "Sources"
@@ -294,9 +283,7 @@ msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr ""
-"Залежності доступні тільки для сховищ, які їх підтримують. SlackBuild-и від "
-"SlackBuilds.org не містять інформацію про залежності."
+msgstr "Залежності доступні тільки для сховищ, які їх підтримують. SlackBuild-и від SlackBuilds.org не містять інформацію про залежності."
 
 #: src/sourcery.glade:2978
 msgid "Dependencies"
@@ -311,10 +298,7 @@ msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr ""
-"Схоже, що це перший запуск Sourcery. Спочатку потрібно створити кеш "
-"SlackBuild для роботи Sourcery. Вам необхідно робоче з’єднання з інтернетом "
-"для створення кешу SlackBuild."
+msgstr "Схоже, що це перший запуск Sourcery. Спочатку потрібно створити кеш SlackBuild для роботи Sourcery. Вам необхідно робоче з’єднання з інтернетом для створення кешу SlackBuild."
 
 #: src/sourcery.glade:3109
 msgid "Create SlackBuild cache"
@@ -420,19 +404,14 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr ""
-"Сталася помилка при компілюванні %(pkg)s %(pkgver)s. Всі заплановані дії "
-"будуть видалені з черги. Ви можете переглянути файл журналу з помилками під "
-"час компіляції."
+msgstr "Сталася помилка при компілюванні %(pkg)s %(pkgver)s. Всі заплановані дії будуть видалені з черги. Ви можете переглянути файл журналу з помилками під час компіляції."
 
 #: src/sourcery:686
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr ""
-"Помилка під час завантаження вихідних файлів для %(pkg)s %(pkgver)s. Всі "
-"заплановані дії будуть видалені з черги."
+msgstr "Помилка під час завантаження вихідних файлів для %(pkg)s %(pkgver)s. Всі заплановані дії будуть видалені з черги."
 
 #: src/sourcery:730
 msgid "Not available"

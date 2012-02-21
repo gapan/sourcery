@@ -2,14 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # 
-# tsuren <hydrangea_and_snail@hotmail.com>, 2011
-# gapan <vlahavas@gmail.com>, 2011
+# Translators:
+# gapan <vlahavas@gmail.com>, 2011.
+# tsuren <hydrangea_and_snail@hotmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 16:31+0300\n"
-"PO-Revision-Date: 2011-05-10 17:20+0000\n"
+"PO-Revision-Date: 2012-02-14 13:36+0000\n"
 "Last-Translator: tsuren <hydrangea_and_snail@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -128,8 +129,7 @@ msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr ""
-"しばらくお待ちください。しばらく時間がかかる場合があります。処理時間は数時間、数秒からと、サイズおよびソフトの複雑さによって異なります..."
+msgstr "しばらくお待ちください。しばらく時間がかかる場合があります。処理時間は数時間、数秒からと、サイズおよびソフトの複雑さによって異なります..."
 
 #: src/sourcery.glade:929
 msgid "Completed tasks"
@@ -283,9 +283,7 @@ msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr ""
-"依存ファイルの処理は、サポートされているリポジトリでのみ使用可能です。 "
-"SlackBuilds.orgのSlackBuildsはすべて依存ファイルの情報が含まれていません。"
+msgstr "依存ファイルの処理は、サポートされているリポジトリでのみ使用可能です。 SlackBuilds.orgのSlackBuildsはすべて依存ファイルの情報が含まれていません。"
 
 #: src/sourcery.glade:2978
 msgid "Dependencies"
@@ -300,9 +298,7 @@ msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr ""
-"Sourceryの初起動のようです。 "
-"Sourceryを使用するには、SlackBuildのキャッシュをまず最初に作成する必要があります。そのためには、インターネット接続が必要です。"
+msgstr "Sourceryの初起動のようです。 Sourceryを使用するには、SlackBuildのキャッシュをまず最初に作成する必要があります。そのためには、インターネット接続が必要です。"
 
 #: src/sourcery.glade:3109
 msgid "Create SlackBuild cache"
@@ -408,17 +404,14 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr ""
-"%(pkg)s "
-"%(pkgver)sをコンパイル中にエラーが発生しました。保留中のすべてのアクションは、処理リストから削除されます。コンパイル時のエラーは、ログファイルで確認することができます。"
+msgstr "%(pkg)s %(pkgver)sをコンパイル中にエラーが発生しました。保留中のすべてのアクションは、処理リストから削除されます。コンパイル時のエラーは、ログファイルで確認することができます。"
 
 #: src/sourcery:686
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr ""
-"%(pkg)s %(pkgver)sのソースファイルをダウンロード中にエラーが発生しました。保留中のすべてのアクションは、処理リストから削除されます。"
+msgstr "%(pkg)s %(pkgver)sのソースファイルをダウンロード中にエラーが発生しました。保留中のすべてのアクションは、処理リストから削除されます。"
 
 #: src/sourcery:730
 msgid "Not available"
@@ -443,5 +436,3 @@ msgstr "slapt-srcのグラフィカル·フロントエンド"
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
 msgstr "Sourcery·SlackBuild·マネージャー"
-
-
