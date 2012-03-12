@@ -106,7 +106,10 @@ class Sourcery:
 				cmd = 'slapt-src --list'
 			else:
 				cmd = 'slapt-src -s "'+searchstring+'"'
-			status, pkglist_output = commands.getstatusoutput(cmd)
+			args = shlex.split(cmd)
+			process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+			pkglist_output = process.communicate()[0]
+			status = process.returncode
 			pkglist_lines = pkglist_output.splitlines()
 			pkglist = []
 			pkglist2 = []
