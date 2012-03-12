@@ -613,13 +613,19 @@ class Sourcery:
 		# shell=True is needed for the pipe to work
 		logfile = logdir+'/'+pkg+'-'+pkgver
 		f = open(logfile, 'a')
-	
+		DEVNULL = open('/dev/null', 'w')
+
 		config = SourceryConfig()
 
+		cmdline = 'yes n'
+		args = shlex.split(cmdline)
+		pyes = subprocess.Popen(args, stdout = subprocess.PIPE, stderr = DEVNULL)
 		if config.deps() == True:
-			process = subprocess.Popen(['yes n 2>/dev/null |slapt-src -y -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+			cmdline = 'slapt-src -y -i '+pkg+':'+pkgver  
 		else:
-			process = subprocess.Popen(['yes n 2>/dev/null |slapt-src -y -n -i '+pkg+':'+pkgver], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+			cmdline = 'slapt-src -y -n -i '+pkg+':'+pkgver  
+		args=shlex.split(cmdline)
+		process = subprocess.Popen(args, stdin=pyes.stdout, stdout = f, stderr = f, shell=False, close_fds=True, preexec_fn=os.setsid)
 		self.vte_term.feed_child('clear\ntail --pid '+str(process.pid)+' -f '+logfile+' 2>/dev/null & clear\n')
 		while not self.canceltask:
 			while gtk.events_pending():
@@ -630,7 +636,9 @@ class Sourcery:
 			if status != None:
 				break
 		f.close()
+		DEVNULL.close()
 		self.vte_term.feed_child('clear\n')
+		pyes.stdout.close()
 		if status == None:
 			os.killpg(process.pid, signal.SIGKILL)
 		if self.canceltask:
