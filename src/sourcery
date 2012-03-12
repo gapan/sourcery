@@ -186,8 +186,20 @@ class Sourcery:
 			self.dlg_updateerror.show()
 
 	def get_pkgver(self, pkg):
-		cmd = 'grep -A10 "^SLACKBUILD NAME: '+pkg+'$" '+slackbuilds_data+'|grep "^SLACKBUILD VERSION: "|sed "s/^SLACKBUILD VERSION: \(.*\)/\\1/"'
-		status, pkgver = commands.getstatusoutput(cmd)
+		cmd1 = 'grep -A10 "^SLACKBUILD NAME: '+pkg+'$" '+slackbuilds_data
+		args1 = shlex.split(cmd1)
+		p1 = subprocess.Popen(args1, stdout=subprocess.PIPE)
+		cmd2 = 'grep "^SLACKBUILD VERSION: "'
+		args2 = shlex.split(cmd2)
+		p2 = subprocess.Popen(args2, stdin=p1.stdout, stdout=subprocess.PIPE)
+		cmd3 = 'sed "s/^SLACKBUILD VERSION: \(.*\)/\\1/"'
+		args3 = shlex.split(cmd3)
+		p3 = subprocess.Popen(args3, stdin=p2.stdout, stdout=subprocess.PIPE)
+		p1.stdout.close()
+		p2.stdout.close()
+		# the version is being output twice, with a newline
+		# character in between. No idea why right now...
+		pkgver = p3.communicate()[0].splitlines()[0]
 		return pkgver
 
 	def get_deps(self, pkglist):
