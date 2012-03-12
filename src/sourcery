@@ -249,8 +249,14 @@ class Sourcery:
 		self.dlg_fetchpkginfo.show()
 		while gtk.events_pending():
 			gtk.main_iteration()
-		cmd = 'grep -A10 "^SLACKBUILD NAME: '+pkg+'$" '+slackbuilds_data+'|grep -m1 -B4 -A6 "^SLACKBUILD VERSION: '+pkgver+'$"'
-		status, data = commands.getstatusoutput(cmd)
+		cmd1 = 'grep -A10 "^SLACKBUILD NAME: '+pkg+'$" '+slackbuilds_data 
+		args1 = shlex.split(cmd1)
+		p1 = subprocess.Popen(args1, stdout=subprocess.PIPE)
+		cmd2 = 'grep -m1 -B4 -A6 "^SLACKBUILD VERSION: '+pkgver+'$"'
+		args2 = shlex.split(cmd2)
+		p2 = subprocess.Popen(args2, stdin=p1.stdout, stdout=subprocess.PIPE)
+		p1.stdout.close()
+		data = p2.communicate()[0]
 		self.pb_fetchpkginfo.set_fraction(0.1)
 		while gtk.events_pending():
 			gtk.main_iteration()
