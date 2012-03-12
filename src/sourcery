@@ -660,7 +660,9 @@ class Sourcery:
 		except OSError:
 			pass
 		f = open(logfile, 'w')
-		process = subprocess.Popen(['slapt-get -y --remove --no-dep '+pkg], stdout = f, stderr = f, shell=True, close_fds=True, preexec_fn=os.setsid)
+		cmdline = 'slapt-get -y --remove --no-dep '+pkg
+		args = shlex.split(cmdline)
+		process = subprocess.Popen(args, stdout = f, stderr = f, shell=False, close_fds=True, preexec_fn=os.setsid)
 		self.vte_term.feed_child('clear\ntail --pid '+str(process.pid)+' -f '+logfile+' 2>/dev/null & clear\n')
 		while True:
 			while gtk.events_pending():
