@@ -140,7 +140,6 @@ class Sourcery:
 		args=shlex.split(cmd)
 		process = subprocess.Popen(args, stdout=subprocess.PIPE)
 		pkg_varlogpkg = process.communicate()[0].splitlines()
-		#pkg_varlogpkg = commands.getoutput('ls /var/log/packages').splitlines()
 		pkg_installed = []
 		for i in pkg_varlogpkg:
 			pkg_installed.append(i.rpartition('-')[0].rpartition('-')[0].rpartition('-')[0])
