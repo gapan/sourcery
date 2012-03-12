@@ -610,7 +610,6 @@ class Sourcery:
 		# ask if it should download it... It's better to just
 		# fail by default in such cases and check the logs for
 		# what happened.
-		# shell=True is needed for the pipe to work
 		logfile = logdir+'/'+pkg+'-'+pkgver
 		f = open(logfile, 'a')
 		DEVNULL = open('/dev/null', 'w')
