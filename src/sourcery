@@ -204,14 +204,38 @@ class Sourcery:
 
 	def get_deps(self, pkglist):
 		deps = []
+		DEVNULL = open('/dev/null', 'w')
 		for pkg, pkgver in pkglist:
-			cmd = 'export LANG=C;yes n|slapt-src -i '+pkg+':'+pkgver+'|grep -A10 "The following dependent slackbuilds"|grep -v "The following dependent slackbuilds"|grep -B10 "Do you want to continue"|grep -v "Do you want to continue"'
-			status, data = commands.getstatusoutput(cmd)
-			newdeps = data.partition('\n ')[2].rsplit(' ')
+			cmd1 = 'yes n'
+			args1 = shlex.split(cmd1)
+			p1 = subprocess.Popen(args1, stdout=subprocess.PIPE, stderr=DEVNULL)
+			cmd2 = 'slapt-src -i '+pkg+':'+pkgver
+			args2 = shlex.split(cmd2)
+			p2 = subprocess.Popen(args2, stdin=p1.stdout, stdout=subprocess.PIPE, stderr=DEVNULL,env={"LANG": "C"})
+			cmd3 = 'grep -A10 "The following dependent slackbuilds"'
+			args3 = shlex.split(cmd3)
+			p3 = subprocess.Popen(args3, stdin=p2.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
+			cmd4 = 'grep -v "The following dependent slackbuilds"'
+			args4 = shlex.split(cmd4)
+			p4 = subprocess.Popen(args4, stdin=p3.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
+			cmd5 = 'grep -B10 "Do you want to continue"'
+			args5 = shlex.split(cmd5)
+			p5 = subprocess.Popen(args5, stdin=p4.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
+			cmd6 = 'grep -B10 "Do you want to continue"'
+			args6 = shlex.split(cmd6)
+			p6 = subprocess.Popen(args6, stdin=p5.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
+			p1.stdout.close()
+			p2.stdout.close()
+			p3.stdout.close()
+			p4.stdout.close()
+			p5.stdout.close()
+			data = p6.communicate()[0]
+			newdeps = data.partition('\n')[0].rsplit(' ')
 			for i in newdeps:
 				if i is not '':
 					if i not in deps:
 						deps.append(i)
+		DEVNULL.close()
 		return deps
 
 	def get_pkg_info(self, pkg, pkgver):
