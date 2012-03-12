@@ -220,7 +220,7 @@ class Sourcery:
 			cmd5 = 'grep -B10 "Do you want to continue"'
 			args5 = shlex.split(cmd5)
 			p5 = subprocess.Popen(args5, stdin=p4.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
-			cmd6 = 'grep -B10 "Do you want to continue"'
+			cmd6 = 'grep -v "Do you want to continue"'
 			args6 = shlex.split(cmd6)
 			p6 = subprocess.Popen(args6, stdin=p5.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
 			p1.stdout.close()
