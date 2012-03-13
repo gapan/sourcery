@@ -223,7 +223,7 @@ class Sourcery:
 						break
 					else:
 						data = ' '.join([data, line])
-			newdeps = data.replace('\n', ' ').rstrip(' ').lstrip(' ').split(' ')
+			newdeps = data.replace('\n', ' ').strip(' ').split(' ')
 			for i in newdeps:
 				if i is not '':
 					if i not in deps:
