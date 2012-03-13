@@ -192,6 +192,7 @@ class Sourcery:
 			line = f.readline()
 			if line == 'SLACKBUILD NAME: '+pkg+'\n':
 				found = True
+				continue
 			if found is True:
 				if line.startswith('SLACKBUILD VERSION:'):
 					version = line.partition('SLACKBUILD VERSION: ')[2].partition('\n')[0]
@@ -209,25 +210,20 @@ class Sourcery:
 			cmd2 = 'slapt-src -i '+pkg+':'+pkgver
 			args2 = shlex.split(cmd2)
 			p2 = subprocess.Popen(args2, stdin=p1.stdout, stdout=subprocess.PIPE, stderr=DEVNULL,env={"LANG": "C"})
-			cmd3 = 'grep -A10 "The following dependent slackbuilds"'
-			args3 = shlex.split(cmd3)
-			p3 = subprocess.Popen(args3, stdin=p2.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
-			cmd4 = 'grep -v "The following dependent slackbuilds"'
-			args4 = shlex.split(cmd4)
-			p4 = subprocess.Popen(args4, stdin=p3.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
-			cmd5 = 'grep -B10 "Do you want to continue"'
-			args5 = shlex.split(cmd5)
-			p5 = subprocess.Popen(args5, stdin=p4.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
-			cmd6 = 'grep -v "Do you want to continue"'
-			args6 = shlex.split(cmd6)
-			p6 = subprocess.Popen(args6, stdin=p5.stdout, stdout=subprocess.PIPE, stderr=DEVNULL)
 			p1.stdout.close()
-			p2.stdout.close()
-			p3.stdout.close()
-			p4.stdout.close()
-			p5.stdout.close()
-			data = p6.communicate()[0]
-			newdeps = data.partition('\n')[0].rsplit(' ')
+			output = p2.communicate()[0]
+			found = False
+			data = ''
+			for line in output.splitlines():
+				if line.startswith('The following dependent slackbuilds'):
+					found = True
+					continue
+				if found is True:
+					if line.startswith('Do you want to continue'):
+						break
+					else:
+						data = ' '.join([data, line])
+			newdeps = data.replace('\n', ' ').rstrip(' ').lstrip(' ').split(' ')
 			for i in newdeps:
 				if i is not '':
 					if i not in deps:
