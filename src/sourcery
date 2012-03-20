@@ -326,7 +326,7 @@ class Sourcery:
 			readme = None
 		self.pb_fetchpkginfo.set_fraction(1)
 		self.dlg_fetchpkginfo.hide()
-		self.dlg_pkginfo.set_title(_('SlackBuild information for ')+pkg+' '+pkgver)
+		self.dlg_pkginfo.set_title(_('SlackBuild information for')+' '+pkg+' '+pkgver)
 		self.lb_pkginfo_name.set_text(pkg)
 		self.lb_pkginfo_ver.set_text(pkgver)
 		self.lb_pkginfo_source.set_text(sourceurl)
@@ -609,7 +609,7 @@ class Sourcery:
 		self.ls_pkg, iter = selectedline.get_selected()
 		pkg = self.ls_pkg.get_value(iter, 1)
 		ver = self.ls_pkg.get_value(iter, 2)
-		self.dlg_setoptions.set_title(_("Set options for %(pkg)s-%(ver)s") % {'pkg' : pkg, 'ver' : ver})
+		self.dlg_setoptions.set_title(_("Set options for %(pkg)s %(ver)s") % {'pkg' : pkg, 'ver' : ver})
 		options = self.getoptions(pkg, ver)
 		self.entry_setoptions.set_text(options)
 		self.dlg_setoptions.show()
