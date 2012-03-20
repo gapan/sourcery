@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011.
 # Laszlo Dvornik <rezuri@zoho.com>, 2011.
@@ -11,423 +11,476 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-26 16:31+0300\n"
+"POT-Creation-Date: 2012-03-20 14:44+0200\n"
 "PO-Revision-Date: 2012-02-14 13:36+0000\n"
 "Last-Translator: Laszlo Dvornik <rezuri@zoho.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: src/sourcery.glade:68
+#: src/sourcery.glade:69
 msgid "_File"
 msgstr "_Fájl"
 
-#: src/sourcery.glade:75 src/sourcery.glade:276
+#: src/sourcery.glade:76 src/sourcery.glade:298
 msgid "Update"
 msgstr "Frissítés"
 
-#: src/sourcery.glade:77 src/sourcery.glade:275
+#: src/sourcery.glade:78 src/sourcery.glade:297
 msgid "Update local SlackBuild cache"
 msgstr "Helyi SlackBuild gyorsítótár frissítése"
 
-#: src/sourcery.glade:85 src/sourcery.glade:291
+#: src/sourcery.glade:87 src/sourcery.glade:313
 msgid "Execute"
 msgstr "Futtatás"
 
-#: src/sourcery.glade:114
+#: src/sourcery.glade:118
 msgid "_Edit"
 msgstr "S_zerkesztés"
 
-#: src/sourcery.glade:121
+#: src/sourcery.glade:125
 msgid "Unmark all"
 msgstr "Minden kijelölés törlése"
 
-#: src/sourcery.glade:150
+#: src/sourcery.glade:156
 msgid "_Package"
 msgstr "_Csomag"
 
-#: src/sourcery.glade:157 src/sourcery.glade:555 src/sourcery.glade:557
+#: src/sourcery.glade:163 src/sourcery.glade:579 src/sourcery.glade:581
 msgid "Unmark"
 msgstr "Kijelölés törlése"
 
-#: src/sourcery.glade:166 src/sourcery.glade:565 src/sourcery.glade:567
+#: src/sourcery.glade:173 src/sourcery.glade:589 src/sourcery.glade:591
 msgid "Install"
 msgstr "Telepítés"
 
-#: src/sourcery.glade:176 src/sourcery.glade:575 src/sourcery.glade:577
+#: src/sourcery.glade:184 src/sourcery.glade:599 src/sourcery.glade:601
 msgid "Reinstall"
 msgstr "Újratelepítés"
 
-#: src/sourcery.glade:186 src/sourcery.glade:585
+#: src/sourcery.glade:195 src/sourcery.glade:609
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: src/sourcery.glade:201 src/sourcery.glade:599
+#: src/sourcery.glade:206 src/sourcery.glade:618 src/sourcery.glade:620
+#, fuzzy
+msgid "Set options"
+msgstr "Információk lekérése"
+
+#: src/sourcery.glade:221 src/sourcery.glade:633
 msgid "Get information"
 msgstr "Információk lekérése"
 
-#: src/sourcery.glade:216
+#: src/sourcery.glade:237
 msgid "_View"
 msgstr "_Nézet"
 
-#: src/sourcery.glade:224 src/sourcery.glade:1817
+#: src/sourcery.glade:245 src/sourcery.glade:1874
 msgid "SlackBuild logs"
 msgstr "SlackBuild naplók"
 
-#: src/sourcery.glade:236
+#: src/sourcery.glade:258
 msgid "_Help"
 msgstr "_Súgó"
 
-#: src/sourcery.glade:243 src/sourcery.glade:1557
+#: src/sourcery.glade:265 src/sourcery.glade:1613
 msgid "Icon legend"
 msgstr "Ikonmagyarázat"
 
-#: src/sourcery.glade:290
+#: src/sourcery.glade:312
 msgid "Execute pending actions"
 msgstr "Függő műveletek végrehajtása"
 
-#: src/sourcery.glade:329
+#: src/sourcery.glade:351
 msgid "Search: "
 msgstr "Keresés: "
 
-#: src/sourcery.glade:463 src/sourcery.glade:1080
+#: src/sourcery.glade:487 src/sourcery.glade:1114
 msgid "Error"
 msgstr "Hiba"
 
-#: src/sourcery.glade:496
+#: src/sourcery.glade:520
 msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr "Hiba történt a SlackBuild gyorsítótár frissítése közben. Győződjön meg róla, hogy az összes forrás megfelelően be van állítva é van működő internet kapcsolata."
+msgstr ""
+"Hiba történt a SlackBuild gyorsítótár frissítése közben. Győződjön meg róla, "
+"hogy az összes forrás megfelelően be van állítva é van működő internet "
+"kapcsolata."
 
-#: src/sourcery.glade:657
+#: src/sourcery.glade:691
 msgid "Pending tasks"
 msgstr "Függő feladatok"
 
-#: src/sourcery.glade:704
+#: src/sourcery.glade:738
 msgid "<b>Execute the following tasks?</b>"
 msgstr "<b>Végrehajtja a következő feladatokat?</b>"
 
-#: src/sourcery.glade:715
+#: src/sourcery.glade:749
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
-msgstr "A következő feladatok hamarosan végrehajtódnak. Átrendezheti a feldolgozás sorrendjét az elemek húzásával a listában."
+msgstr ""
+"A következő feladatok hamarosan végrehajtódnak. Átrendezheti a feldolgozás "
+"sorrendjét az elemek húzásával a listában."
 
-#: src/sourcery.glade:826
+#: src/sourcery.glade:860
 msgid "Progress"
 msgstr "Folyamat"
 
-#: src/sourcery.glade:849
+#: src/sourcery.glade:883
 msgid "Overall progress"
 msgstr "Teljes folyamat"
 
-#: src/sourcery.glade:888
+#: src/sourcery.glade:922
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few "
-"hours..."
-msgstr "Kis türelmet. Ez eltarthat egy ideig. A feldolgozási idő változó, függ a szoftver méretétől és összetettségétől, amely néhány másodperctől néhány óráig is eltarthat..."
+"the size and complexity of the software, from a few seconds to a few hours..."
+msgstr ""
+"Kis türelmet. Ez eltarthat egy ideig. A feldolgozási idő változó, függ a "
+"szoftver méretétől és összetettségétől, amely néhány másodperctől néhány "
+"óráig is eltarthat..."
 
-#: src/sourcery.glade:929
+#: src/sourcery.glade:963
 msgid "Completed tasks"
 msgstr "Elvégzett feladatok"
 
-#: src/sourcery.glade:939
+#: src/sourcery.glade:973
 msgid "All tasks have been executed succesfully."
 msgstr "Minden feladat sikeresen végrehajtódott."
 
-#: src/sourcery.glade:980
+#: src/sourcery.glade:1014
 msgid "Canceled"
 msgstr "Megszakítva"
 
-#: src/sourcery.glade:989
+#: src/sourcery.glade:1023
 msgid "Canceled. Some tasks may have already been completed."
 msgstr "Megszakítva. Egyes feladatok már elkészültek."
 
-#: src/sourcery.glade:1039
+#: src/sourcery.glade:1073
 msgid "Error updating package list."
 msgstr "Hiba a csomaglista frissítése közben."
 
-#: src/sourcery.glade:1133 src/sourcery.glade:1891
+#: src/sourcery.glade:1167 src/sourcery.glade:1949
 msgid "View log"
 msgstr "Napló megtekintése"
 
-#: src/sourcery.glade:1176
+#: src/sourcery.glade:1210
 msgid "Updating..."
 msgstr "Frissítés..."
 
-#: src/sourcery.glade:1200
+#: src/sourcery.glade:1234
 msgid "Updating SlackBuild cache..."
 msgstr "SlackBuild gyorsítótár frissítése..."
 
-#: src/sourcery.glade:1253
+#: src/sourcery.glade:1287
 msgid "Getting SlackBuild information"
 msgstr "SlackBuild információk lekérése"
 
-#: src/sourcery.glade:1269
+#: src/sourcery.glade:1308
 msgid "Downloading SlackBuild information. Please wait..."
 msgstr "SlackBuild információk letöltése. Kis türelmet..."
 
-#: src/sourcery.glade:1303
+#: src/sourcery.glade:1359
 msgid "<b>Name:</b>"
 msgstr "<b>Név:</b>"
 
-#: src/sourcery.glade:1311
+#: src/sourcery.glade:1367
 msgid "<b>Version:</b>"
 msgstr "<b>Verzió:</b>"
 
-#: src/sourcery.glade:1323
+#: src/sourcery.glade:1379
 msgid "<b>Source:</b>"
 msgstr "<b>Forrás:</b>"
 
-#: src/sourcery.glade:1336
+#: src/sourcery.glade:1392
 msgid "<b>Files:</b>"
 msgstr "<b>Fájlok:</b>"
 
-#: src/sourcery.glade:1348
+#: src/sourcery.glade:1404
 msgid "<b>Location:</b>"
 msgstr "<b>Hely:</b>"
 
-#: src/sourcery.glade:1411
+#: src/sourcery.glade:1467
 msgid "<b>Dependencies:</b>"
 msgstr "<b>Függőségek:</b>"
 
-#: src/sourcery.glade:1453
+#: src/sourcery.glade:1509
 msgid "General information"
 msgstr "Általános információ"
 
-#: src/sourcery.glade:1477 src/sourcery:953
+#: src/sourcery.glade:1533 src/sourcery:1184
 msgid "Description"
 msgstr "Leírás"
 
-#: src/sourcery.glade:1508
+#: src/sourcery.glade:1564
 msgid "README file"
 msgstr "README fájl"
 
-#: src/sourcery.glade:1577
+#: src/sourcery.glade:1633
 msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
 msgstr "<b> A következő ikonok jelölik a SlackBuild jelenlegi állapotát:</b>"
 
-#: src/sourcery.glade:1596
+#: src/sourcery.glade:1652
 msgid "Not installed"
 msgstr "Nincs telepítve"
 
-#: src/sourcery.glade:1608
+#: src/sourcery.glade:1664
 msgid "A package with this name is already installed"
 msgstr "Ezen a néven már van csomag telepítve"
 
-#: src/sourcery.glade:1622
+#: src/sourcery.glade:1678
 msgid "The package is going to be installed"
 msgstr "A csomag telepítve lesz"
 
-#: src/sourcery.glade:1636
+#: src/sourcery.glade:1692
 msgid ""
 "A package with this name is already installed and is going to be reinstalled"
 msgstr "Ezen a néven már van csomag telepítve és újra lesz telepítve"
 
-#: src/sourcery.glade:1650
+#: src/sourcery.glade:1706
 msgid "The package is going to be removed"
 msgstr "Ez a csomag el lesz távolítva"
 
-#: src/sourcery.glade:1987
+#: src/sourcery.glade:2047
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr "Grafikus segédprogram a slapt-src programhoz, segítségével lehetőség van a csomagok fordítására és telepítésére forrásból SlackBuild és/vagy SLKBUILD fájlok segítségével."
+msgstr ""
+"Grafikus segédprogram a slapt-src programhoz, segítségével lehetőség van a "
+"csomagok fordítására és telepítésére forrásból SlackBuild és/vagy SLKBUILD "
+"fájlok segítségével."
 
-#: src/sourcery.glade:2665
+#: src/sourcery.glade:2725
 msgid "translator-credits"
-msgstr "Dvornik László <rezuri@zoho.com>\nPolonkai Péter <polesz@nedudu.hu>"
+msgstr ""
+"Dvornik László <rezuri@zoho.com>\n"
+"Polonkai Péter <polesz@nedudu.hu>"
 
-#: src/sourcery.glade:2690
+#: src/sourcery.glade:2750
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: src/sourcery.glade:2713
+#: src/sourcery.glade:2773
 msgid "<b>SlackBuild Sources</b>"
 msgstr "<b>SlackBuild források</b>"
 
-#: src/sourcery.glade:2727
+#: src/sourcery.glade:2787
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
-msgstr "<i>A fentebb levő források prioritása magasabb. Az elemek húzásával átrendezheti a sorrendet.</i>"
+msgstr ""
+"<i>A fentebb levő források prioritása magasabb. Az elemek húzásával "
+"átrendezheti a sorrendet.</i>"
 
-#: src/sourcery.glade:2843
+#: src/sourcery.glade:2903
 msgid "Sources"
 msgstr "Források"
 
-#: src/sourcery.glade:2861
+#: src/sourcery.glade:2921
 msgid "<b>Source and package storage</b>"
 msgstr "<b>Forrás- és csomagtároló</b>"
 
-#: src/sourcery.glade:2886
+#: src/sourcery.glade:2946
 msgid "Clear working directory"
 msgstr "Munkakönyvtár törlése"
 
-#: src/sourcery.glade:2920
+#: src/sourcery.glade:2980
 msgid "Working Directory"
 msgstr "Munkakönyvtár"
 
-#: src/sourcery.glade:2933
+#: src/sourcery.glade:2993
 msgid "Resolve dependencies"
 msgstr "Függőségek feloldása"
 
-#: src/sourcery.glade:2950
+#: src/sourcery.glade:3010
 msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr "A függőségek feloldása csak az azt támogató tárolóknál érhető el. A SlackBuilds.org webhelyről származó SlackBuild fájlok nem tartalmaznak függőségi információkat."
+msgstr ""
+"A függőségek feloldása csak az azt támogató tárolóknál érhető el. A "
+"SlackBuilds.org webhelyről származó SlackBuild fájlok nem tartalmaznak "
+"függőségi információkat."
 
-#: src/sourcery.glade:2978
+#: src/sourcery.glade:3038
 msgid "Dependencies"
 msgstr "Függőségek"
 
-#: src/sourcery.glade:3041
+#: src/sourcery.glade:3101
 msgid "First run"
 msgstr "Első indítás"
 
-#: src/sourcery.glade:3076
+#: src/sourcery.glade:3136
 msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr "Ez az első Sourcery programindítás. A Sourcery használatának megkezdése előtt létre kell hozni a SlackBuild gyorsítótárat. A SlackBuild gyorsítótár létrehozásához szüksége lesz egy működő internet kapcsolatra."
+msgstr ""
+"Ez az első Sourcery programindítás. A Sourcery használatának megkezdése "
+"előtt létre kell hozni a SlackBuild gyorsítótárat. A SlackBuild gyorsítótár "
+"létrehozásához szüksége lesz egy működő internet kapcsolatra."
 
-#: src/sourcery.glade:3109
+#: src/sourcery.glade:3169
 msgid "Create SlackBuild cache"
 msgstr "SlackBuild gyorsítótár létrehozása"
 
-#: src/sourcery.glade:3141
+#: src/sourcery.glade:3201
 msgid "Update SlackBuild Cache?"
 msgstr "Frissíti a SlackBuild gyorsítótárat?"
 
-#: src/sourcery.glade:3160
-msgid ""
-"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+#: src/sourcery.glade:3220
+msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr "A konfiguráció megváltozott. Újraépíti a SlackBuild gyorsítótárat?"
 
-#: src/sourcery.glade:3189
+#: src/sourcery.glade:3249
 msgid "Rebuild SlackBuild cache"
 msgstr "SlackBuild gyorsítótár újraépítése"
 
-#: src/sourcery.glade:3218
+#: src/sourcery.glade:3278
 msgid "Add SlackBuild source"
 msgstr "SlackBuild forrás hozzáadása"
 
-#: src/sourcery.glade:3242 src/sourcery.glade:3341
+#: src/sourcery.glade:3302 src/sourcery.glade:3401
 msgid "SlackBuild source location:"
 msgstr "SlackBuild forrás helye:"
 
-#: src/sourcery.glade:3317
+#: src/sourcery.glade:3377
 msgid "Edit SlackBuild source"
 msgstr "SlackBuild forrás szerkesztése"
 
-#: src/sourcery.glade:3429
+#: src/sourcery.glade:3502
 msgid "Clearing working directory. Please wait..."
 msgstr "Munkakönyvtár törlése. Kis türelmet..."
 
-#: src/sourcery:95
+#: src/sourcery.glade:3594
+msgid ""
+"You may set any extra options the SlackBuild accepts here. Consult each "
+"SlackBuild's README file for a list of those options. Spaces are not allowed "
+"inside option names or definitions. Options should be separated by spaces, e."
+"g.:"
+msgstr ""
+
+#: src/sourcery.glade:3676
+#, fuzzy
+msgid "Error parsing options"
+msgstr "Hiba a csomaglista frissítése közben."
+
+#: src/sourcery.glade:3685
+msgid ""
+"There was an error while parsing options. Please make sure they are entered "
+"correctly."
+msgstr ""
+
+#: src/sourcery:131
 msgid "No SlackBuilds found"
 msgstr "Nem található SlackBuild fájl"
 
-#: src/sourcery:97
+#: src/sourcery:133
 msgid "One SlackBuild found"
 msgstr "Egy SlackBuild fájl található"
 
-#: src/sourcery:99
+#: src/sourcery:135
 #, python-format
 msgid "%(num)i SlackBuilds found"
 msgstr "%(num)i SlackBuild fájl található"
 
-#: src/sourcery:103
+#: src/sourcery:139
 msgid "Could not retrieve SlackBuild data"
 msgstr "Nem lehet lekérni a SlackBuild adatokat"
 
-#: src/sourcery:217
-msgid "SlackBuild information for "
-msgstr "SlackBuild információ ehhez: "
+#: src/sourcery:329
+msgid "SlackBuild information for"
+msgstr "SlackBuild információ ehhez:"
 
-#: src/sourcery:225 src/sourcery:232
+#: src/sourcery:337 src/sourcery:344
 msgid "Not available."
 msgstr "Nem érhető el."
 
-#: src/sourcery:279
+#: src/sourcery:390
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
 msgstr "%(pkg)s %(pkgver)s függőségként telepítve lesz"
 
-#: src/sourcery:289
+#: src/sourcery:400
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
 msgstr "%(pkg)s %(pkgver)s telepítve lesz"
 
-#: src/sourcery:291
+#: src/sourcery:402
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
 msgstr "%(pkg)s %(pkgver)s újra lesz telepítve"
 
-#: src/sourcery:293
+#: src/sourcery:404
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
 msgstr "%(pkg)s %(pkgver)s el lesz távolítva"
 
-#: src/sourcery:404 src/sourcery:946
+#: src/sourcery:549 src/sourcery:1177
 msgid "Status"
 msgstr "Állapot"
 
-#: src/sourcery:596 src/sourcery:720 src/sourcery:771
+#: src/sourcery:612
+#, python-format
+msgid "Set options for %(pkg)s %(ver)s"
+msgstr ""
+
+#: src/sourcery:786 src/sourcery:913 src/sourcery:963
 msgid "Build log for"
 msgstr "Fordítási napló ehhez:"
 
-#: src/sourcery:644 src/sourcery:652
+#: src/sourcery:835 src/sourcery:843
 msgid "Downloading source files for"
 msgstr "Forrásfájlok letöltése ehhez:"
 
-#: src/sourcery:649 src/sourcery:657
+#: src/sourcery:840 src/sourcery:848
 msgid "Compiling"
 msgstr "Fordítás"
 
-#: src/sourcery:660
+#: src/sourcery:851
 msgid "Removing"
 msgstr "Eltávolítás"
 
-#: src/sourcery:680
+#: src/sourcery:871
 #, python-format
 msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr "%(pkg)s %(pkgver)s csomag fordításakor hiba történt. Minden függő művelet el lesz távolítva a feldolgozási sorból. Megtekintheti a naplófájlt a fordítás közbeni hibák elemzéséhez."
+msgstr ""
+"%(pkg)s %(pkgver)s csomag fordításakor hiba történt. Minden függő művelet el "
+"lesz távolítva a feldolgozási sorból. Megtekintheti a naplófájlt a fordítás "
+"közbeni hibák elemzéséhez."
 
-#: src/sourcery:686
+#: src/sourcery:878
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr "%(pkg)s %(pkgver)s csomag forrásfájljainak letöltésekor hiba történt. Minden függő művelet el lesz távolítva a feldolgozási sorból."
+msgstr ""
+"%(pkg)s %(pkgver)s csomag forrásfájljainak letöltésekor hiba történt. Minden "
+"függő művelet el lesz távolítva a feldolgozási sorból."
 
-#: src/sourcery:730
+#: src/sourcery:923
 msgid "Not available"
 msgstr "Nem érhető el"
 
-#: src/sourcery:782
+#: src/sourcery:974
 msgid "Error reading log file."
 msgstr "Hiba a naplófájl olvasása közben."
 
-#: src/sourcery:949 src/sourcery:1099
+#: src/sourcery:1180 src/sourcery:1339
 msgid "Name"
 msgstr "Név"
 
-#: src/sourcery:951 src/sourcery:1100
+#: src/sourcery:1182 src/sourcery:1340
 msgid "Version"
 msgstr "Verzió"
 
