@@ -231,7 +231,11 @@ class Sourcery:
 			p1 = subprocess.Popen(args1, stdout=subprocess.PIPE, stderr=DEVNULL)
 			cmd2 = 'slapt-src -i '+pkg+':'+pkgver
 			args2 = shlex.split(cmd2)
-			p2 = subprocess.Popen(args2, stdin=p1.stdout, stdout=subprocess.PIPE, stderr=DEVNULL,env={"LANG": "C"})
+			env = dict()
+			for i in initial_env:
+				env[i] = initial_env[i]
+			env['LANG'] = 'C'
+			p2 = subprocess.Popen(args2, stdin=p1.stdout, stdout=subprocess.PIPE, stderr=DEVNULL,env=env)
 			p1.stdout.close()
 			output = p2.communicate()[0]
 			found = False
