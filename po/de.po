@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Thorsten  <thenktor@gmx.de>, 2011.
 msgid ""
@@ -9,14 +9,13 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-20 14:44+0200\n"
-"PO-Revision-Date: 2012-02-14 13:36+0000\n"
-"Last-Translator: Manfred Mueller <>\n"
-"Language-Team: German (http://www.transifex.net/projects/p/salix/language/"
-"de/)\n"
-"Language: de\n"
+"PO-Revision-Date: 2012-03-20 12:47+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Language-Team: German (http://www.transifex.net/projects/p/salix/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/sourcery.glade:69
@@ -64,9 +63,8 @@ msgid "Remove"
 msgstr "entfernen"
 
 #: src/sourcery.glade:206 src/sourcery.glade:618 src/sourcery.glade:620
-#, fuzzy
 msgid "Set options"
-msgstr "Information über"
+msgstr ""
 
 #: src/sourcery.glade:221 src/sourcery.glade:633
 msgid "Get information"
@@ -105,9 +103,7 @@ msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr ""
-"Fehler beim Aktualisieren der SlackBuild-Informationen. Bitte überprüfen Sie "
-"Ihre Einstellungen und die Internetverbindung."
+msgstr "Fehler beim Aktualisieren der SlackBuild-Informationen. Bitte überprüfen Sie Ihre Einstellungen und die Internetverbindung."
 
 #: src/sourcery.glade:691
 msgid "Pending tasks"
@@ -121,9 +117,7 @@ msgstr "<b>Folgende Aktionen ausführen?</b>"
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
-msgstr ""
-"Die folgenden Aktionen werden ausgeführt. Sie können die Reihenfolge der "
-"Ausführung durch Verschieben in der Liste ändern."
+msgstr "Die folgenden Aktionen werden ausgeführt. Sie können die Reihenfolge der Ausführung durch Verschieben in der Liste ändern."
 
 #: src/sourcery.glade:860
 msgid "Progress"
@@ -136,10 +130,9 @@ msgstr "Gesamt-Fortschritt"
 #: src/sourcery.glade:922
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
-"the size and complexity of the software, from a few seconds to a few hours..."
-msgstr ""
-"Bitte warten. In Abhängigkeit von Rechnerleistung und Software-Umfang kann "
-"die Ausführung von einigen Minuten bis zu einigen Stunden dauern..."
+"the size and complexity of the software, from a few seconds to a few "
+"hours..."
+msgstr "Bitte warten. In Abhängigkeit von Rechnerleistung und Software-Umfang kann die Ausführung von einigen Minuten bis zu einigen Stunden dauern..."
 
 #: src/sourcery.glade:963
 msgid "Completed tasks"
@@ -155,8 +148,7 @@ msgstr "Abgebrochen"
 
 #: src/sourcery.glade:1023
 msgid "Canceled. Some tasks may have already been completed."
-msgstr ""
-"Abgebrochen. Einige Aufgaben könnten trotzdem bereits abgeschlossen sein."
+msgstr "Abgebrochen. Einige Aufgaben könnten trotzdem bereits abgeschlossen sein."
 
 #: src/sourcery.glade:1073
 msgid "Error updating package list."
@@ -222,9 +214,7 @@ msgstr "README-Datei"
 msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
-msgstr ""
-"<b>Die folgenden Symbole werden zur Statusanzeige eines SlackBuild benutzt:</"
-"b>"
+msgstr "<b>Die folgenden Symbole werden zur Statusanzeige eines SlackBuild benutzt:</b>"
 
 #: src/sourcery.glade:1652
 msgid "Not installed"
@@ -241,8 +231,7 @@ msgstr "Dieses Paket wird installiert"
 #: src/sourcery.glade:1692
 msgid ""
 "A package with this name is already installed and is going to be reinstalled"
-msgstr ""
-"Ein Paket dieses Namens ist bereits installiert und wird erneut installiert"
+msgstr "Ein Paket dieses Namens ist bereits installiert und wird erneut installiert"
 
 #: src/sourcery.glade:1706
 msgid "The package is going to be removed"
@@ -252,10 +241,7 @@ msgstr "Dieses Paket wird entfernt"
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr ""
-"Eine grafische Oberfläche für slapt-src, einem Werkzeug, um Pakete aus "
-"Quellen mit Hilfe von SlackBuilds oder SLKBUILDS zu erstellen und zu "
-"installieren."
+msgstr "Eine grafische Oberfläche für slapt-src, einem Werkzeug, um Pakete aus Quellen mit Hilfe von SlackBuilds oder SLKBUILDS zu erstellen und zu installieren."
 
 #: src/sourcery.glade:2725
 msgid "translator-credits"
@@ -273,9 +259,7 @@ msgstr "<b>SlackBuild Quellen</b>"
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
-msgstr ""
-"<i>Quellen werden von oben nach unten genutzt. Sie können die Reihenfolge "
-"durch Verschieben in der Liste ändern.</i>"
+msgstr "<i>Quellen werden von oben nach unten genutzt. Sie können die Reihenfolge durch Verschieben in der Liste ändern.</i>"
 
 #: src/sourcery.glade:2903
 msgid "Sources"
@@ -302,10 +286,7 @@ msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr ""
-"Diese Funktion ist nur für Repos verfügbar, welche speziell konfiguriert "
-"sind. SlackBuilds von SlackBuilds.org enthalten keine Abhängigkeits-"
-"Informationen."
+msgstr "Diese Funktion ist nur für Repos verfügbar, welche speziell konfiguriert sind. SlackBuilds von SlackBuilds.org enthalten keine Abhängigkeits-Informationen."
 
 #: src/sourcery.glade:3038
 msgid "Dependencies"
@@ -320,10 +301,7 @@ msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr ""
-"Anscheinend starten Sie Sourcery zum ersten Mal. Daher muss als erstes der "
-"SlackBuild-Speicher erstellt werden. Hierfür ist eine intakte Internet-"
-"Verbindung erforderlich."
+msgstr "Anscheinend starten Sie Sourcery zum ersten Mal. Daher muss als erstes der SlackBuild-Speicher erstellt werden. Hierfür ist eine intakte Internet-Verbindung erforderlich."
 
 #: src/sourcery.glade:3169
 msgid "Create SlackBuild cache"
@@ -334,9 +312,9 @@ msgid "Update SlackBuild Cache?"
 msgstr "SlackBuild-speicher aktualisieren?"
 
 #: src/sourcery.glade:3220
-msgid "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
-msgstr ""
-"Konfigurations-Änderungen erkannt. Soll der Speicher aktualisiert werden?"
+msgid ""
+"Configuration has changed. Do you want to rebuild the Slackbuild cache?"
+msgstr "Konfigurations-Änderungen erkannt. Soll der Speicher aktualisiert werden?"
 
 #: src/sourcery.glade:3249
 msgid "Rebuild SlackBuild cache"
@@ -361,15 +339,14 @@ msgstr "Leere Arbeitsverzeichnis. Bitte warten..."
 #: src/sourcery.glade:3594
 msgid ""
 "You may set any extra options the SlackBuild accepts here. Consult each "
-"SlackBuild's README file for a list of those options. Spaces are not allowed "
-"inside option names or definitions. Options should be separated by spaces, e."
-"g.:"
+"SlackBuild's README file for a list of those options. Spaces are not allowed"
+" inside option names or definitions. Options should be separated by spaces, "
+"e.g.:"
 msgstr ""
 
 #: src/sourcery.glade:3676
-#, fuzzy
 msgid "Error parsing options"
-msgstr "Aktualisieren der Paketliste gescheitert"
+msgstr ""
 
 #: src/sourcery.glade:3685
 msgid ""
@@ -453,18 +430,14 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr ""
-"Fehler beim Erstellen von %(pkg)s %(pkgver)s. Alle ausstehenden Aktionen "
-"werden abgebrochen. Bitte prüfen Sie das Fehler-Protokoll."
+msgstr "Fehler beim Erstellen von %(pkg)s %(pkgver)s. Alle ausstehenden Aktionen werden abgebrochen. Bitte prüfen Sie das Fehler-Protokoll."
 
 #: src/sourcery:878
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr ""
-"Fehler Herunterladen der Quellen für %(pkg)s %(pkgver)s. Alle ausstehenden "
-"Aktionen werden abgebrochen."
+msgstr "Fehler Herunterladen der Quellen für %(pkg)s %(pkgver)s. Alle ausstehenden Aktionen werden abgebrochen."
 
 #: src/sourcery:923
 msgid "Not available"
