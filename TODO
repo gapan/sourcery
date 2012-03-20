@@ -1,3 +1,2 @@
 * Add support for build queues, in a similar manner as sbopkg
 * Add support for browsing a specific category
-* Add support for changing environment variables for each package
