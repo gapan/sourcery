@@ -4,14 +4,14 @@
 # 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011.
-# Ingemar Karlsson <ingemar@ingk.se>, 2011.
+# Ingemar Karlsson <ingemar@ingk.se>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-20 14:44+0200\n"
-"PO-Revision-Date: 2012-03-20 12:47+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2012-03-20 16:25+0000\n"
+"Last-Translator: Ingemar Karlsson <ingemar@ingk.se>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,7 +65,7 @@ msgstr "Ta bort"
 
 #: src/sourcery.glade:206 src/sourcery.glade:618 src/sourcery.glade:620
 msgid "Set options"
-msgstr ""
+msgstr "Ange alternativ"
 
 #: src/sourcery.glade:221 src/sourcery.glade:633
 msgid "Get information"
@@ -343,17 +343,17 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr ""
+msgstr "Här kan du ange extra alternativ som SlackBuild accepterar. Läs SlackBuild's README-fil för en förteckning över dessa alternativ. Mellanslag är inte tillåtna i alternativets namn eller definitioner. Alternativ bör separeras med mellanslag, t.ex.:"
 
 #: src/sourcery.glade:3676
 msgid "Error parsing options"
-msgstr ""
+msgstr "Fel vid tolkning av alternativ"
 
 #: src/sourcery.glade:3685
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr ""
+msgstr "Det uppstod ett fel vid tolkning av alternativ. Se till att de är korrekta."
 
 #: src/sourcery:131
 msgid "No SlackBuilds found"
@@ -407,7 +407,7 @@ msgstr "Status"
 #: src/sourcery:612
 #, python-format
 msgid "Set options for %(pkg)s %(ver)s"
-msgstr ""
+msgstr "Ange alternativ för %(pkg)s %(ver)s"
 
 #: src/sourcery:786 src/sourcery:913 src/sourcery:963
 msgid "Build log for"

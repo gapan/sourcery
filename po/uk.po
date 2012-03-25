@@ -4,14 +4,14 @@
 # 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011.
-# Yarema aka Knedlyk <yupadmin@gmail.com>, 2011.
+# Yarema aka Knedlyk <yupadmin@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-20 14:44+0200\n"
-"PO-Revision-Date: 2012-03-20 12:47+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2012-03-20 21:07+0000\n"
+"Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,7 +65,7 @@ msgstr "Вилучити"
 
 #: src/sourcery.glade:206 src/sourcery.glade:618 src/sourcery.glade:620
 msgid "Set options"
-msgstr ""
+msgstr "Налаштування параметрів"
 
 #: src/sourcery.glade:221 src/sourcery.glade:633
 msgid "Get information"
@@ -343,17 +343,17 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr ""
+msgstr "Ви можете встановити будь-які додаткові параметри для SlackBuild. Читайте кожне README від SlackBuild'а на предмет параметрів. Пропуски не дозволені в назвах параметрів або визначеннях. Параметри повинні бути розділені пропусками, наприклад:"
 
 #: src/sourcery.glade:3676
 msgid "Error parsing options"
-msgstr ""
+msgstr "Помилка передачі параметрів"
 
 #: src/sourcery.glade:3685
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr ""
+msgstr "Сталася помилка передачі параметрів. Перевірте правильність вводу."
 
 #: src/sourcery:131
 msgid "No SlackBuilds found"
@@ -407,7 +407,7 @@ msgstr "Статус"
 #: src/sourcery:612
 #, python-format
 msgid "Set options for %(pkg)s %(ver)s"
-msgstr ""
+msgstr "Налаштування параметрів для %(pkg)s %(ver)s"
 
 #: src/sourcery:786 src/sourcery:913 src/sourcery:963
 msgid "Build log for"
