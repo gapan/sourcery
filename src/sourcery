@@ -7,7 +7,6 @@ import subprocess
 import time
 import signal
 import urllib2
-import shlex
 import ConfigParser
 import vte
 from simpleconfig import SimpleConfig
@@ -108,10 +107,9 @@ class Sourcery:
 	def slaptsrclist(self, searchstring):
 		if os.path.isfile(slackbuilds_data):
 			if len(searchstring) == 0:
-				cmd = 'slapt-src --list'
+				args = ['slapt-src', '--list']
 			else:
-				cmd = 'slapt-src -s "'+searchstring+'"'
-			args = shlex.split(cmd)
+				args = ['slapt-src', '-s', searchstring]
 			process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 			pkglist_output = process.communicate()[0]
 			status = process.returncode
@@ -226,11 +224,9 @@ class Sourcery:
 		deps = []
 		DEVNULL = open('/dev/null', 'w')
 		for pkg, pkgver in pkglist:
-			cmd1 = 'yes n'
-			args1 = shlex.split(cmd1)
+			args1 = ['yes', 'n']
 			p1 = subprocess.Popen(args1, stdout=subprocess.PIPE, stderr=DEVNULL)
-			cmd2 = 'slapt-src -i '+pkg+':'+pkgver
-			args2 = shlex.split(cmd2)
+			args2 = ['slapt-src', '-i', pkg+':'+pkgver]
 			env = dict()
 			for i in initial_env:
 				env[i] = initial_env[i]
@@ -695,8 +691,7 @@ class Sourcery:
 
 		logfile = logdir+'/'+pkg+'-'+pkgver
 		f = open(logfile, 'w')
-		cmdline = 'slapt-src -y -f '+pkg+':'+pkgver
-		args = shlex.split(cmdline)
+		args = ['slapt-src', '-y', '-f', pkg+':'+pkgver]
 		options = self.getoptions(pkg, pkgver)
 		options_dict = self.dict_options(options)
 		env = dict()
@@ -745,14 +740,12 @@ class Sourcery:
 
 		config = SourceryConfig()
 
-		cmdline = 'yes n'
-		args = shlex.split(cmdline)
+		args = ['yes', 'n']
 		pyes = subprocess.Popen(args, stdout = subprocess.PIPE, stderr = DEVNULL)
 		if config.deps() == True:
-			cmdline = 'slapt-src -y -i '+pkg+':'+pkgver  
+			args = ['slapt-src', '-y', '-i', pkg+':'+pkgver]
 		else:
-			cmdline = 'slapt-src -y -n -i '+pkg+':'+pkgver  
-		args=shlex.split(cmdline)
+			args = ['slapt-src', '-y', '-n', '-i', pkg+':'+pkgver]
 		options = self.getoptions(pkg, pkgver)
 		options_dict = self.dict_options(options)
 		env = dict()
@@ -798,8 +791,7 @@ class Sourcery:
 		except OSError:
 			pass
 		f = open(logfile, 'w')
-		cmdline = 'slapt-get -y --remove --no-dep '+pkg
-		args = shlex.split(cmdline)
+		args = ['slapt-get', '-y', '--remove', '--no-dep', pkg]
 		process = subprocess.Popen(args, stdout = f, stderr = f, shell=False, close_fds=True, preexec_fn=os.setsid)
 		self.vte_term.feed_child('clear\ntail --pid '+str(process.pid)+' -f '+logfile+' 2>/dev/null & clear\n')
 		while True:
