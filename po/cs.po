@@ -3,339 +3,337 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# hugo carvalho <hugokarvalho@gmail.com>, 2012.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-03-20 14:44+0200\n"
-"PO-Revision-Date: 2012-07-24 14:46+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"PO-Revision-Date: 2012-04-23 07:59+0000\n"
+"Last-Translator: Jiří Šůla <jiri.sula@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_PT\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/sourcery.glade:69
 msgid "_File"
-msgstr "_Ficheiro"
+msgstr "_Soubor"
 
 #: src/sourcery.glade:76 src/sourcery.glade:298
 msgid "Update"
-msgstr "Atualizar"
+msgstr "Aktualizovat"
 
 #: src/sourcery.glade:78 src/sourcery.glade:297
 msgid "Update local SlackBuild cache"
-msgstr "Atualiza a cache SlackBuild local"
+msgstr "Aktualizovat lokální cache SlackBuild"
 
 #: src/sourcery.glade:87 src/sourcery.glade:313
 msgid "Execute"
-msgstr "Executar"
+msgstr "Spustit"
 
 #: src/sourcery.glade:118
 msgid "_Edit"
-msgstr "_Editar"
+msgstr "Úpravy"
 
 #: src/sourcery.glade:125
 msgid "Unmark all"
-msgstr "Desmarcar todos"
+msgstr "Odoznačit vše"
 
 #: src/sourcery.glade:156
 msgid "_Package"
-msgstr "_Pacote"
+msgstr "_Balíček"
 
 #: src/sourcery.glade:163 src/sourcery.glade:579 src/sourcery.glade:581
 msgid "Unmark"
-msgstr "Desmarcar"
+msgstr "Odoznačit"
 
 #: src/sourcery.glade:173 src/sourcery.glade:589 src/sourcery.glade:591
 msgid "Install"
-msgstr "Instalar"
+msgstr "Nainstalovat"
 
 #: src/sourcery.glade:184 src/sourcery.glade:599 src/sourcery.glade:601
 msgid "Reinstall"
-msgstr "Reinstalar"
+msgstr "Přeinstalovat"
 
 #: src/sourcery.glade:195 src/sourcery.glade:609
 msgid "Remove"
-msgstr "Remover"
+msgstr "Odebrat"
 
 #: src/sourcery.glade:206 src/sourcery.glade:618 src/sourcery.glade:620
 msgid "Set options"
-msgstr "Defina as opções"
+msgstr "Nastavit možnosti"
 
 #: src/sourcery.glade:221 src/sourcery.glade:633
 msgid "Get information"
-msgstr "Obter informações"
+msgstr "Získat informace"
 
 #: src/sourcery.glade:237
 msgid "_View"
-msgstr "_Ver"
+msgstr "_Zobrazit"
 
 #: src/sourcery.glade:245 src/sourcery.glade:1874
 msgid "SlackBuild logs"
-msgstr "Registos SlackBuild"
+msgstr "Log SlackBuild"
 
 #: src/sourcery.glade:258
 msgid "_Help"
-msgstr "_Ajuda"
+msgstr "Pomoc"
 
 #: src/sourcery.glade:265 src/sourcery.glade:1613
 msgid "Icon legend"
-msgstr "Legenda dos ícones"
+msgstr "Legenda ikon"
 
 #: src/sourcery.glade:312
 msgid "Execute pending actions"
-msgstr "Executar ações pendentes"
+msgstr "Spustit čekající akce"
 
 #: src/sourcery.glade:351
 msgid "Search: "
-msgstr "Pesquisa: "
+msgstr "Hledat:"
 
 #: src/sourcery.glade:487 src/sourcery.glade:1114
 msgid "Error"
-msgstr "Erro"
+msgstr "Chyba"
 
 #: src/sourcery.glade:520
 msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr "Ocorreu um erro durante a atualização da cache do SlackBuild. Certifique-se de ter configurado todas as fontes corretamente e que você tem uma conexão com a internet."
+msgstr "Vyskytla se chyba v průběhu aktualizace cache SlackBuild. Ujistěte se, že máte správně nakonfigurovány všechny zdroje a máte funkční internetové připojení."
 
 #: src/sourcery.glade:691
 msgid "Pending tasks"
-msgstr "Tarefas pendentes"
+msgstr "Čekající úlohy"
 
 #: src/sourcery.glade:738
 msgid "<b>Execute the following tasks?</b>"
-msgstr "<b>Executar as seguintes tarefas?</b>"
+msgstr "<b>Spustit následující úlohy?</b>"
 
 #: src/sourcery.glade:749
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
-msgstr "As seguintes tarefas estão prestes a ser executadas. Você pode reorganizar a ordem de processamento, arrastando os itens na lista."
+msgstr "Následující úlohy budou spuštěny. Můžete upravit pořadí spouštění přesunutím položek v seznamu."
 
 #: src/sourcery.glade:860
 msgid "Progress"
-msgstr "Progresso"
+msgstr "Postup"
 
 #: src/sourcery.glade:883
 msgid "Overall progress"
-msgstr "Progresso global"
+msgstr "Celkový postup"
 
 #: src/sourcery.glade:922
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr "Por favor, aguarde. Isto pode demorar um pouco. O tempo de processamento varia, dependendo do tamanho e da complexidade do software, de alguns segundos a algumas horas ..."
+msgstr "Prosím čekejte, může to chvíli trvat. Čas průběhu závisí na velikosti a komplexnosti softwaru a pohybuje se od několika vteřin po několik hodin..."
 
 #: src/sourcery.glade:963
 msgid "Completed tasks"
-msgstr "Tarefas concluídas"
+msgstr "Ukončené úlohy"
 
 #: src/sourcery.glade:973
 msgid "All tasks have been executed succesfully."
-msgstr "Todas as tarefas foram executadas com sucesso."
+msgstr "Všechny úlohy byly spuštěny úspěšně."
 
 #: src/sourcery.glade:1014
 msgid "Canceled"
-msgstr "Cancelado"
+msgstr "Zrušeno"
 
 #: src/sourcery.glade:1023
 msgid "Canceled. Some tasks may have already been completed."
-msgstr "Cancelado. Algumas tarefas podem já ter sido concluídas."
+msgstr "Zrušeno. Některé úlohy mohly být již dokončeny."
 
 #: src/sourcery.glade:1073
 msgid "Error updating package list."
-msgstr "Erro ao atualizar lista de pacotes."
+msgstr "Chyba při aktualizaci seznamu balíčků."
 
 #: src/sourcery.glade:1167 src/sourcery.glade:1949
 msgid "View log"
-msgstr "Ver registo"
+msgstr "Zobrazit log"
 
 #: src/sourcery.glade:1210
 msgid "Updating..."
-msgstr "Atualizando ..."
+msgstr "Aktualizace..."
 
 #: src/sourcery.glade:1234
 msgid "Updating SlackBuild cache..."
-msgstr "Atualização de cache SlackBuild ..."
+msgstr "Aktualizace cache SlackBuild..."
 
 #: src/sourcery.glade:1287
 msgid "Getting SlackBuild information"
-msgstr "Obtenção de informações SlackBuild"
+msgstr "Získávání informací SlackBuild"
 
 #: src/sourcery.glade:1308
 msgid "Downloading SlackBuild information. Please wait..."
-msgstr "Baixando informações SlackBuild. Por favor, aguarde ..."
+msgstr "Stahování informací SlackBuild. Prosím čekejte..."
 
 #: src/sourcery.glade:1359
 msgid "<b>Name:</b>"
-msgstr "<b>Nome:</b>"
+msgstr "<b>Jméno:</b>"
 
 #: src/sourcery.glade:1367
 msgid "<b>Version:</b>"
-msgstr "<b>Versão</b>"
+msgstr "<b>Verze:</b>"
 
 #: src/sourcery.glade:1379
 msgid "<b>Source:</b>"
-msgstr "<b>Fonte:</b>"
+msgstr "<b>Zdroj:</b>"
 
 #: src/sourcery.glade:1392
 msgid "<b>Files:</b>"
-msgstr "<b>Ficheiros:</b>"
+msgstr "<b>Soubory:</b>"
 
 #: src/sourcery.glade:1404
 msgid "<b>Location:</b>"
-msgstr "<b>Localização:</b>"
+msgstr "<b>Lokace:</b>"
 
 #: src/sourcery.glade:1467
 msgid "<b>Dependencies:</b>"
-msgstr "<b>Dependências:</b>"
+msgstr "<b>Závislosti:</b>"
 
 #: src/sourcery.glade:1509
 msgid "General information"
-msgstr "Informação geral"
+msgstr "Obecné informace"
 
 #: src/sourcery.glade:1533 src/sourcery:1184
 msgid "Description"
-msgstr "Descrição"
+msgstr "Popis"
 
 #: src/sourcery.glade:1564
 msgid "README file"
-msgstr "Ficheiro LEIA-ME"
+msgstr "soubor README"
 
 #: src/sourcery.glade:1633
 msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
-msgstr "<b>Os seguintes ícones são usados ​​para indicar o estado atual de um SlackBuild:</b>"
+msgstr "<b>Následující ikony jsou použity pro zobrazení aktuálního statusu SlackBuildu:</b>"
 
 #: src/sourcery.glade:1652
 msgid "Not installed"
-msgstr "Não instalado"
+msgstr "Nenainstalováno"
 
 #: src/sourcery.glade:1664
 msgid "A package with this name is already installed"
-msgstr "Um pacote com esse nome já está instalado"
+msgstr "Balíček s tímto názvem je již nainstalován"
 
 #: src/sourcery.glade:1678
 msgid "The package is going to be installed"
-msgstr "O pacote vai ser instalado"
+msgstr "Balíček bude nainstalován"
 
 #: src/sourcery.glade:1692
 msgid ""
 "A package with this name is already installed and is going to be reinstalled"
-msgstr "Um pacote com esse nome já está instalado e vai ser reinstalado"
+msgstr "Balíček s tímto názvem je již nainstalován a bude přeinstalován"
 
 #: src/sourcery.glade:1706
 msgid "The package is going to be removed"
-msgstr "O pacote vai ser removido"
+msgstr "Balíček bude odebrán"
 
 #: src/sourcery.glade:2047
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr "A interface gráfica para o slapt-src, um utilitário para construir e instalar pacotes de fonte usando SlackBuilds e / ou SLKBUILDs."
+msgstr "Grafická nástavba slapt-src, program pro sestavení a nainstalování balíčků ze zdroje, používajíc SlackBuilds a/nebo SLKBUILDy."
 
 #: src/sourcery.glade:2725
 msgid "translator-credits"
-msgstr "Tradutor-créditos"
+msgstr "informace o překladu"
 
 #: src/sourcery.glade:2750
 msgid "Preferences"
-msgstr "Preferências"
+msgstr "Nastavení"
 
 #: src/sourcery.glade:2773
 msgid "<b>SlackBuild Sources</b>"
-msgstr "<b>Fontes SlackBuild</b>"
+msgstr "<b>Zdroje SlackBuild</b>"
 
 #: src/sourcery.glade:2787
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
-msgstr "<i>Fontes mais perto do topo têm prioridade. Você pode reorganizar a ordem arrastando.</i>"
+msgstr "<i>Čím výše, tím má zdroj vyšší prioritu. Pořadí můžete změnit přesouváním</i>"
 
 #: src/sourcery.glade:2903
 msgid "Sources"
-msgstr "Fontes"
+msgstr "Zdroje"
 
 #: src/sourcery.glade:2921
 msgid "<b>Source and package storage</b>"
-msgstr "<b>Fonte e pacote armazenado</b>"
+msgstr "<b>Úložiště zdrojů a balíčků</b>"
 
 #: src/sourcery.glade:2946
 msgid "Clear working directory"
-msgstr "Limpar diretório de trabalho"
+msgstr "Vyčistit pracovní adresář"
 
 #: src/sourcery.glade:2980
 msgid "Working Directory"
-msgstr "Diretório de trabalho"
+msgstr "Pracovní adresář"
 
 #: src/sourcery.glade:2993
 msgid "Resolve dependencies"
-msgstr "Resolver as dependências"
+msgstr "Vyřešit závislosti"
 
 #: src/sourcery.glade:3010
 msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr "Resolução de dependências está disponível apenas para os repositórios que o suportam. SlackBuilds de SlackBuilds.org não incluem qualquer informação de dependência."
+msgstr "Rozlišení závislostí je k dispozici pouze pro repozitáře, které je podporují. SlackBuilds ze SlackBuilds.org neobsahuje žádnou informaci o závislostech."
 
 #: src/sourcery.glade:3038
 msgid "Dependencies"
-msgstr "Dependências"
+msgstr "Závislosti"
 
 #: src/sourcery.glade:3101
 msgid "First run"
-msgstr "Primeiro arranque"
+msgstr "První spuštění"
 
 #: src/sourcery.glade:3136
 msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr "Parece que esta é a primeira vez Sourcery é lançado. O cache SlackBuild precisa ser criado antes de Sourcery torna-se útil. Você vai precisar de uma conexão à Internet para criar a cache SlackBuild."
+msgstr "Vypadá to, že jste spustili Sourcery poprvé. Před samotným používáním Sourcery je nutno nejprve vytvořit cache SlackBuild. Pro vytvoření cache SlackBuild budete potřebovat funkční internetové připojení."
 
 #: src/sourcery.glade:3169
 msgid "Create SlackBuild cache"
-msgstr "Criar a cache SlackBuild"
+msgstr "Vytvořit cache SlackBuild"
 
 #: src/sourcery.glade:3201
 msgid "Update SlackBuild Cache?"
-msgstr "Atualizar a cache SlackBuild?"
+msgstr "Aktualizovat SlackBuild Cache?"
 
 #: src/sourcery.glade:3220
 msgid ""
 "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
-msgstr "A Configuração foi alterada. Você quer reconstruir a cache SlackBuild?"
+msgstr "Konfigurace byla změněna. Chcete zaktualizovat cache SlackBuild?"
 
 #: src/sourcery.glade:3249
 msgid "Rebuild SlackBuild cache"
-msgstr "Reconstruir a cache SlackBuild"
+msgstr "Zaktualizovat cache SlackBuild"
 
 #: src/sourcery.glade:3278
 msgid "Add SlackBuild source"
-msgstr "Adicionar fonte SlackBuild"
+msgstr "Přidat zdroj SlackBuild"
 
 #: src/sourcery.glade:3302 src/sourcery.glade:3401
 msgid "SlackBuild source location:"
-msgstr "Localização da fonte SlackBuild"
+msgstr "Umístění zdroje SlackBuild:"
 
 #: src/sourcery.glade:3377
 msgid "Edit SlackBuild source"
-msgstr "Editar a fonte SlackBuild"
+msgstr "Editace zdroje SlackBuild"
 
 #: src/sourcery.glade:3502
 msgid "Clearing working directory. Please wait..."
-msgstr "Limpando diretório de trabalho. Por favor, aguarde ..."
+msgstr "Čištění pracovního adresáře. Prosím čekejte..."
 
 #: src/sourcery.glade:3594
 msgid ""
@@ -343,87 +341,87 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr "Você pode definir as opções extras do SlackBuild aceites aqui. Consulte cada ficheiro SlackBuild's README para uma lista dessas opções. Espaços não são permitidos dentro de nomes de opções ou definições, e.g.:"
+msgstr "Zde můžete nastavit speciální možnosti SlackBuildu. Pro zjištění seznamu těchto možností, se podívejte na každý README soubor SlackBuildu. Uvnitř názvu možností nebo definic nejsou povoleny mezery. Možnosti mohou být odděleny mezerami, např.:"
 
 #: src/sourcery.glade:3676
 msgid "Error parsing options"
-msgstr "Análise de opções de erro"
+msgstr "Chyba při parsování možností"
 
 #: src/sourcery.glade:3685
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr "Ocorreu um erro enquanto analisava as opções. Por favor, certifique-se que foram digitados corretamente."
+msgstr "Nastala chyba při parsování možností. Prosím ujistěte se, že jsou zadány správně."
 
 #: src/sourcery:131
 msgid "No SlackBuilds found"
-msgstr "SlackBuilds não encontrados"
+msgstr "Nebyly nalezeny SlackBuildy"
 
 #: src/sourcery:133
 msgid "One SlackBuild found"
-msgstr "Um SlackBuild encontrado"
+msgstr "Jeden SlackBuild nalezen"
 
 #: src/sourcery:135
 #, python-format
 msgid "%(num)i SlackBuilds found"
-msgstr "%(num)i SlackBuilds encontrado"
+msgstr "%(num)i SlackBuildů nalezeno"
 
 #: src/sourcery:139
 msgid "Could not retrieve SlackBuild data"
-msgstr "Não foi possível recuperar dados SlackBuild"
+msgstr "Není možné získat data SlackBuildu"
 
 #: src/sourcery:329
 msgid "SlackBuild information for"
-msgstr "SlackBuild informação para"
+msgstr "Informace SlackBuildu pro"
 
 #: src/sourcery:337 src/sourcery:344
 msgid "Not available."
-msgstr "Não disponível."
+msgstr "Není k dispozici."
 
 #: src/sourcery:390
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
-msgstr "%(pkg)s %(pkgver)s vai ser instalado como uma dependência"
+msgstr "%(pkg)s %(pkgver)s bude nainstalován jako závislost"
 
 #: src/sourcery:400
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
-msgstr "%(pkg)s %(pkgver)s vai ser instalado"
+msgstr "%(pkg)s %(pkgver)s bude nainstalován"
 
 #: src/sourcery:402
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
-msgstr "%(pkg)s %(pkgver)s vai ser reinstalado"
+msgstr "%(pkg)s %(pkgver)s bude přeinstalován"
 
 #: src/sourcery:404
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
-msgstr "%(pkg)s %(pkgver)s vai ser removido"
+msgstr "%(pkg)s %(pkgver)s bude odebrán"
 
 #: src/sourcery:549 src/sourcery:1177
 msgid "Status"
-msgstr "Estado"
+msgstr "Status"
 
 #: src/sourcery:612
 #, python-format
 msgid "Set options for %(pkg)s %(ver)s"
-msgstr "Definir opções para %(pkg)s %(ver)s"
+msgstr "Nastavené možnosti pro %(pkg)s %(ver)s"
 
 #: src/sourcery:786 src/sourcery:913 src/sourcery:963
 msgid "Build log for"
-msgstr "Construir registo para"
+msgstr "Log sestavení pro"
 
 #: src/sourcery:835 src/sourcery:843
 msgid "Downloading source files for"
-msgstr "Baixando ficheiros de origem para"
+msgstr "Stažení zdrojových souborů pro"
 
 #: src/sourcery:840 src/sourcery:848
 msgid "Compiling"
-msgstr "Compilando"
+msgstr "Kompilování"
 
 #: src/sourcery:851
 msgid "Removing"
-msgstr "Removendo"
+msgstr "Odebírání"
 
 #: src/sourcery:871
 #, python-format
@@ -431,35 +429,35 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr "Ocorreu um erro durante a compilação %(pkg)s %(pkgver)s. Todas as ações pendentes serão removidos da fila de processamento. Você pode rever o ficheiro de registo por quaisquer erros durante a compilação."
+msgstr "Nastala chyba při kompilaci %(pkg)s %(pkgver)s. Všechny čekající akce ve frontě budou smazány. Pro více informací o chybách v průběhu kompilace, se můžete se podívat na log soubor."
 
 #: src/sourcery:878
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr "Ocorreu um erro durante a transferência de ficheiros de origem para %(pkg)s %(pkgver)s. Todas as ações pendentes serão removidos da fila de processamento."
+msgstr "Nastala chyba v průběhu stahování zdrojových souborů pro %(pkg)s %(pkgver)s. Všechny čekající akce ve frontě budou smazány. "
 
 #: src/sourcery:923
 msgid "Not available"
-msgstr "Não disponível"
+msgstr "Není k dispozici"
 
 #: src/sourcery:974
 msgid "Error reading log file."
-msgstr "Erro ao lêr ficheiro de registo"
+msgstr "Chyba při čtení log souboru."
 
 #: src/sourcery:1180 src/sourcery:1339
 msgid "Name"
-msgstr "Nome"
+msgstr "Název"
 
 #: src/sourcery:1182 src/sourcery:1340
 msgid "Version"
-msgstr "Versão"
+msgstr "Verze"
 
 #: sourcery.desktop.in.h:1 sourcery-kde.desktop.in.h:1
 msgid "A graphical frontend to slapt-src"
-msgstr "Uma interface gráfica para o slapt-src"
+msgstr "Grafická nástavba nad slapt-src"
 
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
-msgstr "Gestor Sourcery SlackBuild"
+msgstr "Sourcery SlackBuild Manager"

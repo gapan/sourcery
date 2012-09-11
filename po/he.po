@@ -3,339 +3,339 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# hugo carvalho <hugokarvalho@gmail.com>, 2012.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011, 2012.
+#   <genghiskhan@gmx.ca>, 2012.
+# Isratine Citizen <genghiskhan@gmx.ca>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-03-20 14:44+0200\n"
-"PO-Revision-Date: 2012-07-24 14:46+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"PO-Revision-Date: 2012-06-21 17:24+0000\n"
+"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_PT\n"
+"Language: he\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/sourcery.glade:69
 msgid "_File"
-msgstr "_Ficheiro"
+msgstr "_קובץ"
 
 #: src/sourcery.glade:76 src/sourcery.glade:298
 msgid "Update"
-msgstr "Atualizar"
+msgstr "עדכון"
 
 #: src/sourcery.glade:78 src/sourcery.glade:297
 msgid "Update local SlackBuild cache"
-msgstr "Atualiza a cache SlackBuild local"
+msgstr "עדכון מטמון SlackBuild מקומי"
 
 #: src/sourcery.glade:87 src/sourcery.glade:313
 msgid "Execute"
-msgstr "Executar"
+msgstr "ביצוע"
 
 #: src/sourcery.glade:118
 msgid "_Edit"
-msgstr "_Editar"
+msgstr "ע_ריכה"
 
 #: src/sourcery.glade:125
 msgid "Unmark all"
-msgstr "Desmarcar todos"
+msgstr "אי־סימון הכל"
 
 #: src/sourcery.glade:156
 msgid "_Package"
-msgstr "_Pacote"
+msgstr "_חבילה"
 
 #: src/sourcery.glade:163 src/sourcery.glade:579 src/sourcery.glade:581
 msgid "Unmark"
-msgstr "Desmarcar"
+msgstr "אי־סימון"
 
 #: src/sourcery.glade:173 src/sourcery.glade:589 src/sourcery.glade:591
 msgid "Install"
-msgstr "Instalar"
+msgstr "התקנה"
 
 #: src/sourcery.glade:184 src/sourcery.glade:599 src/sourcery.glade:601
 msgid "Reinstall"
-msgstr "Reinstalar"
+msgstr "התקנה חוזרת"
 
 #: src/sourcery.glade:195 src/sourcery.glade:609
 msgid "Remove"
-msgstr "Remover"
+msgstr "הסרה"
 
 #: src/sourcery.glade:206 src/sourcery.glade:618 src/sourcery.glade:620
 msgid "Set options"
-msgstr "Defina as opções"
+msgstr "הגדרת אפשרויות"
 
 #: src/sourcery.glade:221 src/sourcery.glade:633
 msgid "Get information"
-msgstr "Obter informações"
+msgstr "הצגת מידע"
 
 #: src/sourcery.glade:237
 msgid "_View"
-msgstr "_Ver"
+msgstr "_תצוגה"
 
 #: src/sourcery.glade:245 src/sourcery.glade:1874
 msgid "SlackBuild logs"
-msgstr "Registos SlackBuild"
+msgstr "יומני SlackBuild"
 
 #: src/sourcery.glade:258
 msgid "_Help"
-msgstr "_Ajuda"
+msgstr "_עזרה"
 
 #: src/sourcery.glade:265 src/sourcery.glade:1613
 msgid "Icon legend"
-msgstr "Legenda dos ícones"
+msgstr "מקרא־צלמית"
 
 #: src/sourcery.glade:312
 msgid "Execute pending actions"
-msgstr "Executar ações pendentes"
+msgstr "ביצוע פעולות שתלויות ועומדות"
 
 #: src/sourcery.glade:351
 msgid "Search: "
-msgstr "Pesquisa: "
+msgstr "חיפוש: "
 
 #: src/sourcery.glade:487 src/sourcery.glade:1114
 msgid "Error"
-msgstr "Erro"
+msgstr "שגיאה"
 
 #: src/sourcery.glade:520
 msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr "Ocorreu um erro durante a atualização da cache do SlackBuild. Certifique-se de ter configurado todas as fontes corretamente e que você tem uma conexão com a internet."
+msgstr "ארעה שגיאה במהלך עדכון מטמון ה־SlackBuild. נא לבדוק שכל המקורות הוגדרו כראוי ושלרשותך עומד חיבור אינטרנט זמין."
 
 #: src/sourcery.glade:691
 msgid "Pending tasks"
-msgstr "Tarefas pendentes"
+msgstr "משימות תלויות ועומדות"
 
 #: src/sourcery.glade:738
 msgid "<b>Execute the following tasks?</b>"
-msgstr "<b>Executar as seguintes tarefas?</b>"
+msgstr "<b>האם לבצע את המשימות שלהלן?</b>"
 
 #: src/sourcery.glade:749
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
-msgstr "As seguintes tarefas estão prestes a ser executadas. Você pode reorganizar a ordem de processamento, arrastando os itens na lista."
+msgstr "המשימות הבאות עומדות להתבצע. ביכולתך להתאים את סדר העיבוד על־ידי גרירת הפריטים שברשימה."
 
 #: src/sourcery.glade:860
 msgid "Progress"
-msgstr "Progresso"
+msgstr "התקדמות"
 
 #: src/sourcery.glade:883
 msgid "Overall progress"
-msgstr "Progresso global"
+msgstr "התקדמות כוללת"
 
 #: src/sourcery.glade:922
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr "Por favor, aguarde. Isto pode demorar um pouco. O tempo de processamento varia, dependendo do tamanho e da complexidade do software, de alguns segundos a algumas horas ..."
+msgstr "נא להיעזר בסבלנות. תהליך זה צפוי להימשך זמן מה. קצב\nהעיבוד משתנה והינו תלוי בגודלה ובמורכבותה של התוכנה.\nתהליך זה עשוי לנוע בין מספר שניות לבין מספר שעות..."
 
 #: src/sourcery.glade:963
 msgid "Completed tasks"
-msgstr "Tarefas concluídas"
+msgstr "משימות שהושלמו"
 
 #: src/sourcery.glade:973
 msgid "All tasks have been executed succesfully."
-msgstr "Todas as tarefas foram executadas com sucesso."
+msgstr "כל המשימות בוצעו בהצלחה."
 
 #: src/sourcery.glade:1014
 msgid "Canceled"
-msgstr "Cancelado"
+msgstr "תהליך ההתקנה בוטל"
 
 #: src/sourcery.glade:1023
 msgid "Canceled. Some tasks may have already been completed."
-msgstr "Cancelado. Algumas tarefas podem já ter sido concluídas."
+msgstr "הפעולות בוטלו. ייתכן שמשימות מסוימות כבר הושלמו."
 
 #: src/sourcery.glade:1073
 msgid "Error updating package list."
-msgstr "Erro ao atualizar lista de pacotes."
+msgstr "שגיאה בעדכון רשימת החבילות."
 
 #: src/sourcery.glade:1167 src/sourcery.glade:1949
 msgid "View log"
-msgstr "Ver registo"
+msgstr "הצגת רשומה"
 
 #: src/sourcery.glade:1210
 msgid "Updating..."
-msgstr "Atualizando ..."
+msgstr "מתעדכן כעת..."
 
 #: src/sourcery.glade:1234
 msgid "Updating SlackBuild cache..."
-msgstr "Atualização de cache SlackBuild ..."
+msgstr "מטמון SlackBuild מתעדכן כעת..."
 
 #: src/sourcery.glade:1287
 msgid "Getting SlackBuild information"
-msgstr "Obtenção de informações SlackBuild"
+msgstr "מידע SlackBuild מתקבל כעת"
 
 #: src/sourcery.glade:1308
 msgid "Downloading SlackBuild information. Please wait..."
-msgstr "Baixando informações SlackBuild. Por favor, aguarde ..."
+msgstr "מידע SlackBuild נטען כעת. נא להמתין..."
 
 #: src/sourcery.glade:1359
 msgid "<b>Name:</b>"
-msgstr "<b>Nome:</b>"
+msgstr "<b>שם:</b>"
 
 #: src/sourcery.glade:1367
 msgid "<b>Version:</b>"
-msgstr "<b>Versão</b>"
+msgstr "<b>גרסה:</b>"
 
 #: src/sourcery.glade:1379
 msgid "<b>Source:</b>"
-msgstr "<b>Fonte:</b>"
+msgstr "<b>מקור:</b>"
 
 #: src/sourcery.glade:1392
 msgid "<b>Files:</b>"
-msgstr "<b>Ficheiros:</b>"
+msgstr "<b>קבצים:</b>"
 
 #: src/sourcery.glade:1404
 msgid "<b>Location:</b>"
-msgstr "<b>Localização:</b>"
+msgstr "<b>מיקום:</b>"
 
 #: src/sourcery.glade:1467
 msgid "<b>Dependencies:</b>"
-msgstr "<b>Dependências:</b>"
+msgstr "<b>תלויות:</b>"
 
 #: src/sourcery.glade:1509
 msgid "General information"
-msgstr "Informação geral"
+msgstr "מידע כללי"
 
 #: src/sourcery.glade:1533 src/sourcery:1184
 msgid "Description"
-msgstr "Descrição"
+msgstr "תיאור"
 
 #: src/sourcery.glade:1564
 msgid "README file"
-msgstr "Ficheiro LEIA-ME"
+msgstr "קובץ README"
 
 #: src/sourcery.glade:1633
 msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
-msgstr "<b>Os seguintes ícones são usados ​​para indicar o estado atual de um SlackBuild:</b>"
+msgstr "<b>הצלמיות הבאות משמשות להצבעה על המצב הנוכחי של תסריט SlackBuild:</b>"
 
 #: src/sourcery.glade:1652
 msgid "Not installed"
-msgstr "Não instalado"
+msgstr "חבילה שאינה מותקנת"
 
 #: src/sourcery.glade:1664
 msgid "A package with this name is already installed"
-msgstr "Um pacote com esse nome já está instalado"
+msgstr "חבילה בשם זה כבר מותקנת"
 
 #: src/sourcery.glade:1678
 msgid "The package is going to be installed"
-msgstr "O pacote vai ser instalado"
+msgstr "חבילה המסומנת להתקנה"
 
 #: src/sourcery.glade:1692
 msgid ""
 "A package with this name is already installed and is going to be reinstalled"
-msgstr "Um pacote com esse nome já está instalado e vai ser reinstalado"
+msgstr "חבילה בשם זה כבר מותקנת ותותקן מחדש"
 
 #: src/sourcery.glade:1706
 msgid "The package is going to be removed"
-msgstr "O pacote vai ser removido"
+msgstr "חבילה המסומנת להסרה"
 
 #: src/sourcery.glade:2047
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr "A interface gráfica para o slapt-src, um utilitário para construir e instalar pacotes de fonte usando SlackBuilds e / ou SLKBUILDs."
+msgstr "מגשר־חזיתי גרפי לתוכנית slapt-src, כלי עזר לבניית ולהתקנת חבילות מתוך קוד מקור באמצעות תסריטי SlackBuild ו/או תסריטי SLKBUILD."
 
 #: src/sourcery.glade:2725
 msgid "translator-credits"
-msgstr "Tradutor-créditos"
+msgstr "Rahut Contributors:\n  Isratine Citizen <genghiskhan@gmx.ca>"
 
 #: src/sourcery.glade:2750
 msgid "Preferences"
-msgstr "Preferências"
+msgstr "העדפות"
 
 #: src/sourcery.glade:2773
 msgid "<b>SlackBuild Sources</b>"
-msgstr "<b>Fontes SlackBuild</b>"
+msgstr "<b>מקורות SlackBuild</b>"
 
 #: src/sourcery.glade:2787
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
-msgstr "<i>Fontes mais perto do topo têm prioridade. Você pode reorganizar a ordem arrastando.</i>"
+msgstr "<i>מקורות הקרובים יותר אל האזור העליון של הרשימה זוכים לעדיפות גבוהה יותר. ביכולתך להתאים את הסדר על־ידי גרירת המקורות.</i>"
 
 #: src/sourcery.glade:2903
 msgid "Sources"
-msgstr "Fontes"
+msgstr "מקורות"
 
 #: src/sourcery.glade:2921
 msgid "<b>Source and package storage</b>"
-msgstr "<b>Fonte e pacote armazenado</b>"
+msgstr "<b>אחסון מקורות וחבילות</b>"
 
 #: src/sourcery.glade:2946
 msgid "Clear working directory"
-msgstr "Limpar diretório de trabalho"
+msgstr "ניקוי מדור עבודה"
 
 #: src/sourcery.glade:2980
 msgid "Working Directory"
-msgstr "Diretório de trabalho"
+msgstr "מדור עבודה"
 
 #: src/sourcery.glade:2993
 msgid "Resolve dependencies"
-msgstr "Resolver as dependências"
+msgstr "פתירת תלויות"
 
 #: src/sourcery.glade:3010
 msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr "Resolução de dependências está disponível apenas para os repositórios que o suportam. SlackBuilds de SlackBuilds.org não incluem qualquer informação de dependência."
+msgstr "פתרון תלויות זמין רק עבור מאגרים התומכים בכך. תסריטי SlackBuild מתוך המקור SlackBuilds.org לא כוללים מידע באשר לתלויות."
 
 #: src/sourcery.glade:3038
 msgid "Dependencies"
-msgstr "Dependências"
+msgstr "תלויות"
 
 #: src/sourcery.glade:3101
 msgid "First run"
-msgstr "Primeiro arranque"
+msgstr "הרצה ראשונה"
 
 #: src/sourcery.glade:3136
 msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr "Parece que esta é a primeira vez Sourcery é lançado. O cache SlackBuild precisa ser criado antes de Sourcery torna-se útil. Você vai precisar de uma conexão à Internet para criar a cache SlackBuild."
+msgstr "נראה שזו הפעם הראשונה שהיישום Sourcery הופעל. לפני שהיישום Sourcery יהפוך להיות שימושי, יש צורך ליצור מטמון תסריטי SlackBuild. נא לוודא שקיים חיבור אינטרנט זמין על מנת שיהיה ניתן ליצור מטמון SlackBuild."
 
 #: src/sourcery.glade:3169
 msgid "Create SlackBuild cache"
-msgstr "Criar a cache SlackBuild"
+msgstr "יצירת מטמון SlackBuild"
 
 #: src/sourcery.glade:3201
 msgid "Update SlackBuild Cache?"
-msgstr "Atualizar a cache SlackBuild?"
+msgstr "האם לעדכן מטמון SlackBuild?"
 
 #: src/sourcery.glade:3220
 msgid ""
 "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
-msgstr "A Configuração foi alterada. Você quer reconstruir a cache SlackBuild?"
+msgstr "הגדרות התצורה השתנו. האם ברצונך לבנות את מטמון ה־SlackBuild מחדש?"
 
 #: src/sourcery.glade:3249
 msgid "Rebuild SlackBuild cache"
-msgstr "Reconstruir a cache SlackBuild"
+msgstr "בניה חוזרת של מטמון תסריטי SlackBuild"
 
 #: src/sourcery.glade:3278
 msgid "Add SlackBuild source"
-msgstr "Adicionar fonte SlackBuild"
+msgstr "הוספת מקור SlackBuild"
 
 #: src/sourcery.glade:3302 src/sourcery.glade:3401
 msgid "SlackBuild source location:"
-msgstr "Localização da fonte SlackBuild"
+msgstr "מיקום מקור SlackBuild:"
 
 #: src/sourcery.glade:3377
 msgid "Edit SlackBuild source"
-msgstr "Editar a fonte SlackBuild"
+msgstr "עריכת מקור SlackBuild"
 
 #: src/sourcery.glade:3502
 msgid "Clearing working directory. Please wait..."
-msgstr "Limpando diretório de trabalho. Por favor, aguarde ..."
+msgstr "מדור העבודה מתנקה כעת, נא להמתין..."
 
 #: src/sourcery.glade:3594
 msgid ""
@@ -343,87 +343,87 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr "Você pode definir as opções extras do SlackBuild aceites aqui. Consulte cada ficheiro SlackBuild's README para uma lista dessas opções. Espaços não são permitidos dentro de nomes de opções ou definições, e.g.:"
+msgstr "ביכולתך להגדיר כל אפשרות נוספת שתסריטי SlackBuild מאפשרים. ניתן לבדוק בקובץ ה־README של תסריט ה־SlackBuild עבור רשימה של אפשרויות. רווחים לא מותרים בתוך שמות או הגדרות אפשרויות. יש להפריד אפשרויות על־ידי רווחים, למשל:"
 
 #: src/sourcery.glade:3676
 msgid "Error parsing options"
-msgstr "Análise de opções de erro"
+msgstr "שגיאה בניתוח אפשרויות"
 
 #: src/sourcery.glade:3685
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr "Ocorreu um erro enquanto analisava as opções. Por favor, certifique-se que foram digitados corretamente."
+msgstr "ארעה שגיאה במהלך ניתוח אפשרויות. נא לוודא שהאפשרויות מוזנות בצורה נכונה."
 
 #: src/sourcery:131
 msgid "No SlackBuilds found"
-msgstr "SlackBuilds não encontrados"
+msgstr "לא נמצאו תסריטי SlackBuild"
 
 #: src/sourcery:133
 msgid "One SlackBuild found"
-msgstr "Um SlackBuild encontrado"
+msgstr "נמצא תסריט SlackBuild אחד"
 
 #: src/sourcery:135
 #, python-format
 msgid "%(num)i SlackBuilds found"
-msgstr "%(num)i SlackBuilds encontrado"
+msgstr "נמצאו %(num)i תסריטי SlackBuild"
 
 #: src/sourcery:139
 msgid "Could not retrieve SlackBuild data"
-msgstr "Não foi possível recuperar dados SlackBuild"
+msgstr "לא ניתן לאחזר מידע SlackBuild"
 
 #: src/sourcery:329
 msgid "SlackBuild information for"
-msgstr "SlackBuild informação para"
+msgstr "מידע SlackBuild עבור"
 
 #: src/sourcery:337 src/sourcery:344
 msgid "Not available."
-msgstr "Não disponível."
+msgstr "לא זמין."
 
 #: src/sourcery:390
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
-msgstr "%(pkg)s %(pkgver)s vai ser instalado como uma dependência"
+msgstr "החבילה %(pkg)s %(pkgver)s תותקן כתלות"
 
 #: src/sourcery:400
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
-msgstr "%(pkg)s %(pkgver)s vai ser instalado"
+msgstr "החבילה %(pkg)s %(pkgver)s תותקן"
 
 #: src/sourcery:402
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
-msgstr "%(pkg)s %(pkgver)s vai ser reinstalado"
+msgstr "החבילה %(pkg)s %(pkgver)s תותקן מחדש"
 
 #: src/sourcery:404
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
-msgstr "%(pkg)s %(pkgver)s vai ser removido"
+msgstr "החבילה %(pkg)s %(pkgver)s תוסר"
 
 #: src/sourcery:549 src/sourcery:1177
 msgid "Status"
-msgstr "Estado"
+msgstr "מצב"
 
 #: src/sourcery:612
 #, python-format
 msgid "Set options for %(pkg)s %(ver)s"
-msgstr "Definir opções para %(pkg)s %(ver)s"
+msgstr "הגדרת אפשרויות עבור %(pkg)s %(ver)s"
 
 #: src/sourcery:786 src/sourcery:913 src/sourcery:963
 msgid "Build log for"
-msgstr "Construir registo para"
+msgstr "רשומת Build עבור"
 
 #: src/sourcery:835 src/sourcery:843
 msgid "Downloading source files for"
-msgstr "Baixando ficheiros de origem para"
+msgstr "מוריד קבצי מקור עבור"
 
 #: src/sourcery:840 src/sourcery:848
 msgid "Compiling"
-msgstr "Compilando"
+msgstr "מהדר כעת את"
 
 #: src/sourcery:851
 msgid "Removing"
-msgstr "Removendo"
+msgstr "מסיר כעת את"
 
 #: src/sourcery:871
 #, python-format
@@ -431,35 +431,35 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr "Ocorreu um erro durante a compilação %(pkg)s %(pkgver)s. Todas as ações pendentes serão removidos da fila de processamento. Você pode rever o ficheiro de registo por quaisquer erros durante a compilação."
+msgstr "ארעה שגיאה במהלך ההדרת %(pkg)s %(pkgver)s. כל הפעולות התלויות ועומדות ינוקו מתוך תור העיבוד. ביכולתך לבחון את קובץ היומן עבור שגיאות בעת תהליך ההדרה."
 
 #: src/sourcery:878
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr "Ocorreu um erro durante a transferência de ficheiros de origem para %(pkg)s %(pkgver)s. Todas as ações pendentes serão removidos da fila de processamento."
+msgstr "ארעה שגיאה במהלך הורדת קבצי המקור עבור %(pkg)s %(pkgver)s. כל הפעולות התלויות ועומדות ינוקו מתוך תור העיבוד."
 
 #: src/sourcery:923
 msgid "Not available"
-msgstr "Não disponível"
+msgstr "לא זמין"
 
 #: src/sourcery:974
 msgid "Error reading log file."
-msgstr "Erro ao lêr ficheiro de registo"
+msgstr "שגיאה בקריאת קובץ יומן."
 
 #: src/sourcery:1180 src/sourcery:1339
 msgid "Name"
-msgstr "Nome"
+msgstr "שם"
 
 #: src/sourcery:1182 src/sourcery:1340
 msgid "Version"
-msgstr "Versão"
+msgstr "גרסה"
 
 #: sourcery.desktop.in.h:1 sourcery-kde.desktop.in.h:1
 msgid "A graphical frontend to slapt-src"
-msgstr "Uma interface gráfica para o slapt-src"
+msgstr "מגשר־חזיתי גרפי לתוכנית slapt-src"
 
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "Sourcery SlackBuild Manager"
-msgstr "Gestor Sourcery SlackBuild"
+msgstr "‏Sourcery מנהל תסריטי SlackBuild"

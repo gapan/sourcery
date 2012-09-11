@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Kris Thomsen <lakristho@gmail.com>, 2011.
+# Kris Thomsen <lakristho@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-03-20 14:44+0200\n"
-"PO-Revision-Date: 2012-03-20 14:09+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2012-07-28 14:15+0000\n"
+"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: da\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/sourcery.glade:69
 msgid "_File"
@@ -64,7 +64,7 @@ msgstr "Fjern"
 
 #: src/sourcery.glade:206 src/sourcery.glade:618 src/sourcery.glade:620
 msgid "Set options"
-msgstr ""
+msgstr "Angiv indstillinger"
 
 #: src/sourcery.glade:221 src/sourcery.glade:633
 msgid "Get information"
@@ -342,17 +342,17 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr ""
+msgstr "Du kan angive enhver ekstra indstilling, som SlackBuild bruger her. Tjek hver SlackBuilds README-fil for en liste over disse indstillinger. Mellemrums-tegn er ikke tilladt i indstillingsnavne eller -definitioner. Indstillinger skal adskilles af mellemrum, f.eks.:"
 
 #: src/sourcery.glade:3676
 msgid "Error parsing options"
-msgstr ""
+msgstr "Tolkningsfejl af indstillinger"
 
 #: src/sourcery.glade:3685
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr ""
+msgstr "Der opstod en fejl under tolkning af indstillinger. Vær sikker på, at du har indtastet dem korrekt."
 
 #: src/sourcery:131
 msgid "No SlackBuilds found"
@@ -406,7 +406,7 @@ msgstr "Status"
 #: src/sourcery:612
 #, python-format
 msgid "Set options for %(pkg)s %(ver)s"
-msgstr ""
+msgstr "Angiv indstillinger for %(pkg)s %(ver)s"
 
 #: src/sourcery:786 src/sourcery:913 src/sourcery:963
 msgid "Build log for"
