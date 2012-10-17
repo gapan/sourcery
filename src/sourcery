@@ -173,7 +173,9 @@ class Sourcery:
 			opt = ''
 		return opt
 
+	@threaded
 	def refresh_pkglist(self):
+		gtk.gdk.threads_enter()
 		self.ls_pkg.clear()
 		# The list is cleared, no item is selected, so all menu
 		# options for package actions should be disabled
@@ -183,6 +185,7 @@ class Sourcery:
 		self.mi_remove.set_sensitive(False)
 		self.mi_setoptions.set_sensitive(False)
 		self.mi_getinfo.set_sensitive(False)
+		gtk.gdk.threads_leave()
 		cmdstatus, pkglist = self.slaptsrclist(self.entry_search.get_text())
 		if cmdstatus == 0:
 			pkg_installed = self.pkg_installed()
@@ -208,11 +211,15 @@ class Sourcery:
 				elif [pkgname, pkgver, PkgAction.Remove] in self.pending:
 					icon = Icon.remove
 					installed = True
+				gtk.gdk.threads_enter()
 				self.ls_pkg.append([icon, pkgname,
 					pkgver, pkgdesc,
 					installed, action])
+				gtk.gdk.threads_leave()
 		else:
+			gtk.gdk.threads_enter()
 			self.dlg_updateerror.show()
+			gtk.gdk_threads_leave()
 
 	def get_pkgver(self, pkg):
 		f = open(slackbuilds_data)
