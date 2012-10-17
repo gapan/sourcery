@@ -385,8 +385,12 @@ class Sourcery:
 		else:
 			self.refresh_pkglist()
 		self.canceltask = False
-	
+
+	@threaded
 	def on_toolbutton_exec_clicked(self, widget):
+		gtk.gdk.threads_enter()
+		self.dlg_wait.show()
+		gtk.gdk.threads_leave()
 		config = SourceryConfig()
 
 		if config.deps() == True:
@@ -416,7 +420,10 @@ class Sourcery:
 			elif i[2] == PkgAction.Remove:
 				desc = _('%(pkg)s %(pkgver)s is going to be removed') %{'pkg' : i[0], 'pkgver' : i[1]}
 			self.ls_summary.append([desc, i[0], i[1], i[2]])
+		gtk.gdk.threads_enter()
+		self.dlg_wait.hide()
 		self.dlg_summary.show()
+		gtk.gdk.threads_leave()
 	
 	def on_toolbutton_clearsearch_clicked(self, widget):
 		if len(self.entry_search.get_text()) != 0:
@@ -1405,6 +1412,11 @@ class Sourcery:
 		self.dlg_firstrun = builder.get_object('dialog_firstrun')
 		self.btn_firstrun_cancel = builder.get_object('button_firstrun_cancel')
 		self.btn_firstrun_create = builder.get_object('button_firstrun_create')
+
+		#
+		# Please wait dialog
+		#
+		self.dlg_wait = builder.get_object('dialog_wait')
 
 		#
 		# About dialog
