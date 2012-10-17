@@ -6,10 +6,14 @@ import sys
 import subprocess
 import time
 import signal
+import threading
 import urllib2
 import ConfigParser
 import vte
 from simpleconfig import SimpleConfig
+
+#Initializing the gtk's thread engine
+gtk.gdk.threads_init()
 
 # Internationalization
 import locale
@@ -32,6 +36,12 @@ shareddir = '/usr/share/sourcery'
 initial_env = dict()
 for i in os.environ:
 	initial_env[i] = os.environ[i]
+
+def threaded(f):
+	def wrapper(*args):
+		t = threading.Thread(target=f, args=args)
+		t.start()
+	return wrapper
 
 class SourceryConfig:
 	config = ConfigParser.RawConfigParser()
