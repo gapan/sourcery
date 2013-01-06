@@ -124,16 +124,19 @@ class Sourcery:
 			pkglist_output = process.communicate()[0]
 			status = process.returncode
 			pkglist_lines = pkglist_output.splitlines()
+			# the pkglist array holds [name, ver, desc], while the pkglist_namever array holds
+			# [name, ver] only. If more than one SlackBuilds exist for the same package, the
+			# description could be different for each one.
 			pkglist = []
-			pkglist2 = []
+			pkglist_namever = []
 			if status == 0:
 				for i in pkglist_lines:
 					nameandver, sep, desc = i.partition(' - ')
 					name = nameandver.rpartition(':')[0]
 					ver = nameandver.rpartition(':')[2]
-					if [name, ver] not in pkglist2:
+					if [name, ver] not in pkglist_namever:
 						pkglist.append([name, ver, desc])
-						pkglist2.append([name, ver])
+						pkglist_namever.append([name, ver])
 			pkglistlen = len(pkglist)
 			if pkglistlen == 0:
 				msg = _('No SlackBuilds found')
