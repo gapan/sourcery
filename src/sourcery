@@ -879,9 +879,9 @@ class Sourcery:
 			gtk.main_iteration()
 		self.pending = []
 		self.ls_summary.clear()
-		self.refresh_pkglist()
 		self.dlg_exec.hide()
 		if retval == 0:
+			self.refresh_pkglist()
 			self.dlg_success.show()
 		# retval = 1 means there was an error during building
 		# the package
