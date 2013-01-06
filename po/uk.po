@@ -4,14 +4,14 @@
 # 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011.
-# Yarema aka Knedlyk <yupadmin@gmail.com>, 2011, 2012.
+# Yarema aka Knedlyk <yupadmin@gmail.com>, 2011-2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-10-17 23:30+0300\n"
-"PO-Revision-Date: 2012-10-17 21:27+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2012-10-26 15:03+0000\n"
+"Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -259,11 +259,11 @@ msgstr "Наступні завдання будуть виконані. Ви м
 
 #: src/sourcery.glade:3162
 msgid "Working..."
-msgstr ""
+msgstr "Працюю..."
 
 #: src/sourcery.glade:3176
 msgid "Please wait."
-msgstr ""
+msgstr "Зачекайте, будь ласка."
 
 #: src/sourcery.glade:3314 src/sourcery.glade:3318 src/sourcery.glade:3721
 msgid "Unmark"

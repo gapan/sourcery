@@ -7,15 +7,15 @@
 # gapan <vlahavas@gmail.com>, 2011.
 #   <kerd89@gmail.com>, 2011.
 # Kerd <kerd89@gmail.com>, 2011.
-#   <laplume@libero.it>, 2011, 2012.
+#   <laplume@libero.it>, 2011-2012.
 #   <mattia.tristo@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-10-17 23:30+0300\n"
-"PO-Revision-Date: 2012-10-21 06:56+0000\n"
-"Last-Translator: keepsimple <mattia.tristo@gmail.com>\n"
+"PO-Revision-Date: 2012-11-14 17:03+0000\n"
+"Last-Translator: laplume <laplume@libero.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr "Un frontend grafico per slapt-src, una utility per costruire e installare i pacchetti da sorgente usando SlackBuilds e/o SLKBUILDs."
+msgstr "Un frontend grafico per slapt-src, una utility per costruire ed installare i pacchetti da sorgente usando SlackBuilds e/o SLKBUILDs."
 
 #: src/sourcery.glade:696
 msgid "translator-credits"
@@ -47,7 +47,7 @@ msgstr "Vuoi aggiornare la cache di SlackBuild?"
 
 #: src/sourcery.glade:876
 msgid "Rebuild SlackBuild cache"
-msgstr "Ricostriusci la cache di SlackBuild"
+msgstr "Ricostruisci la cache di SlackBuild"
 
 #: src/sourcery.glade:902
 msgid ""
@@ -79,11 +79,11 @@ msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr "Si è verificato un errore durante l'aggiornamento della cache SlackBuild. Assicurati di aver configurato correttamente tutte le fonti e di avere una connessione ad Internet attiva."
+msgstr "Si è verificato un errore durante l'aggiornamento della cache SlackBuild. Assicuratevi di aver configurato correttamente tutte le fonti e di avere una connessione ad Internet attiva."
 
 #: src/sourcery.glade:1309
 msgid "Progress"
-msgstr "Progressi"
+msgstr "Progresso"
 
 #: src/sourcery.glade:1362
 msgid "Overall progress"
@@ -94,15 +94,15 @@ msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr "Prego attendere. Questo tipo di operazione potrebbe richiedere un po di tempo, la durata è variabile a seconda della complessità del software, il tempo di attesa può variare da alcuni minuti ad alcune ore."
+msgstr "Prego attendere. Questo tipo di operazione potrebbe richiedere un po' di tempo, la durata è variabile a seconda della complessità del software, il tempo di attesa può variare da alcuni minuti ad alcune ore."
 
 #: src/sourcery.glade:1423
 msgid "Getting SlackBuild information"
-msgstr "Ottenimento di informazioni riguardanti SlackBuild"
+msgstr "Recupero delle  informazioni degli SlackBuild"
 
 #: src/sourcery.glade:1445
 msgid "Downloading SlackBuild information. Please wait..."
-msgstr "Scaricamento delle informazioni SlackBuild. Si prega di attendere..."
+msgstr "Scaricamento delle informazioni degli SlackBuild. Si prega di attendere..."
 
 #: src/sourcery.glade:1472
 msgid "First run"
@@ -233,7 +233,7 @@ msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr "La risoluzione delle dipendenze è disponibile solo per i repository che la supportano. Gli SlackBuilds prelevati da SlackBuilds.org non include nessun informazione sulle dipendenze."
+msgstr "La risoluzione delle dipendenze è disponibile solo per i repository che la supportano. Gli SlackBuilds prelevati da SlackBuilds.org non includono nessuna informazione sulle dipendenze."
 
 #: src/sourcery.glade:2821
 msgid "Dependencies"
@@ -299,7 +299,7 @@ msgstr "Cancellato "
 
 #: src/sourcery.glade:3401
 msgid "Canceled. Some tasks may have already been completed."
-msgstr " Cancellato. Alcuni incarichi sono già stati completati."
+msgstr " Cancellato. Alcune attività sono già state completate."
 
 #: src/sourcery.glade:3446
 msgid "Error parsing options"
@@ -313,7 +313,7 @@ msgstr "Si è verificato un errore durante il parsing delle opzioni. Per favore 
 
 #: src/sourcery.glade:3482
 msgid "Completed tasks"
-msgstr "Incarico completato "
+msgstr "Attività completate "
 
 #: src/sourcery.glade:3492
 msgid "All tasks have been executed succesfully."
@@ -337,7 +337,7 @@ msgstr "Aggiorna la cache locale di SlackBuild"
 
 #: src/sourcery.glade:3629 src/sourcery.glade:3903
 msgid "Execute"
-msgstr "Eseguire"
+msgstr "Esecuzione"
 
 #: src/sourcery.glade:3667
 msgid "_Edit"
@@ -369,16 +369,16 @@ msgstr "Ricerca:"
 
 #: src/sourcery:139
 msgid "No SlackBuilds found"
-msgstr "Nessun SlackBuilds trovato"
+msgstr "Nessuno SlackBuild trovato"
 
 #: src/sourcery:141
 msgid "One SlackBuild found"
-msgstr "Un SlackBuild trovato"
+msgstr "Uno SlackBuild trovato"
 
 #: src/sourcery:143
 #, python-format
 msgid "%(num)i SlackBuilds found"
-msgstr "Trovati %(num)i SlackBuilds"
+msgstr "Trovati %(num)i SlackBuild"
 
 #: src/sourcery:147
 msgid "Could not retrieve SlackBuild data"
@@ -427,7 +427,7 @@ msgstr "Build log per"
 
 #: src/sourcery:851 src/sourcery:859
 msgid "Downloading source files for"
-msgstr "Scaricare i sorgente per"
+msgstr "Scaricare i sorgenti per"
 
 #: src/sourcery:856 src/sourcery:864
 msgid "Compiling"
@@ -443,7 +443,7 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr "Si è verificato un'errore compilando %(pkg)s %(pkgver)s. Tutte le azioni in coda saranno terminate dalla coda di processo. Potrai visionare il file log per ogni errore durante la compilazione."
+msgstr "Si è verificato un'errore compilando %(pkg)s %(pkgver)s. Tutte le azioni in coda saranno terminate dalla coda di processo. Potrete visionare il file log per ogni errore durante la compilazione."
 
 #: src/sourcery:894
 #, python-format
