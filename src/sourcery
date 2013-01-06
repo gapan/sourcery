@@ -898,7 +898,7 @@ class Sourcery:
 			self.show_pkg_install_error_dlg(pkg, pkgver)
 			self.on_menuitem_unmarkall_activate(None)
 		else:
-			self.dlg_canceled.show()
+			self.dlg_cancelled.show()
 			self.on_menuitem_unmarkall_activate(None)
 
 	def on_button_summary_cancel_clicked(self, widget):
@@ -912,8 +912,8 @@ class Sourcery:
 	def on_button_success_ok_clicked(self, widget):
 		self.dlg_success.hide()
 
-	def on_button_canceled_ok_clicked(self, widget):
-		self.dlg_canceled.hide()
+	def on_button_cancelled_ok_clicked(self, widget):
+		self.dlg_cancelled.hide()
 	
 	def on_button_updateerror_ok_clicked(self, widget):
 		self.dlg_updateerror.hide()
@@ -1047,8 +1047,8 @@ class Sourcery:
 		self.dlg_success.hide()
 		return True
 
-	def on_dialog_canceled_delete_event(self, widget, event):
-		self.dlg_canceled.hide()
+	def on_dialog_cancelled_delete_event(self, widget, event):
+		self.dlg_cancelled.hide()
 		return True
 
 	def on_dialog_updateerror_delete_event(self, widget, event):
@@ -1284,10 +1284,10 @@ class Sourcery:
 		self.btn_success_ok = builder.get_object('button_success_ok')
 
 		#
-		# Canceled tasks dialog
+		# Cancelled tasks dialog
 		#
-		self.dlg_canceled = builder.get_object('messagedialog_canceled')
-		self.btn_canceled_ok = builder.get_object('button_canceled_ok')
+		self.dlg_cancelled = builder.get_object('messagedialog_cancelled')
+		self.btn_cancelled_ok = builder.get_object('button_cancelled_ok')
 
 		#
 		# Update error dialog
