@@ -267,7 +267,7 @@ class Sourcery:
 						data = ' '.join([data, line])
 			newdeps = data.replace('\n', ' ').strip(' ').split(' ')
 			for i in newdeps:
-				if i is not '':
+				if i is not '' and i != '%README%':
 					if i not in deps:
 						deps.append(i)
 		DEVNULL.close()
@@ -718,7 +718,7 @@ class Sourcery:
 
 		logfile = logdir+'/'+pkg+'-'+pkgver
 		f = open(logfile, 'w')
-		args = ['slapt-src', '-y', '-f', pkg+':'+pkgver]
+		args = ['slapt-src', '-y', '-n', '-f', pkg+':'+pkgver]
 		options = self.getoptions(pkg, pkgver)
 		options_dict = self.dict_options(options)
 		env = dict()
@@ -769,10 +769,7 @@ class Sourcery:
 
 		args = ['yes', 'n']
 		pyes = subprocess.Popen(args, stdout = subprocess.PIPE, stderr = DEVNULL)
-		if config.deps() == True:
-			args = ['slapt-src', '-y', '-i', pkg+':'+pkgver]
-		else:
-			args = ['slapt-src', '-y', '-n', '-i', pkg+':'+pkgver]
+		args = ['slapt-src', '-y', '-n', '-i', pkg+':'+pkgver]
 		options = self.getoptions(pkg, pkgver)
 		options_dict = self.dict_options(options)
 		env = dict()
