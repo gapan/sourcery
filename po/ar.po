@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# cobraJoker <cobra.the.joker@gmail.com>, 2011.
-# gapan <vlahavas@gmail.com>, 2011.
-# mohammad <malham1@gmail.com>, 2012.
+# cobraJoker <cobra.the.joker@gmail.com>, 2011
+# gapan <vlahavas@gmail.com>, 2011
+# محمد الحرقان <malham1@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-10-17 23:30+0300\n"
-"PO-Revision-Date: 2012-10-17 21:27+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2013-04-29 10:08+0000\n"
+"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
+"Language-Team: Arabic (http://www.transifex.com/projects/p/salix/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
