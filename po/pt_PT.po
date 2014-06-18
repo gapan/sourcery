@@ -4,14 +4,14 @@
 # 
 # Translators:
 # hugo carvalho <hugokarvalho@gmail.com>, 2012
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011-2012
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011-2012,2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-17 23:30+0300\n"
-"PO-Revision-Date: 2013-04-29 10:08+0000\n"
-"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
+"PO-Revision-Date: 2014-02-01 14:10+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/salix/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "A interface gráfica para o slapt-src, um utilitário para compilar e in
 
 #: src/sourcery.glade:696
 msgid "translator-credits"
-msgstr "Sérgio Marques <smarquespt@gmail.com>"
+msgstr "Hugo Carvalho <hugokarvalho@gmail.com>"
 
 #: src/sourcery.glade:724
 msgid "Add SlackBuild source"

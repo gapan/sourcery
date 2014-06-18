@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-17 23:30+0300\n"
 "PO-Revision-Date: 2011-01-11 17:09+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/sourcery.glade:696
 msgid "translator-credits"
-msgstr ""
+msgstr "cliù an t-eadar-theangair"
 
 #: src/sourcery.glade:724
 msgid "Add SlackBuild source"

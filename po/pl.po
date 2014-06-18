@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# 13K <trzynastak@o2.pl>, 2013
+# Emanuel Borówko <trzynastak@o2.pl>, 2013
+# lukkon <lukap93@yahoo.pl>, 2013
 # ink3 <sgasior1@gmail.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-17 23:30+0300\n"
-"PO-Revision-Date: 2013-04-29 10:08+0000\n"
-"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
+"PO-Revision-Date: 2013-12-04 22:00+0000\n"
+"Last-Translator: lukkon <lukap93@yahoo.pl>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/salix/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -241,7 +242,7 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr ""
+msgstr "Tutaj możesz ustawić dodatkowe opcje akceptowalne przez SlackBuild. Sprawdź plik README każdego SlackBuilda by uzyskać listę tych opcji. Spacje nie są dozwolone wewnątrz nazw opcji lub definicji. Opcje powinny być oddzielone spacjami, np.:"
 
 #: src/sourcery.glade:2971
 msgid "Pending tasks"
@@ -283,7 +284,7 @@ msgstr "Usuń"
 
 #: src/sourcery.glade:3361 src/sourcery.glade:3365 src/sourcery.glade:3772
 msgid "Set options"
-msgstr ""
+msgstr "Ustaw opcje"
 
 #: src/sourcery.glade:3379 src/sourcery.glade:3791
 msgid "Get information"
@@ -299,13 +300,13 @@ msgstr "Anulowane. Niektóre zadania mogą być już zakończone."
 
 #: src/sourcery.glade:3446
 msgid "Error parsing options"
-msgstr ""
+msgstr "Błąd przy przetwarzaniu opcji"
 
 #: src/sourcery.glade:3455
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr ""
+msgstr "Wystąpił błąd podczas przetwarzania opcji. Proszę się upewnić czy zostały podane prawidłowo."
 
 #: src/sourcery.glade:3482
 msgid "Completed tasks"
