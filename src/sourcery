@@ -251,11 +251,17 @@ class Sourcery:
 			for i in initial_env:
 				env[i] = initial_env[i]
 			env['LANG'] = 'C'
-			p2 = subprocess.Popen(args2, stdin=p1.stdout, stdout=subprocess.PIPE, stderr=DEVNULL,env=env)
+			p2 = subprocess.Popen(args2, stdin=p1.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=env)
 			p1.stdout.close()
-			output = p2.communicate()[0]
+			output, stderr = p2.communicate()
 			found = False
+			error = False
 			data = ''
+			for line in stderr.splitlines():
+				if line.startswith('Missing slackbuild'):
+					error = True
+					missing = line.partition('requires ')[2].partition('\n')[0]
+					break
 			for line in output.splitlines():
 				if line.startswith('The following dependent slackbuilds'):
 					found = True
@@ -271,7 +277,10 @@ class Sourcery:
 					if i not in deps:
 						deps.append(i)
 		DEVNULL.close()
-		return deps
+		if error:
+			return error, missing 
+		else:
+			return error, deps
 
 	def get_pkg_info(self, pkg, pkgver):
 		# just to be on the safe side
@@ -395,7 +404,8 @@ class Sourcery:
 		self.dlg_wait.show()
 		gtk.gdk.threads_leave()
 		config = SourceryConfig()
-
+		error = False
+		self.ls_summary.clear()
 		if config.deps() == True:
 			requested_pkg = []
 			# get a list of all dependencies for all
@@ -405,16 +415,18 @@ class Sourcery:
 					requested_pkg.append([i[0], i[1]])
 			# add all dependencies to the processing
 			# liststore
-			for pkg in self.get_deps(requested_pkg):
-				pkgver = self.get_pkgver(pkg)
-				desc = _('%(pkg)s %(pkgver)s is going to be installed as a dependency') % {'pkg' : pkg, 'pkgver' : pkgver}
-				self.ls_summary.append([desc, pkg, pkgver, PkgAction.Install])
-				# if a package is already going to be
-				# installed as a dependency, remove it
-				# from the pending list, it's going to
-				# be installed anyway
-				if [pkg, pkgver, PkgAction.Install] in self.pending:
-					self.pending.remove([pkg, pkgver, PkgAction.Install])
+			error, deps = self.get_deps(requested_pkg)
+			if not error:
+				for pkg in deps:
+					pkgver = self.get_pkgver(pkg)
+					desc = _('%(pkg)s %(pkgver)s is going to be installed as a dependency') % {'pkg' : pkg, 'pkgver' : pkgver}
+					self.ls_summary.append([desc, pkg, pkgver, PkgAction.Install])
+					# if a package is already going to be
+					# installed as a dependency, remove it
+					# from the pending list, it's going to
+					# be installed anyway
+					if [pkg, pkgver, PkgAction.Install] in self.pending:
+						self.pending.remove([pkg, pkgver, PkgAction.Install])
 		for i in self.pending:
 			if i[2] == PkgAction.Install:
 				desc = _('%(pkg)s %(pkgver)s is going to be installed') %{'pkg' : i[0], 'pkgver' : i[1]}
@@ -425,7 +437,11 @@ class Sourcery:
 			self.ls_summary.append([desc, i[0], i[1], i[2]])
 		gtk.gdk.threads_enter()
 		self.dlg_wait.hide()
-		self.dlg_summary.show()
+		if error:
+			self.lb_depmissing.set_text(_('%(d)s appears to be a missing dependency and it is not available as a SlackBuild. Install it with GSlapt and try again. If you cannot find a package in GSlapt, you might have to disable dependencies or do some manual tweaking.') %{'d': deps})
+			self.dlg_depmissing.show()
+		else:
+			self.dlg_summary.show()
 		gtk.gdk.threads_leave()
 	
 	def on_toolbutton_clearsearch_clicked(self, widget):
@@ -1024,6 +1040,17 @@ class Sourcery:
 		self.dlg_firstrun.hide()
 		self.window.show()
 
+	def on_dialog_depmissing_delete_event(self, widget, event):
+		self.dlg_depmissing.hide()
+		return True
+
+	def on_button_depmissing_cancel_clicked(self, widget):
+		self.dlg_depmissing.hide()
+
+	def on_button_depmissing_tryagain_clicked(self, widget):
+		self.dlg_depmissing.hide()
+		self.on_toolbutton_exec_clicked(None)
+
 	def on_button_firstrun_create_clicked(self, widget):
 		self.dlg_firstrun.hide()
 		self.window.show()
@@ -1238,6 +1265,14 @@ class Sourcery:
 		#
 		self.dlg_errorcache = builder.get_object('dialog_errorcache')
 		self.btn_errorcacheok = builder.get_object('button_errorcacheok')
+
+		#
+		# Dep missing dialog
+		#
+		self.dlg_depmissing = builder.get_object('dialog_depmissing')
+		self.btn_depmissing_tryagain = builder.get_object('button_depmissing_tryagain')
+		self.btn_depmissing_cancel = builder.get_object('button_depmissing_cancel')
+		self.lb_depmissing = builder.get_object('label_depmissing')
 
 		#
 		# Summary dialog

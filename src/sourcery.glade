@@ -745,7 +745,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_add_source_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -761,7 +760,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_add_source_add">
                 <property name="label">gtk-add</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -858,7 +856,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_ask_for_update_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -874,7 +871,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_ask_for_update_rebuild">
                 <property name="label" translatable="yes">Rebuild SlackBuild cache</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="has_focus">True</property>
@@ -943,7 +939,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_cacheupdate_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1033,7 +1028,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_clear_cache_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1097,6 +1091,119 @@ Public License instead of this License.  But first, please read
       <action-widget response="0">button_clear_cache_cancel</action-widget>
     </action-widgets>
   </object>
+  <object class="GtkDialog" id="dialog_depmissing">
+    <property name="can_focus">False</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Missing dependency</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-on-parent</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="icon_name">dialog-error</property>
+    <property name="type_hint">dialog</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="skip_pager_hint">True</property>
+    <property name="urgency_hint">True</property>
+    <property name="transient_for">sourcery</property>
+    <signal name="delete-event" handler="on_dialog_depmissing_delete_event" swapped="no"/>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox35">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area35">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="button_depmissing_cancel">
+                <property name="label">gtk-cancel</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <signal name="clicked" handler="on_button_depmissing_cancel_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_depmissing_tryagain">
+                <property name="label" translatable="yes">Try again</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="has_focus">True</property>
+                <property name="is_focus">True</property>
+                <property name="can_default">True</property>
+                <property name="has_default">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="on_button_depmissing_tryagain_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox8">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="spacing">10</property>
+            <child>
+              <object class="GtkImage" id="image21">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="stock">gtk-dialog-error</property>
+                <property name="icon-size">6</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label_depmissing">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="xalign">0</property>
+                <property name="label">Dep missing.</property>
+                <property name="wrap">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="padding">5</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">button_depmissing_cancel</action-widget>
+      <action-widget response="0">button_depmissing_tryagain</action-widget>
+    </action-widgets>
+  </object>
   <object class="GtkDialog" id="dialog_edit_source">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -1124,7 +1231,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_edit_source_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1140,7 +1246,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_edit_source_apply">
                 <property name="label">gtk-apply</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1236,7 +1341,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_errorcache_close">
                 <property name="label">gtk-close</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1329,7 +1433,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_exec_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1492,7 +1595,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_firstrun_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">False</property>
@@ -1508,7 +1610,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_firstrun_create">
                 <property name="label" translatable="yes">Create SlackBuild cache</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="has_focus">True</property>
@@ -1601,7 +1702,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_iconlegend_close">
                 <property name="label">gtk-close</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1819,7 +1919,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_loglist_close">
                 <property name="label">gtk-close</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1905,7 +2004,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkButton" id="button_loglist_view">
                         <property name="label" translatable="yes">View log</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -1920,7 +2018,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkButton" id="button_loglist_del">
                         <property name="label">gtk-delete</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -1993,7 +2090,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_pkginfo_close">
                 <property name="label">gtk-close</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2298,7 +2394,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_pkginstallerror_log">
                 <property name="label" translatable="yes">View log</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2313,7 +2408,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_pkginstallerror_close">
                 <property name="label">gtk-close</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2404,7 +2498,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_pkglog_close">
                 <property name="label">gtk-close</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2475,7 +2568,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_prefs_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2491,7 +2583,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_prefs_apply">
                 <property name="label">gtk-apply</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2599,7 +2690,6 @@ Public License instead of this License.  But first, please read
                         <child>
                           <object class="GtkButton" id="button_source_add">
                             <property name="label">gtk-add</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
@@ -2615,7 +2705,6 @@ Public License instead of this License.  But first, please read
                         <child>
                           <object class="GtkButton" id="button_source_edit">
                             <property name="label">gtk-edit</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
@@ -2631,7 +2720,6 @@ Public License instead of this License.  But first, please read
                         <child>
                           <object class="GtkButton" id="button_source_del">
                             <property name="label">gtk-remove</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
@@ -2715,7 +2803,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkButton" id="button_clear_cache">
                         <property name="label" translatable="yes">Clear working directory</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -2768,7 +2855,6 @@ Public License instead of this License.  But first, please read
                 <child>
                   <object class="GtkCheckButton" id="checkbutton_prefs_deps">
                     <property name="label" translatable="yes">Resolve dependencies</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
@@ -2866,7 +2952,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_setoptions_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2882,7 +2967,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_setoptions_ok">
                 <property name="label">gtk-ok</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -2993,7 +3077,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_summary_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -3009,7 +3092,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_summary_apply">
                 <property name="label">gtk-ok</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -3162,6 +3244,7 @@ Public License instead of this License.  But first, please read
     <property name="title" translatable="yes">Working...</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
+    <property name="window_position">center-always</property>
     <property name="icon_name">sourcery</property>
     <property name="skip_taskbar_hint">True</property>
     <property name="skip_pager_hint">True</property>
@@ -3312,7 +3395,6 @@ Public License instead of this License.  But first, please read
     <child>
       <object class="GtkImageMenuItem" id="menuitem_pkg_unmark">
         <property name="label" translatable="yes">Unmark</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="tooltip_text" translatable="yes">Unmark</property>
@@ -3324,7 +3406,6 @@ Public License instead of this License.  But first, please read
     <child>
       <object class="GtkImageMenuItem" id="menuitem_pkg_install">
         <property name="label" translatable="yes">Install</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="tooltip_text" translatable="yes">Install</property>
@@ -3336,7 +3417,6 @@ Public License instead of this License.  But first, please read
     <child>
       <object class="GtkImageMenuItem" id="menuitem_pkg_reinstall">
         <property name="label" translatable="yes">Reinstall</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="tooltip_text" translatable="yes">Reinstall</property>
@@ -3348,7 +3428,6 @@ Public License instead of this License.  But first, please read
     <child>
       <object class="GtkImageMenuItem" id="menuitem_pkg_remove">
         <property name="label" translatable="yes">Remove</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="image">image8</property>
@@ -3359,7 +3438,6 @@ Public License instead of this License.  But first, please read
     <child>
       <object class="GtkImageMenuItem" id="menuitem_pkg_setoptions">
         <property name="label" translatable="yes">Set options</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="tooltip_text" translatable="yes">Set options</property>
@@ -3377,7 +3455,6 @@ Public License instead of this License.  But first, please read
     <child>
       <object class="GtkImageMenuItem" id="menuitem_pkg_getinfo">
         <property name="label" translatable="yes">Get information</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="image">image9</property>
@@ -3413,7 +3490,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_canceled_ok">
                 <property name="label">gtk-ok</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -3504,7 +3580,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_success_ok">
                 <property name="label">gtk-ok</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -3558,7 +3633,6 @@ Public License instead of this License.  But first, please read
             <child>
               <object class="GtkButton" id="button_updateerror_ok">
                 <property name="label">gtk-ok</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -3602,7 +3676,6 @@ Public License instead of this License.  But first, please read
             <property name="can_focus">False</property>
             <child>
               <object class="GtkMenuItem" id="menuitem_file">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_File</property>
@@ -3614,7 +3687,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_update">
                         <property name="label" translatable="yes">Update</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="tooltip_text" translatable="yes">Update local SlackBuild cache</property>
@@ -3627,7 +3699,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_exec">
                         <property name="label" translatable="yes">Execute</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">False</property>
@@ -3646,7 +3717,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem_exit">
                         <property name="label">gtk-quit</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
@@ -3661,7 +3731,6 @@ Public License instead of this License.  But first, please read
             </child>
             <child>
               <object class="GtkMenuItem" id="menuitem_edit">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_Edit</property>
@@ -3673,7 +3742,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_unmarkall">
                         <property name="label" translatable="yes">Unmark all</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">False</property>
@@ -3692,7 +3760,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_prefs">
                         <property name="label">gtk-preferences</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
@@ -3707,7 +3774,6 @@ Public License instead of this License.  But first, please read
             </child>
             <child>
               <object class="GtkMenuItem" id="menuitem_package">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_Package</property>
@@ -3719,7 +3785,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_unmark">
                         <property name="label" translatable="yes">Unmark</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="image">image13</property>
@@ -3731,7 +3796,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_install">
                         <property name="label" translatable="yes">Install</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">False</property>
@@ -3744,7 +3808,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_reinstall">
                         <property name="label" translatable="yes">Reinstall</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">False</property>
@@ -3757,7 +3820,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_remove">
                         <property name="label" translatable="yes">Remove</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">False</property>
@@ -3770,7 +3832,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_setoptions">
                         <property name="label" translatable="yes">Set options</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">False</property>
@@ -3789,7 +3850,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_getinfo">
                         <property name="label" translatable="yes">Get information</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">False</property>
@@ -3805,7 +3865,6 @@ Public License instead of this License.  But first, please read
             </child>
             <child>
               <object class="GtkMenuItem" id="menuitem_view">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_View</property>
@@ -3816,7 +3875,6 @@ Public License instead of this License.  But first, please read
                     <property name="can_focus">False</property>
                     <child>
                       <object class="GtkMenuItem" id="menuitem_logs">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">SlackBuild logs</property>
@@ -3831,7 +3889,6 @@ Public License instead of this License.  But first, please read
             </child>
             <child>
               <object class="GtkMenuItem" id="menuitem_help">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_Help</property>
@@ -3843,7 +3900,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_legend">
                         <property name="label" translatable="yes">Icon legend</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="image">image2</property>
@@ -3854,7 +3910,6 @@ Public License instead of this License.  But first, please read
                     <child>
                       <object class="GtkImageMenuItem" id="menuitem_about">
                         <property name="label">gtk-about</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
@@ -3879,7 +3934,6 @@ Public License instead of this License.  But first, please read
             <property name="can_focus">False</property>
             <child>
               <object class="GtkToolButton" id="toolbutton_update">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Update local SlackBuild cache</property>
@@ -3895,7 +3949,6 @@ Public License instead of this License.  But first, please read
             </child>
             <child>
               <object class="GtkToolButton" id="toolbutton_exec">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">False</property>
@@ -3922,7 +3975,6 @@ Public License instead of this License.  But first, please read
             </child>
             <child>
               <object class="GtkToolItem" id="toolbutton_space">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -3936,7 +3988,6 @@ Public License instead of this License.  But first, please read
             </child>
             <child>
               <object class="GtkToolItem" id="toolbutton2">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -3955,7 +4006,6 @@ Public License instead of this License.  But first, please read
             </child>
             <child>
               <object class="GtkToolItem" id="toolbutton3">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
