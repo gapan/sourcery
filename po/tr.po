@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-17 23:30+0300\n"
-"PO-Revision-Date: 2014-04-08 20:50+0000\n"
-"Last-Translator: Salih <sal.senturk@gmail.com>\n"
+"POT-Creation-Date: 2014-06-18 14:24+0300\n"
+"PO-Revision-Date: 2014-06-18 11:25+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/salix/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,209 +34,217 @@ msgstr "çevirmen-credits"
 msgid "Add SlackBuild source"
 msgstr "SlackBuild kaynağı ekle"
 
-#: src/sourcery.glade:794 src/sourcery.glade:1173
+#: src/sourcery.glade:792 src/sourcery.glade:1278
 msgid "SlackBuild source location:"
 msgstr ""
 
-#: src/sourcery.glade:837
+#: src/sourcery.glade:835
 msgid "Update SlackBuild Cache?"
 msgstr "SlackBuild Önbelleği Güncellensin mi?"
 
-#: src/sourcery.glade:876
+#: src/sourcery.glade:873
 msgid "Rebuild SlackBuild cache"
 msgstr "SlackBuild önbelleğini güncelle"
 
-#: src/sourcery.glade:902
+#: src/sourcery.glade:898
 msgid ""
 "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
 msgstr "Ayarlar değiştirildi. SlackBuikd önbelleğini güncellemek ister misiniz?"
 
-#: src/sourcery.glade:922
+#: src/sourcery.glade:918
 msgid "Updating..."
 msgstr "Güncelleniyor..."
 
-#: src/sourcery.glade:976
+#: src/sourcery.glade:971
 msgid "Updating SlackBuild cache..."
 msgstr "SlackBuild önbelleği güncelleniyor."
 
-#: src/sourcery.glade:1067
+#: src/sourcery.glade:1061
 msgid "Clearing working directory. Please wait..."
 msgstr "Çalışma dizini temizleniyor. Lütfen bekleyin..."
 
-#: src/sourcery.glade:1103
+#: src/sourcery.glade:1097
+msgid "Missing dependency"
+msgstr ""
+
+#: src/sourcery.glade:1136
+msgid "Try again"
+msgstr ""
+
+#: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
 msgstr "SlackBuild kaynağını düzenle"
 
-#: src/sourcery.glade:1216 src/sourcery.glade:2278
+#: src/sourcery.glade:1321 src/sourcery.glade:2374
 msgid "Error"
 msgstr "Hata"
 
-#: src/sourcery.glade:1283
+#: src/sourcery.glade:1387
 msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
 msgstr ""
 
-#: src/sourcery.glade:1309
+#: src/sourcery.glade:1413
 msgid "Progress"
 msgstr "Durum"
 
-#: src/sourcery.glade:1362
+#: src/sourcery.glade:1465
 msgid "Overall progress"
 msgstr ""
 
-#: src/sourcery.glade:1406
+#: src/sourcery.glade:1509
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
 msgstr ""
 
-#: src/sourcery.glade:1423
+#: src/sourcery.glade:1526
 msgid "Getting SlackBuild information"
 msgstr ""
 
-#: src/sourcery.glade:1445
+#: src/sourcery.glade:1548
 msgid "Downloading SlackBuild information. Please wait..."
 msgstr "SlackBuild bilgileri indiriliyor.Litfen bekleyin..."
 
-#: src/sourcery.glade:1472
+#: src/sourcery.glade:1575
 msgid "First run"
 msgstr "İlk çalıştırma"
 
-#: src/sourcery.glade:1510
+#: src/sourcery.glade:1612
 msgid "Create SlackBuild cache"
 msgstr "SlackBuild önbelleği yarat"
 
-#: src/sourcery.glade:1558
+#: src/sourcery.glade:1659
 msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
 msgstr ""
 
-#: src/sourcery.glade:1584 src/sourcery.glade:3845
+#: src/sourcery.glade:1685 src/sourcery.glade:3902
 msgid "Icon legend"
 msgstr ""
 
-#: src/sourcery.glade:1634
+#: src/sourcery.glade:1734
 msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
 msgstr ""
 
-#: src/sourcery.glade:1657
+#: src/sourcery.glade:1757
 msgid "Not installed"
 msgstr "Kurulamadı"
 
-#: src/sourcery.glade:1670
+#: src/sourcery.glade:1770
 msgid "A package with this name is already installed"
 msgstr "Bu isimdeki paket zaten yüklenmiş"
 
-#: src/sourcery.glade:1685
+#: src/sourcery.glade:1785
 msgid "The package is going to be installed"
 msgstr "Bu paket yüklenecek"
 
-#: src/sourcery.glade:1700
+#: src/sourcery.glade:1800
 msgid ""
 "A package with this name is already installed and is going to be reinstalled"
 msgstr "Bu isimdeki paket zaten yüklenmiş ve şimdi yeniden yüklenecek"
 
-#: src/sourcery.glade:1715
+#: src/sourcery.glade:1815
 msgid "The package is going to be removed"
 msgstr "Bu paket kaldırılacak"
 
-#: src/sourcery.glade:1800 src/sourcery.glade:3822
+#: src/sourcery.glade:1900 src/sourcery.glade:3880
 msgid "SlackBuild logs"
 msgstr "SlackBuild logları"
 
-#: src/sourcery.glade:1907 src/sourcery.glade:2300
+#: src/sourcery.glade:2006 src/sourcery.glade:2396
 msgid "View log"
 msgstr "Kayıtları görüntüle"
 
-#: src/sourcery.glade:2035
+#: src/sourcery.glade:2131
 msgid "<b>Name:</b>"
 msgstr "<b>İsim:</b>"
 
-#: src/sourcery.glade:2044
+#: src/sourcery.glade:2140
 msgid "<b>Version:</b>"
 msgstr "<b>Sürüm:</b>"
 
-#: src/sourcery.glade:2057
+#: src/sourcery.glade:2153
 msgid "<b>Source:</b>"
 msgstr "<b>Kaynak:</b>"
 
-#: src/sourcery.glade:2071
+#: src/sourcery.glade:2167
 msgid "<b>Files:</b>"
 msgstr "<b>Dosyalar:</b>"
 
-#: src/sourcery.glade:2084
+#: src/sourcery.glade:2180
 msgid "<b>Location:</b>"
 msgstr "<b>Konum:</b>"
 
-#: src/sourcery.glade:2152
+#: src/sourcery.glade:2248
 msgid "<b>Dependencies:</b>"
 msgstr "<b>Bağımlılıklar:</b>"
 
-#: src/sourcery.glade:2197
+#: src/sourcery.glade:2293
 msgid "General information"
 msgstr "Genel bilgiler"
 
-#: src/sourcery.glade:2223 src/sourcery:1200
+#: src/sourcery.glade:2319 src/sourcery:1227
 msgid "Description"
 msgstr "Açıklama"
 
-#: src/sourcery.glade:2255
+#: src/sourcery.glade:2351
 msgid "README file"
 msgstr "BENİOKU dosyası"
 
-#: src/sourcery.glade:2459
+#: src/sourcery.glade:2552
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: src/sourcery.glade:2528
+#: src/sourcery.glade:2619
 msgid "<b>SlackBuild Sources</b>"
 msgstr "<b>SlackBuild Kaynakları</b>"
 
-#: src/sourcery.glade:2543
+#: src/sourcery.glade:2634
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
 msgstr ""
 
-#: src/sourcery.glade:2668
+#: src/sourcery.glade:2756
 msgid "Sources"
 msgstr "Kaynaklar"
 
-#: src/sourcery.glade:2688
+#: src/sourcery.glade:2776
 msgid "<b>Source and package storage</b>"
 msgstr ""
 
-#: src/sourcery.glade:2717
+#: src/sourcery.glade:2805
 msgid "Clear working directory"
 msgstr "Çalışma dizinini temizle"
 
-#: src/sourcery.glade:2757
+#: src/sourcery.glade:2844
 msgid "Working Directory"
 msgstr "Çalışma Dizini"
 
-#: src/sourcery.glade:2770
+#: src/sourcery.glade:2857
 msgid "Resolve dependencies"
 msgstr "Bağımlılıkları çözümle"
 
-#: src/sourcery.glade:2789
+#: src/sourcery.glade:2875
 msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
 msgstr ""
 
-#: src/sourcery.glade:2821
+#: src/sourcery.glade:2907
 msgid "Dependencies"
 msgstr "Gereksinimler"
 
-#: src/sourcery.glade:2916
+#: src/sourcery.glade:3000
 msgid ""
 "You may set any extra options the SlackBuild accepts here. Consult each "
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
@@ -244,197 +252,206 @@ msgid ""
 "e.g.:"
 msgstr ""
 
-#: src/sourcery.glade:2971
+#: src/sourcery.glade:3055
 msgid "Pending tasks"
 msgstr "Bekletilen işlemler"
 
-#: src/sourcery.glade:3067
+#: src/sourcery.glade:3149
 msgid "<b>Execute the following tasks?</b>"
 msgstr ""
 
-#: src/sourcery.glade:3081
+#: src/sourcery.glade:3163
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
 msgstr ""
 
-#: src/sourcery.glade:3162
+#: src/sourcery.glade:3244
 msgid "Working..."
 msgstr "Çalışıyor..."
 
-#: src/sourcery.glade:3176
+#: src/sourcery.glade:3259
 msgid "Please wait."
 msgstr "Lütfen bekleyin."
 
-#: src/sourcery.glade:3314 src/sourcery.glade:3318 src/sourcery.glade:3721
+#: src/sourcery.glade:3397 src/sourcery.glade:3400 src/sourcery.glade:3787
 msgid "Unmark"
 msgstr "İşareti kaldır"
 
-#: src/sourcery.glade:3326 src/sourcery.glade:3330 src/sourcery.glade:3733
+#: src/sourcery.glade:3408 src/sourcery.glade:3411 src/sourcery.glade:3798
 msgid "Install"
 msgstr "Kur"
 
-#: src/sourcery.glade:3338 src/sourcery.glade:3342 src/sourcery.glade:3746
+#: src/sourcery.glade:3419 src/sourcery.glade:3422 src/sourcery.glade:3810
 msgid "Reinstall"
 msgstr "Yeniden kur"
 
-#: src/sourcery.glade:3350 src/sourcery.glade:3759
+#: src/sourcery.glade:3430 src/sourcery.glade:3822
 msgid "Remove"
 msgstr "Kaldır"
 
-#: src/sourcery.glade:3361 src/sourcery.glade:3365 src/sourcery.glade:3772
+#: src/sourcery.glade:3440 src/sourcery.glade:3443 src/sourcery.glade:3834
 msgid "Set options"
 msgstr ""
 
-#: src/sourcery.glade:3379 src/sourcery.glade:3791
+#: src/sourcery.glade:3457 src/sourcery.glade:3852
 msgid "Get information"
 msgstr "Bilgi alın"
 
-#: src/sourcery.glade:3392
+#: src/sourcery.glade:3469
 msgid "Canceled"
 msgstr "İptal edildi"
 
-#: src/sourcery.glade:3401
+#: src/sourcery.glade:3478
 msgid "Canceled. Some tasks may have already been completed."
 msgstr ""
 
-#: src/sourcery.glade:3446
+#: src/sourcery.glade:3522
 msgid "Error parsing options"
 msgstr ""
 
-#: src/sourcery.glade:3455
+#: src/sourcery.glade:3531
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
 msgstr ""
 
-#: src/sourcery.glade:3482
+#: src/sourcery.glade:3558
 msgid "Completed tasks"
 msgstr "Tamamlanan işlemler"
 
-#: src/sourcery.glade:3492
+#: src/sourcery.glade:3568
 msgid "All tasks have been executed succesfully."
 msgstr ""
 
-#: src/sourcery.glade:3546
+#: src/sourcery.glade:3621
 msgid "Error updating package list."
 msgstr "Paket listesi güncellemesinde hata var."
 
-#: src/sourcery.glade:3608
+#: src/sourcery.glade:3681
 msgid "_File"
 msgstr "_Dosya"
 
-#: src/sourcery.glade:3616 src/sourcery.glade:3886
+#: src/sourcery.glade:3689 src/sourcery.glade:3940
 msgid "Update"
 msgstr "Güncelle"
 
-#: src/sourcery.glade:3620 src/sourcery.glade:3885
+#: src/sourcery.glade:3692 src/sourcery.glade:3939
 msgid "Update local SlackBuild cache"
 msgstr "SlackBuild önbelleğini güncelle"
 
-#: src/sourcery.glade:3629 src/sourcery.glade:3903
+#: src/sourcery.glade:3701 src/sourcery.glade:3956
 msgid "Execute"
 msgstr "Çalıştır"
 
-#: src/sourcery.glade:3667
+#: src/sourcery.glade:3736
 msgid "_Edit"
 msgstr "_Düzenle"
 
-#: src/sourcery.glade:3675
+#: src/sourcery.glade:3744
 msgid "Unmark all"
 msgstr "Hepsinin işaretini kaldır"
 
-#: src/sourcery.glade:3713
+#: src/sourcery.glade:3779
 msgid "_Package"
 msgstr "_Paket"
 
-#: src/sourcery.glade:3811
+#: src/sourcery.glade:3870
 msgid "_View"
 msgstr "_Görüntüle"
 
-#: src/sourcery.glade:3837
+#: src/sourcery.glade:3894
 msgid "_Help"
 msgstr "_Yardım"
 
-#: src/sourcery.glade:3902
+#: src/sourcery.glade:3955
 msgid "Execute pending actions"
 msgstr ""
 
-#: src/sourcery.glade:3947
+#: src/sourcery.glade:3998
 msgid "Search: "
 msgstr "Arama:"
 
-#: src/sourcery:139
+#: src/sourcery:142
 msgid "No SlackBuilds found"
 msgstr ""
 
-#: src/sourcery:141
+#: src/sourcery:144
 msgid "One SlackBuild found"
 msgstr ""
 
-#: src/sourcery:143
+#: src/sourcery:146
 #, python-format
 msgid "%(num)i SlackBuilds found"
 msgstr ""
 
-#: src/sourcery:147
+#: src/sourcery:150
 msgid "Could not retrieve SlackBuild data"
 msgstr "SlackBuild verileri alınamadı"
 
-#: src/sourcery:342
+#: src/sourcery:354
 msgid "SlackBuild information for"
 msgstr ""
 
-#: src/sourcery:350 src/sourcery:357
+#: src/sourcery:362 src/sourcery:369
 msgid "Not available."
 msgstr "Kullanılamaz"
 
-#: src/sourcery:407
+#: src/sourcery:422
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
 msgstr "%(pkg)s %(pkgver)s paketleri bağımlılık olarak yüklenecek"
 
-#: src/sourcery:417
+#: src/sourcery:432
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
 msgstr "%(pkg)s %(pkgver)s paketleri yüklenecek"
 
-#: src/sourcery:419
+#: src/sourcery:434
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
 msgstr "%(pkg)s %(pkgver)s paketleri yeniden yüklenecek"
 
-#: src/sourcery:421
+#: src/sourcery:436
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
 msgstr "%(pkg)s %(pkgver)s paketleri kaldırılacak"
 
-#: src/sourcery:569 src/sourcery:1193
+#: src/sourcery:441
+#, python-format
+msgid ""
+"%(d)s appears to be a missing dependency and it is not available as a "
+"SlackBuild. Install it with GSlapt and try again. If you cannot find a "
+"package in GSlapt, you might have to disable dependencies or do some manual "
+"tweaking."
+msgstr ""
+
+#: src/sourcery:588 src/sourcery:1220
 msgid "Status"
 msgstr "Durum"
 
-#: src/sourcery:632
+#: src/sourcery:651
 #, python-format
 msgid "Set options for %(pkg)s %(ver)s"
 msgstr ""
 
-#: src/sourcery:803 src/sourcery:929 src/sourcery:979
+#: src/sourcery:819 src/sourcery:945 src/sourcery:995
 msgid "Build log for"
 msgstr ""
 
-#: src/sourcery:851 src/sourcery:859
+#: src/sourcery:867 src/sourcery:875
 msgid "Downloading source files for"
 msgstr "için kaynak dosyaları indiriliyor"
 
-#: src/sourcery:856 src/sourcery:864
+#: src/sourcery:872 src/sourcery:880
 msgid "Compiling"
 msgstr "Derleniyor"
 
-#: src/sourcery:867
+#: src/sourcery:883
 msgid "Removing"
 msgstr "Kaldırılıyor"
 
-#: src/sourcery:887
+#: src/sourcery:903
 #, python-format
 msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
@@ -442,26 +459,26 @@ msgid ""
 "any errors during compiling."
 msgstr ""
 
-#: src/sourcery:894
+#: src/sourcery:910
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
 msgstr ""
 
-#: src/sourcery:939
+#: src/sourcery:955
 msgid "Not available"
 msgstr "Kullanılamaz"
 
-#: src/sourcery:990
+#: src/sourcery:1006
 msgid "Error reading log file."
 msgstr "Log dosyası okunamıyor"
 
-#: src/sourcery:1196 src/sourcery:1355
+#: src/sourcery:1223 src/sourcery:1390
 msgid "Name"
 msgstr "İsim"
 
-#: src/sourcery:1198 src/sourcery:1356
+#: src/sourcery:1225 src/sourcery:1391
 msgid "Version"
 msgstr "Versiyon"
 

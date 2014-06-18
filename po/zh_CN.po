@@ -3,63 +3,62 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Arian - Cazare Muncitori <arianserv@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-06-18 11:25+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
-"Language-Team: Romanian (Romania) (http://www.transifex.com/projects/p/salix/language/ro_RO/)\n"
+"PO-Revision-Date: 2011-01-11 17:09+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/salix/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ro_RO\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/sourcery.glade:18
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr "O interfaţă grafică pentru slapt-src, un utilitar pentru a construi şi instala pachete, din sursă, folosind SlackBuilds şi/sau SLKBUILD."
+msgstr ""
 
 #: src/sourcery.glade:696
 msgid "translator-credits"
-msgstr "creditare-translatori"
+msgstr ""
 
 #: src/sourcery.glade:724
 msgid "Add SlackBuild source"
-msgstr "Adăugare sursă SlackBuild"
+msgstr ""
 
 #: src/sourcery.glade:792 src/sourcery.glade:1278
 msgid "SlackBuild source location:"
-msgstr "Locaţie sursă SlackBuild:"
+msgstr ""
 
 #: src/sourcery.glade:835
 msgid "Update SlackBuild Cache?"
-msgstr "Actualizare Cache SlackBuild?"
+msgstr ""
 
 #: src/sourcery.glade:873
 msgid "Rebuild SlackBuild cache"
-msgstr "Reconstruire cache SlackBuild"
+msgstr ""
 
 #: src/sourcery.glade:898
 msgid ""
 "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
-msgstr "Configurarea s-a modificat. Doriţi reconstruirea Slackbuild Cache?"
+msgstr ""
 
 #: src/sourcery.glade:918
 msgid "Updating..."
-msgstr "Actualizare..."
+msgstr ""
 
 #: src/sourcery.glade:971
 msgid "Updating SlackBuild cache..."
-msgstr "Actualizare cache SlackBuild..."
+msgstr ""
 
 #: src/sourcery.glade:1061
 msgid "Clearing working directory. Please wait..."
-msgstr "Curăţare director de lucru. Vă rugăm, aşteptaţi..."
+msgstr ""
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
@@ -71,176 +70,176 @@ msgstr ""
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
-msgstr "Editare sursă SlackBuild"
+msgstr ""
 
 #: src/sourcery.glade:1321 src/sourcery.glade:2374
 msgid "Error"
-msgstr "Eroare"
+msgstr ""
 
 #: src/sourcery.glade:1387
 msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr "A apărut o eroare la actulaizarea cache SlackBuild. Asiguraţi-vă că aţi configurat, toate sursele, cum trebuie, şi că dispuneţi de o conexiune de internet, funcţională."
+msgstr ""
 
 #: src/sourcery.glade:1413
 msgid "Progress"
-msgstr "Progres"
+msgstr ""
 
 #: src/sourcery.glade:1465
 msgid "Overall progress"
-msgstr "Progres general"
+msgstr ""
 
 #: src/sourcery.glade:1509
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr "Vă rugăm aşteptaţi. Poate dura o vreme. Timpul de procesare variează, în funcţie de dimensiunea şi complexitatea programului, de la câteva secunde la câteva ore..."
+msgstr ""
 
 #: src/sourcery.glade:1526
 msgid "Getting SlackBuild information"
-msgstr "Obţinere infomaţii SlackBuild"
+msgstr ""
 
 #: src/sourcery.glade:1548
 msgid "Downloading SlackBuild information. Please wait..."
-msgstr "Descărcare informaţii SlackBuild. Vă rugăm aşteptaţi..."
+msgstr ""
 
 #: src/sourcery.glade:1575
 msgid "First run"
-msgstr "Prima pornire"
+msgstr ""
 
 #: src/sourcery.glade:1612
 msgid "Create SlackBuild cache"
-msgstr "Creare cache SlackBuild"
+msgstr ""
 
 #: src/sourcery.glade:1659
 msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr "Se pare că aceas este prima lansare a Sourcery. Cache-ul SlackBuild trebuie creat înainte ca Sourcery să fie util. Aveşi nevoie de o conexiune internet funcţională pentru a crea SlackBuild cache."
+msgstr ""
 
 #: src/sourcery.glade:1685 src/sourcery.glade:3902
 msgid "Icon legend"
-msgstr "Legendă pictogramă"
+msgstr ""
 
 #: src/sourcery.glade:1734
 msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
-msgstr "<b>Următoarele pictograme sunt folosite la indicare statusului curent a SlackBuild:</b>"
+msgstr ""
 
 #: src/sourcery.glade:1757
 msgid "Not installed"
-msgstr "Neinstalate"
+msgstr ""
 
 #: src/sourcery.glade:1770
 msgid "A package with this name is already installed"
-msgstr "Un pachet cu acest nume este deja instalat"
+msgstr ""
 
 #: src/sourcery.glade:1785
 msgid "The package is going to be installed"
-msgstr "Pachetul va fi instalat"
+msgstr ""
 
 #: src/sourcery.glade:1800
 msgid ""
 "A package with this name is already installed and is going to be reinstalled"
-msgstr "Un pachet cu acest nume, este deja instalat şi este pe cale să fie reinstalat"
+msgstr ""
 
 #: src/sourcery.glade:1815
 msgid "The package is going to be removed"
-msgstr "Pachetul va fi eliminat"
+msgstr ""
 
 #: src/sourcery.glade:1900 src/sourcery.glade:3880
 msgid "SlackBuild logs"
-msgstr "Jurnal SlackBuild"
+msgstr ""
 
 #: src/sourcery.glade:2006 src/sourcery.glade:2396
 msgid "View log"
-msgstr "Vizualizare jurnal"
+msgstr ""
 
 #: src/sourcery.glade:2131
 msgid "<b>Name:</b>"
-msgstr "<b>Nume:</b>"
+msgstr ""
 
 #: src/sourcery.glade:2140
 msgid "<b>Version:</b>"
-msgstr "<b>Versiune:</b>"
+msgstr ""
 
 #: src/sourcery.glade:2153
 msgid "<b>Source:</b>"
-msgstr "<b>Soursă:</b>"
+msgstr ""
 
 #: src/sourcery.glade:2167
 msgid "<b>Files:</b>"
-msgstr "<b>Fişiere:</b>"
+msgstr ""
 
 #: src/sourcery.glade:2180
 msgid "<b>Location:</b>"
-msgstr "<b>Localizare:</b>"
+msgstr ""
 
 #: src/sourcery.glade:2248
 msgid "<b>Dependencies:</b>"
-msgstr "<b>Dependinţe:</b>"
+msgstr ""
 
 #: src/sourcery.glade:2293
 msgid "General information"
-msgstr "Informaţii Generale"
+msgstr ""
 
 #: src/sourcery.glade:2319 src/sourcery:1227
 msgid "Description"
-msgstr "Descriere"
+msgstr ""
 
 #: src/sourcery.glade:2351
 msgid "README file"
-msgstr "Fișier README"
+msgstr ""
 
 #: src/sourcery.glade:2552
 msgid "Preferences"
-msgstr "Preferinţe"
+msgstr ""
 
 #: src/sourcery.glade:2619
 msgid "<b>SlackBuild Sources</b>"
-msgstr "<b>Surse SlackBuild</b>"
+msgstr ""
 
 #: src/sourcery.glade:2634
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
-msgstr "<i>Sursele mai apropiate de partea de sus, au o prioritate mai mare. Puteţi rearanja ordinea, prin tragere</i>"
+msgstr ""
 
 #: src/sourcery.glade:2756
 msgid "Sources"
-msgstr "Surse"
+msgstr ""
 
 #: src/sourcery.glade:2776
 msgid "<b>Source and package storage</b>"
-msgstr "<b>Stocare surse şi pachete</b>"
+msgstr ""
 
 #: src/sourcery.glade:2805
 msgid "Clear working directory"
-msgstr "Curăţare director de lucru"
+msgstr ""
 
 #: src/sourcery.glade:2844
 msgid "Working Directory"
-msgstr "Director de Lucru"
+msgstr ""
 
 #: src/sourcery.glade:2857
 msgid "Resolve dependencies"
-msgstr "Rezolvare dependinţe"
+msgstr ""
 
 #: src/sourcery.glade:2875
 msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr "Rezoluţia dependenşei este disponibilă doar pentru arhivele ce suportă acest lucru. SlackBuilds de la SlackBuilds.org nu includ nici-o informaţie despre dependinţe."
+msgstr ""
 
 #: src/sourcery.glade:2907
 msgid "Dependencies"
-msgstr "Dependinţe"
+msgstr ""
 
 #: src/sourcery.glade:3000
 msgid ""
@@ -248,172 +247,172 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr "Puteţi stabili orice opţiune suplimentară acceptată aici de către SlackBuild. Consultaţi fiecare fişier README din SlackBuld, pentru o listî cu aceste opţiuni. Spaţiile nu sunt permise în cadrul numelor de opţiuni, sau pentru definiţii. Opţiunile ar trebui să fie separate de spaţii, ex:"
+msgstr ""
 
 #: src/sourcery.glade:3055
 msgid "Pending tasks"
-msgstr "Sarcini în așteptare"
+msgstr ""
 
 #: src/sourcery.glade:3149
 msgid "<b>Execute the following tasks?</b>"
-msgstr "<b>Se execută următoarele sarcini?</b>"
+msgstr ""
 
 #: src/sourcery.glade:3163
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
-msgstr "Următoarele sarcini vor fi executate. Puteţi rearănja ordine procesării, trăgând itemii din listă."
+msgstr ""
 
 #: src/sourcery.glade:3244
 msgid "Working..."
-msgstr "Se lucrează..."
+msgstr ""
 
 #: src/sourcery.glade:3259
 msgid "Please wait."
-msgstr "Vă rugăm, aşteptaţi."
+msgstr ""
 
 #: src/sourcery.glade:3397 src/sourcery.glade:3400 src/sourcery.glade:3787
 msgid "Unmark"
-msgstr "Debifare"
+msgstr ""
 
 #: src/sourcery.glade:3408 src/sourcery.glade:3411 src/sourcery.glade:3798
 msgid "Install"
-msgstr "Instalare"
+msgstr ""
 
 #: src/sourcery.glade:3419 src/sourcery.glade:3422 src/sourcery.glade:3810
 msgid "Reinstall"
-msgstr "Reinstalare"
+msgstr ""
 
 #: src/sourcery.glade:3430 src/sourcery.glade:3822
 msgid "Remove"
-msgstr "Eliminare"
+msgstr ""
 
 #: src/sourcery.glade:3440 src/sourcery.glade:3443 src/sourcery.glade:3834
 msgid "Set options"
-msgstr "Stabilire opţiuni"
+msgstr ""
 
 #: src/sourcery.glade:3457 src/sourcery.glade:3852
 msgid "Get information"
-msgstr "Obţinere informaţii"
+msgstr ""
 
 #: src/sourcery.glade:3469
 msgid "Canceled"
-msgstr "Anulate"
+msgstr ""
 
 #: src/sourcery.glade:3478
 msgid "Canceled. Some tasks may have already been completed."
-msgstr "Anulate. Anumite sarcini ar pute fi deja efectuate."
+msgstr ""
 
 #: src/sourcery.glade:3522
 msgid "Error parsing options"
-msgstr "Eroare la analizare opţiuni"
+msgstr ""
 
 #: src/sourcery.glade:3531
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr "A apărut o eroare ăn timpul analizer opţiunilor. Vă rugăm să vă asigurăm că le-aţi introdus corect."
+msgstr ""
 
 #: src/sourcery.glade:3558
 msgid "Completed tasks"
-msgstr "Sarcini finalizate"
+msgstr ""
 
 #: src/sourcery.glade:3568
 msgid "All tasks have been executed succesfully."
-msgstr "Toate sarcinile au fost executate cu succes."
+msgstr ""
 
 #: src/sourcery.glade:3621
 msgid "Error updating package list."
-msgstr "Eraore la actulaizarea listei de pachete."
+msgstr ""
 
 #: src/sourcery.glade:3681
 msgid "_File"
-msgstr "_Fşier"
+msgstr ""
 
 #: src/sourcery.glade:3689 src/sourcery.glade:3940
 msgid "Update"
-msgstr "Actualizare"
+msgstr ""
 
 #: src/sourcery.glade:3692 src/sourcery.glade:3939
 msgid "Update local SlackBuild cache"
-msgstr "Actualizare cache local SlackBuild"
+msgstr ""
 
 #: src/sourcery.glade:3701 src/sourcery.glade:3956
 msgid "Execute"
-msgstr "Executare"
+msgstr ""
 
 #: src/sourcery.glade:3736
 msgid "_Edit"
-msgstr "_Editare"
+msgstr ""
 
 #: src/sourcery.glade:3744
 msgid "Unmark all"
-msgstr "Debifare tot"
+msgstr ""
 
 #: src/sourcery.glade:3779
 msgid "_Package"
-msgstr "_Pachet"
+msgstr ""
 
 #: src/sourcery.glade:3870
 msgid "_View"
-msgstr "_Vizualizare"
+msgstr ""
 
 #: src/sourcery.glade:3894
 msgid "_Help"
-msgstr "_Ajutor"
+msgstr ""
 
 #: src/sourcery.glade:3955
 msgid "Execute pending actions"
-msgstr "Executare acțiuni în așteptare"
+msgstr ""
 
 #: src/sourcery.glade:3998
 msgid "Search: "
-msgstr "Căutare:"
+msgstr ""
 
 #: src/sourcery:142
 msgid "No SlackBuilds found"
-msgstr "Nici-un SlackBuild găsit"
+msgstr ""
 
 #: src/sourcery:144
 msgid "One SlackBuild found"
-msgstr "Un SlackBuild găsit"
+msgstr ""
 
 #: src/sourcery:146
 #, python-format
 msgid "%(num)i SlackBuilds found"
-msgstr "%(num)i SlackBuild găsite"
+msgstr ""
 
 #: src/sourcery:150
 msgid "Could not retrieve SlackBuild data"
-msgstr "Nu se pot repera datele SlackBuild"
+msgstr ""
 
 #: src/sourcery:354
 msgid "SlackBuild information for"
-msgstr "Informaţii SlackBuild pentru"
+msgstr ""
 
 #: src/sourcery:362 src/sourcery:369
 msgid "Not available."
-msgstr "Indisponibil."
+msgstr ""
 
 #: src/sourcery:422
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
-msgstr "%(pkg)s %(pkgver)s va fi instalat ca şi dependinţă"
+msgstr ""
 
 #: src/sourcery:432
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
-msgstr "%(pkg)s %(pkgver)s urmeză să fie instalat"
+msgstr ""
 
 #: src/sourcery:434
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
-msgstr "%(pkg)s %(pkgver)s urmeză să fie instalat"
+msgstr ""
 
 #: src/sourcery:436
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
-msgstr "%(pkg)s %(pkgver)s urmeză să fie eliminat"
+msgstr ""
 
 #: src/sourcery:441
 #, python-format
@@ -426,28 +425,28 @@ msgstr ""
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"
-msgstr "Status"
+msgstr ""
 
 #: src/sourcery:651
 #, python-format
 msgid "Set options for %(pkg)s %(ver)s"
-msgstr "Stabilire opţiuni pentru %(pkg)s %(ver)s"
+msgstr ""
 
 #: src/sourcery:819 src/sourcery:945 src/sourcery:995
 msgid "Build log for"
-msgstr "Jurnal construire pentru"
+msgstr ""
 
 #: src/sourcery:867 src/sourcery:875
 msgid "Downloading source files for"
-msgstr "Se descarcă fişiere sursă pentru"
+msgstr ""
 
 #: src/sourcery:872 src/sourcery:880
 msgid "Compiling"
-msgstr "Compilare"
+msgstr ""
 
 #: src/sourcery:883
 msgid "Removing"
-msgstr "Eliminare"
+msgstr ""
 
 #: src/sourcery:903
 #, python-format
@@ -455,35 +454,35 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr "A apărut o eroare în timpul compilării fişierelor sursă pentru %(pkg)s %(pkgver)s. Toate acțiunile în așteptare vor fi eliminate din lista de prelucrare. Puteţi consulta fişierul jurnal pentru fiecare eroare apărută în timpul compilării. "
+msgstr ""
 
 #: src/sourcery:910
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr "A apărut o eroare în timpul descărcării fişierelor sursă pentru %(pkg)s %(pkgver)s. Toate acțiunile în așteptare vor fi eliminate din lista de prelucrare. Puteţi consulta fişierul jurnal pentru fiecare eroare apărută în timpul compilării. "
+msgstr ""
 
 #: src/sourcery:955
 msgid "Not available"
-msgstr "Indisponibil"
+msgstr ""
 
 #: src/sourcery:1006
 msgid "Error reading log file."
-msgstr "Eroare la citirea fişierului jurnal."
+msgstr ""
 
 #: src/sourcery:1223 src/sourcery:1390
 msgid "Name"
-msgstr "Nume"
+msgstr ""
 
 #: src/sourcery:1225 src/sourcery:1391
 msgid "Version"
-msgstr "Versiune"
+msgstr ""
 
 #: sourcery.desktop.in.h:1 sourcery-kde.desktop.in.h:1
 msgid "Sourcery SlackBuild Manager"
-msgstr "Sourcery SlackBuild Manager"
+msgstr ""
 
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "A graphical frontend to slapt-src"
-msgstr "O interfaţă grafică pentru slapt-src"
+msgstr ""
