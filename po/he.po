@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# GenghisKhan <genghiskhan@gmx.ca>, 2013
+# GenghisKhan <genghiskhan@gmx.ca>, 2013-2014
 # GenghisKhan <genghiskhan@gmx.ca>, 2012
 # GenghisKhan <genghiskhan@gmx.ca>, 2012
 msgid ""
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-06-18 11:25+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2014-06-18 17:20+0000\n"
+"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/salix/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,15 +61,15 @@ msgstr "מעדכן כעת מטמון ‫SlackBuild..."
 
 #: src/sourcery.glade:1061
 msgid "Clearing working directory. Please wait..."
-msgstr "מטהר כעת מדור העבודה, אנא המתן..."
+msgstr "מטהר כעת ספריית עבודה, אנא המתן..."
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
-msgstr ""
+msgstr "תלות חסרה"
 
 #: src/sourcery.glade:1136
 msgid "Try again"
-msgstr ""
+msgstr "נסה שוב"
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
@@ -84,7 +84,7 @@ msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr "ארעה שגיאה במהלך עדכון מטמון SlackBuild. וודא שכל המקורות הוגדרו כראוי ושלרשותך עומד חיבור אינטרנט זמין."
+msgstr "אירעה שגיאה במהלך עדכון מטמון SlackBuild. ודא כי הגדרת את כל המקורות כראוי ושלרשותך עומד חיבור אינטרנט זמין."
 
 #: src/sourcery.glade:1413
 msgid "Progress"
@@ -99,7 +99,7 @@ msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr "נא להיעזר בסבלנות. תהליך זה צפוי להימשך זמן מה. קצב\nהעיבוד משתנה והינו תלוי בגודלה ובמורכבותה של התוכנה.\nתהליך זה עשוי לנוע בין מספר שניות לבין מספר שעות..."
+msgstr "אנא המתן. תהליך זה צפוי להימשך זמן מה. קצב עיבוד\nמשתנה והינו תלוי בגודלה ובמורכבותה של התוכנה.\nתהליך זה עשוי לנוע בין מספר שניות לבין מספר שעות..."
 
 #: src/sourcery.glade:1526
 msgid "Getting SlackBuild information"
@@ -122,7 +122,7 @@ msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr "נראה שזו הפעם הראשונה שהיישום Sourcery הופעל. לפני שהיישום Sourcery יהפוך להיות שימושי, יש צורך ליצור מטמון תסריטי SlackBuild. וודא שקיים חיבור אינטרנט זמין על מנת שיהיה ניתן ליצור מטמון SlackBuild."
+msgstr "נראה כי זוהי הפעם הראשונה שהיישום Sourcery מופעל. לפני שהיישום Sourcery יהפוך להיות שימושי, יש צורך ליצור מטמון תסריטי SlackBuild. ודא כי קיים חיבור אינטרנט זמין על מנת שיהיה ניתן ליצור מטמון SlackBuild."
 
 #: src/sourcery.glade:1685 src/sourcery.glade:3902
 msgid "Icon legend"
@@ -223,11 +223,11 @@ msgstr "<b>אחסון מקורות וחבילות</b>"
 
 #: src/sourcery.glade:2805
 msgid "Clear working directory"
-msgstr "טהר מדור עבודה"
+msgstr "טהר ספריית עבודה"
 
 #: src/sourcery.glade:2844
 msgid "Working Directory"
-msgstr "מדור עבודה"
+msgstr "ספריית עבודה"
 
 #: src/sourcery.glade:2857
 msgid "Resolve dependencies"
@@ -276,7 +276,7 @@ msgstr "אנא המתן."
 
 #: src/sourcery.glade:3397 src/sourcery.glade:3400 src/sourcery.glade:3787
 msgid "Unmark"
-msgstr "אי־סימון"
+msgstr "בטל סימון"
 
 #: src/sourcery.glade:3408 src/sourcery.glade:3411 src/sourcery.glade:3798
 msgid "Install"
@@ -304,7 +304,7 @@ msgstr "תהליך ההתקנה בוטל"
 
 #: src/sourcery.glade:3478
 msgid "Canceled. Some tasks may have already been completed."
-msgstr "הפעולות בוטלו. ייתכן שמשימות מסוימות כבר הושלמו."
+msgstr "הפעולות בוטלו. יתכן כי משימות מסוימות כבר הושלמו."
 
 #: src/sourcery.glade:3522
 msgid "Error parsing options"
@@ -350,7 +350,7 @@ msgstr "ע_ריכה"
 
 #: src/sourcery.glade:3744
 msgid "Unmark all"
-msgstr "אי־סימון הכל"
+msgstr "בטל סימון מוחלט"
 
 #: src/sourcery.glade:3779
 msgid "_Package"
@@ -424,7 +424,7 @@ msgid ""
 "SlackBuild. Install it with GSlapt and try again. If you cannot find a "
 "package in GSlapt, you might have to disable dependencies or do some manual "
 "tweaking."
-msgstr ""
+msgstr "נראה כי %(d)s מהווה תלות חסרה וזו אינה זמינה בתור SlackBuild. התקן אותה בעזרת GSlapt ונסה שוב. אם אין ביכולתך למצוא חבילה בתוך GSlapt, ייתכן כי נטרלת תלויות או שעשית התאמה ידנית כלשהי."
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"
@@ -457,14 +457,14 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr "ארעה שגיאה במהלך ההדרת %(pkg)s %(pkgver)s. כל הפעולות התלויות ועומדות ינוקו מתוך תור העיבוד. ביכולתך לבחון את קובץ היומן עבור שגיאות בעת תהליך ההדרה."
+msgstr "אירעה שגיאה במהלך הדרת %(pkg)s %(pkgver)s. כל הפעולות התלויות ועומדות ינוקו מתוך תור העיבוד. באפשרותך לבחון את קובץ היומן עבור שגיאות בעת תהליך ההדרה."
 
 #: src/sourcery:910
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr "ארעה שגיאה במהלך הורדת קבצי המקור עבור %(pkg)s %(pkgver)s. כל הפעולות התלויות ועומדות ינוקו מתוך תור העיבוד."
+msgstr "אירעה שגיאה במהלך הורדת קבצי המקור עבור %(pkg)s %(pkgver)s. כל הפעולות התלויות ועומדות ינוקו מתוך תור העיבוד."
 
 #: src/sourcery:955
 msgid "Not available"

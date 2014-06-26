@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-06-18 11:25+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2014-06-18 14:21+0000\n"
+"Last-Translator: Arian - Cazare Muncitori <arianserv@gmail.com>\n"
 "Language-Team: Romanian (Romania) (http://www.transifex.com/projects/p/salix/language/ro_RO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,11 +63,11 @@ msgstr "Curăţare director de lucru. Vă rugăm, aşteptaţi..."
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
-msgstr ""
+msgstr "Dependințe lipsă"
 
 #: src/sourcery.glade:1136
 msgid "Try again"
-msgstr ""
+msgstr "Reîncercați"
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
@@ -120,7 +120,7 @@ msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr "Se pare că aceas este prima lansare a Sourcery. Cache-ul SlackBuild trebuie creat înainte ca Sourcery să fie util. Aveşi nevoie de o conexiune internet funcţională pentru a crea SlackBuild cache."
+msgstr "Se pare că aceas este prima lansare a Sourcery. Cache-ul SlackBuild trebuie creat înainte ca Sourcery să fie util. Aveți nevoie de o conexiune internet funcţională pentru a crea SlackBuild cache."
 
 #: src/sourcery.glade:1685 src/sourcery.glade:3902
 msgid "Icon legend"
@@ -248,7 +248,7 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr "Puteţi stabili orice opţiune suplimentară acceptată aici de către SlackBuild. Consultaţi fiecare fişier README din SlackBuld, pentru o listî cu aceste opţiuni. Spaţiile nu sunt permise în cadrul numelor de opţiuni, sau pentru definiţii. Opţiunile ar trebui să fie separate de spaţii, ex:"
+msgstr "Puteţi stabili orice opţiune suplimentară acceptată aici de către SlackBuild. Consultaţi fiecare fişier README din SlackBuld, pentru o listă cu aceste opţiuni. Spaţiile nu sunt permise în cadrul numelor de opţiuni, sau pentru definiţii. Opţiunile ar trebui să fie separate de spaţii, ex:"
 
 #: src/sourcery.glade:3055
 msgid "Pending tasks"
@@ -294,15 +294,15 @@ msgstr "Stabilire opţiuni"
 
 #: src/sourcery.glade:3457 src/sourcery.glade:3852
 msgid "Get information"
-msgstr "Obţinere informaţii"
+msgstr "Obţinți informaţii"
 
 #: src/sourcery.glade:3469
 msgid "Canceled"
-msgstr "Anulate"
+msgstr "Anulat"
 
 #: src/sourcery.glade:3478
 msgid "Canceled. Some tasks may have already been completed."
-msgstr "Anulate. Anumite sarcini ar pute fi deja efectuate."
+msgstr "Anulat. Anumite sarcini ar pute fi deja efectuate."
 
 #: src/sourcery.glade:3522
 msgid "Error parsing options"
@@ -324,11 +324,11 @@ msgstr "Toate sarcinile au fost executate cu succes."
 
 #: src/sourcery.glade:3621
 msgid "Error updating package list."
-msgstr "Eraore la actulaizarea listei de pachete."
+msgstr "Eroare la actulaizarea listei de pachete."
 
 #: src/sourcery.glade:3681
 msgid "_File"
-msgstr "_Fşier"
+msgstr "_Fişier"
 
 #: src/sourcery.glade:3689 src/sourcery.glade:3940
 msgid "Update"
@@ -385,7 +385,7 @@ msgstr "%(num)i SlackBuild găsite"
 
 #: src/sourcery:150
 msgid "Could not retrieve SlackBuild data"
-msgstr "Nu se pot repera datele SlackBuild"
+msgstr "Nu se pot obține datele SlackBuild"
 
 #: src/sourcery:354
 msgid "SlackBuild information for"
@@ -408,7 +408,7 @@ msgstr "%(pkg)s %(pkgver)s urmeză să fie instalat"
 #: src/sourcery:434
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
-msgstr "%(pkg)s %(pkgver)s urmeză să fie instalat"
+msgstr "%(pkg)s %(pkgver)s urmeză să fie reinstalat"
 
 #: src/sourcery:436
 #, python-format
@@ -422,7 +422,7 @@ msgid ""
 "SlackBuild. Install it with GSlapt and try again. If you cannot find a "
 "package in GSlapt, you might have to disable dependencies or do some manual "
 "tweaking."
-msgstr ""
+msgstr "%(d)s pare a fi o dependință lipsă și nu este disponibilă ca și SlackBuild. Instalați cu GSlapt iar apoi reîncercați. Dacă nu puteți găsi pachetul în GSlapt, va trebui să dezactivați dependințele ori să faceți anumite modificări manual."
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"

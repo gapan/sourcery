@@ -4,14 +4,14 @@
 # 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011
-# Yarema aka Knedlyk <yupadmin@gmail.com>, 2011-2012
+# Yarema aka Knedlyk <yupadmin@gmail.com>, 2011-2012,2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-06-18 11:25+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2014-06-20 22:00+0000\n"
+"Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/salix/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,11 +64,11 @@ msgstr "Очищення робочої теки. Будь ласка, заче�
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
-msgstr ""
+msgstr "Пропущені залеєності"
 
 #: src/sourcery.glade:1136
 msgid "Try again"
-msgstr ""
+msgstr "Спробуйте знову"
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
@@ -423,7 +423,7 @@ msgid ""
 "SlackBuild. Install it with GSlapt and try again. If you cannot find a "
 "package in GSlapt, you might have to disable dependencies or do some manual "
 "tweaking."
-msgstr ""
+msgstr "Схоже, що %(d)s є потрібним пакунком, але він відсутній у вигляді SlackBuild. Встановіть його за допомогою GSlapt і спробуйте знову. Якщо Ви не знайдете пакунок у GSlapt, спробуйте вимкнути пошук залежностей або спробувати щось інше."
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"

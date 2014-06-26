@@ -4,14 +4,14 @@
 # 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011
-# Ingemar Karlsson <ingemar@ingk.se>, 2011-2012
+# Ingemar Karlsson <ingemar@ingk.se>, 2011-2012,2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-06-18 11:25+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2014-06-18 15:30+0000\n"
+"Last-Translator: Ingemar Karlsson <ingemar@ingk.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/salix/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,11 +64,11 @@ msgstr "Rensar arbetskatalogen. Var god vänta..."
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
-msgstr ""
+msgstr "Saknade beroende"
 
 #: src/sourcery.glade:1136
 msgid "Try again"
-msgstr ""
+msgstr "Försök igen"
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
@@ -423,7 +423,7 @@ msgid ""
 "SlackBuild. Install it with GSlapt and try again. If you cannot find a "
 "package in GSlapt, you might have to disable dependencies or do some manual "
 "tweaking."
-msgstr ""
+msgstr "%(d)s verkar vara en saknad beroende och det inte är tillgängligt som en SlackBuild. Installera det med Gslapt och försök igen. Om du inte kan hitta ett paket i Gslapt, kan du behöva avaktivera beroenden eller göra några manuella justeringar."
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"
