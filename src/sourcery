@@ -334,7 +334,7 @@ class Sourcery:
 				for i in slackdescfull:
 					if i.startswith(pkg+':'):
 						slackdesc.append(i.partition(pkg+':')[2])
-			except urllib2.httperror:
+			except urllib2.HTTPError:
 				slackdesc = None
 		else:
 			slackdesc = None
@@ -345,7 +345,7 @@ class Sourcery:
 			try:
 				f = urllib2.urlopen(sourceurl+location+'README')
 				readme = f.read().splitlines()
-			except urllib2.httperror:
+			except urllib2.HTTPError:
 				readme = None
 		else:
 			readme = None
