@@ -241,6 +241,8 @@ class Sourcery:
 		return version
 
 	def get_deps(self, pkglist):
+		error = False
+		missing = ''
 		deps = []
 		DEVNULL = open('/dev/null', 'w')
 		for pkg, pkgver in pkglist:
