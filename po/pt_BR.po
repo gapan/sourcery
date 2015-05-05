@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Stanley Ipikiss, 2013
-# Enrico Nicoletto <enrico.BR@gmx.co.uk>, 2013
+# Enrico Nicoletto <enrico.BR@gmx.co.uk>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-06-18 11:25+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2015-03-28 00:11+0000\n"
+"Last-Translator: Enrico Nicoletto <enrico.BR@gmx.co.uk>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/salix/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,11 +64,11 @@ msgstr "Limpando diretório de trabalho. Por favor aguarde..."
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
-msgstr ""
+msgstr "Dependência em falta"
 
 #: src/sourcery.glade:1136
 msgid "Try again"
-msgstr ""
+msgstr "Tente novamente"
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
@@ -423,7 +423,7 @@ msgid ""
 "SlackBuild. Install it with GSlapt and try again. If you cannot find a "
 "package in GSlapt, you might have to disable dependencies or do some manual "
 "tweaking."
-msgstr ""
+msgstr "%(d)s aparenta ser uma dependência em falta e não está disponível como um construtor Slack (SlackBuild). Instale-a com o GSlapt e tente novamente. Se você não consegue encontrar um pacote no GSlapt, você terá de desabilitar as dependências ou fazer algum ajuste manual."
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"

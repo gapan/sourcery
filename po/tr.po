@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Ege Öz <ege.oz@yandex.com.tr>, 2014
 # Ege Öz <ege.oz@yandex.com.tr>, 2013
 # eren <erenlinux@gmail.com>, 2011
-# Salih <sal.senturk@gmail.com>, 2013-2014
+# Salih <sal.senturk@gmail.com>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-06-18 11:25+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2015-01-26 16:30+0000\n"
+"Last-Translator: Salih <sal.senturk@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/salix/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +37,7 @@ msgstr "SlackBuild kaynağı ekle"
 
 #: src/sourcery.glade:792 src/sourcery.glade:1278
 msgid "SlackBuild source location:"
-msgstr ""
+msgstr "SlackBuild kaynak yolu:"
 
 #: src/sourcery.glade:835
 msgid "Update SlackBuild Cache?"
@@ -65,11 +66,11 @@ msgstr "Çalışma dizini temizleniyor. Lütfen bekleyin..."
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
-msgstr ""
+msgstr "Sağlanalımayan bağlılık"
 
 #: src/sourcery.glade:1136
 msgid "Try again"
-msgstr ""
+msgstr "Tekrar deneyin"
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
@@ -92,7 +93,7 @@ msgstr "Durum"
 
 #: src/sourcery.glade:1465
 msgid "Overall progress"
-msgstr ""
+msgstr "Tüm süreç"
 
 #: src/sourcery.glade:1509
 msgid ""
@@ -103,7 +104,7 @@ msgstr ""
 
 #: src/sourcery.glade:1526
 msgid "Getting SlackBuild information"
-msgstr ""
+msgstr "SlackBuild bilgisi alınıyor"
 
 #: src/sourcery.glade:1548
 msgid "Downloading SlackBuild information. Please wait..."
@@ -292,7 +293,7 @@ msgstr "Kaldır"
 
 #: src/sourcery.glade:3440 src/sourcery.glade:3443 src/sourcery.glade:3834
 msgid "Set options"
-msgstr ""
+msgstr "Ayarları seç"
 
 #: src/sourcery.glade:3457 src/sourcery.glade:3852
 msgid "Get information"
@@ -304,17 +305,17 @@ msgstr "İptal edildi"
 
 #: src/sourcery.glade:3478
 msgid "Canceled. Some tasks may have already been completed."
-msgstr ""
+msgstr "İptal edildi. Bazı görevler zaten tamamlanmış olabilir."
 
 #: src/sourcery.glade:3522
 msgid "Error parsing options"
-msgstr ""
+msgstr "Seçenekleri belirlemede hata"
 
 #: src/sourcery.glade:3531
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr ""
+msgstr "Seçenekler belirlenirken bir hata oluştu. Doğru girdiğinize emin olun."
 
 #: src/sourcery.glade:3558
 msgid "Completed tasks"
@@ -322,7 +323,7 @@ msgstr "Tamamlanan işlemler"
 
 #: src/sourcery.glade:3568
 msgid "All tasks have been executed succesfully."
-msgstr ""
+msgstr "Tüm görevler başarıyla çalıştırıldı."
 
 #: src/sourcery.glade:3621
 msgid "Error updating package list."
@@ -366,7 +367,7 @@ msgstr "_Yardım"
 
 #: src/sourcery.glade:3955
 msgid "Execute pending actions"
-msgstr ""
+msgstr "Bekleyen görevleri çalıştır"
 
 #: src/sourcery.glade:3998
 msgid "Search: "
@@ -374,16 +375,16 @@ msgstr "Arama:"
 
 #: src/sourcery:142
 msgid "No SlackBuilds found"
-msgstr ""
+msgstr "SlackBuild bulunamadı"
 
 #: src/sourcery:144
 msgid "One SlackBuild found"
-msgstr ""
+msgstr "Bir SlackBuild bulundu"
 
 #: src/sourcery:146
 #, python-format
 msgid "%(num)i SlackBuilds found"
-msgstr ""
+msgstr "%(num)i SlackBuild'ler bulundu"
 
 #: src/sourcery:150
 msgid "Could not retrieve SlackBuild data"
@@ -391,7 +392,7 @@ msgstr "SlackBuild verileri alınamadı"
 
 #: src/sourcery:354
 msgid "SlackBuild information for"
-msgstr ""
+msgstr "SlackBuild bilgisi"
 
 #: src/sourcery:362 src/sourcery:369
 msgid "Not available."

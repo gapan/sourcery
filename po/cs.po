@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Jiří Vírava <appukonrad@gmail.com>, 2013
+# Jiří Vírava <appukonrad@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-06-18 11:25+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2014-08-01 07:00+0000\n"
+"Last-Translator: Jiří Vírava <appukonrad@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/salix/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,11 +64,11 @@ msgstr "Čištění pracovního adresáře. Prosím čekejte..."
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
-msgstr ""
+msgstr "Chybějící závislost"
 
 #: src/sourcery.glade:1136
 msgid "Try again"
-msgstr ""
+msgstr "Zkuste to znovu"
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
@@ -422,7 +423,7 @@ msgid ""
 "SlackBuild. Install it with GSlapt and try again. If you cannot find a "
 "package in GSlapt, you might have to disable dependencies or do some manual "
 "tweaking."
-msgstr ""
+msgstr "%(d)s zdá se, že chybí závislost a není k dispozici jako SlackBuild. Nainstalujte ji s GSlapt a zkuste to znovu. Pokud nemůžete najít balíček v GSlapt, budete muset zakázat závislosti nebo dělat nějaké manuální odladění."
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"

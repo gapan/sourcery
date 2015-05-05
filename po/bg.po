@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/sourcery.glade:696
 msgid "translator-credits"
-msgstr ""
+msgstr "преводач-благодарности"
 
 #: src/sourcery.glade:724
 msgid "Add SlackBuild source"
@@ -54,7 +54,7 @@ msgstr ""
 
 #: src/sourcery.glade:971
 msgid "Updating SlackBuild cache..."
-msgstr ""
+msgstr "Актуализиране на кеш паметта на SlackBuild-ите..."
 
 #: src/sourcery.glade:1061
 msgid "Clearing working directory. Please wait..."
@@ -133,7 +133,7 @@ msgstr ""
 
 #: src/sourcery.glade:1757
 msgid "Not installed"
-msgstr ""
+msgstr "Не е инсталиран"
 
 #: src/sourcery.glade:1770
 msgid "A package with this name is already installed"
@@ -198,7 +198,7 @@ msgstr ""
 
 #: src/sourcery.glade:2552
 msgid "Preferences"
-msgstr ""
+msgstr "Настройки"
 
 #: src/sourcery.glade:2619
 msgid "<b>SlackBuild Sources</b>"
@@ -327,7 +327,7 @@ msgstr ""
 
 #: src/sourcery.glade:3681
 msgid "_File"
-msgstr ""
+msgstr "_Файл"
 
 #: src/sourcery.glade:3689 src/sourcery.glade:3940
 msgid "Update"
@@ -359,7 +359,7 @@ msgstr ""
 
 #: src/sourcery.glade:3894
 msgid "_Help"
-msgstr ""
+msgstr "_Помощ"
 
 #: src/sourcery.glade:3955
 msgid "Execute pending actions"
@@ -473,7 +473,7 @@ msgstr ""
 
 #: src/sourcery:1223 src/sourcery:1390
 msgid "Name"
-msgstr ""
+msgstr "Име"
 
 #: src/sourcery:1225 src/sourcery:1391
 msgid "Version"
