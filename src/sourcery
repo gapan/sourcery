@@ -261,9 +261,10 @@ class Sourcery:
 			data = ''
 			for line in stderr.splitlines():
 				if line.startswith('Missing slackbuild'):
-					error = True
 					missing = line.partition('requires ')[2].partition('\n')[0]
-					break
+					if missing != '%README%':
+						error = True
+						break
 			for line in output.splitlines():
 				if line.startswith('The following dependent slackbuilds'):
 					found = True
