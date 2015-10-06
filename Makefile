@@ -31,7 +31,7 @@ pot:
 		-x po/EXCLUDE \
 		-L Glade \
 		-o po/sourcery.pot \
-		src/sourcery.glade
+		src/sourcery.ui
 	xgettext --from-code=utf-8 \
 		-j \
 		-L Python \
@@ -61,7 +61,7 @@ install: install-icons install-mo
 	install -d -m 755 $(DESTDIR)/usr/share/sourcery
 	install -d -m 755 $(DESTDIR)/etc
 	install -m 755 src/sourcery $(DESTDIR)/usr/sbin/
-	install -m 644 src/sourcery.glade $(DESTDIR)/usr/share/sourcery/
+	install -m 644 src/sourcery.ui $(DESTDIR)/usr/share/sourcery/
 	install -m 644 sourcery.desktop $(DESTDIR)/usr/share/applications/
 	install -m 644 sourcery-kde.desktop $(DESTDIR)/usr/share/applications/
 	install -m 644 sourcery.conf $(DESTDIR)/etc/

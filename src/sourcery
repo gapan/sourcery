@@ -1208,10 +1208,10 @@ class Sourcery:
 	def __init__(self):
 		builder = gtk.Builder()
 		builder.set_translation_domain("sourcery")
-		if os.path.exists('sourcery.glade'):
-			builder.add_from_file('sourcery.glade')
-		elif os.path.exists('/usr/share/sourcery/sourcery.glade'):
-			builder.add_from_file('/usr/share/sourcery/sourcery.glade')
+		if os.path.exists('sourcery.ui'):
+			builder.add_from_file('sourcery.ui')
+		elif os.path.exists('/usr/share/sourcery/sourcery.ui'):
+			builder.add_from_file('/usr/share/sourcery/sourcery.ui')
 
 		#
 		# Main window objects
