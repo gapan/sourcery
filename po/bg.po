@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Georgi Georgiev <georgiev_1994@abv.bg>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2011-01-11 17:09+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Bulgarian (http://www.transifex.com/projects/p/salix/language/bg/)\n"
+"PO-Revision-Date: 2016-04-09 18:59+0000\n"
+"Last-Translator: Georgi Georgiev <georgiev_1994@abv.bg>\n"
+"Language-Team: Bulgarian (http://www.transifex.com/gapan/salix/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +22,7 @@ msgstr ""
 msgid ""
 "A graphical frontend to slapt-src, a utility to build and install packages "
 "from source using SlackBuilds and/or SLKBUILDs."
-msgstr ""
+msgstr "Графична среда на slapt-src за изграждане и инсталиране на пакети от източник, използвайки SlackBuilds и/или SLKBUILDs."
 
 #: src/sourcery.glade:696
 msgid "translator-credits"
@@ -29,28 +30,28 @@ msgstr "преводач-благодарности"
 
 #: src/sourcery.glade:724
 msgid "Add SlackBuild source"
-msgstr ""
+msgstr "Добави SlackBuild източник"
 
 #: src/sourcery.glade:792 src/sourcery.glade:1278
 msgid "SlackBuild source location:"
-msgstr ""
+msgstr "Локация на SlackBuild източник:"
 
 #: src/sourcery.glade:835
 msgid "Update SlackBuild Cache?"
-msgstr ""
+msgstr "Актуализирай кеш паметта на SlackBuild?"
 
 #: src/sourcery.glade:873
 msgid "Rebuild SlackBuild cache"
-msgstr ""
+msgstr "Преизгради кеш паметта на SlackBuild"
 
 #: src/sourcery.glade:898
 msgid ""
 "Configuration has changed. Do you want to rebuild the Slackbuild cache?"
-msgstr ""
+msgstr "Конфигурацията беше променена. Искате ли да преизградите кеш паметта на SlackBuild?"
 
 #: src/sourcery.glade:918
 msgid "Updating..."
-msgstr ""
+msgstr "Актуализиране..."
 
 #: src/sourcery.glade:971
 msgid "Updating SlackBuild cache..."
@@ -58,78 +59,78 @@ msgstr "Актуализиране на кеш паметта на SlackBuild-и
 
 #: src/sourcery.glade:1061
 msgid "Clearing working directory. Please wait..."
-msgstr ""
+msgstr "Изчистване на работната директория. Моля почакайте..."
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
-msgstr ""
+msgstr "Липсва зависимост"
 
 #: src/sourcery.glade:1136
 msgid "Try again"
-msgstr ""
+msgstr "Опитайте отново"
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
-msgstr ""
+msgstr "Редактирай SlackBuild източник"
 
 #: src/sourcery.glade:1321 src/sourcery.glade:2374
 msgid "Error"
-msgstr ""
+msgstr "Грешка"
 
 #: src/sourcery.glade:1387
 msgid ""
 "There was an error while updating the SlackBuild cache. Make sure you have "
 "configured all sources properly and that you have a working internet "
 "connection."
-msgstr ""
+msgstr "Възникна грешка при актуализирането на кеш паметта на SlackBuild. Проверете настройките на всички източници и вашата интернет връзка."
 
 #: src/sourcery.glade:1413
 msgid "Progress"
-msgstr ""
+msgstr "Напредък"
 
 #: src/sourcery.glade:1465
 msgid "Overall progress"
-msgstr ""
+msgstr "Общ напредък"
 
 #: src/sourcery.glade:1509
 msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr ""
+msgstr "Моля почакайте. Времето за изчакване зависи от размера и вида на софтуера, може да отнеме от няколко секунди до няколко часа..."
 
 #: src/sourcery.glade:1526
 msgid "Getting SlackBuild information"
-msgstr ""
+msgstr "Получаване на информация за SlackBuild"
 
 #: src/sourcery.glade:1548
 msgid "Downloading SlackBuild information. Please wait..."
-msgstr ""
+msgstr "Изтегляне на информация за SlackBuild. Моля почакайте..."
 
 #: src/sourcery.glade:1575
 msgid "First run"
-msgstr ""
+msgstr "Първо пускане"
 
 #: src/sourcery.glade:1612
 msgid "Create SlackBuild cache"
-msgstr ""
+msgstr "Създаване на кеш паметта на SlackBuild"
 
 #: src/sourcery.glade:1659
 msgid ""
 "It looks like this is the first time Sourcery is launched. The SlackBuild "
 "cache needs to be created first before Sourcery becomes useful. You will "
 "need a working internet connection to create the SlackBuild cache."
-msgstr ""
+msgstr "Изглежда, че Sourcery е стартиран за първи път. Преди да използвате Sourcery, трябва да създадете кеш паметта на SlackBuild. Ще ви е нужна работеща интернет връзка."
 
 #: src/sourcery.glade:1685 src/sourcery.glade:3902
 msgid "Icon legend"
-msgstr ""
+msgstr "Икони - легенда"
 
 #: src/sourcery.glade:1734
 msgid ""
 "<b>The following icons are used to indicate the current status of a "
 "SlackBuild:</b>"
-msgstr ""
+msgstr "<b>Следните икони се използват за да се покаже сегашното състояние на  SlackBuild:</b>"
 
 #: src/sourcery.glade:1757
 msgid "Not installed"
@@ -137,64 +138,64 @@ msgstr "Не е инсталиран"
 
 #: src/sourcery.glade:1770
 msgid "A package with this name is already installed"
-msgstr ""
+msgstr "Пакет с това име е вече инсталиран"
 
 #: src/sourcery.glade:1785
 msgid "The package is going to be installed"
-msgstr ""
+msgstr "Пакета ще бъде инсталиран"
 
 #: src/sourcery.glade:1800
 msgid ""
 "A package with this name is already installed and is going to be reinstalled"
-msgstr ""
+msgstr "Пакет с това име е вече инсталиран и ще бъде преинсталиран"
 
 #: src/sourcery.glade:1815
 msgid "The package is going to be removed"
-msgstr ""
+msgstr "Пакета ще бъде премахнат"
 
 #: src/sourcery.glade:1900 src/sourcery.glade:3880
 msgid "SlackBuild logs"
-msgstr ""
+msgstr "SlackBuild логове"
 
 #: src/sourcery.glade:2006 src/sourcery.glade:2396
 msgid "View log"
-msgstr ""
+msgstr "Виж лога"
 
 #: src/sourcery.glade:2131
 msgid "<b>Name:</b>"
-msgstr ""
+msgstr "<b>Име:</b>"
 
 #: src/sourcery.glade:2140
 msgid "<b>Version:</b>"
-msgstr ""
+msgstr "<b>Версия:</b>"
 
 #: src/sourcery.glade:2153
 msgid "<b>Source:</b>"
-msgstr ""
+msgstr "<b>Източник:</b>"
 
 #: src/sourcery.glade:2167
 msgid "<b>Files:</b>"
-msgstr ""
+msgstr "<b>Файлове:</b>"
 
 #: src/sourcery.glade:2180
 msgid "<b>Location:</b>"
-msgstr ""
+msgstr "<b>Локация:</b>"
 
 #: src/sourcery.glade:2248
 msgid "<b>Dependencies:</b>"
-msgstr ""
+msgstr "<b>Зависимости:</b>"
 
 #: src/sourcery.glade:2293
 msgid "General information"
-msgstr ""
+msgstr "Обща информация"
 
 #: src/sourcery.glade:2319 src/sourcery:1227
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: src/sourcery.glade:2351
 msgid "README file"
-msgstr ""
+msgstr "файл ПРОЧЕТИ МЕ"
 
 #: src/sourcery.glade:2552
 msgid "Preferences"
@@ -202,44 +203,44 @@ msgstr "Настройки"
 
 #: src/sourcery.glade:2619
 msgid "<b>SlackBuild Sources</b>"
-msgstr ""
+msgstr "<b>SlackBuild Източници</b>"
 
 #: src/sourcery.glade:2634
 msgid ""
 "<i>Sources closer to the top have higher priority. You can rearrange the "
 "order by dragging.</i>"
-msgstr ""
+msgstr "<i>Горните източници имат по-висок приоритет от другите. Можете да ги пренаредите чрез влачене.</i>"
 
 #: src/sourcery.glade:2756
 msgid "Sources"
-msgstr ""
+msgstr "Източници"
 
 #: src/sourcery.glade:2776
 msgid "<b>Source and package storage</b>"
-msgstr ""
+msgstr "<b>Източници и пакети на съхранение</b>"
 
 #: src/sourcery.glade:2805
 msgid "Clear working directory"
-msgstr ""
+msgstr "Изчисти работната директория"
 
 #: src/sourcery.glade:2844
 msgid "Working Directory"
-msgstr ""
+msgstr "Работна Директория"
 
 #: src/sourcery.glade:2857
 msgid "Resolve dependencies"
-msgstr ""
+msgstr "Разреши зависимости"
 
 #: src/sourcery.glade:2875
 msgid ""
 "Dependency resolution is only available for the repositories that support "
 "it. SlackBuilds from SlackBuilds.org do not include any dependency "
 "information."
-msgstr ""
+msgstr "Разрешаването на зависимости е налично само за хранилищата, които поддържат тази опция. SlackBuild-овете от SlackBuilds.org не включват информация за зависимости."
 
 #: src/sourcery.glade:2907
 msgid "Dependencies"
-msgstr ""
+msgstr "Зависимости"
 
 #: src/sourcery.glade:3000
 msgid ""
@@ -247,83 +248,83 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr ""
+msgstr "Тук може да добавите допълнителни опции, които се поддържат от SlackBuild-овете. Съобразете се с README файла на SlackBuild-овете за тези опции. Разстояния не са позволени в имената на опциите или в дефинициите им. Опциите трябва да са разделени от разстояния, например:"
 
 #: src/sourcery.glade:3055
 msgid "Pending tasks"
-msgstr ""
+msgstr "Висящи задачи"
 
 #: src/sourcery.glade:3149
 msgid "<b>Execute the following tasks?</b>"
-msgstr ""
+msgstr "<b>Изпълни следните задачи?</b>"
 
 #: src/sourcery.glade:3163
 msgid ""
 "The following tasks are about to be performed. You can rearrange the "
 "processing order by dragging the items in the list."
-msgstr ""
+msgstr "Следните задачи ще бъдат изпълнени. Може да ги пренаредите чрез влачене в листа."
 
 #: src/sourcery.glade:3244
 msgid "Working..."
-msgstr ""
+msgstr "Обработка..."
 
 #: src/sourcery.glade:3259
 msgid "Please wait."
-msgstr ""
+msgstr "Моля почакайте."
 
 #: src/sourcery.glade:3397 src/sourcery.glade:3400 src/sourcery.glade:3787
 msgid "Unmark"
-msgstr ""
+msgstr "Демаркирай"
 
 #: src/sourcery.glade:3408 src/sourcery.glade:3411 src/sourcery.glade:3798
 msgid "Install"
-msgstr ""
+msgstr "Инсталирай"
 
 #: src/sourcery.glade:3419 src/sourcery.glade:3422 src/sourcery.glade:3810
 msgid "Reinstall"
-msgstr ""
+msgstr "Преинсталирай"
 
 #: src/sourcery.glade:3430 src/sourcery.glade:3822
 msgid "Remove"
-msgstr ""
+msgstr "Премахни"
 
 #: src/sourcery.glade:3440 src/sourcery.glade:3443 src/sourcery.glade:3834
 msgid "Set options"
-msgstr ""
+msgstr "Задай опции"
 
 #: src/sourcery.glade:3457 src/sourcery.glade:3852
 msgid "Get information"
-msgstr ""
+msgstr "Получи информация"
 
 #: src/sourcery.glade:3469
 msgid "Canceled"
-msgstr ""
+msgstr "Отменено"
 
 #: src/sourcery.glade:3478
 msgid "Canceled. Some tasks may have already been completed."
-msgstr ""
+msgstr "Отменено. Някои задачи може да са вече завършени."
 
 #: src/sourcery.glade:3522
 msgid "Error parsing options"
-msgstr ""
+msgstr "Грешка при анализирането на опциите"
 
 #: src/sourcery.glade:3531
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr ""
+msgstr "Имаше грешка при анализирането на опциите. Моля, проверете дали са въведени правилно."
 
 #: src/sourcery.glade:3558
 msgid "Completed tasks"
-msgstr ""
+msgstr "Завършени задачи"
 
 #: src/sourcery.glade:3568
 msgid "All tasks have been executed succesfully."
-msgstr ""
+msgstr "Всички задачи са изпълнени успешно."
 
 #: src/sourcery.glade:3621
 msgid "Error updating package list."
-msgstr ""
+msgstr "Грешка при актуализирането на листа с пакети."
 
 #: src/sourcery.glade:3681
 msgid "_File"
@@ -331,31 +332,31 @@ msgstr "_Файл"
 
 #: src/sourcery.glade:3689 src/sourcery.glade:3940
 msgid "Update"
-msgstr ""
+msgstr "Актуализирай"
 
 #: src/sourcery.glade:3692 src/sourcery.glade:3939
 msgid "Update local SlackBuild cache"
-msgstr ""
+msgstr "Актуализирай локалната кеш памет на SlackBuild"
 
 #: src/sourcery.glade:3701 src/sourcery.glade:3956
 msgid "Execute"
-msgstr ""
+msgstr "Изпълни"
 
 #: src/sourcery.glade:3736
 msgid "_Edit"
-msgstr ""
+msgstr "_Редактиране"
 
 #: src/sourcery.glade:3744
 msgid "Unmark all"
-msgstr ""
+msgstr "Демаркирай всички"
 
 #: src/sourcery.glade:3779
 msgid "_Package"
-msgstr ""
+msgstr "–Пакет"
 
 #: src/sourcery.glade:3870
 msgid "_View"
-msgstr ""
+msgstr "–Изглед"
 
 #: src/sourcery.glade:3894
 msgid "_Help"
@@ -363,56 +364,56 @@ msgstr "_Помощ"
 
 #: src/sourcery.glade:3955
 msgid "Execute pending actions"
-msgstr ""
+msgstr "Изпълни висящите действия"
 
 #: src/sourcery.glade:3998
 msgid "Search: "
-msgstr ""
+msgstr "Търси:"
 
 #: src/sourcery:142
 msgid "No SlackBuilds found"
-msgstr ""
+msgstr "Не са намерени SlackBuild-ове"
 
 #: src/sourcery:144
 msgid "One SlackBuild found"
-msgstr ""
+msgstr "Един SlackBuild е намерен"
 
 #: src/sourcery:146
 #, python-format
 msgid "%(num)i SlackBuilds found"
-msgstr ""
+msgstr "%(num)i SlackBuild-ове са намерени"
 
 #: src/sourcery:150
 msgid "Could not retrieve SlackBuild data"
-msgstr ""
+msgstr "Не може да се извлекат данни за SlackBuild-а"
 
 #: src/sourcery:354
 msgid "SlackBuild information for"
-msgstr ""
+msgstr "SlackBuild информация за"
 
 #: src/sourcery:362 src/sourcery:369
 msgid "Not available."
-msgstr ""
+msgstr "Не е наличен."
 
 #: src/sourcery:422
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed as a dependency"
-msgstr ""
+msgstr "%(pkg)s %(pkgver)s ще бъде инсталиран като зависимост"
 
 #: src/sourcery:432
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be installed"
-msgstr ""
+msgstr "%(pkg)s %(pkgver)s ще бъде инсталиран"
 
 #: src/sourcery:434
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be reinstalled"
-msgstr ""
+msgstr "%(pkg)s %(pkgver)s ще бъде преинсталиран"
 
 #: src/sourcery:436
 #, python-format
 msgid "%(pkg)s %(pkgver)s is going to be removed"
-msgstr ""
+msgstr "%(pkg)s %(pkgver)s ще бъде премахнат"
 
 #: src/sourcery:441
 #, python-format
@@ -421,32 +422,32 @@ msgid ""
 "SlackBuild. Install it with GSlapt and try again. If you cannot find a "
 "package in GSlapt, you might have to disable dependencies or do some manual "
 "tweaking."
-msgstr ""
+msgstr "%(d)s изглежда е липсваща зависимост и не е налична като SlackBuild. Инсталирайте я с GSlapt и опитайте отново. Ако не може да намерите пакета в GSlapt ще трябва да забраните зависимостите или да направите други промени."
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"
-msgstr ""
+msgstr "Състояние"
 
 #: src/sourcery:651
 #, python-format
 msgid "Set options for %(pkg)s %(ver)s"
-msgstr ""
+msgstr "Задайте опции за %(pkg)s %(ver)s"
 
 #: src/sourcery:819 src/sourcery:945 src/sourcery:995
 msgid "Build log for"
-msgstr ""
+msgstr "Лог на изграждане за"
 
 #: src/sourcery:867 src/sourcery:875
 msgid "Downloading source files for"
-msgstr ""
+msgstr "Изтегляне на източниците за"
 
 #: src/sourcery:872 src/sourcery:880
 msgid "Compiling"
-msgstr ""
+msgstr "Компилиране"
 
 #: src/sourcery:883
 msgid "Removing"
-msgstr ""
+msgstr "Премахване"
 
 #: src/sourcery:903
 #, python-format
@@ -454,22 +455,22 @@ msgid ""
 "There was an error while compiling %(pkg)s %(pkgver)s. All pending actions "
 "will be purged from the processing queue. You can review the log file for "
 "any errors during compiling."
-msgstr ""
+msgstr "Възникна грешка при компилирането на %(pkg)s %(pkgver)s. Всички висящи задачи ще бъдат изчистени. Може да проверите лог файла за грешки по време на компилацията."
 
 #: src/sourcery:910
 #, python-format
 msgid ""
 "There was an error while downloading source files for %(pkg)s %(pkgver)s. "
 "All pending actions will be purged from the processing queue."
-msgstr ""
+msgstr "Възникна грешка при изтеглянето на източниците за %(pkg)s %(pkgver)s. Всички висящи задачи ще бъдат изчистени."
 
 #: src/sourcery:955
 msgid "Not available"
-msgstr ""
+msgstr "Не е наличен"
 
 #: src/sourcery:1006
 msgid "Error reading log file."
-msgstr ""
+msgstr "Грешка при четене на лог файла."
 
 #: src/sourcery:1223 src/sourcery:1390
 msgid "Name"
@@ -477,12 +478,12 @@ msgstr "Име"
 
 #: src/sourcery:1225 src/sourcery:1391
 msgid "Version"
-msgstr ""
+msgstr "Версия"
 
 #: sourcery.desktop.in.h:1 sourcery-kde.desktop.in.h:1
 msgid "Sourcery SlackBuild Manager"
-msgstr ""
+msgstr "Sourcery SlackBuild Мениджър"
 
 #: sourcery.desktop.in.h:2 sourcery-kde.desktop.in.h:2
 msgid "A graphical frontend to slapt-src"
-msgstr ""
+msgstr "Графична среда на slapt-src"
