@@ -4,6 +4,7 @@
 # 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011
+# tsuren <hydrangea_and_snail@hotmail.com>, 2015
 # tsuren <hydrangea_and_snail@hotmail.com>, 2012
 # tsuren <hydrangea_and_snail@hotmail.com>, 2011
 msgid ""
@@ -11,9 +12,9 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-06-18 11:25+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/salix/language/ja/)\n"
+"PO-Revision-Date: 2015-08-19 09:31+0000\n"
+"Last-Translator: tsuren <hydrangea_and_snail@hotmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/gapan/salix/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -65,11 +66,11 @@ msgstr "作業ディレクトリを空にします。しばらくお待ちくだ
 
 #: src/sourcery.glade:1097
 msgid "Missing dependency"
-msgstr ""
+msgstr "欠けています依存関係のあるパッケージ"
 
 #: src/sourcery.glade:1136
 msgid "Try again"
-msgstr ""
+msgstr "もう一度試してください。"
 
 #: src/sourcery.glade:1210
 msgid "Edit SlackBuild source"
@@ -268,11 +269,11 @@ msgstr "リストされているタスクが実行されます。リスト内の
 
 #: src/sourcery.glade:3244
 msgid "Working..."
-msgstr ""
+msgstr "作業中"
 
 #: src/sourcery.glade:3259
 msgid "Please wait."
-msgstr ""
+msgstr "お待ちください。"
 
 #: src/sourcery.glade:3397 src/sourcery.glade:3400 src/sourcery.glade:3787
 msgid "Unmark"
@@ -424,7 +425,7 @@ msgid ""
 "SlackBuild. Install it with GSlapt and try again. If you cannot find a "
 "package in GSlapt, you might have to disable dependencies or do some manual "
 "tweaking."
-msgstr ""
+msgstr "%(d)s の依存関係のあるパッケージがインストールされていません。また使用できるSlackBuildとして存在していません。 GSlaptで依存関係のあるパッケージをまずインストールしてから、もう一度試してください。GSlaptでパッケージが見つからない場合は、依存関係を無効にするか、いくつかの微調整を手動で行う必要があります。"
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"

@@ -15,9 +15,9 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-18 14:24+0300\n"
-"PO-Revision-Date: 2014-11-16 16:31+0000\n"
+"PO-Revision-Date: 2016-06-09 20:49+0000\n"
 "Last-Translator: Antonio Sardei <laplume@libero.it>\n"
-"Language-Team: Italian (http://www.transifex.com/projects/p/salix/language/it/)\n"
+"Language-Team: Italian (http://www.transifex.com/gapan/salix/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -103,11 +103,11 @@ msgid ""
 "Please wait. This might take a while. Processing time varies, depending on "
 "the size and complexity of the software, from a few seconds to a few "
 "hours..."
-msgstr "Prego attendere. Questo tipo di operazione potrebbe richiedere un po' di tempo. A seconda della complessità del software il tempo di attesa può variare da alcuni minuti ad alcune ore."
+msgstr "Prego attendi. Questo tipo di operazione potrebbe richiedere un po' di tempo. A seconda della complessità del software il tempo di attesa può variare da alcuni minuti ad alcune ore."
 
 #: src/sourcery.glade:1526
 msgid "Getting SlackBuild information"
-msgstr "Recupero delle  informazioni degli SlackBuild"
+msgstr "Recupero delle informazioni degli SlackBuild"
 
 #: src/sourcery.glade:1548
 msgid "Downloading SlackBuild information. Please wait..."
@@ -115,7 +115,7 @@ msgstr "Scaricamento delle informazioni degli SlackBuild. Per favore attendi..."
 
 #: src/sourcery.glade:1575
 msgid "First run"
-msgstr "Primo avvio "
+msgstr "Primo avvio"
 
 #: src/sourcery.glade:1612
 msgid "Create SlackBuild cache"
@@ -161,7 +161,7 @@ msgstr "Il pacchetto sta per essere rimosso"
 
 #: src/sourcery.glade:1900 src/sourcery.glade:3880
 msgid "SlackBuild logs"
-msgstr "log di SlackBuild "
+msgstr "Log di SlackBuild "
 
 #: src/sourcery.glade:2006 src/sourcery.glade:2396
 msgid "View log"
@@ -254,7 +254,7 @@ msgid ""
 "SlackBuild's README file for a list of those options. Spaces are not allowed"
 " inside option names or definitions. Options should be separated by spaces, "
 "e.g.:"
-msgstr "Potete impostare qui alcune opzioni aggiuntive accettate da SlackBuild. Consultate il file README del singolo SlackBuild per conoscere le opzioni disponibili. Gli spazi non sono ammessi all'interno delle opzioni o delle definizioni. Le opzioni devono essere separate da spazi, come ad esempio: "
+msgstr "Puoi impostare qui alcune opzioni aggiuntive accettate da SlackBuild. Consulta il file README del singolo SlackBuild per conoscere le opzioni disponibili. Gli spazi non sono ammessi all'interno delle opzioni o delle definizioni. Le opzioni devono essere separate da spazi, come ad esempio: "
 
 #: src/sourcery.glade:3055
 msgid "Pending tasks"
@@ -272,7 +272,7 @@ msgstr "Le seguenti attività stanno per  essere eseguite. È possibile riorgani
 
 #: src/sourcery.glade:3244
 msgid "Working..."
-msgstr "Stò preparando..."
+msgstr "Sto preparando..."
 
 #: src/sourcery.glade:3259
 msgid "Please wait."
@@ -308,7 +308,7 @@ msgstr "Cancellato "
 
 #: src/sourcery.glade:3478
 msgid "Canceled. Some tasks may have already been completed."
-msgstr " Cancellato. Alcune attività sono già state completate."
+msgstr " Cancellato. Alcune attività potrebbero essere già state completate."
 
 #: src/sourcery.glade:3522
 msgid "Error parsing options"
@@ -318,7 +318,7 @@ msgstr "Errore durante il parsing delle opzioni"
 msgid ""
 "There was an error while parsing options. Please make sure they are entered "
 "correctly."
-msgstr "Si è verificato un errore durante il parsing delle opzioni. Per favore verificate che siano state inserite correttamente."
+msgstr "Si è verificato un errore durante il parsing delle opzioni. Per favore verifica che siano state inserite correttamente."
 
 #: src/sourcery.glade:3558
 msgid "Completed tasks"
@@ -428,7 +428,7 @@ msgid ""
 "SlackBuild. Install it with GSlapt and try again. If you cannot find a "
 "package in GSlapt, you might have to disable dependencies or do some manual "
 "tweaking."
-msgstr "%(d) risulta essere una dipendenza mancante e non è disponibile come Slackbuild. Installalo tramite Gslapt e prova di nuovo."
+msgstr "%(d) risulta essere una dipendenza mancante e non è disponibile come Slackbuild. Installalo tramite Gslapt e prova di nuovo. Se non trovi il pacchetto in Gslapt puoi procedere disabilitando le dipendenze oppure facendo qualche aggiustamento manuale."
 
 #: src/sourcery:588 src/sourcery:1220
 msgid "Status"
@@ -445,7 +445,7 @@ msgstr "Build log per"
 
 #: src/sourcery:867 src/sourcery:875
 msgid "Downloading source files for"
-msgstr "Scaricare i sorgenti di"
+msgstr "Scarico i sorgenti di"
 
 #: src/sourcery:872 src/sourcery:880
 msgid "Compiling"
