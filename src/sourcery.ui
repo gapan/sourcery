@@ -4059,6 +4059,7 @@ Public License instead of this License.  But first, please read
                     <property name="resizable">True</property>
                     <property name="min_width">25</property>
                     <property name="title">status</property>
+                    <property name="sort_column_id">4</property>
                     <child>
                       <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf_status"/>
                       <attributes>
@@ -4072,6 +4073,7 @@ Public License instead of this License.  But first, please read
                     <property name="resizable">True</property>
                     <property name="min_width">70</property>
                     <property name="title">pkgname</property>
+                    <property name="sort_column_id">1</property>
                     <child>
                       <object class="GtkCellRendererText" id="cellrenderertext_pkgname"/>
                       <attributes>
@@ -4085,6 +4087,7 @@ Public License instead of this License.  But first, please read
                     <property name="resizable">True</property>
                     <property name="min_width">70</property>
                     <property name="title">version</property>
+                    <property name="sort_column_id">2</property>
                     <child>
                       <object class="GtkCellRendererText" id="cellrenderertext_version"/>
                       <attributes>
@@ -4098,6 +4101,7 @@ Public License instead of this License.  But first, please read
                     <property name="resizable">True</property>
                     <property name="min_width">70</property>
                     <property name="title">desc</property>
+                    <property name="sort_column_id">3</property>
                     <child>
                       <object class="GtkCellRendererText" id="cellrenderertext_desc"/>
                       <attributes>
